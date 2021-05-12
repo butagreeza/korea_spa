@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="service_booking_form_view">
+            <field name="name">Services Booking form view</field>
+            <field name="model">service.booking</field>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_met" string="Met" type="object" states="ready"/>
+                        <button name="action_cancel" string="Cancel" type="object" states="ready"/>
+                        <field name="state" widget="statusbar" statusbar_visible="ready,met,cancel"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <div class="oe_title">
+                                <h1 class="text-center">
+                                    <field name="name" class="oe_inline" readonly="1"
+                                           attrs="{'invisible': [('name', '=', False)]}"/>
+                                </h1>
+                            </div>
+                        </group>
+                        <label for="customer_id" string="Customer"/>
+                        <h2>
+                            <field name="customer_id" required="True" options="{'no_create': 1, 'no_create_edit': 1}" attrs="{'readonly': [('state', '!=', 'ready')]}"/>
+                        </h2>
+                        <group>
+                            <group>
+                                <field name="type" required="True" attrs="{'readonly': [('state', '!=', 'ready')]}"/>
+                                <field name="date" required="True" attrs="{'readonly': [('state', '!=', 'ready')]}"/>
+                                <!--<field name="time_from" required="True" attrs="{'readonly': [('state', '!=', 'ready')]}"/>-->
+                                <field name="booking_period_id" options="{'no_create': 1, 'no_create_edit': 1}" attrs="{'readonly': [('state', '!=', 'ready')]}"/>
+                                <field name="partner_status_ids" options="{'no_create': 1, 'no_create_edit': 1}" widget="many2many_tags" attrs="{'readonly': [('state', '!=', 'ready')]}"/>
+                            </group>
+                            <group>
+                                <field name="team_id" required="True" options="{'no_create': 1, 'no_create_edit': 1}" attrs="{'readonly': [('state', '!=', 'ready')]}"/>
+                                <field name="user_id" options="{'no_create': 1, 'no_create_edit': 1}" attrs="{'readonly': [('state', '!=', 'ready')]}"/>
+                                <field name="categ_id" options="{'no_create': 1, 'no_create_edit': 1}" attrs="{'readonly': [('state', '!=', 'ready')]}"/>
+                                <field name="create_uid"
+                                       options="{'no_create': 1, 'no_create_edit': 1}" readonly="1"/>
+                            </group>
+                            <label string="Note"/>
+                            <field name="note" attrs="{'readonly': [('state', '=', 'met')]}"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="service_booking_form_view_1">
+            <field name="name">Services Booking form view</field>
+            <field name="model">service.booking</field>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_cancel" string="Cancel" type="object" states="ready"/>
+                        <field name="state" widget="statusbar" statusbar_visible="ready,met,cancel"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <div class="oe_title">
+                                <h1 class="text-center">
+                                    <field name="name" class="oe_inline" readonly="1"
+                                           attrs="{'invisible': [('name', '=', False)]}"/>
+                                </h1>
+                            </div>
+                        </group>
+                        <group col="4">
+                            <field name="lead_id" options="{'no_create': 1, 'no_create_edit': 1}"
+                                   attrs="{'readonly':[('state','not in',('ready'))]}"/>
+                            <field name="create_uid" options="{'no_create': 1, 'no_create_edit': 1}"
+                                   readonly="1"/>
+                            <field name="type" attrs="{'readonly':[('state','not in',('ready'))]}"/>
+                            <!--<field name="time_from" attrs="{'readonly':[('state','not in',('ready'))]}" required="1"/>-->
+                        </group>
+                        <notebook>
+                            <page string="Services" attrs="{'readonly':[('state','not in',('ready'))]}">
+                                <field name="services"
+                                       context="{'tree_view_ref': 'izi_crm_booking.product_product_tree_view_p1000'}">
+                                    <tree editable="bottom">
+                                        <field name="default_code"/>
+                                        <field name="name"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="services_booking_tree_view">
+            <field name="name">Services Booking tree view</field>
+            <field name="model">service.booking</field>
+            <field name="arch" type="xml">
+                <tree default_order='name desc' decoration-info="state == 'new'"
+                      decoration-muted="state == 'cancel'">
+                    <field name="name"/>
+                    <field name="customer_id"/>
+                    <field name="date"/>
+                    <field name="booking_period_id"/>
+                    <field name="categ_id"/>
+                    <field name="user_id"/>
+                    <field name="note"/>
+                    <field name="partner_status_ids" widget="many2many_tags"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_service_booking_search">
+            <field name="name">service.booking.search</field>
+            <field name="model">service.booking</field>
+            <field name="arch" type="xml">
+                <search string="Service Booking">
+                    <field name="name"/>
+                    <field name="customer_id"
+                           filter_domain="['|','|','|','|','|','|',('customer_id.name','ilike',self),('customer_id.phone','ilike',self),('customer_id.mobile','ilike',self),('customer_id.x_code', 'ilike', self),('customer_id.display_name','ilike',self),('customer_id.ref','=',self),('customer_id.email','ilike',self)]"/>
+                    <field name="user_id"/>
+                    <filter string="My Activities" name="activities_my"
+                        domain="[('user_id', '=', uid)]"/>
+                    <separator/>
+                    <filter string="Today Activities" name="activities_today"
+                        domain="[('date', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                    <filter string="Future Activities" name="activities_upcoming_all"
+                        domain="[('date', '&gt;', context_today().strftime('%Y-%m-%d'))]"/>
+
+                    <group expand="0" string="Group By">
+<!--                        <filter name="date_now" string="Today" domain="[('time_from', '&gt;=', datetime.datetime.now().strftime('%Y-%m-%d 00:00:00')), ('time_from', '&lt;=', datetime.datetime.now().strftime('%Y-%m-%d 23:59:59'))]"/>-->
+                        <filter string="Year" name="groupby_year" domain="[]" context="{'group_by':'date:year'}" help="Timesheet by Date"/>
+                        <filter string="Month" name="groupby_month" domain="[]" context="{'group_by':'date:month'}" help="Timesheet by Date"/>
+                        <filter string="Date" name="groupby_date" domain="[]" context="{'group_by':'date:day'}" help="Timesheet by Date"/>
+                        <filter string="Booking period"  context="{'group_by': 'booking_period_id'}"/>
+                        <filter string="State" context="{'group_by':'state'}"/>
+                        <filter string="Cate" context="{'group_by':'categ_id'}"/>
+                        <filter string="Customer" context="{'group_by':'customer_id'}"/>
+                        <filter string="User" context="{'group_by':'user_id'}"/>
+                        <filter string="Team" context="{'group_by':'team_id'}"/>
+                        <filter string="Type" context="{'group_by':'type'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_service_booking" model="ir.actions.act_window">
+            <field name="name">Booking/meeting</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">service.booking</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('izi_crm_booking.services_booking_tree_view')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('izi_crm_booking.service_booking_form_view')})]"/>
+            <field name='context'>{'search_default_activities_today': 1}</field>
+        </record>
+
+        <record id="action_service_booking_by_partner" model="ir.actions.act_window">
+            <field name="name">Booking/meeting</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">service.booking</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('izi_crm_booking.services_booking_tree_view')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('izi_crm_booking.service_booking_form_view')})]"/>
+            <field name='domain'>[('customer_id', '=', active_id)]</field>
+        </record>
+
+        <menuitem id="menu_service_booking"
+                  name="Booking/Meeting"
+                  action="action_service_booking"
+                  parent="crm.crm_menu_root"/>
+    </data>
+</odoo>

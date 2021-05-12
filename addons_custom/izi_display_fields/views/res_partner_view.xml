@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="display_field_partner_tree" model="ir.ui.view">
+            <field name="name">Partner</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="izi_use_service_card.view_partner_tree_korea_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='phone']" position="replace">
+                    <field name="phone" groups="izi_display_fields.group_display_phone"/>
+                </xpath>
+                <xpath expr="//field[@name='x_loyal_total']" position="replace">
+                    <field name="x_loyal_total" groups="izi_display_fields.group_display_loyal_total"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

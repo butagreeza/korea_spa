@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="schedule_transfer_reason_tree_view">
+            <field name="name">Schedule Transfer Reason</field>
+            <field name="model">schedule.transfer.reason</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="schedule_transfer_reason_action">
+            <field name="name">Schedule Transfer Reason</field>
+            <field name="res_model">schedule.transfer.reason</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        </record>
+
+        <menuitem name="Schedule Transfer Reason" id="schedule_transfer_reason_setting_menu" action="schedule_transfer_reason_action" parent="crm.crm_menu_config" sequence="11"/>
+    </data>
+</odoo>

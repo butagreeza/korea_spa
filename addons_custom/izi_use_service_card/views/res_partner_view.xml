@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <template id="history_use_service" name="history_use_service_js" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/izi_use_service_card/static/src/js/employee_card_detail.js"/>
+            </xpath>
+        </template>
+        <!-- Bổ sung thông tin vào biểu mẫu của partner -->
+        <record id="izi_history_service_view_partner_form" model="ir.ui.view">
+            <field name="name">izi.res.partner.form.presenter</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="izi_pos_custom_backend.izi_history_order_line_view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='history_order']" position="after">
+                    <page string="Lịch sử sử dụng dịch vụ" name="history_service">
+                        <field name="id" widget="use_service_detail" style="width:100%;"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_partner_tree_korea_inherit" model="ir.ui.view">
+            <field name="name">izi.res.partner</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="res_partner_custom.view_partner_tree_korea"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='x_age']" position="after">
+                    <field name="x_first_date_use_service"/>
+                    <field name="phone" groups="izi_display_fields.group_display_phone"/>
+                </xpath>
+
+                <xpath expr="//field[@name='x_old_code']" position="after">
+                    <field name="user_id"/>
+                    <field name="x_end_date_use_service"/>
+                    <field name="x_loyal_total"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,798 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_report_birt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-13 06:53+0000\n"
+"PO-Revision-Date: 2021-01-13 06:53+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+"Language: vi\n"
+"X-Generator: Poedit 2.2.3\n"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+#: selection:report.birthday.partner,month:0
+#: selection:rpt.birthday.partner,from_month:0
+#: selection:rpt.birthday.partner,to_month:0
+msgid "01"
+msgstr "01"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+#: selection:report.birthday.partner,month:0
+#: selection:rpt.birthday.partner,from_month:0
+#: selection:rpt.birthday.partner,to_month:0
+msgid "02"
+msgstr "02"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+#: selection:report.birthday.partner,month:0
+#: selection:rpt.birthday.partner,from_month:0
+#: selection:rpt.birthday.partner,to_month:0
+msgid "03"
+msgstr "03"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+#: selection:report.birthday.partner,month:0
+#: selection:rpt.birthday.partner,from_month:0
+#: selection:rpt.birthday.partner,to_month:0
+msgid "04"
+msgstr "04"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+#: selection:report.birthday.partner,month:0
+#: selection:rpt.birthday.partner,from_month:0
+#: selection:rpt.birthday.partner,to_month:0
+msgid "05"
+msgstr "05"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+#: selection:report.birthday.partner,month:0
+#: selection:rpt.birthday.partner,from_month:0
+#: selection:rpt.birthday.partner,to_month:0
+msgid "06"
+msgstr "06"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+#: selection:report.birthday.partner,month:0
+#: selection:rpt.birthday.partner,from_month:0
+#: selection:rpt.birthday.partner,to_month:0
+msgid "07"
+msgstr "07"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+#: selection:report.birthday.partner,month:0
+#: selection:rpt.birthday.partner,from_month:0
+#: selection:rpt.birthday.partner,to_month:0
+msgid "08"
+msgstr "08"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+#: selection:report.birthday.partner,month:0
+#: selection:rpt.birthday.partner,from_month:0
+#: selection:rpt.birthday.partner,to_month:0
+msgid "09"
+msgstr "09"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+#: selection:report.birthday.partner,month:0
+#: selection:rpt.birthday.partner,from_month:0
+#: selection:rpt.birthday.partner,to_month:0
+msgid "10"
+msgstr "10"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+#: selection:report.birthday.partner,month:0
+#: selection:rpt.birthday.partner,from_month:0
+#: selection:rpt.birthday.partner,to_month:0
+msgid "11"
+msgstr "11"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+#: selection:report.birthday.partner,month:0
+#: selection:rpt.birthday.partner,from_month:0
+#: selection:rpt.birthday.partner,to_month:0
+msgid "12"
+msgstr "12"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+msgid "13"
+msgstr "13"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+msgid "14"
+msgstr "14"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+msgid "15"
+msgstr "15"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+msgid "16"
+msgstr "16"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+msgid "17"
+msgstr "17"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+msgid "18"
+msgstr "18"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+msgid "19"
+msgstr "19"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+msgid "20"
+msgstr "20"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+msgid "21"
+msgstr "21"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+msgid "22"
+msgstr "22"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+msgid "23"
+msgstr "23"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+msgid "24"
+msgstr "24"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+msgid "25"
+msgstr "25"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+msgid "26"
+msgstr "26"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+msgid "27"
+msgstr "27"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+msgid "28"
+msgstr "28"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+msgid "29"
+msgstr "29"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+msgid "30"
+msgstr "30"
+
+#. module: crm_report_birt
+#: selection:report.birthday.partner,date:0
+msgid "31"
+msgstr "31"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_fail_select_config_all
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_lead_select_config_all
+msgid "All Config"
+msgstr "Tất cả điểm bán hàng"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_handling_by_department_select_emp_all
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_fail_select_all
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_lead_select_all
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_service_reminder_calender_select_all_employee
+msgid "All Employee"
+msgstr "Tất cả nhân viên"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_customer_new_select_all
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_service_reminder_calender_select_all_config
+msgid "All Pos Config"
+msgstr "Tất cả điểm bán hàng"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_state_select_all_stage
+msgid "All Stage"
+msgstr "Tất cả trạng thái"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_state_select_team_all
+msgid "All Team"
+msgstr "Tất cả chi nhánh"
+
+#. module: crm_report_birt
+#: code:addons/crm_report_birt/models/report_care_customer_counselor.py:17
+#: code:addons/crm_report_birt/models/report_care_customer_counselor.py:32
+#: code:addons/crm_report_birt/models/report_give_gift_partner.py:17
+#: code:addons/crm_report_birt/models/report_give_gift_partner.py:33
+#: code:addons/crm_report_birt/models/report_interaction_partner.py:19
+#: code:addons/crm_report_birt/models/report_interaction_partner.py:56
+#: code:addons/crm_report_birt/models/report_job_handling_by_department.py:27
+#: code:addons/crm_report_birt/models/report_job_handling_by_department.py:52
+#: code:addons/crm_report_birt/models/report_job_performance.py:18
+#: code:addons/crm_report_birt/models/report_job_performance.py:45
+#: code:addons/crm_report_birt/models/report_partner_feedback.py:17
+#: code:addons/crm_report_birt/models/report_partner_feedback.py:33
+#: code:addons/crm_report_birt/models/rpt_crm_customer_new.py:19
+#, python-format
+msgid "Báº¡n pháº£i cáº¥u hÃ¬nh birt_url"
+msgstr "Báº¡n pháº£i cáº¥u hÃ¬nh birt_url"
+
+#. module: crm_report_birt
+#: code:addons/crm_report_birt/models/crm_service_reminder_calender.py:24
+#: code:addons/crm_report_birt/models/crm_service_reminder_calender.py:59
+#: code:addons/crm_report_birt/models/models.py:23
+#: code:addons/crm_report_birt/models/models.py:70
+#: code:addons/crm_report_birt/models/report_birthday_partner.py:35
+#: code:addons/crm_report_birt/models/report_birthday_partner.py:51
+#: code:addons/crm_report_birt/models/rpt_birthday_partner.py:23
+#: code:addons/crm_report_birt/models/rpt_birthday_partner.py:51
+#: code:addons/crm_report_birt/models/rpt_crm_fail.py:23
+#: code:addons/crm_report_birt/models/rpt_crm_state.py:36
+#: code:addons/crm_report_birt/models/rpt_crm_state.py:74
+#: code:addons/crm_report_birt/models/rpt_partner_not_revenue_date.py:20
+#: code:addons/crm_report_birt/models/rpt_partner_not_revenue_date.py:43
+#: code:addons/crm_report_birt/models/rpt_revenue_detail_default_use.py:58
+#: code:addons/crm_report_birt/models/rpt_revenue_sum.py:58
+#, python-format
+msgid "Bạn phải cấu hình birt_url"
+msgstr "Bạn phải cấu hình birt_url"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_birthday_partner_code
+msgid "Code"
+msgstr "Mã"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_birthday_partner_create_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_care_customer_counselor_create_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_give_gift_partner_create_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_interaction_partner_create_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_handling_by_department_create_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_performance_create_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_partner_feedback_create_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_birthday_partner_create_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_customer_new_create_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_fail_create_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_lead_create_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_service_reminder_calender_create_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_state_create_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_partner_not_revenue_date_create_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_detail_default_use_create_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_sum_default_use_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_birthday_partner_create_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_care_customer_counselor_create_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_give_gift_partner_create_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_interaction_partner_create_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_handling_by_department_create_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_performance_create_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_partner_feedback_create_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_birthday_partner_create_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_customer_new_create_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_fail_create_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_lead_create_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_service_reminder_calender_create_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_state_create_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_partner_not_revenue_date_create_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_detail_default_use_create_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_sum_default_use_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_birthday_partner_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_partner_not_revenue_date_date
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_partner_not_revenue_date_date_default
+msgid "Date Default"
+msgstr "Ngày mặc định"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_interaction_partner_department_ids
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_handling_by_department_department_id
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_performance_department_ids
+msgid "Department"
+msgstr "Phòng ban"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_birthday_partner_display_name
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_care_customer_counselor_display_name
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_give_gift_partner_display_name
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_interaction_partner_display_name
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_handling_by_department_display_name
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_performance_display_name
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_partner_feedback_display_name
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_birthday_partner_display_name
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_customer_new_display_name
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_fail_display_name
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_lead_display_name
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_service_reminder_calender_display_name
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_state_display_name
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_partner_not_revenue_date_display_name
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_detail_default_use_display_name
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_sum_default_use_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_interaction_partner_employee_ids
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_handling_by_department_employee_ids
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_fail_employee_ids
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_lead_employee_ids
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_service_reminder_calender_employee_id
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_detail_default_use_employee_id
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_sum_default_use_employee_id
+msgid "Employee"
+msgstr "Người lao động"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_care_customer_counselor_from_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_give_gift_partner_from_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_interaction_partner_from_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_handling_by_department_from_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_performance_from_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_partner_feedback_from_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_customer_new_from_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_fail_from_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_lead_from_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_service_reminder_calender_from_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_state_from_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_detail_default_use_from_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_sum_default_use_from_date
+msgid "From Date"
+msgstr "Từ ngày"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_birthday_partner_from_month
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_birthday_partner_from_month
+msgid "From Month"
+msgstr "Từ tháng"
+
+#. module: crm_report_birt
+#: selection:rpt.crm.service.reminder.calender,type:0
+msgid "HTKH"
+msgstr "Hỏi thăm khách hàng"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_birthday_partner_id
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_care_customer_counselor_id
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_give_gift_partner_id
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_interaction_partner_id
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_handling_by_department_id
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_performance_id
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_partner_feedback_id
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_birthday_partner_id
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_customer_new_id
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_fail_id
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_lead_id
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_service_reminder_calender_id
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_state_id
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_partner_not_revenue_date_id
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_detail_default_use_id
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_sum_default_use_id
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_birthday_partner___last_update
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_care_customer_counselor___last_update
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_give_gift_partner___last_update
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_interaction_partner___last_update
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_handling_by_department___last_update
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_performance___last_update
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_partner_feedback___last_update
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_birthday_partner___last_update
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_customer_new___last_update
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_fail___last_update
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_lead___last_update
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_service_reminder_calender___last_update
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_state___last_update
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_partner_not_revenue_date___last_update
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_detail_default_use___last_update
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_sum_default_use___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_birthday_partner_write_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_care_customer_counselor_write_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_give_gift_partner_write_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_interaction_partner_write_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_handling_by_department_write_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_performance_write_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_partner_feedback_write_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_birthday_partner_write_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_customer_new_write_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_fail_write_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_lead_write_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_service_reminder_calender_write_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_state_write_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_partner_not_revenue_date_write_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_detail_default_use_write_uid
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_sum_default_use_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_birthday_partner_write_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_care_customer_counselor_write_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_give_gift_partner_write_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_interaction_partner_write_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_handling_by_department_write_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_performance_write_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_partner_feedback_write_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_birthday_partner_write_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_customer_new_write_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_fail_write_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_lead_write_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_service_reminder_calender_write_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_state_write_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_partner_not_revenue_date_write_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_detail_default_use_write_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_sum_default_use_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_birthday_partner_month
+msgid "Month"
+msgstr "Tháng"
+
+#. module: crm_report_birt
+#: selection:rpt.crm.service.reminder.calender,type:0
+msgid "NLKH"
+msgstr "Nhắc lịch khách hàng"
+
+#. module: crm_report_birt
+#: model:ir.ui.view,arch_db:crm_report_birt.report_birthday_partner_form
+msgid "Ngày"
+msgstr "Ngày"
+
+#. module: crm_report_birt
+#: model:ir.ui.view,arch_db:crm_report_birt.report_birthday_partner_form
+msgid "Ngày sinh nhật"
+msgstr "Ngày sinh nhật"
+
+#. module: crm_report_birt
+#: model:ir.actions.act_window,name:crm_report_birt.rpt_partner_not_revenue_date_action
+msgid "Partner Not Revenue Date"
+msgstr "Báo cáo khách hàng không phát sinh doanh thu/dịch vụ"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_customer_new_x_pos_config
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_fail_config_ids
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_lead_config_ids
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_service_reminder_calender_config_id
+msgid "Pos Config"
+msgstr "Cấu hình điểm bán hàng"
+
+#. module: crm_report_birt
+#: model:ir.ui.view,arch_db:crm_report_birt.rpt_birthday_partner_form
+#: model:ir.ui.view,arch_db:crm_report_birt.rpt_crm_service_reminder_calender
+#: model:ir.ui.view,arch_db:crm_report_birt.rpt_partner_not_revenue_date
+msgid "Print Excel"
+msgstr "In Excel"
+
+#. module: crm_report_birt
+#: model:ir.ui.view,arch_db:crm_report_birt.report_birthday_partner_form
+#: model:ir.ui.view,arch_db:crm_report_birt.report_care_customer_counselor_form
+#: model:ir.ui.view,arch_db:crm_report_birt.report_give_gift_partner_form
+#: model:ir.ui.view,arch_db:crm_report_birt.report_interaction_partner_form
+#: model:ir.ui.view,arch_db:crm_report_birt.report_job_handling_by_department_form
+#: model:ir.ui.view,arch_db:crm_report_birt.report_job_performance_form
+#: model:ir.ui.view,arch_db:crm_report_birt.report_partner_feedback_form
+#: model:ir.ui.view,arch_db:crm_report_birt.rpt_birthday_partner_form
+#: model:ir.ui.view,arch_db:crm_report_birt.rpt_crm_customer_new_from
+#: model:ir.ui.view,arch_db:crm_report_birt.rpt_crm_fail_from
+#: model:ir.ui.view,arch_db:crm_report_birt.rpt_crm_lead_form
+#: model:ir.ui.view,arch_db:crm_report_birt.rpt_crm_service_reminder_calender
+#: model:ir.ui.view,arch_db:crm_report_birt.rpt_crm_state_from
+#: model:ir.ui.view,arch_db:crm_report_birt.rpt_partner_not_revenue_date
+#: model:ir.ui.view,arch_db:crm_report_birt.rpt_revenue_allocation_detail_default_use_form
+#: model:ir.ui.view,arch_db:crm_report_birt.rpt_revenue_allocation_sum_default_use_form
+msgid "Print Report"
+msgstr "In báo cáo"
+
+#. module: crm_report_birt
+#: model:ir.ui.view,arch_db:crm_report_birt.report_birthday_partner_form
+#: model:ir.ui.view,arch_db:crm_report_birt.report_care_customer_counselor_form
+#: model:ir.ui.view,arch_db:crm_report_birt.report_give_gift_partner_form
+#: model:ir.ui.view,arch_db:crm_report_birt.report_interaction_partner_form
+#: model:ir.ui.view,arch_db:crm_report_birt.report_job_handling_by_department_form
+#: model:ir.ui.view,arch_db:crm_report_birt.report_job_performance_form
+#: model:ir.ui.view,arch_db:crm_report_birt.report_partner_feedback_form
+#: model:ir.ui.view,arch_db:crm_report_birt.rpt_crm_state_from
+msgid "Print Report Excel"
+msgstr "In Excel"
+
+#. module: crm_report_birt
+#: model:ir.ui.view,arch_db:crm_report_birt.rpt_crm_lead_form
+msgid "Print Report Sum"
+msgstr "Báo cáo tổng hợp"
+
+#. module: crm_report_birt
+#: model:ir.actions.act_window,name:crm_report_birt.report_care_customer_counselor_action
+#: model:ir.ui.menu,name:crm_report_birt.report_care_customer_counselor_menu
+msgid "Report Care Customer Counselor"
+msgstr "Báo cáo Chăm sóc khách hàng theo tư vấn"
+
+#. module: crm_report_birt
+#: model:ir.actions.act_window,name:crm_report_birt.report_give_gift_partner_action
+#: model:ir.ui.menu,name:crm_report_birt.report_give_gift_partner_menu
+msgid "Report Give Gift Prtner"
+msgstr "Báo cáo Quà tặng khách hàng"
+
+#. module: crm_report_birt
+#: model:ir.actions.act_window,name:crm_report_birt.report_interaction_partner_action
+#: model:ir.ui.menu,name:crm_report_birt.report_interaction_partner_menu
+msgid "Report Interaction Partner"
+msgstr "Báo cáo Tương tác khách hàng"
+
+#. module: crm_report_birt
+#: model:ir.actions.act_window,name:crm_report_birt.report_job_handling_by_department_action
+#: model:ir.ui.menu,name:crm_report_birt.report_job_handling_by_department_menu
+msgid "Report Job Handling By Department"
+msgstr "Báo cáo Xử lý công việc nội bộ theo phòng ban"
+
+#. module: crm_report_birt
+#: model:ir.actions.act_window,name:crm_report_birt.report_job_performance_action
+#: model:ir.ui.menu,name:crm_report_birt.report_job_performance_menu
+msgid "Report Job Performance"
+msgstr "Báo cáo Hiệu suất công việc theo phòng ban"
+
+#. module: crm_report_birt
+#: model:ir.actions.act_window,name:crm_report_birt.report_birthday_partner_action
+#: model:ir.ui.menu,name:crm_report_birt.report_birthday_partner_menu
+msgid "Report birthday_partner"
+msgstr "Báo cáo Sinh nhật khách hàng"
+
+#. module: crm_report_birt
+#: model:ir.actions.act_window,name:crm_report_birt.report_partner_feedback_action
+#: model:ir.ui.menu,name:crm_report_birt.report_partner_feedback_menu
+msgid "Report partner feedback"
+msgstr "Báo cáo Phản hồi khách hàng "
+
+#. module: crm_report_birt
+#: model:ir.actions.act_window,name:crm_report_birt.rpt_birthday_partner_action
+#: model:ir.ui.menu,name:crm_report_birt.rpt_birthday_partner_menu
+msgid "Rpt Birthday Partner"
+msgstr "Báo cáo sinh nhật khách hàng"
+
+#. module: crm_report_birt
+#: model:ir.ui.menu,name:crm_report_birt.rpt_crm_lead_menu
+msgid "Rpt CRM Lead"
+msgstr "Báo cáo CRM"
+
+#. module: crm_report_birt
+#: model:ir.actions.act_window,name:crm_report_birt.rpt_crm_customer_new_action
+#: model:ir.ui.menu,name:crm_report_birt.rpt_crm_customer_new_menu
+msgid "Rpt Crm Customer New"
+msgstr "Báo cáo khách hàng mới"
+
+#. module: crm_report_birt
+#: model:ir.actions.act_window,name:crm_report_birt.rpt_crm_fail_action
+#: model:ir.ui.menu,name:crm_report_birt.rpt_crm_fail_menu
+msgid "Rpt Crm Fail"
+msgstr "Báo cáo CRM thất bại"
+
+#. module: crm_report_birt
+#: model:ir.actions.act_window,name:crm_report_birt.rpt_crm_lead_action
+msgid "Rpt Crm Lead"
+msgstr "Báo cáo CRM"
+
+#. module: crm_report_birt
+#: model:ir.actions.act_window,name:crm_report_birt.rpt_crm_state_action
+#: model:ir.ui.menu,name:crm_report_birt.rpt_crm_state_menu
+msgid "Rpt Crm State"
+msgstr "Báo cáo CRM  theo trạng thái"
+
+#. module: crm_report_birt
+#: model:ir.ui.menu,name:crm_report_birt.rpt_partner_not_revenue_date_menu
+msgid "Rpt Partner Not Revenue Date"
+msgstr "Báo cáo khách hàng không phát sinh doanh thu/dịch vụ"
+
+#. module: crm_report_birt
+#: model:ir.actions.act_window,name:crm_report_birt.rpt_pos_revenue_detail_default_use_action
+msgid "Rpt Pos Revenue Detial Default Use"
+msgstr "Báo cáo phân bổ doanh thu"
+
+#. module: crm_report_birt
+#: model:ir.actions.act_window,name:crm_report_birt.rpt_pos_revenue_sum_default_use_action
+msgid "Rpt Pos Revenue Sum Default Use"
+msgstr "Báo cáo phân bổ doanh thu tổng"
+
+#. module: crm_report_birt
+#: model:ir.actions.act_window,name:crm_report_birt.rpt_crm_service_reminder_calender_action
+#: model:ir.ui.menu,name:crm_report_birt.rpt_crm_reminder_service_new_menu
+msgid "Rpt Reminder Service"
+msgstr "Báo cáo nhắc lịch khách hàng"
+
+#. module: crm_report_birt
+#: model:ir.ui.menu,name:crm_report_birt.rpt_revenue_datil_default_use_menu
+msgid "Rpt Revenue Allocation Detail Default Use"
+msgstr "Báo cáo phân bổ doanh thu"
+
+#. module: crm_report_birt
+#: model:ir.ui.menu,name:crm_report_birt.rpt_revenue_sum_default_use_menu
+msgid "Rpt Revenue Allocation Sum Default Use"
+msgstr "Báo cáo phân bổ doanh thu tổng"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_birthday_partner_select_all
+msgid "Select all"
+msgstr "Chọn hết"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_state_stage_ids
+msgid "Stage"
+msgstr "Trạng thái"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_state_team_ids
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_detail_default_use_crm_team_ids
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_sum_default_use_crm_team_ids
+msgid "Team"
+msgstr "Nhóm"
+
+#. module: crm_report_birt
+#: model:ir.ui.view,arch_db:crm_report_birt.report_birthday_partner_form
+msgid "Tháng"
+msgstr "Tháng"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_care_customer_counselor_to_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_give_gift_partner_to_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_interaction_partner_to_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_handling_by_department_to_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_job_performance_to_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_partner_feedback_to_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_customer_new_to_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_fail_to_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_lead_to_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_service_reminder_calender_to_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_state_to_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_detail_default_use_to_date
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_revenue_allocation_sum_default_use_to_date
+msgid "To Date"
+msgstr "Đến ngày"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_birthday_partner_to_month
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_birthday_partner_to_month
+msgid "To Month"
+msgstr "Đến tháng"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_rpt_crm_service_reminder_calender_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: crm_report_birt
+#: model:ir.model.fields,field_description:crm_report_birt.field_report_birthday_partner_url_report
+msgid "Url report"
+msgstr "Đường dẫn báo cáo"
+
+#. module: crm_report_birt
+#: model:ir.model,name:crm_report_birt.model_report_birthday_partner
+msgid "report.birthday.partner"
+msgstr "Báo cáo Sinh nhật khách hàng"
+
+#. module: crm_report_birt
+#: model:ir.model,name:crm_report_birt.model_report_care_customer_counselor
+msgid "report.care.customer.counselor"
+msgstr "Báo cáo Chăm sóc khách hàng theo tư vấn"
+
+#. module: crm_report_birt
+#: model:ir.model,name:crm_report_birt.model_report_give_gift_partner
+msgid "report.give.gift.partner"
+msgstr "Báo cáo tặng Quà sinh nhật khách hàng"
+
+#. module: crm_report_birt
+#: model:ir.model,name:crm_report_birt.model_report_interaction_partner
+msgid "report.interaction.partner"
+msgstr "Báo cáo Tương tác khách hàng"
+
+#. module: crm_report_birt
+#: model:ir.model,name:crm_report_birt.model_report_job_handling_by_department
+msgid "report.job.handling.by.department"
+msgstr "Báo cáo Xử lý công việc nội bộ theo phòng ban"
+
+#. module: crm_report_birt
+#: model:ir.model,name:crm_report_birt.model_report_job_performance
+msgid "report.job.performance"
+msgstr "Báo cáo Hiệu suất công việc theo phòng ban"
+
+#. module: crm_report_birt
+#: model:ir.model,name:crm_report_birt.model_report_partner_feedback
+msgid "report.partner.feedback"
+msgstr "Báo cáo Phản hồi khách hàng"
+
+#. module: crm_report_birt
+#: model:ir.model,name:crm_report_birt.model_rpt_birthday_partner
+msgid "rpt.birthday.partner"
+msgstr "rpt.birthday.partner"
+
+#. module: crm_report_birt
+#: model:ir.model,name:crm_report_birt.model_rpt_crm_customer_new
+msgid "rpt.crm.customer.new"
+msgstr "rpt.crm.customer.new"
+
+#. module: crm_report_birt
+#: model:ir.model,name:crm_report_birt.model_rpt_crm_fail
+msgid "rpt.crm.fail"
+msgstr "rpt.crm.fail"
+
+#. module: crm_report_birt
+#: model:ir.model,name:crm_report_birt.model_rpt_crm_lead
+msgid "rpt.crm.lead"
+msgstr "rpt.crm.lead"
+
+#. module: crm_report_birt
+#: model:ir.model,name:crm_report_birt.model_rpt_crm_service_reminder_calender
+msgid "rpt.crm.service.reminder.calender"
+msgstr "rpt.crm.service.reminder.calender"
+
+#. module: crm_report_birt
+#: model:ir.model,name:crm_report_birt.model_rpt_crm_state
+msgid "rpt.crm.state"
+msgstr "rpt.crm.state"
+
+#. module: crm_report_birt
+#: model:ir.model,name:crm_report_birt.model_rpt_partner_not_revenue_date
+msgid "rpt.partner.not.revenue.date"
+msgstr "rpt.partner.not.revenue.date"
+
+#. module: crm_report_birt
+#: model:ir.model,name:crm_report_birt.model_rpt_revenue_allocation_detail_default_use
+msgid "rpt.revenue.allocation.detail.default.use"
+msgstr "rpt.revenue.allocation.detail.default.use"
+
+#. module: crm_report_birt
+#: model:ir.model,name:crm_report_birt.model_rpt_revenue_allocation_sum_default_use
+msgid "rpt.revenue.allocation.sum.default.use"
+msgstr "rpt.revenue.allocation.sum.default.use"

@@ -1,0 +1,425 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* izi_crm_claim
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-25 04:24+0000\n"
+"PO-Revision-Date: 2020-08-25 04:24+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: izi_crm_claim
+#. openerp-web
+#: code:addons/izi_crm_claim/static/src/js/crm_claim_report1.js:61
+#, python-format
+msgid "All"
+msgstr "All"
+
+#. module: izi_crm_claim
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_form_view
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_popup_assign_form_view
+msgid "Assign"
+msgstr "Giao việc"
+
+#. module: izi_crm_claim
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_form_view
+msgid "Back"
+msgstr "Quay lại"
+
+#. module: izi_crm_claim
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_popup_assign_form_view
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_popup_handle_form_view
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_popup_refuse_form_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: izi_crm_claim
+#. openerp-web
+#: code:addons/izi_crm_claim/static/src/xml/crm_claim_report_template.xml:62
+#, python-format
+msgid "Category"
+msgstr "Category"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_cause
+msgid "Cause"
+msgstr "Lý do khách hàng phản hồi"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_cause_refuse
+msgid "Cause refuse"
+msgstr "Lý do từ chối giải quyết"
+
+#. module: izi_crm_claim
+#: model:ir.actions.act_window,name:izi_crm_claim.crm_claim_action_window
+#: model:ir.actions.act_window,name:izi_crm_claim.crm_claim_action_window_by_partner
+#: model:ir.model,name:izi_crm_claim.model_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_res_partner_claim_count
+#: model:ir.model.fields,field_description:izi_crm_claim.field_res_partner_claim_ids
+#: model:ir.ui.menu,name:izi_crm_claim.crm_claim_menu
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_search_view
+#: model:ir.ui.view,arch_db:izi_crm_claim.res_partner_claim_view
+#: model:ir.ui.view,arch_db:izi_crm_claim.res_partner_inherit_claim_form_view
+msgid "Claim"
+msgstr "Phản hồi"
+
+#. module: izi_crm_claim
+#: model:ir.ui.menu,name:izi_crm_claim.crm_claim_report_menu
+msgid "Claim Report"
+msgstr "Báo cáo phản hồi"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_claim_date
+msgid "Claim date"
+msgstr "Thời gian phản hồi"
+
+#. module: izi_crm_claim
+#: model:ir.ui.menu,name:izi_crm_claim.crm_claim_main_menu
+msgid "Claim manager"
+msgstr "Quản lý phản hồi"
+
+#. module: izi_crm_claim
+#: model:ir.actions.act_window,name:izi_crm_claim.crm_claim_report_action_window
+msgid "Claim report"
+msgstr "Claim report"
+
+#. module: izi_crm_claim
+#: model:ir.actions.act_window,name:izi_crm_claim.crm_claim_type_action_window
+#: model:ir.model,name:izi_crm_claim.model_crm_claim_type
+#: model:ir.ui.menu,name:izi_crm_claim.crm_claim_type_menu
+msgid "Claim type"
+msgstr "Loại"
+
+#. module: izi_crm_claim
+#: model:ir.model,name:izi_crm_claim.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_content
+msgid "Content"
+msgstr "Nội dung"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_create_uid
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_report_create_uid
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_type_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_create_date
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_report_create_date
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_type_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_deadline
+msgid "Deadline"
+msgstr "Thời gian cuối cùng xử lý"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_display_name
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_report_display_name
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_type_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_crm_claim
+#: selection:crm.claim,state:0
+msgid "Done"
+msgstr "Xong"
+
+#. module: izi_crm_claim
+#. openerp-web
+#: code:addons/izi_crm_claim/static/src/xml/crm_claim_report_template.xml:50
+#, python-format
+msgid "Export Excel"
+msgstr "Export Excel"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_follower_ids
+msgid "Followers"
+msgstr "Người theo dõi"
+
+#. module: izi_crm_claim
+#. openerp-web
+#: code:addons/izi_crm_claim/static/src/xml/crm_claim_report_template.xml:9
+#, python-format
+msgid "From Date:"
+msgstr "From Date:"
+
+#. module: izi_crm_claim
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_search_view
+msgid "Giai đoạn"
+msgstr "Giai đoạn"
+
+#. module: izi_crm_claim
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_search_view
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: izi_crm_claim
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_form_view
+msgid "Handle"
+msgstr "Xử lý"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_handler_id
+msgid "Handler"
+msgstr "Người xử lý"
+
+#. module: izi_crm_claim
+#: selection:crm.claim,priority:0
+msgid "High"
+msgstr "Cao"
+
+#. module: izi_crm_claim
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_search_view
+msgid "Hạn xử lý"
+msgstr "Hạn xử lý"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_id
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_report_id
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_type_id_9136
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim___last_update
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_report___last_update
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_type___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_report_write_uid
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_type_write_uid
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_report_write_date
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_type_write_date
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_crm_claim
+#: selection:crm.claim,priority:0
+msgid "Low"
+msgstr "Thấp"
+
+#. module: izi_crm_claim
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_search_view
+msgid "Mới"
+msgstr "Mới"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_type_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: izi_crm_claim
+#: selection:crm.claim,state:0
+msgid "New"
+msgstr "Mới"
+
+#. module: izi_crm_claim
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_search_view
+msgid "Người xử lý"
+msgstr "Người xử lý"
+
+#. module: izi_crm_claim
+#: selection:crm.claim,priority:0
+msgid "Normal"
+msgstr "Bình thường"
+
+#. module: izi_crm_claim
+#. openerp-web
+#: code:addons/izi_crm_claim/static/src/xml/crm_claim_report_template.xml:59
+#, python-format
+msgid "Order"
+msgstr "Order"
+
+#. module: izi_crm_claim
+#. openerp-web
+#: code:addons/izi_crm_claim/static/src/xml/crm_claim_report_template.xml:60
+#, python-format
+msgid "Order Detail"
+msgstr "Order Detail"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_partner_id
+msgid "Partner"
+msgstr "Khách hàng"
+
+#. module: izi_crm_claim
+#. openerp-web
+#: code:addons/izi_crm_claim/static/src/xml/crm_claim_report_template.xml:64
+#, python-format
+msgid "Payment"
+msgstr "Payment"
+
+#. module: izi_crm_claim
+#. openerp-web
+#: code:addons/izi_crm_claim/static/src/js/crm_claim_report1.js:20
+#, python-format
+msgid "Point Of Sale Report"
+msgstr "Point Of Sale Report"
+
+#. module: izi_crm_claim
+#. openerp-web
+#: code:addons/izi_crm_claim/static/src/xml/crm_claim_report_template.xml:35
+#, python-format
+msgid "Point of Sale:"
+msgstr "Point of Sale:"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_priority
+msgid "Priority"
+msgstr "Mức độ ưu tiên"
+
+#. module: izi_crm_claim
+#: selection:crm.claim,state:0
+msgid "Processing"
+msgstr "Đang xử lý"
+
+#. module: izi_crm_claim
+#. openerp-web
+#: code:addons/izi_crm_claim/static/src/xml/crm_claim_report_template.xml:61
+#, python-format
+msgid "Product"
+msgstr "Product"
+
+#. module: izi_crm_claim
+#: selection:crm.claim,state:0
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_form_view
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_popup_refuse_form_view
+msgid "Refuse"
+msgstr "Từ chối"
+
+#. module: izi_crm_claim
+#. openerp-web
+#: code:addons/izi_crm_claim/static/src/xml/crm_claim_report_template.xml:55
+#, python-format
+msgid "Report Type:"
+msgstr "Report Type:"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_resolution
+msgid "Resolution"
+msgstr "Hướng giải quyết"
+
+#. module: izi_crm_claim
+#. openerp-web
+#: code:addons/izi_crm_claim/static/src/xml/crm_claim_report_template.xml:63
+#, python-format
+msgid "Saleman"
+msgstr "Saleman"
+
+#. module: izi_crm_claim
+#. openerp-web
+#: code:addons/izi_crm_claim/static/src/xml/crm_claim_report_template.xml:38
+#, python-format
+msgid "Select Point of Sale"
+msgstr "Select Point of Sale"
+
+#. module: izi_crm_claim
+#. openerp-web
+#: code:addons/izi_crm_claim/static/src/xml/crm_claim_report_template.xml:58
+#, python-format
+msgid "Select Report Type"
+msgstr "Select Report Type"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_state
+msgid "State"
+msgstr "Trạng thái xử lý"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_name
+msgid "Subject"
+msgstr "Chủ đề"
+
+#. module: izi_crm_claim
+#. openerp-web
+#: code:addons/izi_crm_claim/static/src/xml/crm_claim_report_template.xml:47
+#, python-format
+msgid "Take Data"
+msgstr "Take Data"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_crm_team_id
+msgid "Team"
+msgstr "Cơ sở làm dịch vụ"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,help:izi_crm_claim.field_crm_claim_user_id
+msgid "The internal user that is in charge of communicating with this contact if any."
+msgstr "The internal user that is in charge of communicating with this contact if any."
+
+#. module: izi_crm_claim
+#. openerp-web
+#: code:addons/izi_crm_claim/static/src/xml/crm_claim_report_template.xml:22
+#, python-format
+msgid "To Date:"
+msgstr "To Date:"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_type_ids
+msgid "Type"
+msgstr "Loại"
+
+#. module: izi_crm_claim
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_search_view
+msgid "Từ chối"
+msgstr "Từ chối"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_report_url_report
+msgid "Url report"
+msgstr "Đường dẫn báo cáo"
+
+#. module: izi_crm_claim
+#: model:ir.model.fields,field_description:izi_crm_claim.field_crm_claim_user_id
+msgid "User"
+msgstr "Chuyên gia tư vấn"
+
+#. module: izi_crm_claim
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_search_view
+msgid "Xong"
+msgstr "Xong"
+
+#. module: izi_crm_claim
+#: model:ir.model,name:izi_crm_claim.model_crm_claim_type
+msgid "crm.claim.type"
+msgstr "Loại phản hồi"
+
+#. module: izi_crm_claim
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_popup_handle_form_view
+msgid "handle"
+msgstr "Xử lý"
+
+#. module: izi_crm_claim
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_popup_assign_form_view
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_popup_handle_form_view
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_popup_refuse_form_view
+msgid "or"
+msgstr "hoặc"
+
+#. module: izi_crm_claim
+#: model:ir.ui.view,arch_db:izi_crm_claim.crm_claim_search_view
+msgid "Đang xử lý"
+msgstr "Đang xử lý"
+

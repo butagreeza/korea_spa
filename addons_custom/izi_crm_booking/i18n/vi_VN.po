@@ -1,0 +1,469 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* izi_crm_booking
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-26 16:26+0000\n"
+"PO-Revision-Date: 2020-08-26 16:26+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_name
+msgid "Booking"
+msgstr "Lịch hẹn"
+
+#. module: izi_crm_booking
+#: model:ir.actions.act_window,name:izi_crm_booking.action_booking_period
+#: model:ir.ui.menu,name:izi_crm_booking.menu_booking_period
+msgid "Booking Period"
+msgstr "Khung giờ đặt hẹn"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking_booking_period_id
+#: model:ir.ui.view,arch_db:izi_crm_booking.view_service_booking_search
+msgid "Booking period"
+msgstr "Khung giờ đặt hẹn"
+
+#. module: izi_crm_booking
+#: model:ir.ui.menu,name:izi_crm_booking.menu_service_booking
+#: model:ir.ui.view,arch_db:izi_crm_booking.crm_case_form_view_leads_service_booking_inherit
+#: model:ir.ui.view,arch_db:izi_crm_booking.izi_respartner_service_booking_inherit
+msgid "Booking/Meeting"
+msgstr "Lịch hẹn"
+
+#. module: izi_crm_booking
+#: model:ir.actions.act_window,name:izi_crm_booking.action_service_booking
+#: model:ir.actions.act_window,name:izi_crm_booking.action_service_booking_by_partner
+msgid "Booking/meeting"
+msgstr "Lịch hẹn"
+
+#. module: izi_crm_booking
+#: code:addons/izi_crm_booking/wizards/list_booking_by_employee.py:21
+#, python-format
+msgid "Bạn đang chọn điều kiện ngày không đúng."
+msgstr "Bạn đang chọn điều kiện ngày không đúng."
+
+#. module: izi_crm_booking
+#: code:addons/izi_crm_booking/models/booking_period.py:21
+#, python-format
+msgid "Call now"
+msgstr "Cần gọi ngay"
+
+#. module: izi_crm_booking
+#: model:ir.ui.view,arch_db:izi_crm_booking.crm_case_form_view_leads_service_booking_inherit
+#: model:ir.ui.view,arch_db:izi_crm_booking.service_booking_form_view
+#: model:ir.ui.view,arch_db:izi_crm_booking.service_booking_form_view_1
+#: selection:service.booking,state:0
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: izi_crm_booking
+#: model:ir.ui.view,arch_db:izi_crm_booking.view_service_booking_search
+msgid "Cate"
+msgstr "Cate"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_res_users_conpute_id
+msgid "Compute View"
+msgstr "Compute View"
+
+#. module: izi_crm_booking
+#: model:ir.model,name:izi_crm_booking.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_line_contact_number
+msgid "Contact Number"
+msgstr "Số điện thoại"
+
+#. module: izi_crm_booking
+#: model:ir.ui.view,arch_db:izi_crm_booking.crm_case_form_view_leads_service_booking_inherit
+msgid "Create Booking/Meeting"
+msgstr "Tạo lịch hẹn"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_booking_period_create_uid
+#: model:ir.model.fields,field_description:izi_crm_booking.field_confirm_dialog_create_uid
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_create_uid
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_line_create_uid
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_booking_period_create_date
+#: model:ir.model.fields,field_description:izi_crm_booking.field_confirm_dialog_create_date
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_create_date
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_line_create_date
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking_customer_id
+#: model:ir.ui.view,arch_db:izi_crm_booking.crm_case_form_view_leads_service_booking_inherit
+#: model:ir.ui.view,arch_db:izi_crm_booking.service_booking_form_view
+#: model:ir.ui.view,arch_db:izi_crm_booking.view_service_booking_search
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: izi_crm_booking
+#: selection:service.booking,type:0
+msgid "Customer meeting"
+msgstr "Lịch hẹn tư vấn"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking_date
+#: model:ir.ui.view,arch_db:izi_crm_booking.view_service_booking_search
+msgid "Date"
+msgstr "Ngày"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_crm_lead_service_booking_count
+#: model:ir.model.fields,field_description:izi_crm_booking.field_res_partner_x_service_booking_count
+#: model:ir.model.fields,field_description:izi_crm_booking.field_res_users_x_service_booking_count
+msgid "Delivery Orders"
+msgstr "Phiếu giao hàng"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_res_users_deposit_line_ids
+#: model:ir.model.fields,field_description:izi_crm_booking.field_res_users_destroy_service_ids
+msgid "Destroy Service"
+msgstr "Hủy dịch vụ"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_booking_period_display_name
+#: model:ir.model.fields,field_description:izi_crm_booking.field_confirm_dialog_display_name
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_display_name
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_line_display_name
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_employee_id
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_line_employee_id
+msgid "Employee"
+msgstr "Kỹ thuật viên(Book)"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_res_users_exchange_service_ids
+msgid "Exchange Service"
+msgstr "Đổi dịch vụ"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_from_date
+msgid "From date"
+msgstr "Từ ngày"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_booking_period_from_time
+msgid "From time"
+msgstr "Thời gian đặt hẹn"
+
+#. module: izi_crm_booking
+#: model:ir.ui.view,arch_db:izi_crm_booking.view_service_booking_search
+msgid "Future Activities"
+msgstr "Hoạt động tương lai"
+
+#. module: izi_crm_booking
+#: model:ir.ui.view,arch_db:izi_crm_booking.view_service_booking_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_booking_period_id
+#: model:ir.model.fields,field_description:izi_crm_booking.field_confirm_dialog_id
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_id
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_line_id
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking_id
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_booking_period___last_update
+#: model:ir.model.fields,field_description:izi_crm_booking.field_confirm_dialog___last_update
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee___last_update
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_line___last_update
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_booking_period_write_uid
+#: model:ir.model.fields,field_description:izi_crm_booking.field_confirm_dialog_write_uid
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_line_write_uid
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_write_uid
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_booking_period_write_date
+#: model:ir.model.fields,field_description:izi_crm_booking.field_confirm_dialog_write_date
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_line_write_date
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_write_date
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking_lead_id
+msgid "Lead"
+msgstr "Cơ hội bán hàng"
+
+#. module: izi_crm_booking
+#: model:ir.model,name:izi_crm_booking.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Cơ hội bán hàng"
+
+#. module: izi_crm_booking
+#: code:addons/izi_crm_booking/wizards/list_booking_by_employee.py:58
+#, python-format
+msgid "List Booking"
+msgstr "Danh sách lịch hẹn"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_res_users_coupon_ids
+#: model:ir.model.fields,field_description:izi_crm_booking.field_res_users_lot_ids
+msgid "Lot Id"
+msgstr "Lot Id"
+
+#. module: izi_crm_booking
+#: code:addons/izi_crm_booking/models/crm_stage.py:12
+#, python-format
+msgid "Meeting"
+msgstr "Lịch hẹn tư vấn"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_confirm_dialog_message
+msgid "Message"
+msgstr "Thông điệp"
+
+#. module: izi_crm_booking
+#: model:ir.ui.view,arch_db:izi_crm_booking.service_booking_form_view
+#: selection:service.booking,state:0
+msgid "Met"
+msgstr "Đã gặp"
+
+#. module: izi_crm_booking
+#: model:ir.ui.view,arch_db:izi_crm_booking.view_service_booking_search
+msgid "Month"
+msgstr "Tháng"
+
+#. module: izi_crm_booking
+#: model:ir.ui.view,arch_db:izi_crm_booking.view_service_booking_search
+msgid "My Activities"
+msgstr "Hoạt động của tôi"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_booking_period_name
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_line_name
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking_note
+#: model:ir.ui.view,arch_db:izi_crm_booking.service_booking_form_view
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_line_partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking_partner_status_ids
+msgid "Partner status"
+msgstr "Tình trạng khách hàng"
+
+#. module: izi_crm_booking
+#: model:ir.model,name:izi_crm_booking.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Point of Sale Orders"
+
+#. module: izi_crm_booking
+#: model:ir.model,name:izi_crm_booking.model_product_product
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: izi_crm_booking
+#: model:ir.model,name:izi_crm_booking.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking_categ_id
+msgid "Product category"
+msgstr "Nhóm dịch vụ"
+
+#. module: izi_crm_booking
+#: selection:service.booking,state:0
+msgid "Ready"
+msgstr "Sẵn sàng"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_res_users_service_ids
+msgid "Service"
+msgstr "Dịch vụ"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_crm_lead_service_booking_ids
+#: model:ir.model.fields,field_description:izi_crm_booking.field_res_partner_x_service_booking_ids
+#: model:ir.model.fields,field_description:izi_crm_booking.field_res_users_x_service_booking_ids
+#: model:ir.ui.view,arch_db:izi_crm_booking.view_service_booking_search
+msgid "Service Booking"
+msgstr "Lịch hẹn"
+
+#: selection:service.booking,type:0
+msgid "Service Booking"
+msgstr "Lịch hẹn làm dịch vụ"
+
+#. module: izi_crm_booking
+#: model:ir.model,name:izi_crm_booking.model_service_booking
+msgid "Service booking"
+msgstr "Lịch hẹn"
+
+#. module: izi_crm_booking
+#: model:ir.model,name:izi_crm_booking.model_service_booking_product
+msgid "Service booking product"
+msgstr "Service booking product"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking_services
+#: model:ir.ui.view,arch_db:izi_crm_booking.crm_case_form_view_leads_service_booking_inherit
+#: model:ir.ui.view,arch_db:izi_crm_booking.service_booking_form_view_1
+msgid "Services"
+msgstr "Các dịch vụ"
+
+#. module: izi_crm_booking
+#: model:ir.model,name:izi_crm_booking.model_crm_stage
+msgid "Stage of case"
+msgstr "Trạng thái"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking_state
+#: model:ir.ui.view,arch_db:izi_crm_booking.view_service_booking_search
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_line_team_id
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_team_id
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking_team_id
+#: model:ir.ui.view,arch_db:izi_crm_booking.view_service_booking_search
+msgid "Team"
+msgstr "Cơ sở đặt hẹn"
+
+#. module: izi_crm_booking
+#: code:addons/izi_crm_booking/models/service_booking_product.py:27
+#: code:addons/izi_crm_booking/wizards/list_booking_by_employee.py:21
+#, python-format
+msgid "Thông báo"
+msgstr "Thông báo"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_line_time
+msgid "Time"
+msgstr "Time"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_crm_lead_time_booking
+msgid "Time Booking"
+msgstr "Thời gian đặt hẹn"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_line_time_from
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking_time_from
+msgid "Time From"
+msgstr "Thời gian bắt đầu"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_line_time_to
+msgid "Time To"
+msgstr "Thời gian kết thúc"
+
+#. module: izi_crm_booking
+#: model:ir.ui.view,arch_db:izi_crm_booking.view_service_booking_search
+msgid "Timesheet by Date"
+msgstr "Timesheet by Date"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_booking_period_to_time
+msgid "To Time"
+msgstr "To Time"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_list_booking_by_employee_to_date
+msgid "To date"
+msgstr "Đến ngày "
+
+#. module: izi_crm_booking
+#: model:ir.ui.view,arch_db:izi_crm_booking.view_service_booking_search
+msgid "Today Activities"
+msgstr "Hoạt động hôm nay"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking_type
+#: model:ir.ui.view,arch_db:izi_crm_booking.view_service_booking_search
+msgid "Type"
+msgstr "Loại"
+
+#. module: izi_crm_booking
+#: model:ir.model.fields,field_description:izi_crm_booking.field_service_booking_user_id
+#: model:ir.ui.view,arch_db:izi_crm_booking.view_service_booking_search
+msgid "User"
+msgstr "Đặt hẹn nhân viên"
+
+#. module: izi_crm_booking
+#: code:addons/izi_crm_booking/models/service_booking_product.py:28
+#, python-format
+msgid "Vui lòng chọn khách hàng trước khi chọn sản phẩm!"
+msgstr "Vui lòng chọn khách hàng trước khi chọn sản phẩm!"
+
+#. module: izi_crm_booking
+#: model:ir.ui.view,arch_db:izi_crm_booking.view_service_booking_search
+msgid "Year"
+msgstr "Năm"
+
+#. module: izi_crm_booking
+#: model:ir.model,name:izi_crm_booking.model_booking_period
+msgid "booking.period"
+msgstr "Khung giờ đặt hẹn"
+
+#. module: izi_crm_booking
+#: model:ir.model,name:izi_crm_booking.model_confirm_dialog
+msgid "confirm.dialog"
+msgstr "confirm.dialog"
+
+#. module: izi_crm_booking
+#: model:ir.model,name:izi_crm_booking.model_izi_service_card_using
+msgid "izi.service.card.using"
+msgstr "izi.service.card.using"
+
+#. module: izi_crm_booking
+#: model:ir.model,name:izi_crm_booking.model_list_booking_by_employee
+msgid "list.booking.by.employee"
+msgstr "list.booking.by.employee"
+
+#. module: izi_crm_booking
+#: model:ir.model,name:izi_crm_booking.model_list_booking_by_employee_line
+msgid "list.booking.by.employee.line"
+msgstr "list.booking.by.employee.line"
+
+#. module: izi_crm_booking
+#: model:ir.model,name:izi_crm_booking.model_pos_service_bed
+msgid "pos.service.bed"
+msgstr "pos.service.bed"
+

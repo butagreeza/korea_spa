@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="rpt_crm_service_reminder_calender" model="ir.ui.view">
+            <field name="name">rpt.crm.service.reminder.calender.new.form</field>
+            <field name="model">rpt.crm.service.reminder.calender</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="from_date" required="1"/>
+                        <field name="to_date" required="1"/>
+                        <field name="type" required="1"/>
+                        <field name="select_all_config"/>
+                        <field name="config_id" options="{'no_create':1, 'no_create_edit':1}" widget="many2many_tags"
+                               attrs="{'invisible': [('select_all_config','=',True)],'required': [('select_all_config','=',False)]}"/>
+                        <field name="select_all_employee" invisible="1"/>
+                        <field name="employee_id" invisible="1"/>
+                    </group>
+                    <footer>
+                        <button class="oe_highlight" name="create_rpt_service_reminder_calender" type="object" string="Print Report"/>
+                        <button class="oe_highlight" name="create_rpt_service_reminder_calender_excel" type="object" string="Print Excel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="rpt_crm_service_reminder_calender_action" model="ir.actions.act_window">
+            <field name="name">Rpt Reminder Service</field>
+            <field name="res_model">rpt.crm.service.reminder.calender</field>
+            <field name="view_mode">form</field>
+            <field name="view_type">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="rpt_crm_reminder_service_new_menu" action="rpt_crm_service_reminder_calender_action" name="Rpt Reminder Service"
+                  parent="crm.crm_menu_report"/>
+    </data>
+</odoo>

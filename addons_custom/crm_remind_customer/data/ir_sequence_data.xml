@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="sequence_izi_service_calender_reminder" model="ir.sequence">
+            <field name="name">CSHK</field>
+            <field name="code">crm.service.calender.reminder</field>
+            <field name="prefix">CSKH/%(y)s%(month)s%(day)s/</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+    </data>
+</odoo>

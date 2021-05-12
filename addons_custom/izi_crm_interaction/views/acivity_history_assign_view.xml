@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="assign_multi_activity_form_view">
+            <field name="name">Assign Activity History</field>
+            <field name="model">activity.history.assign</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="user_id" required="True" options="{'no_create': True}"/>
+                    </group>
+                    <footer>
+                        <button name="assign_activity" string="Assign" type="object" class="btn-primary"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_assign_multi"
+                    key2="client_action_multi" name="Assign activity"
+                    res_model="activity.history.assign" src_model="activity.history"
+                    view_mode="form" view_type="form"
+                    view_id="assign_multi_activity_form_view"
+                    target="new"
+        />
+    </data>
+</odoo>

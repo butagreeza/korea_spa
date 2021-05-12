@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="izi_view_therapy_record_form_inherit" model="ir.ui.view">
+            <field name="name">izi.view.therapy.record.form.inherit</field>
+            <field name="model">therapy.record</field>
+            <field name="inherit_id" ref="izi_therapy_record.izi_view_therapy_record_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header[1]" position="inside">
+                    <button name="create_order" string="Create Order" type="object"
+                                class="oe_highlight" icon="fa-archive"/>
+                </xpath>
+<!--                <xpath expr="//page[@name='therapy_prescription']" position="after">-->
+<!--                    <page string="Bundle Therapies">-->
+<!--                        <field name="therapy_bundle_ids" readonly="1">-->
+<!--                            <tree create="0" default_order='create_date desc'>-->
+<!--                                <field name="create_date" invisible="True" />-->
+<!--                                <field name="name"/>-->
+<!--                                <field name="order_id"/>-->
+<!--                                <field name="amount_total"/>-->
+<!--                                <field name="file_attach"/>-->
+<!--                                <field name="state"/>-->
+<!--                            </tree>-->
+<!--                            <form>-->
+<!--                                <header>-->
+<!--                                    <field name="state" widget="statusbar" statusbar_visible="in_therapy,signed_commitment,stop_care,cancel"/>-->
+<!--                                    <button name="action_sign_therapy_bundle" string="Sign Bundle" type="object" class="btn-primary" attrs="{'invisible': [('state','!=','in_therapy')]}"/>-->
+<!--                                    <button name="action_stop_care" string="Stop Care" type="object" class="btn-primary" attrs="{'invisible': [('state','!=','signed_commitment')]}"/>-->
+<!--                                    <button name="action_cancel" string="Cancel" class="btn-default" attrs="{'invisible': [('state','!=','stop_care')]}"/>-->
+<!--                                </header>-->
+<!--                                <sheet>-->
+<!--                                    <div class="oe_title">-->
+<!--                                        <h1>-->
+<!--                                            <field name="name" placeholder="Tên gói trị liệu..." attrs="{'required': 1}"/>-->
+<!--                                        </h1>-->
+<!--                                    </div>-->
+<!--                                    <group>-->
+<!--                                        <group>-->
+<!--                                            <field name="order_id"/>-->
+<!--                                            <field name="file_attach"/>-->
+<!--                                        </group>-->
+<!--                                        <group>-->
+<!--                                            <field name="amount_total"/>-->
+<!--                                        </group>-->
+<!--                                    </group>-->
+<!--                                    <notebook>-->
+<!--                                        <page string="Therapy bundle Line">-->
+<!--                                            <field name="therapy_bundle_line_ids">-->
+<!--                                                <tree editable="bottom">-->
+<!--                                                    <field name="product_id" attrs="{'required': 1}"/>-->
+<!--                                                    <field name="uom_id"/>-->
+<!--                                                    <field name="qty"/>-->
+<!--                                                    <field name="body_area_ids" widget="many2many_tags"/>-->
+<!--                                                </tree>-->
+<!--                                            </field>-->
+<!--                                        </page>-->
+<!--                                    </notebook>-->
+<!--                                </sheet>-->
+<!--                            </form>-->
+<!--                        </field>-->
+<!--                    </page>-->
+<!--                </xpath>-->
+            </field>
+        </record>
+    </data>
+</odoo>

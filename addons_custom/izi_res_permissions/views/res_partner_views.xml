@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="izi_res_partner_debt_add_groups_form">
+            <field name="name">res.partner.debt.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="izi_pos_custom_backend.izi_res_partner_debt_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_invoice_payment']" position="attributes">
+                    <attribute name="groups">izi_res_permissions.group_cashier</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

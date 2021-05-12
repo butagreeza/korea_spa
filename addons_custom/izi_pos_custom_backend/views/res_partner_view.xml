@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <template id="history_order_line" name="history_order_line_js" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/izi_pos_custom_backend/static/src/js/order_line_detail.js"/>
+            </xpath>
+        </template>
+        <!-- Bổ sung thông tin vào biểu mẫu của partner -->
+        <record id="izi_history_order_line_view_partner_form" model="ir.ui.view">
+            <field name="name">izi.res.partner.form.order.line</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="izi_pos_custom_backend.izi_invoice_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='invoice_service']" position="after">
+                    <page string="Lịch sử đơn hàng" name='history_order' sequence="10">
+<!--                        <div style="width:100%;">-->
+                            <field name="conpute_id" widget="order_line_detail" style="width:100%;"/>
+<!--                        </div>-->
+
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Thêm smart button -->
+        <record id="res_partner_pos_order_view" model="ir.ui.view">
+            <field name="name">Res Partner</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="point_of_sale.view_partner_property_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='%(point_of_sale.action_pos_pos_form)d']" position="replace">
+                    <!-- Đơn hàng-->
+                    <button class="oe_stat_button o_res_partner_tip_opp" type="action"
+                            attrs="{'invisible': [('customer', '=', False)]}"
+                            name="%(izi_pos_custom_backend.action_pos_pos_form_by_partner)d"
+                            icon="fa-shopping-bag"
+                            context="{'default_partner_id': active_id}">
+                        <field string="Đơn hàng" name="pos_order_count" widget="statinfo"/>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

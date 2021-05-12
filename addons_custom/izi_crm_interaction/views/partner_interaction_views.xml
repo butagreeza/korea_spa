@@ -1,0 +1,205 @@
+<odoo>
+    <data>
+        <template id="float_minutes_seconds" name="float_minutes_seconds_js" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/izi_crm_interaction/static/src/js/float_minutes_seconds.js"/>
+            </xpath>
+        </template>
+
+        <!-- Danh sách các tương tác khách hàng -->
+        <record model="ir.ui.view" id="partner_interaction_tree_view">
+            <field name="name">Partner interaction</field>
+            <field name="model">partner.interaction</field>
+            <field name="arch" type="xml">
+                <tree default_order="actual_date desc">
+                    <field name="partner_id"/>
+                    <field name="therapy_record_ids" widget="many2many_tags"/>
+                    <field name="user_id"/>
+                    <field name="expected_date"/>
+                    <field name="actual_date"/>
+                    <field name="read_time"/>
+                    <field name="mail_activity_type_id"/>
+                    <field name="resource_ids" widget="many2many_tags" readonly="True"/>
+                    <field name="picking_ids" widget="many2many_tags" readonly="True"/>
+                    <field name="using_ids" widget="many2many_tags" readonly="True"/>
+                    <field name="product_ids" widget="many2many_tags"/>
+                    <field name="content"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Pop up tương tác khách hàng -->
+<!--        <record id="enter_note_interaction_form_view" model="ir.ui.view">-->
+<!--            <field name="name">enter_note_interaction_form_view</field>-->
+<!--            <field name="model">partner.interaction</field>-->
+<!--            <field name="priority">1024</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="Content">-->
+<!--                    <sheet>-->
+<!--                        <group>-->
+<!--                            <field name="content" required="True"/>-->
+<!--                        </group>-->
+<!--                    </sheet>-->
+<!--                    <footer>-->
+<!--                        <button name="action_done_interaction" string="Done" type="object" class="btn-primary"/>-->
+<!--                        <button string="Skip" special="cancel" class="btn-default"/>-->
+<!--                    </footer>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+
+        <!-- Form view tương tác khách hàng -->
+        <record model="ir.ui.view" id="partner_interaction_form_view">
+            <field name="name">Partner interaction</field>
+            <field name="model">partner.interaction</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_start_read_therapy_record" string="Start read therapy record" type="object"
+                                class="oe_highlight" states="new"/>
+                        <button name="action_end_read_therapy_record" string="Stop read therapy record" type="object"
+                                class="oe_highlight" states="reading"/>
+                        <button name="action_done" string="Done" class="oe_highlight" type="object"
+                                states="processing"/>
+                        <button name="action_create_meeting" string="Create meeting" type="object" states="processing"/>
+                        <button name="action_create_claim" string="Create claim" type="object" states="processing"/>
+                        <button name="action_back_to_draft" string="Back to draft" type="object"
+                                states="reading,processing"/>
+                        <field name="state" widget="statusbar" statusbar_visible="new,reading,processing,done"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="partner_id" options="{'no_create':1, 'no_create_edit':1}" domain="[('customer', '=', True)]" attrs="{'required': 1, 'readonly': [('state', '=', 'done')]}"/>
+                                <field name="phone"/>
+                                <field name="therapy_record_ids" widget="many2many_tags" context="{'search_activity': True, 'partner_id': partner_id}" options="{'no_create':1, 'no_create_edit':1}" domain="[('partner_id', '=', partner_id)]" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                                <field name="product_ids" widget="many2many_tags" attrs="{'invisible': [('product_ids', '=', False)]}"/>
+                                <field name="user_id" options="{'no_create':1, 'no_create_edit':1}" attrs="{'required': 1, 'readonly': [('state', '=', 'done')]}"/>
+                                <field name="read_therapy_record_start" attrs="{'readonly': True}"/>
+                                <field name="read_therapy_record_end" attrs="{'readonly': True}"/>
+                                <field name="read_time" widget="float_minutes_seconds" attrs="{'readonly': True}"/>
+                                <field name="type" readonly="True" invisible="True"/>
+                                <field name="content" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            </group>
+                            <group>
+                                <field name="expected_date" attrs="{'required': 1, 'readonly': [('state', '=', 'done')]}"/>
+                                <field name="actual_date" attrs="{'required': 1, 'readonly': [('state', '=', 'done')]}"/>
+                                <field name="mail_activity_type_id" options="{'no_create':1, 'no_create_edit':1}" attrs="{'required': 1, 'readonly': [('state', '=', 'done')]}"/>
+                                <field name="method_interaction" attrs="{'readonly': [('state', '=', 'done')], 'required': True}"/>
+                                <field name="activity_history_ids" widget="many2many_tags" readonly="True" attrs="{'invisible': [('activity_history_ids', '=', False)]}"/>
+                                <field name="create_uid" readonly="True" />
+                                <field name="resource_ids" widget="many2many_tags" readonly="True" attrs="{'invisible': [('resource_ids', '=', False)]}"/>
+                                <field name="picking_ids" widget="many2many_tags" readonly="True" attrs="{'invisible': [('picking_ids', '=', False)]}"/>
+                                <field name="using_ids" widget="many2many_tags" readonly="True" attrs="{'invisible': [('using_ids', '=', False)]}"/>
+                                <field name="object" readonly="True" invisible="True"/>
+                            </group>
+                        </group>
+                        <h3><label for="feedback_ids"/></h3>
+                        <field name="feedback_ids" attrs="{'readonly': [('state', '=', 'done')]}">
+                            <tree editable="bottom" create="0" delete="0">
+                                <field name="criteria_id" attrs="{'readonly': True}" options="{'no_create':1, 'no_create_edit':1}" force_save="1"/>
+                                <field name="option_id" attrs="{'required': True}" options="{'no_create':1, 'no_create_edit':1}" domain="[('criteria_id', '=', criteria_id)]"/>
+                            </tree>
+                        </field>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--Search tương tác khách hàng-->
+        <record model="ir.ui.view" id="partner_interaction_search_view">
+            <field name="name">Partner interaction</field>
+            <field name="model">partner.interaction</field>
+            <field name="arch" type="xml">
+                <search string="Partner interaction">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="user_id"/>
+                    <separator/>
+                    <filter string="Mới" name="state_new"
+                            domain="[('state', '=', 'new')]"/>
+                    <separator/>
+                    <filter string="Lịch nhắc thuốc" name="type_out_of_medicine"
+                            domain="[('type', '=', 'out_of_medicine')]"/>
+                    <filter string="Lịch nhắc chăm sóc" name="type_customer_care"
+                            domain="[('type', '=', 'customer_care')]"/>
+                    <separator/>
+                    <filter string="Lịch nhắc tư vấn" name="object_consultant"
+                            domain="[('object', '=', 'consultant')]"/>
+                    <filter string="Lịch nhắc CSKH" name="object_customer_care"
+                            domain="[('object', '=', 'customer_care')]"/>
+                    <separator/>
+                    <filter string="Chủ động" name="method_interaction_proactive"
+                            domain="[('method_interaction', '=', 'proactive')]"/>
+                    <filter string="Bị động" name="method_interaction_passive"
+                            domain="[('method_interaction', '=', 'passive')]"/>
+                    <separator/>
+                    <group expand="0" string="Group By">
+                        <separator/>
+                        <filter string="Người tương tác" context="{'group_by': 'user_id'}"/>
+                        <separator/>
+                        <filter string="Giai đoạn" context="{'group_by':'state'}"/>
+                        <separator/>
+                        <filter string="Khách hàng" context="{'group_by':'partner_id'}"/>
+                        <separator/>
+                        <filter string="Hồ sơ trị liệu" context="{'group_by':'therapy_record_ids'}"/>
+                        <separator/>
+                        <filter string="Vị trí công tác" context="{'group_by':'object'}"/>
+                        <separator/>
+                        <filter string="Loại" context="{'group_by':'type'}"/>
+                        <separator/>
+                        <filter string="Hình thức tương tác" context="{'group_by':'method_interaction'}"/>
+                        <separator/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Hành động tương tác khách hàng -->
+        <record model="ir.actions.act_window" id="partner_interaction_action_window">
+            <field name="name">Partner interaction</field>
+            <field name="res_model">partner.interaction</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="search_view_id" ref="partner_interaction_search_view"/>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('partner_interaction_tree_view')}),
+                          (0, 0, {'view_mode': 'form', 'view_id': ref('partner_interaction_form_view')})]"/>
+            <field name="view_type">form</field>
+        </record>
+
+        <record id="action_izi_partner_interaction_by_partner" model="ir.actions.act_window">
+            <field name="name">Partner Interaction</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">partner.interaction</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name='domain'>[('partner_id', '=', active_id)]</field>
+        </record>
+
+        <menuitem name="Partner interaction" id="partner_interaction_main_menu" parent="crm.crm_menu_root"
+                  sequence="2"/>
+
+        <menuitem name="Partner interaction" id="partner_interaction_menu"
+                  parent="izi_crm_interaction.partner_interaction_main_menu" sequence="1"
+                  action="partner_interaction_action_window"/>
+
+
+        <!--<record id="partner_interaction_images_view_form" model="ir.ui.view">-->
+        <!--<field name="name">Image</field>-->
+        <!--<field name="model">partner.interaction.images</field>-->
+        <!--<field name="arch" type="xml">-->
+        <!--<form>-->
+        <!--<field name="image" nolabel="1" widget="image"/>-->
+        <!--</form>-->
+        <!--</field>-->
+        <!--</record>-->
+    </data>
+</odoo>

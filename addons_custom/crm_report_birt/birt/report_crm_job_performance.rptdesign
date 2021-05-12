@@ -1,0 +1,1094 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.5.0.v201506092134 Build &lt;@BUILD@></property>
+    <property name="units">cm</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="from_date" id="6">
+            <text-property name="promptText">from_date</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">date</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2021-01-01</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="to_date" id="7">
+            <text-property name="promptText">to_date</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">date</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2021-03-15</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="department_id" id="8">
+            <text-property name="promptText">department_id</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">12,16</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="4">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.postgresql.Driver</property>
+            <property name="odaURL">jdbc:postgresql://103.145.62.165:5445/korea-erp-07122020</property>
+            <property name="odaUser">korea</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">S3JBQDEyM1ZuMjUwNA==</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set" id="5">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">login</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">login</text-property>
+                    <text-property name="heading">login</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">user_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">user_name</text-property>
+                    <text-property name="heading">user_name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">department_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">department_name</text-property>
+                    <text-property name="heading">department_name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">count_phonecall</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">count_phonecall</text-property>
+                    <text-property name="heading">count_phonecall</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">sum_talk_time</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">sum_talk_time</text-property>
+                    <text-property name="heading">sum_talk_time</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">count_sms</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">count_sms</text-property>
+                    <text-property name="heading">count_sms</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">count_zalo</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">count_zalo</text-property>
+                    <text-property name="heading">count_zalo</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">count_todo</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">count_todo</text-property>
+                    <text-property name="heading">count_todo</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">count_interaction</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">count_interaction</text-property>
+                    <text-property name="heading">count_interaction</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">sum_time_handle_interaction</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">sum_time_handle_interaction</text-property>
+                    <text-property name="heading">sum_time_handle_interaction</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">avg_time_handle_interaction</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">avg_time_handle_interaction</text-property>
+                    <text-property name="heading">avg_time_handle_interaction</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">department_ids</property>
+                    <property name="paramName">department_id</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">department_ids2</property>
+                    <property name="paramName">department_id</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">2</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">from_date</property>
+                    <property name="paramName">from_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">3</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">to_date</property>
+                    <property name="paramName">to_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">4</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">department_ids3</property>
+                    <property name="paramName">department_id</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">5</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">department_ids4</property>
+                    <property name="paramName">department_id</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">6</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="paramName">from_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">7</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_2</property>
+                    <property name="paramName">to_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">8</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">department_ids5</property>
+                    <property name="paramName">department_id</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">9</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">department_ids6</property>
+                    <property name="paramName">department_id</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">10</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_3</property>
+                    <property name="paramName">from_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">11</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_4</property>
+                    <property name="paramName">to_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">12</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">login</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">user_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">department_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">count_phonecall</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">sum_talk_time</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">count_sms</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">count_zalo</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">count_todo</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">count_interaction</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">sum_time_handle_interaction</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">avg_time_handle_interaction</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">login</property>
+                    <property name="nativeName">login</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">user_name</property>
+                    <property name="nativeName">user_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">department_name</property>
+                    <property name="nativeName">department_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">count_phonecall</property>
+                    <property name="nativeName">count_phonecall</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">sum_talk_time</property>
+                    <property name="nativeName">sum_talk_time</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">count_sms</property>
+                    <property name="nativeName">count_sms</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">count_zalo</property>
+                    <property name="nativeName">count_zalo</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">count_todo</property>
+                    <property name="nativeName">count_todo</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">count_interaction</property>
+                    <property name="nativeName">count_interaction</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">sum_time_handle_interaction</property>
+                    <property name="nativeName">sum_time_handle_interaction</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">avg_time_handle_interaction</property>
+                    <property name="nativeName">avg_time_handle_interaction</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT 
+job_performance.login
+, job_performance.user_name
+, job_performance.department_name
+,SUM(job_performance.count_phonecall) as count_phonecall
+,SUM(job_performance.sum_talk_time) as sum_talk_time
+,SUM(job_performance.count_sms) as count_sms
+,SUM(job_performance.count_zalo) as count_zalo
+,SUM(job_performance.count_todo) as count_todo
+,SUM(job_performance.count_interaction) as count_interaction
+,SUM(job_performance.sum_time_handle_interaction) as sum_time_handle_interaction
+,SUM(job_performance.avg_time_handle_interaction) as avg_time_handle_interaction
+FROM (
+	(SELECT 
+	b.login as login
+	, c.name as user_name
+	, f.name as department_name
+	, COUNT(a.id) as count_phonecall
+	, SUM(a.talk_time) as sum_talk_time
+	, 0 as count_sms
+	, 0 as count_zalo
+	, 0 as count_todo
+	, 0 as count_interaction
+	, 0 as sum_time_handle_interaction
+	, 0 as avg_time_handle_interaction
+	FROM phonecall a
+	LEFT JOIN res_users b ON a.user_id = b.id
+	LEFT JOIN res_partner c ON b.partner_id = c.id
+	LEFT JOIN resource_resource d ON d.user_id = b.id
+	LEFT JOIN hr_employee e ON d.id = e.resource_id
+	LEFT JOIN hr_department f ON e.department_id = f.id
+	WHERE a.call_status = 'meetAgent'
+				and (f.id = ANY(string_to_array( ?, ',')::integer[]) or ? = '0')
+				and a.partner_id is not null
+				and (a.call_date + INTERVAL '7' HOUR)::date >= ?
+				and (a.call_date + INTERVAL '7' HOUR)::date <= ?
+	GROUP BY b.login,c.name,f.name)
+
+	UNION ALL
+
+	(SELECT 
+	b.login as login
+	, c.name as user_name
+	, f.name as department_name
+	, 0 as count_phonecall
+	, 0 as sum_talk_time
+	, COUNT(CASE WHEN g.name ilike 'sms' THEN a.id ELSE null END) as count_sms
+	, COUNT(CASE WHEN g.name ilike 'zalo' THEN a.id ELSE null END) as count_zalo
+	, COUNT(CASE WHEN g.name ilike 'todo' THEN a.id ELSE null END) as count_todo
+	, COUNT(a.id) as count_interaction
+	, SUM(a.read_time*60*60) as sum_time_handle_interaction
+	, 0 as avg_time_handle_interaction
+	FROM partner_interaction a
+	LEFT JOIN res_users b ON a.user_id = b.id
+	LEFT JOIN res_partner c ON b.partner_id = c.id
+	LEFT JOIN resource_resource d ON d.user_id = b.id
+	LEFT JOIN hr_employee e ON d.id = e.resource_id
+	LEFT JOIN hr_department f ON e.department_id = f.id
+	LEFT JOIN mail_activity_type g ON a.mail_activity_type_id = g.id
+	WHERE a.state = 'done'
+				and (f.id = ANY(string_to_array( ?, ',')::integer[]) or ? = '0')
+				and a.actual_date >= ?
+				and a.actual_date <= ?
+	GROUP BY b.login,c.name,f.name)
+
+	UNION ALL
+
+
+	(SELECT 
+	b.login as login
+	, c.name as user_name 
+	, f.name as department_name
+	, 0 as count_phonecall
+	, 0 as sum_talk_time
+	, 0 as count_sms
+	, 0 as count_zalo
+	, 0 as count_todo
+	, 0 as count_interaction
+	, 0 as sum_time_handle_interaction
+	, SUM(a.read_time*60*60)/COUNT(a.id) as avg_time_handle_interaction
+	FROM partner_interaction a
+	LEFT JOIN res_users b ON a.user_id = b.id
+	LEFT JOIN res_partner c ON b.partner_id = c.id
+	LEFT JOIN resource_resource d ON d.user_id = b.id
+	LEFT JOIN hr_employee e ON d.id = e.resource_id
+	LEFT JOIN hr_department f ON e.department_id = f.id
+	WHERE a.state = 'done'
+				and (f.id = ANY(string_to_array( ?, ',')::integer[]) or ? = '0')
+				and a.actual_date >= ?
+				and a.actual_date <= ?
+	GROUP BY b.login,c.name,f.name)
+) as job_performance
+GROUP BY job_performance.login
+,job_performance.user_name 
+,job_performance.department_name
+ORDER BY job_performance.login;]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>3</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>4</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>5</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>6</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>7</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>8</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>9</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>10</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>11</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>12</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="147">
+            <property name="fontFamily">"Times New Roman"</property>
+            <property name="fontSize">13pt</property>
+        </style>
+        <style name="page" id="148"/>
+        <style name="data" id="149"/>
+        <style name="text" id="150"/>
+        <style name="reportTitle" id="151">
+            <property name="fontSize">16pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="grid" id="152"/>
+        <style name="grid-row" id="153">
+            <property name="paddingTop">3px</property>
+            <property name="paddingLeft">3px</property>
+            <property name="paddingBottom">3px</property>
+            <property name="paddingRight">3px</property>
+        </style>
+        <style name="grid-cell" id="154"/>
+        <style name="table" id="155">
+            <property name="paddingTop">4px</property>
+            <property name="paddingLeft">4px</property>
+            <property name="paddingBottom">4px</property>
+            <property name="paddingRight">4px</property>
+        </style>
+        <style name="table-cell" id="156">
+            <property name="borderBottomColor">black</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="borderLeftColor">black</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1px</property>
+            <property name="borderRightColor">black</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1px</property>
+            <property name="borderTopColor">black</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1px</property>
+            <property name="paddingTop">3px</property>
+            <property name="paddingLeft">3px</property>
+            <property name="paddingBottom">3px</property>
+            <property name="paddingRight">3px</property>
+        </style>
+        <style name="table-header" id="157">
+            <property name="backgroundColor">#233C98</property>
+            <property name="fontWeight">bold</property>
+            <property name="color">#FFFFFF</property>
+        </style>
+        <style name="table-header-cell" id="158"/>
+        <style name="table-footer" id="159">
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">right</property>
+        </style>
+        <style name="table-footer-cell" id="160"/>
+        <style name="table-detail" id="161"/>
+        <style name="table-detail-cell" id="162"/>
+        <style name="crosstab" id="163"/>
+        <style name="crosstab-header" id="164">
+            <property name="backgroundColor">#233C98</property>
+        </style>
+        <style name="crosstab-cell" id="165">
+            <property name="borderBottomColor">black</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="borderLeftColor">black</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1px</property>
+            <property name="borderRightColor">black</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1px</property>
+            <property name="borderTopColor">black</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1px</property>
+            <property name="paddingTop">3px</property>
+            <property name="paddingLeft">3px</property>
+            <property name="paddingBottom">3px</property>
+            <property name="paddingRight">3px</property>
+        </style>
+        <style name="crosstab-column-header" id="166">
+            <property name="backgroundColor">#CCCCCC</property>
+        </style>
+        <style name="crosstab-row-header" id="167">
+            <property name="backgroundColor">#CCCCCC</property>
+        </style>
+        <style name="crosstab-row-grand-total" id="168">
+            <property name="fontWeight">bold</property>
+        </style>
+        <style name="crosstab-column-grand-total" id="169">
+            <property name="fontWeight">bold</property>
+        </style>
+        <style name="crosstab-row-sub-total" id="170">
+            <property name="fontWeight">bold</property>
+        </style>
+        <style name="crosstab-column-sub-total" id="171">
+            <property name="fontWeight">bold</property>
+        </style>
+        <style name="reportHeader1" id="172">
+            <property name="fontSize">13pt</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="reportHeader2" id="173">
+            <property name="fontSize">13pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="master1" id="174">
+            <property name="textAlign">left</property>
+        </style>
+        <style name="reportFooter1" id="175">
+            <property name="fontSize">13pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="reportFooter2" id="176">
+            <property name="fontSize">13pt</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="reportFooter3" id="177">
+            <property name="fontSize">13pt</property>
+            <property name="fontStyle">italic</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="reportHeaderDate" id="178">
+            <property name="fontSize">13pt</property>
+            <property name="fontStyle">italic</property>
+        </style>
+        <style name="center" id="179">
+            <property name="textAlign">center</property>
+        </style>
+        <style name="crosstabselledit" id="180">
+            <property name="paddingTop">3px</property>
+            <property name="paddingLeft">3px</property>
+            <property name="paddingBottom">3px</property>
+            <property name="paddingRight">3px</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>Formatter.format(new Date(), 'dd/MM/yyyy')</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <label id="9">
+            <property name="fontSize">16pt</property>
+            <property name="textAlign">center</property>
+            <text-property name="text">BÁO CÁO HIỆU SUẤT CÔNG VIỆC</text-property>
+        </label>
+        <text-data id="66">
+            <property name="fontFamily">"Times New Roman"</property>
+            <property name="fontSize">12pt</property>
+            <property name="color">#000000</property>
+            <property name="textAlign">center</property>
+            <expression name="valueExpr">"THỜI GIAN LÀM VIỆC TỪ " + Formatter.format(params["from_date"].value, 'dd/MM/yyyy') + " ĐẾN " + Formatter.format(params["to_date"].value, 'dd/MM/yyyy')</expression>
+            <property name="contentType">html</property>
+        </text-data>
+        <table id="77">
+            <property name="width">100%</property>
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">login</property>
+                    <text-property name="displayName">login</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["login"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">user_name</property>
+                    <text-property name="displayName">user_name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["user_name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">department_name</property>
+                    <text-property name="displayName">department_name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["department_name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">count_phonecall</property>
+                    <text-property name="displayName">count_phonecall</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["count_phonecall"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">sum_talk_time</property>
+                    <text-property name="displayName">sum_talk_time</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["sum_talk_time"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">count_sms</property>
+                    <text-property name="displayName">count_sms</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["count_sms"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">count_zalo</property>
+                    <text-property name="displayName">count_zalo</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["count_zalo"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">count_interaction</property>
+                    <text-property name="displayName">count_interaction</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["count_interaction"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">sum_time_handle_interaction</property>
+                    <text-property name="displayName">sum_time_handle_interaction</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["sum_time_handle_interaction"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">avg_time_handle_interaction</property>
+                    <text-property name="displayName">avg_time_handle_interaction</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["avg_time_handle_interaction"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">count_todo</property>
+                    <text-property name="displayName">count_todo</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["count_todo"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+            <property name="pageBreakInterval">1000</property>
+            <column id="144">
+                <property name="width">0.3in</property>
+            </column>
+            <column id="132">
+                <property name="width">3in</property>
+            </column>
+            <column id="133">
+                <property name="width">2in</property>
+            </column>
+            <column id="135">
+                <property name="repeat">1</property>
+            </column>
+            <column id="134"/>
+            <column id="136"/>
+            <column id="137"/>
+            <column id="183"/>
+            <column id="138"/>
+            <column id="139"/>
+            <column id="140"/>
+            <header>
+                <row id="78">
+                    <property name="backgroundColor">teal</property>
+                    <property name="verticalAlign">middle</property>
+                    <cell id="141">
+                        <label id="145">
+                            <text-property name="text">STT</text-property>
+                        </label>
+                    </cell>
+                    <cell id="81">
+                        <label id="82">
+                            <text-property name="text">TÊN NHÂN VIÊN</text-property>
+                        </label>
+                    </cell>
+                    <cell id="83">
+                        <label id="84">
+                            <text-property name="text">PHÒNG BAN</text-property>
+                        </label>
+                    </cell>
+                    <cell id="87">
+                        <label id="88">
+                            <text-property name="text">TỔNG THỜI GIAN KẾT NÔI (giây)</text-property>
+                        </label>
+                    </cell>
+                    <cell id="85">
+                        <label id="86">
+                            <text-property name="text">TỔNG CUỘC GỌI KẾT NỐI</text-property>
+                        </label>
+                    </cell>
+                    <cell id="89">
+                        <label id="90">
+                            <text-property name="text">TỔNG TƯƠNG TÁC BẰNG SMS</text-property>
+                        </label>
+                    </cell>
+                    <cell id="91">
+                        <label id="92">
+                            <text-property name="text">TỔNG TƯƠNG TÁC BẰNG  ZALO</text-property>
+                        </label>
+                    </cell>
+                    <cell id="181">
+                        <label id="184">
+                            <text-property name="text">TỔNG TƯƠNG TÁC QUA HÌNH THỨC CẦN LÀM</text-property>
+                        </label>
+                    </cell>
+                    <cell id="93">
+                        <label id="94">
+                            <text-property name="text">TỔNG TƯƠNG TÁC</text-property>
+                        </label>
+                    </cell>
+                    <cell id="95">
+                        <label id="96">
+                            <text-property name="text">TỔNG THỜI GIAN XỬ LÝ HỒ  SƠ (giây)</text-property>
+                        </label>
+                    </cell>
+                    <cell id="97">
+                        <label id="98">
+                            <text-property name="text">THỜI GIAN XỬ LÝ TRUNG BÌNH TRÊN MỘT TƯƠNG TÁC (giây)</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="99">
+                    <property name="textAlign">center</property>
+                    <property name="verticalAlign">middle</property>
+                    <cell id="142">
+                        <text-data id="146">
+                            <property name="fontFamily">"Times New Roman"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="textAlign">center</property>
+                            <expression name="valueExpr">row.__rownum+1</expression>
+                            <property name="contentType">plain</property>
+                        </text-data>
+                    </cell>
+                    <cell id="102">
+                        <property name="textAlign">left</property>
+                        <data id="103">
+                            <property name="resultSetColumn">user_name</property>
+                        </data>
+                    </cell>
+                    <cell id="104">
+                        <data id="105">
+                            <property name="resultSetColumn">department_name</property>
+                        </data>
+                    </cell>
+                    <cell id="108">
+                        <data id="109">
+                            <property name="resultSetColumn">sum_talk_time</property>
+                        </data>
+                    </cell>
+                    <cell id="106">
+                        <data id="107">
+                            <property name="resultSetColumn">count_phonecall</property>
+                        </data>
+                    </cell>
+                    <cell id="110">
+                        <data id="111">
+                            <property name="resultSetColumn">count_sms</property>
+                        </data>
+                    </cell>
+                    <cell id="112">
+                        <data id="113">
+                            <property name="resultSetColumn">count_zalo</property>
+                        </data>
+                    </cell>
+                    <cell id="182">
+                        <data id="185">
+                            <property name="resultSetColumn">count_todo</property>
+                        </data>
+                    </cell>
+                    <cell id="114">
+                        <data id="115">
+                            <structure name="numberFormat">
+                                <property name="category">Unformatted</property>
+                            </structure>
+                            <property name="resultSetColumn">count_interaction</property>
+                        </data>
+                    </cell>
+                    <cell id="116">
+                        <data id="117">
+                            <structure name="numberFormat">
+                                <property name="category">Custom</property>
+                                <property name="pattern">#0.00</property>
+                            </structure>
+                            <property name="resultSetColumn">sum_time_handle_interaction</property>
+                        </data>
+                    </cell>
+                    <cell id="118">
+                        <data id="119">
+                            <structure name="numberFormat">
+                                <property name="category">Fixed</property>
+                                <property name="pattern">###0.00{RoundingMode=HALF_UP}</property>
+                            </structure>
+                            <property name="resultSetColumn">avg_time_handle_interaction</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+    </body>
+</report>

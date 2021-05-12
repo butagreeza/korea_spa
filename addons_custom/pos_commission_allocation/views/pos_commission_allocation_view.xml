@@ -1,0 +1,105 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="commission_allocation_form_view">
+            <field name="name">Commission Allocation from view</field>
+            <field name="model">pos.commission.allocation</field>
+            <field name="arch" type="xml">
+                <form string="Commission Allocation" create="0">
+                    <header>
+                        <button class="oe_highlight" name="action_send" type="object" states="draft"
+                                string="Send" groups="point_of_sale.group_pos_manager, izi_res_permissions.group_cashier,izi_res_permissions.group_consultant"/>
+                        <button class="oe_highlight" name="action_confirm_allocation" type="object" states="to_approve" confirm="Hành động sẽ tạo ra 1 phiếu chi cho các khách hàng đã được chọn để trích hoa hồng.Bạn có chắc chắn muốn Phê duyệt"
+                                string="Confirm" groups="point_of_sale.group_pos_manager, izi_res_permissions.group_leader_shop, izi_res_permissions.group_leader_consultant"/>
+                        <button class="oe_highlight" name="action_cancel" type="object" states="done" confirm="Hành động sẽ tạo ra 1 phiếu thu cho các khách hàng đã được trích hoa hồng trước đó.Bạn có chắc chắn muốn Hủy"
+                                string="Cancel" groups="point_of_sale.group_pos_manager, izi_res_permissions.group_leader_shop, izi_res_permissions.group_leader_consultant"/>
+                        <button name="action_back" type="object" states="to_approve" string="Back" confirm="Bạn có chắc muốn quay lại?" groups="point_of_sale.group_pos_manager, izi_res_permissions.group_leader_shop, izi_res_permissions.group_leader_consultant"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,to_approve,done"/>
+                    </header>
+                    <sheet string="Commission Allocation">
+                        <h2 class="text-center">COMMISSTION ALLOCATION</h2>
+                        <h3 class="text-center">
+                            <field name="name" attrs="{'invisible': [('state', '=', 'draft')]}" readonly="1" force_save="1"
+                                   style="margin-right: 35%%; margin-left: 35%%; max-width: 30%%; font-style: italic;"
+                                   placeholder="Name"/>
+                        </h3>
+                        <group>
+                            <group>
+                                <field name="partner_id" required="True" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_create_edit':True, 'no_open':True}"/>
+                                <field name="date_allocation" readonly="True"/>
+                            </group>
+                            <group>
+                                <field name="account_cash_in_id" readonly="True" attrs="{'invisible': [('account_cash_in_id', '=', False)]}"/>
+                                <field name="account_cash_out_id" readonly="True" attrs="{'invisible': [('account_cash_out_id', '=', False)]}"/>
+
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Allocation Lines">
+                                <field name="commission_line_ids" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                    <tree string="Commission Allocation Lines" editable="bottom">
+                                        <field name="partner_id" required="True" options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                        <field name="order_id" context="{'no_refund': True, 'partner_id': partner_id}" required="True" domain="[('partner_id', '=', partner_id)]" options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                        <field name="amount_total"  readonly="True" force_save="1" sum="Total"/>
+                                        <field name="amount_commission" force_save="1" sum="Total Commission"/>
+                                        <field name="percent"  force_save="1" sum="Percent"/>
+                                        <field name="amount" force_save="1" readonly="True" sum="Amount"/>
+                                        <field name="note"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="commission_allocation_tree_view" model="ir.ui.view">
+            <field name="name">Commission Allocation Tree</field>
+            <field name="model">pos.commission.allocation</field>
+            <field name="arch" type="xml">
+                <tree default_order='date_allocation desc' decoration-info="state == 'draft'">
+                    <field name="partner_id"/>
+                    <field name="account_cash_in_id" readonly="True"/>
+                    <field name="account_cash_out_id" readonly="True"/>
+                    <field name="date_allocation"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_pos_commission_allocation_filter" model="ir.ui.view">
+            <field name="name">pos.commission.allocation.select</field>
+            <field name="model">pos.commission.allocation</field>
+            <field name="view_type">search</field>
+            <field name="arch" type="xml">
+                <search string="Search Commission Allocation">
+                    <field name="partner_id"
+                           filter_domain="['|','|','|','|','|','|','|','|',('partner_id.name','ilike',self),('partner_id.phone','ilike',self),('partner_id.mobile','ilike',self),('partner_id.x_mobile2','ilike',self),('partner_id.x_old_code', 'ilike', self),('partner_id.x_code', 'ilike', self),('partner_id.display_name','ilike',self),('partner_id.ref','=',self),('partner_id.email','ilike',self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="commission_allocation_action" model="ir.actions.act_window">
+            <field name="name">Commission Allocation</field>
+            <field name="res_model">pos.commission.allocation</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_pos_commission_allocation_filter"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create a Commission Allocation
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="commission_allocation_action" groups="point_of_sale.group_pos_manager"
+                  id="menu_commission_allocation" name="Commission Allocation"
+                  parent="point_of_sale.menu_point_of_sale" sequence="65"/>
+
+    </data>
+</odoo>

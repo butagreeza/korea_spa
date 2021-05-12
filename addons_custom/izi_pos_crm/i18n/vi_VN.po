@@ -1,0 +1,426 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* izi_pos_crm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-02 16:37+0000\n"
+"PO-Revision-Date: 2020-09-02 16:37+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_address
+msgid "Address"
+msgstr "Địa chỉ"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_booking_note
+msgid "Booking note"
+msgstr "Ghi chú lịch hẹn"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_form_view
+msgid "Assign"
+msgstr "Giao việc"
+
+#. module: izi_pos_crm
+#: selection:reception.customer,state:0
+msgid "Assigned"
+msgstr "Đã giao tư vấn"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_birthday
+msgid "Birthday"
+msgstr "Ngày sinh"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_booking_id
+msgid "Booking"
+msgstr "Lịch hẹn"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_booking_categ_id
+msgid "Booking category"
+msgstr "Nhóm dịch vụ"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_booking_date
+msgid "Booking date"
+msgstr "Ngày đặt hẹn"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_form_view
+msgid "Booking info"
+msgstr "Thông tin lịch hẹn"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_booking_note
+msgid "Booking note"
+msgstr "Ghi chú lịch hẹn"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_booking_period_id
+msgid "Booking period"
+msgstr "Khung giờ đặt hẹn"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_booking_team_id
+msgid "Booking team"
+msgstr "Cơ sở đặt hẹn"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_booking_type
+msgid "Booking type"
+msgstr "Loại đặt hẹn"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_booking_user_id
+msgid "Booking user"
+msgstr "Đặt hẹn nhân viên"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_campaign_id
+msgid "Campaign"
+msgstr "Chiến dịch"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_assign_form_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_assign_form_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_form_view
+msgid "Confirm reception"
+msgstr "Xác nhận tư vấn"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_count_lead
+msgid "Count lead"
+msgstr "Count lead"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_country_id
+msgid "Country"
+msgstr "Quốc gia"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_form_view
+msgid "Create new"
+msgstr "Tạo mới"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_search_view
+msgid "Cơ sở tiếp đón"
+msgstr "Cơ sở tiếp đón"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_date_meeting
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_district_id
+msgid "District"
+msgstr "Huyện"
+
+#. module: izi_pos_crm
+#: selection:reception.customer,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_email
+msgid "Email"
+msgstr "Email"
+
+#. module: izi_pos_crm
+#: selection:reception.customer,search_result:0
+msgid "Found many"
+msgstr "Tìm thấy nhiều"
+
+#. module: izi_pos_crm
+#: selection:reception.customer,search_result:0
+msgid "Found one"
+msgstr "Tìm thấy một"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_search_view
+msgid "Giai đoạn"
+msgstr "Giai đoạn"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_search_view
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_search_view
+msgid "Hoàn thành"
+msgstr "Hoàn thành"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_id
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_name
+msgid "Keyword"
+msgstr "Từ khóa"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_search_view
+msgid "Khách hàng"
+msgstr "Khách hàng"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_pos_crm
+#: model:ir.model,name:izi_pos_crm.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Cơ hội bán hàng"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_lead_ids
+msgid "Leads"
+msgstr "Các đầu mối"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_level_age_id
+msgid "Level Age"
+msgstr "Khung độ tuổi"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_partner_mobile
+msgid "Mobile number"
+msgstr "Số di động"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_search_view
+msgid "Mới"
+msgstr "Mới"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_name_of_lead
+msgid "Name of Lead"
+msgstr "Tên cơ hội"
+
+#. module: izi_pos_crm
+#: selection:reception.customer,state:0
+msgid "New"
+msgstr "Mới"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_search_view
+msgid "Ngày"
+msgstr "Ngày"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_search_view
+msgid "Người tiếp đón"
+msgstr "Người tiếp đón"
+
+#. module: izi_pos_crm
+#: selection:reception.customer,search_result:0
+msgid "Not Found"
+msgstr "Không tìm thấy"
+
+#. module: izi_pos_crm
+#: selection:reception.customer,search_result:0
+msgid "Not search"
+msgstr "Không tìm kiếm"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: izi_pos_crm
+#: model:ir.ui.menu,name:izi_pos_crm.menu_pos_crm
+msgid "POS CRM"
+msgstr "POS CRM"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_partner_code
+msgid "Partner code"
+msgstr "Mã khách hàng"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_form_view
+msgid "Partner info"
+msgstr "Thông tin khách hàng"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_partner_name
+msgid "Partner name"
+msgstr "Tên khách hàng"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_partner_stage_id
+msgid "Partner stage"
+msgstr "Trạng thái khách hàng"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_partner_status_ids
+msgid "Partner status"
+msgstr "Tình trạng khách hàng"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_partner_team_id
+msgid "Partner team"
+msgstr "Cơ sở làm dịch vụ"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_partner_user_id
+msgid "Partner user"
+msgstr "Chuyên gia tư vấn"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_phone_number
+msgid "Phone number"
+msgstr "Số điện thoại"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_state_id
+msgid "Province"
+msgstr "Tỉnh"
+
+#. module: izi_pos_crm
+#: model:ir.actions.act_window,name:izi_pos_crm.action_reception_customer
+#: model:ir.ui.menu,name:izi_pos_crm.menu_reception_customer
+msgid "Reception Customer"
+msgstr "Tiếp đón khách hàng"
+
+#. module: izi_pos_crm
+#: model:ir.model,name:izi_pos_crm.model_reception_customer
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_search_view
+msgid "Reception customer"
+msgstr "Tiếp đón khách hàng"
+
+#. module: izi_pos_crm
+#: model:ir.actions.act_window,name:izi_pos_crm.action_reception_customer_history
+#: model:ir.ui.menu,name:izi_pos_crm.menu_reception_customer_history
+msgid "Reception customer history"
+msgstr "Lịch sử tiếp đón khách hàng"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_form_view
+msgid "Reception info"
+msgstr "Thông tin tiếp đón"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_form_view
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_search_result
+msgid "Search result"
+msgstr "Kết quả tìm kiếm"
+
+#. module: izi_pos_crm
+#: model:ir.ui.menu,name:izi_pos_crm.menu_service_booking
+msgid "Service booking"
+msgstr "Lịch hẹn"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_form_view
+msgid "Số điện thoại hoặc mã của khách hàng..."
+msgstr "Số điện thoại hoặc mã của khách hàng..."
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_team_id
+msgid "Team"
+msgstr "Cơ sở tiếp đón"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,help:izi_pos_crm.field_reception_customer_partner_user_id
+msgid "The internal user that is in charge of communicating with this contact if any."
+msgstr "The internal user that is in charge of communicating with this contact if any."
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_search_view
+msgid "Tháng"
+msgstr "Tháng"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_search_view
+msgid "Tiếp đón của tôi"
+msgstr "Tiếp đón của tôi"
+
+#. module: izi_pos_crm
+#: code:addons/izi_pos_crm/models/crm_lead.py:47
+#, python-format
+msgid "To shop"
+msgstr "Ra shop"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_form_view
+msgid "Tỉnh - Huyện"
+msgstr "Tỉnh - Huyện"
+
+#. module: izi_pos_crm
+#: model:ir.model.fields,field_description:izi_pos_crm.field_reception_customer_user_id
+msgid "User"
+msgstr "Người tiếp đón"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_assign_form_view
+msgid "or"
+msgstr "hoặc"
+
+#. module: izi_pos_crm
+#: model:ir.ui.view,arch_db:izi_pos_crm.reception_customer_search_view
+msgid "Đã giao tư vấn"
+msgstr "Đã giao tư vấn"
+

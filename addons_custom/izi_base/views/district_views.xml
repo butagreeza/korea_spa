@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="district_tree_view">
+            <field name="name">res.district</field>
+            <field name="model">res.district</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="state_id"/>
+                </tree>
+            </field>
+        </record>
+
+<!--        <record model="ir.ui.view" id="district_form_view">-->
+<!--            <field name="name">res.district</field>-->
+<!--            <field name="model">res.district</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form>-->
+<!--                    <sheet>-->
+<!--                        <group>-->
+<!--                            <group>-->
+<!--                                <field name="name"/>-->
+<!--                                <field name="state_id"/>-->
+<!--                            </group>-->
+<!--                            <group>-->
+<!--                                <field name="code"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                    </sheet>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+
+        <record model="ir.actions.act_window" id="res_district_act">
+          <field name="name">District</field>
+          <field name="res_model">res.district</field>
+          <field name="view_mode">tree</field>
+        </record>
+
+        <menuitem name="District" id="res_district_menu" parent="crm.crm_menu_config"
+                  action="res_district_act"/>
+    </data>
+</odoo>

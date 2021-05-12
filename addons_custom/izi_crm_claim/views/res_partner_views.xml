@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+        <record id="res_partner_inherit_claim_form_view" model="ir.ui.view">
+            <field name="name">Res Partner</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="res_partner_custom.res_partner_add_tab_other_info_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='other_infor']" position="before">
+                    <page string="Claim">
+                        <field name="claim_ids" readonly="1">
+                            <tree editable="bottom">
+                                <field name="partner_id"/>
+                                <field name="type_ids" widget="many2many_tags"/>
+                                <field name="claim_date"/>
+                                <field name="content"/>
+                                <field name="handler_id"/>
+                                <field name="deadline"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <!--Thêm smart button-->
+        <record id="res_partner_claim_view" model="ir.ui.view">
+            <field name="name">Res Partner</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='toggle_active']" position="before">
+                    <!-- Phản hồi-->
+                    <button class="oe_stat_button o_res_partner_tip_opp" type="action"
+                            attrs="{'invisible': [('customer', '=', False)]}"
+                            name="%(izi_crm_claim.crm_claim_action_window_by_partner)d"
+                            icon="fa-question"
+                            context="{'search_default_partner_id': active_id}">
+                        <field string="Claim" name="claim_count" widget="statinfo"/>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

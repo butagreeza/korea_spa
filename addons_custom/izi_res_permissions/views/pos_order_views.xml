@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_pos_pos_form_add_groups" model="ir.ui.view">
+            <field name="name">pos.order.form</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <button name="%(point_of_sale.action_pos_payment)d" position="attributes">
+                    <attribute name="groups">izi_res_permissions.group_cashier</attribute>
+                </button>
+            </field>
+        </record>
+
+        <record id="pos_order_gift_add_groups_form" model="ir.ui.view">
+            <field name="name">pos.order.gift.form</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="res_partner_gift.pos_order_gift_form_view"/>
+            <field name="arch" type="xml">
+                <button name="%(point_of_sale.action_pos_payment)d" position="attributes">
+                    <attribute name="groups">izi_res_permissions.group_cashier</attribute>
+                </button>
+            </field>
+        </record>
+
+        <record id="view_pos_order_change_payment_add_groups" model="ir.ui.view">
+            <field name="name">Change Payment</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="izi_pos_change_payment.view_pos_order_change_payment"/>
+            <field name="arch" type="xml">
+                <button name="action_change_payment" position="attributes">
+                    <attribute name="groups">izi_res_permissions.group_leader_accountant</attribute>
+                </button>
+                <button name="action_change_payment_done" position="attributes">
+                    <attribute name="groups">izi_res_permissions.group_leader_accountant</attribute>
+                </button>
+            </field>
+        </record>
+    </data>
+</odoo>

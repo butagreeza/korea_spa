@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="booking_period_tree_view">
+            <field name="name">booking.period</field>
+            <field name="model">booking.period</field>
+            <field name="priority">12</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                    <field name="name"/>
+                    <field name="from_time" widget="float_time"/>
+                    <field name="to_time" widget="float_time"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_booking_period" model="ir.actions.act_window">
+            <field name="name">Booking Period</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">booking.period</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <menuitem id="menu_booking_period" name="Booking Period" action="action_booking_period"
+            parent="crm.crm_menu_config"/>
+    </data>
+</odoo>

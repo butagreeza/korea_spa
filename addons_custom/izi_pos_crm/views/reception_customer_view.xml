@@ -1,0 +1,163 @@
+<odoo>
+    <data>
+        <record id="reception_customer_form_view" model="ir.ui.view">
+            <field name="name">Reception Customer</field>
+            <field name="model">reception.customer</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_confirm_reception" string="Confirm reception" type="object"
+                                class="oe_highlight"
+                                states="assigned"/>
+                        <button name="action_assign" string="Assign" type="object" states="assigned"/>
+                        <field name="state" widget="statusbar" statusbar_visible="new,assigned,done" nolabel="1"
+                               readonly="1"/>
+                    </header>
+                    <sheet>
+                        <field name="search_result" invisible="True"/>
+                        <h1>
+                            <field name="name" placeholder="Số điện thoại hoặc mã của khách hàng..."
+                                   attrs="{'action_element_class': '.action_search', 'readonly': [('state', '!=', 'new')]}"
+                                   widget="enter2action"/>
+                            <button name="action_search" string="Search" type="object"
+                                    class="oe_highlight action_search"
+                                    attrs="{'invisible': [('state', '!=', 'new')]}"/>
+                            <button name="action_create" string="Create new" type="object"
+                                    style="margin-left: 20px" attrs="{'invisible': [('state', '!=', 'new')]}"/>
+                        </h1>
+                        <group name="partner_info" string="Partner info">
+                            <group name="column_left">
+                                <field name="partner_name"
+                                       attrs="{'readonly': [('state', '!=', 'new')], 'invisible': [('partner_id', '!=', False)]}"/>
+                                <field name="partner_id"
+                                       attrs="{'readonly': True, 'invisible': [('partner_id', '=', False)]}"
+                                       options="{'no_create':1, 'no_create_edit':1}"/>
+                                <field name="partner_code" attrs="{'readonly': True}"/>
+                                <field name="partner_stage_id" attrs="{'readonly': True}"/>
+                                <field name="partner_user_id" attrs="{'readonly': True}"
+                                       options="{'no_create':1, 'no_create_edit':1}"/>
+                                <field name="partner_team_id" attrs="{'readonly': True}"
+                                       options="{'no_create':1, 'no_create_edit':1}"/>
+                                <field name="partner_status_ids"
+                                       options="{'no_create':1, 'no_create_edit':1}"
+                                       widget="many2many_tags"
+                                       attrs="{'readonly': ['|', ('search_result', '=', 'found_one'), ('state', '!=', 'new')]}"/>
+                            </group>
+                            <group name="column_right">
+                                <field name="phone_number"
+                                       attrs="{'readonly': ['|', ('search_result', '=', 'found_one'), ('state', '!=', 'new')]}"/>
+                                <field name="partner_mobile"
+                                       attrs="{'readonly': ['|', ('search_result', '=', 'found_one'), ('state', '!=', 'new')]}"/>
+                                <field name="country_id" invisible="True"/>
+                                <label string="Tỉnh - Huyện"/>
+                                <div>
+                                    <field name="state_id"
+                                           domain="[('country_id', '=', country_id)]"
+                                           options="{'no_create_edit':True, 'no_open':False, 'no_create':True}"
+                                           attrs="{'readonly': ['|', ('search_result', '=', 'found_one'), ('state', '!=', 'new')]}"/>
+                                    -
+                                    <field name="district_id"
+                                           options="{'no_create_edit':True, 'no_open':False, 'no_create':True}"
+                                           domain="[('state_id', '=', state_id)]"
+                                           attrs="{'readonly': ['|', ('search_result', '=', 'found_one'), ('state', '!=', 'new')]}"/>
+                                </div>
+                                <field name="address"
+                                       attrs="{'readonly': ['|', ('search_result', '=', 'found_one'), ('state', '!=', 'new')]}"/>
+                                <label for="birthday"/>
+                                <div>
+                                    <field name="birthday"
+                                           options="{'no_create_edit':True, 'no_open':False, 'no_create':True}"
+                                           attrs="{'readonly': ['|', ('search_result', '=', 'found_one'), ('state', '!=', 'new')]}"/>
+                                    -
+                                    <field name="level_age_id" readonly="True"
+                                           options="{'no_create_edit':True, 'no_open':False, 'no_create':True}"
+                                           attrs="{'readonly': ['|', ('search_result', '=', 'found_one'), ('state', '!=', 'new')]}"/>
+                                </div>
+                            </group>
+                        </group>
+                        <group name="booking_info" attrs="{'invisible': [('booking_id', '=', False)]}"
+                               string="Booking info">
+                            <group name="column_left">
+                                <field name="booking_id" readonly="True"/>
+                                <field name="booking_team_id"/>
+                                <field name="booking_user_id"/>
+                            </group>
+                            <group name="column_right">
+                                <field name="booking_type"/>
+                                <field name="booking_date"/>
+                                <field name="booking_period_id"/>
+                                <field name="booking_categ_id"/>
+                            </group>
+                            <label for="booking_note"/>
+                            <field name="booking_note"/>
+                        </group>
+                        <group name="reception_info" string="Reception info">
+                            <field name="team_id" options="{'no_create':1, 'no_create_edit':1}"
+                                   attrs="{'readonly': [('state', '!=', 'new')]}"/>
+                            <field name="user_id" options="{'no_create':1, 'no_create_edit':1}"
+                                   attrs="{'readonly': [('state', '!=', 'new')]}"/>
+                        </group>
+                        <footer>
+                            <button name="action_assign" string="Assign" type="object" class="oe_highlight"
+                                    attrs="{'invisible': [('state', '!=', 'new')]}"/>
+                        </footer>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="reception_customer_assign_form_view" model="ir.ui.view">
+            <field name="name">Assign lead</field>
+            <field name="model">reception.customer</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="team_id" required="True" options="{'no_create':1, 'no_create_edit':1}"/>
+                            <field name="user_id" required="True" options="{'no_create':1, 'no_create_edit':1}"/>
+                        </group>
+                        <footer>
+                            <button name="action_confirm" string="Confirm" type="object" class="oe_highlight"/>
+                            or
+                            <button string="Cancel" class="oe_link" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="reception_customer_tree_view" model="ir.ui.view">
+            <field name="name">Reception customer</field>
+            <field name="model">reception.customer</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="phone_number"/>
+                    <field name="create_date"/>
+                    <field name="note"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_reception_customer" model="ir.actions.act_window">
+            <field name="name">Reception Customer</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">reception.customer</field>
+            <field name="view_mode">form, tree</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('izi_pos_crm.reception_customer_form_view')}),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('izi_pos_crm.reception_customer_tree_view')})]"/>
+        </record>
+
+        <menuitem id="menu_reception_customer"
+                  name="Reception Customer"
+                  action="action_reception_customer"
+                  parent="menu_pos_crm"/>
+    </data>
+</odoo>

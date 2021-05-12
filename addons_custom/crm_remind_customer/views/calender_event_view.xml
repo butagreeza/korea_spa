@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="calender_event_inherit_view_form" model="ir.ui.view">
+            <field name="name">calender.event.inherit.view</field>
+            <field name="model">calendar.event</field>
+            <field name="inherit_id" ref="calendar.view_calendar_event_form"/>
+            <field name="arch" type="xml">
+                <field name="allday" position="after">
+                    <field name="x_crm_remind_customer_id" readonly="1" force_save="1"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

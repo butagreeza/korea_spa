@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.5.0.v201506092134 Build &lt;@BUILD@></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="cssStyleSheets">
+        <structure>
+            <property name="fileName">style_Birt.css</property>
+            <property name="useExternalCss">false</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="date" id="6">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">date</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2019-01-01</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="date_default" id="518">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">date</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2018-09-01</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="519">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.postgresql.Driver</property>
+            <property name="odaURL">jdbc:postgresql://103.145.62.165:5445/korea-erp-07122020</property>
+            <property name="odaUser">korea</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">S3JBQDEyM1ZuMjUwNA==</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set" id="5">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">name</text-property>
+                    <text-property name="heading">name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">x_date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">x_date</text-property>
+                    <text-property name="heading">x_date</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">phone</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">phone</text-property>
+                    <text-property name="heading">phone</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">mobile</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">mobile</text-property>
+                    <text-property name="heading">mobile</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">x_code</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">x_code</text-property>
+                    <text-property name="heading">x_code</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">x_old_code</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">x_old_code</text-property>
+                    <text-property name="heading">x_old_code</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">nv</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">nv</text-property>
+                    <text-property name="heading">nv</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="paramName">date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_2</property>
+                    <property name="paramName">date_default</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">2</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">x_date</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">phone</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">mobile</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">x_code</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">x_old_code</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">nv</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">name</property>
+                    <property name="nativeName">name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">x_date</property>
+                    <property name="nativeName">x_date</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">phone</property>
+                    <property name="nativeName">phone</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">mobile</property>
+                    <property name="nativeName">mobile</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">x_code</property>
+                    <property name="nativeName">x_code</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">x_old_code</property>
+                    <property name="nativeName">x_old_code</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">nv</property>
+                    <property name="nativeName">nv</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select DISTINCT s.name, to_char(max(s.x_date + INTERVAL '7 hour'), 'dd/mm/yyyy') x_date, s.phone, s.mobile, s.x_code, s.x_old_code, s.nv from
+(
+select * from 
+(SELECT DISTINCT z.name, max(z.date_order) x_date, z.phone, z.mobile, z.x_code, z.x_old_code, z.nv from  (select c.name, c.phone, a.date_order, c.x_old_code, c.x_code, c.mobile, e.name as nv
+from pos_order a
+JOIN pos_session b on a.session_id = b.id
+JOIN res_partner c on a.partner_id = c.id
+LEFT JOIN res_users d on c.x_manage_user_id = d.id
+LEFT JOIN res_partner e on d.partner_id = e.id
+where b.config_id = 1 and b.id not in (1,2,48)
+ORDER BY c.name) as z
+GROUP BY z.name, z.phone, z.mobile, z.x_code, z.x_old_code, z.nv
+ORDER BY z.name) as q
+
+UNION
+
+SELECT * from
+(SELECT DISTINCT z.name, max(z.redeem_date) x_date, z.phone, z.mobile, z.x_code, z.x_old_code, z.nv from  (select c.name, c.phone, a.redeem_date, c.x_old_code, c.x_code, c.mobile, e.name as nv
+from izi_service_card_using a
+JOIN pos_session b on a.pos_session_id = b.id
+JOIN res_partner c on a.customer_id = c.id
+LEFT JOIN res_users d on c.x_manage_user_id = d.id
+LEFT JOIN res_partner e on d.partner_id = e.id
+where b.config_id = 1 and b.id not in (1,2,48)
+ORDER BY c.name) as z
+GROUP BY z.name, z.phone, z.mobile, z.x_code, z.x_old_code, z.nv
+ORDER BY z.name) as w) as s
+where (s.x_date+ INTERVAL '7 hour')::date <= ?
+and (s.x_date+ INTERVAL '7 hour')::date >= ?
+GROUP BY s.name, s.phone, s.mobile, s.x_code, s.x_old_code, s.nv]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>name</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>name</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>name</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>x_date</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>x_date</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>x_date</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>phone</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>phone</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>phone</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>mobile</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>mobile</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>mobile</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>x_code</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>x_code</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>x_code</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>x_old_code</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>x_old_code</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>x_old_code</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>nv</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>nv</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>nv</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="7">
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">name</property>
+                    <text-property name="displayName">name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">phone</property>
+                    <text-property name="displayName">phone</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["phone"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">mobile</property>
+                    <text-property name="displayName">mobile</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["mobile"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">x_code</property>
+                    <text-property name="displayName">x_code</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["x_code"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">x_old_code</property>
+                    <text-property name="displayName">x_old_code</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["x_old_code"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">nv</property>
+                    <text-property name="displayName">nv</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["nv"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">x_date</property>
+                    <text-property name="displayName">x_date</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["x_date"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">stt</property>
+                    <text-property name="displayName">stt</text-property>
+                    <expression name="expression" type="javascript">row.__rownum+1</expression>
+                    <property name="dataType">integer</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <property name="pageBreakInterval">0</property>
+            <column id="35"/>
+            <column id="36"/>
+            <column id="37"/>
+            <column id="38"/>
+            <column id="39"/>
+            <column id="40"/>
+            <column id="41"/>
+            <column id="42"/>
+            <header>
+                <row id="52">
+                    <property name="backgroundColor">#FFFFFF</property>
+                    <property name="color">#000000</property>
+                    <property name="borderBottomStyle">none</property>
+                    <property name="borderLeftStyle">none</property>
+                    <property name="borderRightStyle">none</property>
+                    <property name="borderTopStyle">none</property>
+                    <cell id="53">
+                        <property name="colSpan">8</property>
+                        <property name="rowSpan">1</property>
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderTopStyle">none</property>
+                        <text-data id="501">
+                            <property name="fontSize">16pt</property>
+                            <expression name="valueExpr">'Danh sách khách hàng không phát sinh doanh thu/ sử dụng dich vụ từ ngày ' + Formatter.format(params["date"].value, 'dd/MM/yyyy')</expression>
+                            <property name="contentType">html</property>
+                        </text-data>
+                    </cell>
+                </row>
+                <row id="8">
+                    <property name="backgroundColor">#FFFF00</property>
+                    <cell id="9">
+                        <label id="510">
+                            <text-property name="text">STT</text-property>
+                        </label>
+                    </cell>
+                    <cell id="10">
+                        <label id="511">
+                            <text-property name="text">Khách hàng</text-property>
+                        </label>
+                    </cell>
+                    <cell id="11">
+                        <label id="512">
+                            <text-property name="text">Mã khách hàng</text-property>
+                        </label>
+                    </cell>
+                    <cell id="12">
+                        <label id="513">
+                            <text-property name="text">Mã cũ khách hàng</text-property>
+                        </label>
+                    </cell>
+                    <cell id="13">
+                        <label id="514">
+                            <text-property name="text">SĐT</text-property>
+                        </label>
+                    </cell>
+                    <cell id="14">
+                        <label id="515">
+                            <text-property name="text">SDĐ</text-property>
+                        </label>
+                    </cell>
+                    <cell id="15">
+                        <label id="516">
+                            <text-property name="text">Ngày tháng</text-property>
+                        </label>
+                    </cell>
+                    <cell id="16">
+                        <label id="517">
+                            <text-property name="text">Nhân viên</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="17">
+                    <cell id="18">
+                        <property name="textAlign">center</property>
+                        <data id="509">
+                            <property name="resultSetColumn">stt</property>
+                        </data>
+                    </cell>
+                    <cell id="19">
+                        <property name="textAlign">left</property>
+                        <data id="502">
+                            <property name="resultSetColumn">name</property>
+                        </data>
+                    </cell>
+                    <cell id="20">
+                        <property name="textAlign">center</property>
+                        <data id="505">
+                            <property name="resultSetColumn">x_code</property>
+                        </data>
+                    </cell>
+                    <cell id="21">
+                        <property name="textAlign">center</property>
+                        <data id="506">
+                            <property name="resultSetColumn">x_old_code</property>
+                        </data>
+                    </cell>
+                    <cell id="22">
+                        <property name="textAlign">center</property>
+                        <data id="503">
+                            <property name="resultSetColumn">phone</property>
+                        </data>
+                    </cell>
+                    <cell id="23">
+                        <property name="textAlign">center</property>
+                        <data id="504">
+                            <property name="resultSetColumn">mobile</property>
+                        </data>
+                    </cell>
+                    <cell id="24">
+                        <property name="textAlign">center</property>
+                        <data id="508">
+                            <property name="resultSetColumn">x_date</property>
+                        </data>
+                    </cell>
+                    <cell id="25">
+                        <property name="textAlign">left</property>
+                        <data id="507">
+                            <property name="resultSetColumn">nv</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+    </body>
+</report>

@@ -1,0 +1,82 @@
+<odoo>
+    <data>
+        <record id="partner_assign_telesales_form" model="ir.ui.view">
+            <field name="name">Assign telesales</field>
+            <field name="model">partner.assign.telesales</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="telesales_id" required="True" options="{'no_create':1, 'no_create_edit':1}"/>
+                            <field name="next_interaction_reminder_activity_type_id" required="True" options="{'no_create':1, 'no_create_edit':1}"/>
+                            <field name="next_interaction_reminder_date" required="True"/>
+                        </group>
+                        <footer>
+                            <button name="action_confirm_assign_telesales" string="Confirm" type="object" class="oe_highlight"/>
+                            or
+                            <button string="Cancel" class="oe_link" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="assign_telesales_multi_form_view">
+            <field name="name">Assign Telesales Multi History</field>
+            <field name="model">partner.assign.telesales.history</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="telesales_id" required="True" options="{'no_create':1, 'no_create_edit':1}"/>
+                            <field name="next_interaction_reminder_activity_type_id" required="True" options="{'no_create':1, 'no_create_edit':1}"/>
+                            <field name="next_interaction_reminder_date" required="True"/>
+                        </group>
+                        <footer>
+                            <button name="action_confirm_assign_telesales_multi" string="Confirm" type="object" class="oe_highlight"/>
+                            or
+                            <button string="Cancel" class="oe_link" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_assign_telesale_multi"
+                    key2="client_action_telesale_multi" name="Assign Telesales Multi"
+                    res_model="partner.assign.telesales.history" src_model="res.partner"
+                    view_mode="form" view_type="form"
+                    view_id="assign_telesales_multi_form_view"
+                    target="new"
+        />
+
+        <record model="ir.ui.view" id="assign_telesales_again_multi_form_view">
+            <field name="name">Assign Telesales Multi History</field>
+            <field name="model">partner.assign.telesales.history</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="telesales_id" required="True" options="{'no_create':1, 'no_create_edit':1}"/>
+                            <field name="next_interaction_reminder_activity_type_id" required="True" options="{'no_create':1, 'no_create_edit':1}"/>
+                            <field name="next_interaction_reminder_date" required="True"/>
+                        </group>
+                        <footer>
+                            <button name="action_confirm_assign_telesales_again_multi" string="Confirm" type="object" class="oe_highlight"/>
+                            or
+                            <button string="Cancel" class="oe_link" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_assign_telesale_again_multi"
+                    key2="client_action_telesale_again_multi" name="Assign Telesales Again Multi"
+                    res_model="partner.assign.telesales.history" src_model="res.partner"
+                    view_mode="form" view_type="form"
+                    view_id="assign_telesales_again_multi_form_view"
+                    target="new"
+        />
+    </data>
+</odoo>

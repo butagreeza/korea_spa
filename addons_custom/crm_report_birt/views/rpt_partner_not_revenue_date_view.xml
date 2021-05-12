@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="rpt_partner_not_revenue_date" model="ir.ui.view">
+            <field name="name">rpt.partner.not.revenue.date.new.form</field>
+            <field name="model">rpt.partner.not.revenue.date</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="date" required="1"/>
+                        <field name="date_default" required="1" invisible="1"/>
+                    </group>
+                    <footer>
+                        <button class="oe_highlight" name="create_rpt_partner_not_revenue_date" type="object" string="Print Report"/>
+                        <button class="oe_highlight" name="create_rpt_partner_not_revenue_date_excel" type="object" string="Print Excel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="rpt_partner_not_revenue_date_action" model="ir.actions.act_window">
+            <field name="name">Partner Not Revenue Date</field>
+            <field name="res_model">rpt.partner.not.revenue.date</field>
+            <field name="view_mode">form</field>
+            <field name="view_type">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="rpt_partner_not_revenue_date_menu" action="rpt_partner_not_revenue_date_action" name="Rpt Partner Not Revenue Date"
+                  parent="crm.crm_menu_report"/>
+    </data>
+</odoo>

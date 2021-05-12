@@ -1,0 +1,461 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* res_partner_gift
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-12 07:48+0000\n"
+"PO-Revision-Date: 2020-09-12 07:48+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "(update)"
+msgstr "(cập nhật)"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_reason_active
+msgid "Active"
+msgstr "Có hiệu lực"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_pos_make_payment_x_vc_amount
+#: model:ir.model.fields,field_description:res_partner_gift.field_pos_payment_service_x_vc_amount
+msgid "Amount Voucher"
+msgstr "Giá trị Voucher"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "Approve"
+msgstr "Chấp thuận"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "Back Refund"
+msgstr "Back Refund"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.partner_gift_inherit_view
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.partner_gift_inherit_view
+msgid "Chắc chắn hủy phiếu quà tặng này không?"
+msgstr "Chắc chắn hủy phiếu quà tặng này không?"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "Confirm Refund"
+msgstr "Xác nhận Refund"
+
+#. module: res_partner_gift
+#: model:ir.model,name:res_partner_gift.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_content
+msgid "Content"
+msgstr "Nội dung"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_create_uid
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_reason_create_uid
+#: model:ir.model.fields,field_description:res_partner_gift.field_product_gift_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_create_date
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_reason_create_date
+#: model:ir.model.fields,field_description:res_partner_gift.field_product_gift_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "Customer Signature"
+msgstr "Khách hàng xác nhận"
+
+#. module: res_partner_gift
+#: code:addons/res_partner_gift/models/pos_make_payment.py:59
+#: code:addons/res_partner_gift/models/pos_make_payment.py:108
+#: code:addons/res_partner_gift/models/pos_make_payment.py:127
+#: code:addons/res_partner_gift/models/pos_payment_service.py:30
+#: code:addons/res_partner_gift/models/pos_payment_service.py:54
+#: code:addons/res_partner_gift/models/pos_payment_service.py:108
+#: code:addons/res_partner_gift/models/pos_payment_service.py:126
+#, python-format
+msgid "Cảnh báo"
+msgstr "Cảnh báo"
+
+#. module: res_partner_gift
+#: code:addons/res_partner_gift/models/pos_order.py:33
+#: code:addons/res_partner_gift/models/pos_order.py:104
+#, python-format
+msgid "Cảnh báo!"
+msgstr "Cảnh báo!"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "Discount compute"
+msgstr "Tính khuyến mại"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_display_name
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_reason_display_name
+#: model:ir.model.fields,field_description:res_partner_gift.field_product_gift_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_gift_expired_date
+msgid "Expired Date"
+msgstr "Ngày hết hạn"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_gift_id
+#: model:ir.ui.view,arch_db:res_partner_gift.partner_gift_inherit_view
+msgid "Gift"
+msgstr "Quà tặng sinh thật"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.partner_gift_inherit_view
+msgid "Gift Information"
+msgstr "Thông tin quà tặng"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_gift_name
+msgid "Gift Name"
+msgstr "Tên quà tặng"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.partner_gift_reason_tree_view
+msgid "Gift Reason"
+msgstr "Lý do tặng quà"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.partner_gift_inherit_view
+msgid "Give"
+msgstr "Tặng quà"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "Huỷ các thanh toán và thực hiện thanh toán lại?"
+msgstr "Huỷ các thanh toán và thực hiện thanh toán lại?"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_id
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_reason_id
+#: model:ir.model.fields,field_description:res_partner_gift.field_product_gift_id
+msgid "ID"
+msgstr "ID"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.izi_product_product_custom_view_voucher
+msgid "Information Card"
+msgstr "Thông tin thẻ"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "Invoice"
+msgstr "Hóa đơn"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift___last_update
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_reason___last_update
+#: model:ir.model.fields,field_description:res_partner_gift.field_product_gift___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_reason_write_uid
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_write_uid
+#: model:ir.model.fields,field_description:res_partner_gift.field_product_gift_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_reason_write_date
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_write_date
+#: model:ir.model.fields,field_description:res_partner_gift.field_product_gift_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: res_partner_gift
+#: model:ir.model,name:res_partner_gift.model_pos_order_line
+msgid "Lines of Point of Sale Orders"
+msgstr "Chi tiết đơn hàng"
+
+#. module: res_partner_gift
+#: model:ir.model,name:res_partner_gift.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr "Lô/Số sê-ri"
+
+#. module: res_partner_gift
+#: code:addons/res_partner_gift/models/product_product.py:49
+#, python-format
+msgid "Loại thẻ là phiếu mua hàng, bạn cần thêm tổng tiền hoặc phần trăm giảm giá cho phiếu này!"
+msgstr "Loại thẻ là phiếu mua hàng, bạn cần thêm tổng tiền hoặc phần trăm giảm giá cho phiếu này!"
+
+#. module: res_partner_gift
+#: code:addons/res_partner_gift/models/product_product.py:52
+#, python-format
+msgid "Loại thẻ là phiếu mua hàng, tổng tiền hoặc phần trăm giảm giá của phiếu này phải lớn hơn 0!"
+msgstr "Loại thẻ là phiếu mua hàng, tổng tiền hoặc phần trăm giảm giá của phiếu này phải lớn hơn 0!"
+
+#. module: res_partner_gift
+#: code:addons/res_partner_gift/models/product_product.py:56
+#, python-format
+msgid "Loại thẻ là phiếu mua hàng, voucher tặng sản phẩm không được để trống!"
+msgstr "Loại thẻ là phiếu mua hàng, voucher tặng sản phẩm không được để trống!"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_gift_code
+msgid "Name gift"
+msgstr "Mã Voucher"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "Number"
+msgstr "Số"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "Order lines"
+msgstr "Chi tiết đơn hàng"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_pos_order_line_x_paid_vc
+msgid "Paid by Voucher"
+msgstr "Thanh toán bằng Voucher"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_res_partner_x_gift_ids
+#: model:ir.model.fields,field_description:res_partner_gift.field_res_users_x_gift_ids
+msgid "Parter Gift"
+msgstr "Khách hàng"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_partner_id
+msgid "Partner"
+msgstr "Khách hàng"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_name
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_reason_partner_gift_ids
+msgid "Partner Gift"
+msgstr "Khách hàng"
+
+#. module: res_partner_gift
+#: model:ir.actions.act_window,name:res_partner_gift.action_partner_gift_reason
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_reason_gift_id
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_reason_name
+#: model:ir.ui.menu,name:res_partner_gift.menu_partner_gift_reason
+msgid "Partner Gift Reason"
+msgstr "Lý do tặng quà khách hàng"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "Payment"
+msgstr "Thanh toán"
+
+#. module: res_partner_gift
+#: code:addons/res_partner_gift/models/pos_make_payment.py:109
+#, python-format
+msgid "Phiếu mua hàng này đã được sử dụng ở đơn hàng {0}!"
+msgstr "Phiếu mua hàng này đã được sử dụng ở đơn hàng {0}!"
+
+#. module: res_partner_gift
+#: code:addons/res_partner_gift/models/pos_payment_service.py:31
+#: code:addons/res_partner_gift/models/pos_payment_service.py:109
+#, python-format
+msgid "Phiếu mua hàng này đã được sử dụng ở đơn sử dụng dịch vụ {0}!"
+msgstr "Phiếu mua hàng này đã được sử dụng ở đơn sử dụng dịch vụ {0}!"
+
+#. module: res_partner_gift
+#: model:ir.model,name:res_partner_gift.model_pos_order
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "Point of Sale Orders"
+msgstr "Point of Sale Orders"
+
+#. module: res_partner_gift
+#: model:ir.model,name:res_partner_gift.model_pos_make_payment
+msgid "Point of Sale Payment"
+msgstr "Point of Sale Payment"
+
+#. module: res_partner_gift
+#: model:ir.model,name:res_partner_gift.model_product_product
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_gift_product_id
+#: model:ir.model.fields,field_description:res_partner_gift.field_product_gift_product_id
+#: selection:product.product,x_type_voucher:0
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_product_product_x_product_card_id
+msgid "Product Card"
+msgstr "Thẻ dịch vụ"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_product_gift_name
+msgid "Product Gift"
+msgstr "Sản phẩm tặng"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_product_gift_product_vc_id
+#: model:ir.model.fields,field_description:res_partner_gift.field_product_product_x_product_voucher_ids
+msgid "Product Voucher"
+msgstr "Product Voucher"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.izi_product_product_custom_view_voucher
+msgid "Information Card"
+msgstr "Thông tin thẻ"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.izi_product_product_custom_view_voucher
+msgid "Product-Service"
+msgstr "Sản phẩm & Dịch vụ"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_res_users_profile_image_ids
+msgid "Profile image"
+msgstr "Ảnh lý lịch"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_product_gift_qty
+msgid "Qty"
+msgstr "Số lượng"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "Refund"
+msgstr "Hoàn tiền"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "Return Products"
+msgstr "Trả lại sản phẩm"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "Send"
+msgstr "Gửi"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "Send Refund"
+msgstr "Gửi"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_res_users_x_stage_history_ids
+msgid "Stage history"
+msgstr "Lịch sử trạng thái"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_partner_gift_gift_status
+msgid "Status gift"
+msgstr "Trạng thái Voucher"
+
+#. module: res_partner_gift
+#: code:addons/res_partner_gift/models/pos_order.py:35
+#: code:addons/res_partner_gift/models/pos_order.py:106
+#, python-format
+msgid "Sản phẩm \"\" đang có số lượng tồn kho là "
+msgstr "Sản phẩm \"\" đang có số lượng tồn kho là "
+
+#. module: res_partner_gift
+#: model:ir.model.fields,help:res_partner_gift.field_partner_gift_gift_expired_date
+msgid "This is the date on which the goods with this Serial Number may become dangerous and must not be consumed."
+msgstr "Đây là ngày mà hàng hóa với số sê-ri này có thể trở nên nguy hiểm và không thể tiêu thụ."
+
+#. module: res_partner_gift
+#: code:addons/res_partner_gift/models/pos_make_payment.py:60
+#: code:addons/res_partner_gift/models/pos_make_payment.py:128
+#: code:addons/res_partner_gift/models/pos_payment_service.py:55
+#: code:addons/res_partner_gift/models/pos_payment_service.py:127
+#, python-format
+msgid "Trên đơn hàng không có hoặc đã được thanh toán hết sản phẩm, dịch vụ nào được cấu hình thanh toán bằng voucher. Vui lòng chọn hình thức thanh toán khác!"
+msgstr "Trên đơn hàng không có hoặc đã được thanh toán hết sản phẩm, dịch vụ nào được cấu hình thanh toán bằng voucher. Vui lòng chọn hình thức thanh toán khác!"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.izi_product_product_custom_view_voucher
+msgid "Type Voucher"
+msgstr "Loại Voucher"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_product_product_x_type_voucher
+msgid "Type voucher"
+msgstr "Loại voucher"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,help:res_partner_gift.field_partner_gift_gift_code
+msgid "Unique Lot/Serial Number"
+msgstr "Unique Lot/Serial Number"
+
+#. module: res_partner_gift
+#: selection:product.product,x_type_voucher:0
+msgid "Value"
+msgstr "Giá trị"
+
+#. module: res_partner_gift
+#: model:ir.model.fields,field_description:res_partner_gift.field_pos_make_payment_x_vc_id
+#: model:ir.model.fields,field_description:res_partner_gift.field_pos_payment_service_x_vc_id
+msgid "Voucher lot"
+msgstr "Voucher lot"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "Vouchers"
+msgstr "Vouchers"
+
+#. module: res_partner_gift
+#: model:ir.model,name:res_partner_gift.model_partner_gift
+msgid "partner.gift"
+msgstr "Quà tặng khách hàng"
+
+#. module: res_partner_gift
+#: model:ir.model,name:res_partner_gift.model_product_card
+msgid "product.card"
+msgstr "product.card"
+
+#. module: res_partner_gift
+#: model:ir.model,name:res_partner_gift.model_partner_gift_reason
+msgid "partner.gift.reason"
+msgstr "Lý do tặng quà khách hàng"
+
+#. module: res_partner_gift
+#: model:ir.model,name:res_partner_gift.model_pos_payment_service
+msgid "pos.payment.service"
+msgstr "Thanh toán dịch vụ"
+
+#. module: res_partner_gift
+#: model:ir.model,name:res_partner_gift.model_product_gift
+msgid "product.gift"
+msgstr "Sản phẩm tặng"
+
+#. module: res_partner_gift
+#: model:ir.ui.view,arch_db:res_partner_gift.pos_order_gift_form_view
+msgid "Đơn hàng này đang bán sản phẩm dưới giá tối thiểu. Bạn có chắc chắn duyệt đơn?"
+msgstr "Đơn hàng này đang bán sản phẩm dưới giá tối thiểu. Bạn có chắc chắn duyệt đơn?"
+

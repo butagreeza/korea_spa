@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="res_partner_department_rate">
+            <field name="name">res.partner</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="pos_destroy_service.izi_destroy_service_partner_form"/>
+            <field name="priority">12</field>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='destroy_service']" position="after">
+                    <page string="Department Rate" name="department_rate">
+                        <field name="department_rate_line_ids" readonly="1">
+                            <tree default_order='rate_time desc'>
+                                <field name="rate_time"/>
+                                <field name="department_id"/>
+                                <field name="branch_id"/>
+                                <field name="using_id"/>
+                                <field name="customer_rate" widget="sentiment_icon"/>
+                                <field name="customer_comment"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <group>
+                                        <field name="rate_time"/>
+                                        <field name="department_id"/>
+                                        <field name="branch_id"/>
+                                    </group>
+                                    <group>
+                                        <field name="using_id"/>
+                                        <field name="customer_rate" widget="sentiment_icon"/>
+                                        <field name="customer_comment"/>
+                                    </group>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

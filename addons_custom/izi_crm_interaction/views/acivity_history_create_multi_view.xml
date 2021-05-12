@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="activity_history_confirm_view" model="ir.ui.view">
+            <field name="name">activity.history.confirm.form</field>
+            <field name="model">activity.history.confirm</field>
+            <field name="arch" type="xml">
+                <form string="Confirm Activity History">
+                    <p class="oe_black">
+                        Are you sure the activity histories are in the state "Assigned" or "Move Remind" to create interaction !?
+                    </p>
+                    <footer>
+                        <button string="Create Interaction" name="create_interaction" type="object" default_focus="1" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="schedule_transfer_reason_multi_form_view">
+            <field name="name">Schedule Transfer Reason</field>
+            <field name="model">activity.history.assign</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="schedule_transfer_reason_id" required="True"/>
+                            </group>
+                            <group>
+                                <field name="date_move_remind" required="True"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="confirm_transfer_multi" string="Confirm" type="object" class="btn-primary" icon="fa-check text-success"/>
+                        <button name="cancel" string="Cancel" special="cancel" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_create_interaction_multi"
+                    key2="client_action_multi" name="Create interaction multi"
+                    res_model="activity.history.confirm" src_model="activity.history"
+                    view_mode="form" view_type="form"
+                    target="new" multi="True"
+        />
+
+        <act_window id="action_schedule_transfer_multi"
+                    key2="client_action_multi" name="Schedule Tranfer multi"
+                    res_model="activity.history.assign" src_model="activity.history"
+                    view_id="schedule_transfer_reason_multi_form_view"
+                    view_mode="form" view_type="form"
+                    target="new" multi="True"
+        />
+
+    </data>
+</odoo>

@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        <record id="izi_virtual_money_sell_money_form" model="ir.ui.view">
+            <field name="name">account.journal.form.inherit</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="izi_virtual_money.view_pos_pos_form_izi_vm_sell"/>
+            <field name="arch" type="xml">
+                <field name="amount_authorized_diff" position="after">
+                    <notebook colspan="4">
+                        <page string="Products">
+                            <field name="product_ids">
+                                <tree string="Order lines" editable="bottom">
+                                    <field name="product_ids"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

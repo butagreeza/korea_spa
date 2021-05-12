@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="job_revenue_monthly_action" model="ir.cron">
+            <field name="name">Revenue Monthly</field>
+            <field name="model_id" ref="crm_revennue.model_res_partner_revenue_monthly"/>
+            <field name="state">code</field>
+            <field name="code">model.job_revenue_moth()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">months</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="True" />
+        </record>
+</odoo>

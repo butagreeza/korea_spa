@@ -1,0 +1,102 @@
+<odoo>
+    <data>
+        <record id="view_pos_therapy_bundle_pos_form" model="ir.ui.view">
+            <field name="name">POS Order</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+<!--                <xpath expr="//button[@name='action_order_confirm']" position="attributes">-->
+<!--                    <attribute name="attrs">{"invisible": [("state", "!=", "paid")]}</attribute>-->
+<!--                </xpath>-->
+                <xpath expr="//field[@name='user_id']" position="before">
+                    <field name="x_therapy_record_id" readonly="True" attrs="{'invisible': [('x_therapy_record_id', '=', False)]}"/>
+                    <field name="x_number_massage" readonly="True" attrs="{'invisible': [('x_therapy_record_id', '=', False)]}"/>
+                    <field name="x_barem_id" readonly="True" attrs="{'invisible': [('x_therapy_record_id', '=', False)]}"/>
+                    <field name="x_categ_id" invisible="1"/>
+                    <field name="x_is_use_barem" invisible="1"/>
+                    <field name="x_is_create_therapy_record" invisible="1"/>
+                </xpath>
+                <xpath expr="//page[2]" position="before">
+                    <page name="product_complement" string="Product Complement" attrs="{'invisible': [('x_is_use_barem', '=', False)]}">
+                        <div>
+                            <button name="action_compute_barem" type="object" class="oe_highlight" string="Compute Barem" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                            <button name="action_compute_massage" type="object" string="Compute Massage" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                        </div>
+                        <field name="x_pos_order_complement_ids" attrs="{'readonly': [('state', '!=', 'new')]}">
+                            <tree create="0" editable="bottom">
+                                <field name="product_is_massage" invisible="True"/>
+                                <field name="component_id" readonly="1"/>
+                                <field name="product_id" options="{'no_create': True}" context="{'component_id': component_id}"/>
+                                <field name="categ_id" readonly="True"/>
+                                <field name="barem_id" readonly="True"/>
+                                <field name="qty"/>
+                                <field name="qty_max" readonly="1"/>
+                                <field name="uom_id" readonly="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                <xpath expr="//page[1]" position="replace">
+                    <page string="Products">
+                        <field name="lines" colspan="4" nolabel="1">
+                            <tree string="Order lines" editable="bottom">
+                                <field name="x_check_service" invisible="True"/>
+                                <field name="x_charge_refund" invisible="True"/>
+                                <field name="x_edit_price" invisible="True"/>
+                                <field name="product_id" context="{'izi_pos_product_search':True}" options="{'no_create_edit':True, 'no_open':False, 'no_create':True}" domain="[('product_tmpl_id.x_type_card', '=', 'none'), ('available_in_pos','=',True)]"/>
+                                <field name="x_categ_id" readonly="True"/>
+                                <field name="lot_name" readonly="1" force_save="1"/>
+                                <field name="qty" force_save="1"/>
+                                <field name="x_use_compute_massage"/>
+                                <field name="x_qty" invisible="True" attrs="{'readonly': [('parent.x_pos_partner_refund_id', '!=', False)]}" force_save="1"/>
+                                <field name="x_is_create_therapy" invisible="True"/>
+                                <field name="x_body_area_ids" context="{'default_product_id': product_id}" widget="many2many_tags" options="{'no_create_edit':True, 'no_create':True}" attrs="{'required': [('x_is_create_therapy', '=', True)]}" domain="[('type','=', 'injection')]"/>
+                                <field name="price_unit" widget="monetary" attrs="{'readonly': [('x_edit_price', '=', False)]}" force_save="1"/>
+                                <field name="discount" widget="monetary"/>
+                                <field name="x_discount" widget="monetary"/>
+                                <field name="tax_ids_after_fiscal_position" widget="many2many_tags" invisible="1"/>
+                                <field name="tax_ids" widget="many2many_tags" invisible="1"/>
+                                <field name="price_subtotal" widget="monetary" invisible="1"/>
+                                <field name="x_subtotal_wo_discount" widget="monetary" invisible="1"/>
+                                <field name="price_subtotal_incl" widget="monetary"/>
+                            </tree>
+                        </field>
+                        <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                            <field name="amount_tax" widget="monetary"/>
+                            <field name="x_amount_total" class="oe_subtotal_footer_separator" widget="monetary"/>
+                            <!--<field name="x_vip_discount" class="oe_subtotal_footer_separator"-->
+                            <!--widget="monetary"/>-->
+                            <div class="oe_subtotal_footer_separator oe_inline">
+                                <label for="amount_total"/>
+                                <button name="button_dummy" states="draft" string="(update)" invisible="1" class="oe_edit_only oe_link"/>
+                            </div>
+                            <field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator" widget="monetary"/>
+                        </group>
+                        <div class="oe_clear"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="pos_order_compute_massage_formview" model="ir.ui.view">
+            <field name="name">Compute massage</field>
+            <field name="model">pos.order.compute.massage</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="body_area_number" required="True"/>
+                            <field name="amount_total" required="True"/>
+                            <field name="massage_number" readonly="True"/>
+                        </group>
+                        <footer>
+                            <button name="action_confirm" string="Confirm" type="object" class="oe_highlight"/>
+                            or
+                            <button string="Cancel" class="oe_link" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="partner_gift_inherit_view" model="ir.ui.view">
+            <field name="name">res.partner.gift</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='sales_purchases']" position="after">
+                    <page string="Gift Information" name="gift_info">
+                        <button name="action_give" type="object" string="Give" class="oe_highlight" groups="izi_res_permissions.group_customer_care, izi_res_permissions.group_leader_consultant"/>
+                        <field name="x_gift_ids">
+                            <tree string="Gift" editable="top" create="false" delete="false">
+                                <field name="gift_code" readonly="True"/>
+                                <field name="gift_name"  readonly="True" />
+                                <field name="gift_expired_date" readonly="True"/>
+                                <field name="gift_status" readonly="True"/>
+                                <field name="reason_gift_id"/>
+                                <field name="content"/>
+                                <field name="create_date" readonly="True"/>
+                                <field name="pos_order_id" readonly="True"/>
+                                <button name="action_cancel_gift" type="object" string="Cancel" confirm="Chắc chắn hủy phiếu quà tặng này không?" attrs="{'invisible': ['|', ('gift_code', '=', False), ('gift_status', 'in', ['destroy', 'used'])]}"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <group>
+                                        <field name="gift_code" readonly="True"/>
+                                        <field name="gift_expired_date" readonly="True"/>
+                                        <field name="pos_order_id" readonly="True"/>
+                                    </group>
+                                    <group>
+                                        <field name="gift_status" readonly="True"/>
+                                        <field name="reason_gift_id"/>
+                                        <field name="content"/>
+                                    </group>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

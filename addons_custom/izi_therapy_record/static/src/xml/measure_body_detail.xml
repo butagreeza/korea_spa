@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="template_custom_by_tungpd">
+    <t t-name="izi_therapy_record.BodyMeasureDetail">
+        <div class="table-responsive">
+            <table class="o_list_view table table-condensed table-striped o_list_view_ungrouped">
+            <thead>
+                <tr class="oe_list_header_columns">
+                    <th class="oe_list_header_many2one oe_sortable">Sản phẩm cấy</th>
+                    <th class="oe_list_header_many2one oe_sortable">Ngày đo</th>
+                    <t t-foreach="arr_body" t-as="detail">
+                        <th class="oe_list_header_many2one oe_sortable">
+                            <t t-esc="name"/>
+                        </th>
+                    </t>
+                </tr>
+            </thead>
+            <tbody>
+                <t t-foreach="items" t-as="item">
+                    <tr>
+                        <td>
+                            <t t-esc="product_id"/>
+                        </td>
+                        <td>
+                            <t t-esc="measurement"/>
+                        </td>
+                        <t t-foreach="body" t-as="detail">
+                            <t t-foreach="arr_body" t-as="body_item">
+                                <t t-if="detail[1] == body_item[0]">
+                                    <t t-set="check" t-value="True"/>
+                                </t>
+                                <t t-else="">
+                                    <t t-set="check" t-value="False"/>
+                                </t>
+                            </t>
+                            <t t-if="check == True">
+                                <t t-if="measurement &gt; 0">
+                                    <td style="color: #00a09d;">
+                                        <t t-esc="measurement"/>
+                                    </td>
+                                </t>
+                                <t t-else="">
+                                    <td >
+                                        <t t-esc="measurement"/>
+                                    </td>
+                                </t>
+                            </t>
+                        </t>
+                    </tr>
+                </t>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="oe_list_footer oe_number">
+                    </td>
+                    <td class="oe_list_footer oe_number">
+                    </td>
+                    <td class="oe_list_footer oe_number">
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        </div>
+
+    </t>
+</templates>

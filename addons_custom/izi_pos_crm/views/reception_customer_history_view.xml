@@ -1,0 +1,74 @@
+<odoo>
+    <data>
+        <record id="reception_customer_history_tree_view" model="ir.ui.view">
+            <field name="name">Reception customer history</field>
+            <field name="model">reception.customer</field>
+            <field name="arch" type="xml">
+                <tree default_order='create_date desc'
+                      decoration-danger="state=='assigned'"
+                      decoration-success="state=='done'">
+                    <field name="partner_id"/>
+                    <field name="name"/>
+                    <field name="phone_number"/>
+                    <field name="create_date"/>
+                    <field name="team_id"/>
+                    <field name="user_id"/>
+                    <field name="booking_note"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Search lịch sử tiếp đón-->
+        <record model="ir.ui.view" id="reception_customer_search_view">
+            <field name="name">Reception customer</field>
+            <field name="model">reception.customer</field>
+            <field name="arch" type="xml">
+                <search string="Reception customer">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="user_id"/>
+                    <field name="team_id"/>
+
+                    <separator/>
+                    <filter string="Mới" name="state_new" domain="[('state', '=', 'new')]"/>
+                    <filter string="Đã giao tư vấn" name="state_assigned" domain="[('state', '=', 'assigned')]"/>
+                    <filter string="Hoàn thành" name="state_done" domain="[('state', '=', 'done')]"/>
+                    <separator/>
+                    <filter string="Tiếp đón của tôi" name="my_reception"
+                            domain="[('user_id', '=', uid)]"/>
+                    <separator/>
+                    <group expand="0" string="Group By">
+                        <separator/>
+                        <filter string="Người tiếp đón" context="{'group_by': 'user_id'}"/>
+                        <separator/>
+                        <filter string="Cơ sở tiếp đón" context="{'group_by':'team_id'}"/>
+                        <separator/>
+                        <filter string="Khách hàng" context="{'group_by':'partner_id'}"/>
+                        <separator/>
+                        <filter string="Giai đoạn" context="{'group_by':'state'}"/>
+                        <separator/>
+                        <filter string="Ngày" context="{'group_by':'create_date:day'}"/>
+                        <filter string="Tháng" context="{'group_by':'create_date:month'}"/>
+                        <separator/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_reception_customer_history" model="ir.actions.act_window">
+            <field name="name">Reception customer history</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">reception.customer</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('izi_pos_crm.reception_customer_history_tree_view')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('izi_pos_crm.reception_customer_form_view')})]"/>
+        </record>
+
+        <menuitem id="menu_reception_customer_history"
+                  name="Reception customer history"
+                  action="action_reception_customer_history"
+                  parent="menu_pos_crm"/>
+    </data>
+</odoo>

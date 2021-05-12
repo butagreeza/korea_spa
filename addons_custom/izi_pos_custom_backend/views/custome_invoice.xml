@@ -1,0 +1,103 @@
+<odoo>
+    <data>
+
+        <record id="invoice_form_pos_order" model="ir.ui.view">
+            <field name="name">account.invoice.form.pos.order</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <xpath expr="//form/header/button[@name='invoice_print']" position="after">
+                    <button name="action_invoice_payment" context="{'invoice_id': id, 'izi_partner_debt':True}" string="Register Payment" type="object" states="open"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="invoice_kanban">
+            <field name="name">account.invoice.kanban</field>
+            <field name="model">account.invoice</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_mobile">
+                    <field name="number"/>
+                    <field name="partner_id"/>
+                    <field name="amount_total_signed"/>
+                    <field name="date_invoice"/>
+                    <field name="state"/>
+                    <field name="currency_id"/>
+                    <field name="date_due"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                                <div class="o_kanban_record_top">
+                                    <div class="o_kanban_record_headings">
+                                        <strong class="o_kanban_record_title"><span><t t-esc="record.partner_id.value"/></span></strong>
+                                    </div>
+                                    <strong><field name="amount_total_signed" widget="monetary"/></strong>
+                                </div>
+                                <div class="o_kanban_record_bottom">
+                                    <div class="oe_kanban_bottom_left text-muted">
+                                        <span><t t-esc="record.number.value"/> <t t-esc="record.date_invoice.value"/></span>
+                                        <br/>
+                                        <span>Hạn thanh toán công nợ:<t t-esc="record.date_due.value"/> </span>
+                                    </div>
+                                    <div class="oe_kanban_bottom_right">
+                                        <span class="pull-right text-right">
+                                            <field name="state" widget="label_selection" options="{'classes': {'draft': 'default', 'cancel': 'default', 'none': 'danger', 'open': 'warning',
+                                            'paid': 'success'}}"/>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!--<record id="action_invoice_tree_pos_order" model="ir.actions.act_window">-->
+            <!--<field name="name">Customer Invoices</field>-->
+            <!--<field name="res_model">account.invoice</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_mode">tree,kanban,form,calendar,pivot,graph</field>-->
+            <!--<field eval="False" name="view_id"/>-->
+            <!--<field name="domain">[('type','=','out_invoice')]</field>-->
+            <!--<field name="context">{'type':'out_invoice', 'journal_type': 'sale'}</field>-->
+            <!--<field name="search_view_id" ref="account.view_account_invoice_filter"/>-->
+            <!--<field name="help" type="html">-->
+                <!--<p class="oe_view_nocontent_create">-->
+                    <!--Click to create a customer invoice.-->
+                <!--</p>-->
+                <!--<p>-->
+                    <!--Odoo's electronic invoicing allows to ease and fasten the-->
+                    <!--collection of customer payments. Your customer receives the-->
+                    <!--invoice by email and he can pay online and/or import it-->
+                    <!--in his own system.-->
+                <!--</p>-->
+                <!--<p>-->
+                    <!--The discussions with your customer are automatically displayed at-->
+                    <!--the bottom of each invoice.-->
+                <!--</p>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <!--<record id="action_invoice_tree1_pos_order_view1" model="ir.actions.act_window.view">-->
+            <!--<field eval="55" name="sequence"/>-->
+            <!--<field name="view_mode">tree</field>-->
+            <!--<field name="view_id" ref="account.invoice_tree"/>-->
+            <!--<field name="act_window_id" ref="action_invoice_tree_pos_order"/>-->
+        <!--</record>-->
+
+        <!--<record id="action_invoice_tree1_pos_order_view2" model="ir.actions.act_window.view">-->
+            <!--<field eval="6" name="sequence"/>-->
+            <!--<field name="view_mode">form</field>-->
+            <!--<field name="view_id" ref="invoice_form_pos_order"/>-->
+            <!--<field name="act_window_id" ref="action_invoice_tree_pos_order"/>-->
+        <!--</record>-->
+
+        <!--<menuitem action="account.action_invoice_tree1"-->
+                  <!--id="menu_action_invoice_tree1_pos_order"-->
+                  <!--parent="izi_menu_res_partner_debt" groups="pos_security.group_pos_supervisor_user"-->
+                  <!--sequence="2"/>-->
+    </data>
+</odoo>

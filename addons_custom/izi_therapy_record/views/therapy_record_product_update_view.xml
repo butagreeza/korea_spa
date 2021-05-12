@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="therapy_record_update_product_tree_view" model="ir.ui.view">
+            <field name="name">Therapy Record Product Update</field>
+            <field name="model">therapy.record.product.update</field>
+            <field name="arch" type="xml">
+                <tree default_order='date desc' create="False" editable="top">
+                    <field name="therapy_record_id" options="{'no_create_edit':True, 'no_open':True}"/>
+                    <field name="user_id" options="{'no_create_edit':True, 'no_open':True}"/>
+                    <field name="date_update"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="therapy_record_product_update_form_view" model="ir.ui.view">
+            <field name="name">Therapy Record Product Update</field>
+            <field name="model">therapy.record.product.update</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="therapy_record_id" readonly="1"/>
+                            <field name="user_id" readonly="1"/>
+                            <field name="date_update" readonly="1"/>
+                        </group>
+                        <label for="update_line_ids"/>
+                        <field name="update_line_ids" editable="bottom">
+                            <tree name="update_product_line" editable="bottom">
+                                <field name="order_id" force_save="True" readonly="1" options="{'no_create': True}"/>
+                                <field name="product_id" attrs="{'readonly': [('order_id', '!=', False)]}" options="{'no_create': True}"/>
+                                <field name="uom_id" readonly="1" options="{'no_create': True}"/>
+                                <field name="price_unit" readonly="1"/>
+                                <field name="qty_max_old" force_save="True" readonly="1"/>
+                                <field name="qty_max_new"/>
+                                <field name="note"/>
+                            </tree>
+                        </field>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                    <footer>
+                        <button string="Cancel" class="btn-default" special="cancel" />
+                    </footer>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="therapy_record_product_update_form_popup_view" model="ir.ui.view">
+            <field name="name">Therapy Record Product Update</field>
+            <field name="model">therapy.record.product.update</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="therapy_record_id" readonly="1"/>
+                        <field name="user_id" readonly="1"/>
+                        <field name="date_update" readonly="1"/>
+                    </group>
+                    <label for="update_line_ids"/>
+                    <field name="update_line_ids" editable="bottom">
+                        <tree name="update_product_line" editable="bottom">
+                            <field name="order_id" force_save="True" readonly="1" options="{'no_create': True}"/>
+                            <field name="order_line_id" invisible="True" force_save="True" readonly="1" options="{'no_create': True}"/>
+                            <field name="product_id" attrs="{'readonly': [('order_id', '!=', False)]}" required="True" force_save="True" options="{'no_create': True}"/>
+                            <field name="uom_id" readonly="1" options="{'no_create': True}"/>
+                            <field name="price_unit" readonly="1"/>
+                            <field name="qty_max_old" force_save="True" readonly="1"/>
+                            <field name="qty_max_new"/>
+                            <field name="note"/>
+                        </tree>
+                    </field>
+                    <footer>
+                        <button name="update_therapy_record_product" string="Update Product" type="object" class="oe_highlight" icon="fa-archive"/>
+                        <button string="Cancel" class="btn-default" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

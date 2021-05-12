@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+        <record id="izi_purchase_order_form_inherit" model="ir.ui.view">
+            <field name="name">Purchase</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="attributes">
+                    <attribute name="context">{'search_default_supplier':1, 'default_supplier':1, 'default_customer':0, 'purchase_order': 1}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='date_planned']" position="after">
+                    <field name="quantity" readonly="1"/>
+                </xpath>
+
+                <xpath expr="//button[@name='action_rfq_send']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//button[@name='button_approve']" position="attributes">
+                    <attribute name="groups">izi_res_permissions.group_leader_accountant</attribute>
+                </xpath>
+
+                <xpath expr="//button[@name='print_quotation']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='picking_type_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='date_order']" position="after">
+                    <field name="picking_type_id" domain="[('code','=','incoming')]" options="{'no_create': True}" groups="stock.group_stock_multi_locations"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="purchase.purchase_form_action" model="ir.actions.act_window">
+            <field name="domain">[('state','in',('draft', 'to approve', 'purchase', 'confirmed'))]</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,6 @@
+<odoo>
+    <data>
+        <menuitem id="menu_service_booking" name="Service booking" action="izi_crm_booking.action_service_booking"
+              parent="menu_pos_crm"/>
+    </data>
+</odoo>

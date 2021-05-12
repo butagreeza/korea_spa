@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        <record id="izi_view_hr_job_code_form" model="ir.ui.view">
+            <field name="name">Hr job code</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_hr_job_form"/>
+            <field name="priority">12</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']/parent::h1" position="after">
+                    <label for="x_code" class="oe_edit_only"/>
+                    <h1>
+                        <field name="x_code" placeholder="Code"/>
+                    </h1>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

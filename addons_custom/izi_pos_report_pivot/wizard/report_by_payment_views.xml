@@ -1,0 +1,88 @@
+<odoo>
+    <data>
+        <record id="report_by_payment_form_view" model="ir.ui.view">
+            <field name="name">report_by_payment_view</field>
+            <field name="model">report.by.payment</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="date_from" required="True" />
+                            <field name="date_to" required="True"/>
+                        </group>
+                        <group>
+                            <field name="user_ids" widget="many2many_tags" options="{'no_create': True}"/>
+                            <field name="partner_ids" widget="many2many_tags" context="{'user_ids': user_ids}" options="{'no_create': True}"/>
+                        </group>
+                    </group>
+
+                    <footer>
+                        <button name="action_get_report_by_payment" context="{'type':'tree'}" string="Get Report Tree" type="object" class="btn-primary"/>
+                        <button name="action_get_report_by_payment" context="{'type':'pivot'}" string="Get Report Pivot" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="report_by_payment_action" model="ir.actions.act_window">
+            <field name="name">Report By Payment</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">report.by.payment</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="izi_pos_report_pivot.report_by_payment_form_view"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="report_by_payment_menu"
+                  parent="point_of_sale.menu_point_rep"
+                  action="report_by_payment_action"
+                  sequence="4"/>
+
+        <record id="report_by_payment_line_tree_view" model="ir.ui.view">
+            <field name="name">report_by_payment_line_tree_view</field>
+            <field name="model">report.by.payment.line</field>
+            <field name="arch" type="xml">
+                <tree>
+<!--                    <field name="pos_session_id" required="1"/>-->
+                    <field name="date_order" required="1"/>
+                    <field name="accounting_voucher" required="1"/>
+                    <field name="partner_code" required="1"/>
+                    <field name="partner_name" required="1"/>
+                    <field name="journal_id" required="1"/>
+                    <field name="user_id" required="1"/>
+                    <field name="value_amount" required="1" sum="Amount Total"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="report_by_payment_line_pivot_view" model="ir.ui.view">
+            <field name="name">report_by_payment_line_pivot_view</field>
+            <field name="model">report.by.payment.line</field>
+            <field name="arch" type="xml">
+                <pivot disable_linking="True">
+<!--                    <field name="pos_session_id" type="row"/>-->
+                    <field name="partner_id" type="row"/>
+                    <field name="accounting_voucher" type="row"/>
+                    <field name="journal_id" type="col"/>
+                    <field name="date_order" type="col" interval="day"/>
+                    <field name="value_amount" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="report_by_payment_line_action" model="ir.actions.act_window">
+            <field name="name">Report By Payment</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">report.by.payment.line</field>
+            <field name="view_mode">tree,pivot</field>
+            <field name="view_type">tree</field>
+            <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('report_by_payment_line_tree_view')}),
+                          (0, 0, {'view_mode': 'pivot', 'view_id': ref('report_by_payment_line_pivot_view')})]"/>
+            <field name="target">current</field>
+        </record>
+
+    </data>
+</odoo>

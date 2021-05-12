@@ -1,0 +1,68 @@
+<odoo>
+    <data>
+        <record id="department_rate_line_tree_view" model="ir.ui.view">
+            <field name="name">department.rate.line</field>
+            <field name="model">department.rate.line</field>
+            <field name="arch" type="xml">
+                <tree create="false" delete="false" default_order="rate_time DESC">
+                    <field name="rate_time"/>
+                    <field name="department_id"/>
+                    <field name="branch_id"/>
+                    <field name="using_id"/>
+                    <field name="customer_rate" widget="sentiment_icon"/>
+                    <field name="customer_comment"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="department_rate_line_form_view" model="ir.ui.view">
+            <field name="name">department.rate.line</field>
+            <field name="model">department.rate.line</field>
+            <field name="arch" type="xml">
+                <form edit="false">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="department_id"/>
+                                <field name="rate_time"/>
+                            </group>
+                            <group>
+                                <field name="customer_rate" widget="sentiment_icon" />
+                                <field name="customer_comment"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="department_rate_line_search_view" model="ir.ui.view">
+           <field name="name">department.rate.line</field>
+           <field name="model">department.rate.line</field>
+            <field name="arch" type="xml">
+                <search string="Search">
+                    <field name="department_id"/>
+                    <field name="customer_rate" widget="sentiment_icon"/>
+                    <field name="customer_comment"/>
+                    <field name="rate_time"/>
+                    <group expand="0" string="Group By">
+                        <filter name="group_by_department" string="Department" context="{'group_by':'department_id'}"/>
+                    </group>
+                </search>
+           </field>
+        </record>
+
+        <record id="action_department_rate_line" model="ir.actions.act_window">
+            <field name="name">Department Rate Line</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">department.rate.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="target">current</field>
+            <field name="context">{'search_default_group_by_department': 1}</field>
+        </record>
+
+        <menuitem id="menu_department_rate_line" name="Department Rate Line" action="action_department_rate_line"
+            parent="izi_pos_custom_backend.izi_menu_res_partner_debt"/>
+    </data>
+</odoo>

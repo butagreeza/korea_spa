@@ -1,0 +1,410 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* izi_pos_report_pivot
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-22 03:06+0000\n"
+"PO-Revision-Date: 2020-09-22 03:06+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_line_account_expense_income
+msgid "Account Expense Income"
+msgstr "Khoản thu chi"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_line_accounting_voucher
+msgid "Accounting Voucher"
+msgstr "Chứng từ"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_line_amount
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_line_amount
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: izi_pos_report_pivot
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_by_payment_line_tree_view
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_cash_book_line_tree_view
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_expense_by_partner_line_tree_view
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_expense_income_by_product_line_tree_view
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_income_by_journal_line_tree_view
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_sale_by_product_line_tree_view
+msgid "Amount Total"
+msgstr "Tổng tiền"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_line_bill_name
+msgid "Bill Name"
+msgstr "Tên phiếu"
+
+#. module: izi_pos_report_pivot
+#: code:addons/izi_pos_report_pivot/wizard/report_sale_by_product.py:82
+#, python-format
+msgid "Báo cáo bán hàng chi tiết theo sản phẩm"
+msgstr "Báo cáo bán hàng chi tiết theo sản phẩm"
+
+#. module: izi_pos_report_pivot
+#: code:addons/izi_pos_report_pivot/wizard/report_by_payment.py:126
+#, python-format
+msgid "Báo cáo doanh thu (Tổng hợp/ Chi tiết)"
+msgstr "Báo cáo doanh thu (Tổng hợp/ Chi tiết)"
+
+#. module: izi_pos_report_pivot
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_by_payment_form_view
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_cash_book_form_view
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_expense_by_partner_form_view
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_expense_income_by_product_form_view
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_income_by_journal_form_view
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_sale_by_product_form_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_line_category
+msgid "Category"
+msgstr "Nội dung thu chi"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_line_partner_code
+msgid "Code Partner"
+msgstr "Mã người thụ hưởng"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model,name:izi_pos_report_pivot.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_create_uid
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_line_create_uid
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_create_uid
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_line_create_uid
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_create_uid
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_line_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_create_date
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_line_create_date
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_create_date
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_line_create_date
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_create_date
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_line_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_line_date
+msgid "Date"
+msgstr "Ngày chứng từ"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_date_from
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_date_from
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_date_from
+msgid "Date From"
+msgstr "Từ ngày"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_line_date_order
+msgid "Date Order"
+msgstr "Ngày chứng từ"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_date_to
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_date_to
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_date_to
+msgid "Date To"
+msgstr "Đến ngày"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_line_date_done
+msgid "Date done"
+msgstr "Ngày (Xuất/Nhập)"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_display_name
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_line_display_name
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_display_name
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_line_display_name
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_display_name
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_line_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: izi_pos_report_pivot
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_by_payment_form_view
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_cash_book_form_view
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_expense_by_partner_form_view
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_expense_income_by_product_form_view
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_income_by_journal_form_view
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_sale_by_product_form_view
+msgid "Get Report Pivot"
+msgstr "Lấy báo cáo dạng Pivot"
+
+#. module: izi_pos_report_pivot
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_by_payment_form_view
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_cash_book_form_view
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_expense_by_partner_form_view
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_expense_income_by_product_form_view
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_income_by_journal_form_view
+#: model:ir.ui.view,arch_db:izi_pos_report_pivot.report_sale_by_product_form_view
+msgid "Get Report Tree"
+msgstr "Lấy báo cáo dạng Danh sách"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_id
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_line_id
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_id
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_line_id
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_id
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: izi_pos_report_pivot
+#: selection:report.expense.income.line,bill_type:0
+#: selection:report.sale.by.product.line,type:0
+msgid "In"
+msgstr "Nhập"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_line_journal_id
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_line_journal_id
+msgid "Journal"
+msgstr "Phương thức thanh toán"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,help:izi_pos_report_pivot.field_report_expense_income_line_account_expense_income
+msgid "Khoản thu chi"
+msgstr "Khoản thu chi"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment___last_update
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_line___last_update
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income___last_update
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_line___last_update
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product___last_update
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_line___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_line_write_uid
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_write_uid
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_line_write_uid
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_write_uid
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_line_write_uid
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_line_write_date
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_write_date
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_line_write_date
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_write_date
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_line_write_date
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_line_user_last_id
+msgid "Last User"
+msgstr "Người sửa cuối cùng"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_line_partner_name
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_line_partner_name
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_line_partner_name
+msgid "Name partner"
+msgstr "Tên khách hàng"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,help:izi_pos_report_pivot.field_report_expense_income_line_date
+msgid "Ngày chứng từ"
+msgstr "Ngày chứng từ"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,help:izi_pos_report_pivot.field_report_expense_income_line_user_id
+msgid "Người lập"
+msgstr "Người lập"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,help:izi_pos_report_pivot.field_report_expense_income_line_user_last_id
+msgid "Người sửa cuối cùng"
+msgstr "Người sửa cuối cùng"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_line_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_line_pos_order_id
+msgid "Order"
+msgstr "Đơn hàng"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_line_origin
+msgid "Origin"
+msgstr "Tham chiếu"
+
+#. module: izi_pos_report_pivot
+#: selection:report.expense.income.line,bill_type:0
+#: selection:report.sale.by.product.line,type:0
+msgid "Out"
+msgstr "Xuất"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_line_partner_id
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_partner_ids
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_line_partner_id
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_partner_ids
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_line_partner_id
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_partner_ids
+msgid "Partner"
+msgstr "Khách hàng"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_line_partner_code
+msgid "Partner Code"
+msgstr "Mã khách hàng"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_line_picking_id
+msgid "Picking"
+msgstr "Phiếu kho"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_line_pos_session_id
+msgid "Pos Session"
+msgstr "Phiên"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_line_product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: izi_pos_report_pivot
+#: model:ir.actions.act_window,name:izi_pos_report_pivot.report_by_payment_action
+#: model:ir.actions.act_window,name:izi_pos_report_pivot.report_by_payment_line_action
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_line_name
+#: model:ir.ui.menu,name:izi_pos_report_pivot.report_by_payment_menu
+msgid "Report By Payment"
+msgstr "Báo cáo Doanh thu (Tổng hợp/ Chi tiết)"
+
+#. module: izi_pos_report_pivot
+#: model:ir.actions.act_window,name:izi_pos_report_pivot.report_cash_book_action
+#: model:ir.actions.act_window,name:izi_pos_report_pivot.report_cash_book_line_action
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_line_name
+#: model:ir.ui.menu,name:izi_pos_report_pivot.report_cash_book_menu
+msgid "Report Cash Book"
+msgstr "Báo cáo sổ quỹ"
+
+#. module: izi_pos_report_pivot
+#: model:ir.actions.act_window,name:izi_pos_report_pivot.report_expense_by_partner_action
+#: model:ir.actions.act_window,name:izi_pos_report_pivot.report_expense_by_partner_line_action
+#: model:ir.ui.menu,name:izi_pos_report_pivot.report_expense_by_partner_menu
+msgid "Report Expense By Partner"
+msgstr "Báo cáo tiền chi theo đối tượng nhận"
+""
+
+#. module: izi_pos_report_pivot
+#: model:ir.actions.act_window,name:izi_pos_report_pivot.report_expense_income_by_product_action
+#: model:ir.actions.act_window,name:izi_pos_report_pivot.report_expense_income_by_product_line_action
+#: model:ir.ui.menu,name:izi_pos_report_pivot.report_expense_income_by_product_menu
+msgid "Report Expense Income By Product"
+msgstr "Báo cáo thu chi theo từng khoản mục thu chi"
+
+#. module: izi_pos_report_pivot
+#: model:ir.actions.act_window,name:izi_pos_report_pivot.report_income_by_journal_action
+#: model:ir.actions.act_window,name:izi_pos_report_pivot.report_income_by_journal_line_action
+#: model:ir.ui.menu,name:izi_pos_report_pivot.report_income_by_journal_menu
+msgid "Report Income By Journal"
+msgstr "Báo cáo thu theo từng loại tiền"
+
+#. module: izi_pos_report_pivot
+#: model:ir.actions.act_window,name:izi_pos_report_pivot.report_sale_by_product_action
+#: model:ir.actions.act_window,name:izi_pos_report_pivot.report_sale_by_product_line_action
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_line_name
+#: model:ir.ui.menu,name:izi_pos_report_pivot.report_sale_by_product_menu
+msgid "Report Sale By Product"
+msgstr "Báo cáo bán hàng chi tiết theo sản phẩm"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,help:izi_pos_report_pivot.field_report_expense_income_line_bill_name
+msgid "Số phiếu"
+msgstr "Số phiếu"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_line_value_amount
+msgid "Total amount"
+msgstr "Tổng số tiền"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_line_bill_type
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_line_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_line_user_id
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_by_payment_user_ids
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_line_user_id
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_expense_income_user_ids
+#: model:ir.model.fields,field_description:izi_pos_report_pivot.field_report_sale_by_product_user_ids
+msgid "User"
+msgstr "Nhân viên tư vấn"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model,name:izi_pos_report_pivot.model_report_by_payment
+msgid "report.by.payment"
+msgstr "Báo cáo Doanh thu (Tổng hợp/ Chi tiết)"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model,name:izi_pos_report_pivot.model_report_by_payment_line
+msgid "report.by.payment.line"
+msgstr "Báo cáo Doanh thu (Tổng hợp/ Chi tiết)"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model,name:izi_pos_report_pivot.model_report_cash_book
+msgid "report.cash.book"
+msgstr "Báo cáo sổ quỹ"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model,name:izi_pos_report_pivot.model_report_cash_book_line
+msgid "report.cash.book.line"
+msgstr "Báo cáo sổ quỹ"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model,name:izi_pos_report_pivot.model_report_expense_income
+msgid "report.expense.income"
+msgstr "Báo cáo sổ quỹ"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model,name:izi_pos_report_pivot.model_report_expense_income_line
+msgid "report.expense.income.line"
+msgstr "Báo cáo sổ quỹ"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model,name:izi_pos_report_pivot.model_report_sale_by_product
+msgid "report.sale.by.product"
+msgstr "Báo cáo bán hàng chi tiết theo sản phẩm"
+
+#. module: izi_pos_report_pivot
+#: model:ir.model,name:izi_pos_report_pivot.model_report_sale_by_product_line
+msgid "report.sale.by.product.line"
+msgstr "Báo cáo bán hàng chi tiết theo sản phẩm"
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+    <!-- thêm sản phẩm dịch vụ theo voucher-->
+        <record model="ir.ui.view" id="izi_product_product_custom_view_voucher">
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"></field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='is_product_variant']" position="after">
+                    <field name="x_type_card" invisible="True"/>
+                </xpath>
+                <xpath expr="//page[@name='notes']" position="after">
+                    <page attrs="{'invisible':[('x_type_card', '!=', 'pmh')]}" string="Information Card" name="product_service">
+                        <form>
+                            <sheet>
+                                <group>
+                                    <div>
+                                      <label string='Type Voucher'/>
+                                      <field name="x_type_voucher" widget="Selection"/>
+                                    </div>
+                                    <div attrs="{'invisible':[('x_type_voucher','=','product')]}">
+                                        <group>
+                                            <field name="x_amount"/>
+                                            <field name="x_discount"/>
+                                        </group>
+                                        <group>
+                                            <field name="x_product_card_id" context="{'izi_pos_product_search':True}" options="{'no_create_edit':True, 'no_open':False, 'no_create':True}" domain="[('product_tmpl_id.x_type_card', '=', 'none'), ('available_in_pos','=',True)]"/>
+                                        </group>
+                                    </div>
+
+                                </group>
+                                <notebook>
+                                    <page string="Product voucher" attrs="{'invisible':[('x_type_voucher','=','value')]}">
+                                        <field name="x_product_voucher_ids" string="Product voucher">
+                                            <tree editable="bottom">
+                                                <field name="product_vc_id" options="{'no_create': True}"/>
+                                                <field name="qty" required="True"/>
+                                            </tree>
+                                        </field>
+                                    </page>
+                                </notebook>
+                            </sheet>
+                        </form>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="izi_product_product_custom_view_code_inherit">
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="izi_product_release.izi_product_product_custom_view_code"></field>
+            <field name="arch" type="xml">
+                <field name="x_amount" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="x_discount" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

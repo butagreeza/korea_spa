@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="history_measure_body_line" name="history_measure_body_line_js" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/izi_therapy_record/static/src/js/measure_body_detail.js"/>
+            </xpath>
+        </template>
+
+        <record id="izi_view_therapy_record_tree" model="ir.ui.view">
+            <field name="name">Therapy record</field>
+            <field name="model">therapy.record</field>
+            <field name="arch" type="xml">
+                <tree string="Therapy Record" default_order="create_date desc">
+                    <field name="partner_code"/>
+                    <field name="partner_id"/>
+                    <field name="name"/>
+                    <field name="create_date"/>
+                    <field name="partner_user_id"/>
+                    <field name="user_id" options="{'no_create_edit':True, 'no_open':False, 'no_create':True}"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="izi_view_therapy_record_form" model="ir.ui.view">
+            <field name="name">Therapy record</field>
+            <field name="model">therapy.record</field>
+            <field name="arch" type="xml">
+                <form string="Therapy Record">
+                    <header>
+                        <button name="create_prescription" string="Create Prescription" type="object"
+                                context="{'default_partner_id': partner_id}"
+                                class="oe_highlight" icon="fa-archive"/>
+                        <button name="action_sign_commitment" string="Sign commitment" confirm="Bạn có chắc chắn ký đạt cam kết với Hồ sơ trị liệu này?" type="object" class="btn-primary" attrs="{'invisible': [('state','!=','in_therapy')]}"/>
+                        <button name="action_stop_care" string="Stop Care" confirm="Bạn có chắc chắn dừng chăm sóc với Hồ sơ trị liệu này?" type="object" class="btn-primary" attrs="{'invisible': [('state','not in',('in_therapy','signed_commitment'))]}"/>
+                        <button name="action_back_state" string="Back" confirm="Bạn có chắc chắn thay đổi trạng thái của Hồ sơ trị liệu này?" type="object" class="btn-primary" states="signed_commitment,stop_care"/>
+                        <button name="action_return_product" string="Return product" type="object" states="in_therapy"/>
+                        <field name="state" widget="statusbar" statusbar_visible="in_therapy,signed_commitment,stop_care,cancel" nolabel="1" readonly="1" />
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Tên hồ sơ trị liệu..." required="True"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="partner_id" required="True" options="{'no_create_edit':True, 'no_open':False, 'no_create':True}"/>
+                                <field name="partner_code" />
+                                <field name="partner_birthday"/>
+                                <field name="partner_phone"/>
+                                <field name="partner_level_age_id" force_save="1"/>
+                                <field name="note"/>
+                            </group>
+                            <group>
+                                <label string="Địa chỉ"/>
+                                <div class="o_address_format">
+                                    <field name="partner_street" class="o_address_street" placeholder="Địa chỉ..." />
+                                    <field name="partner_state_id" class="o_address_state" placeholder="Tỉnh/Tp..." />
+                                    <field name="partner_country_id" class="oe_inline" placeholder="Quốc gia..." />
+                                </div>
+                                <field name="create_date" readonly="1"/>
+                                <field name="partner_user_id" options="{'no_create_edit':True, 'no_open':False, 'no_create':True}"/>
+                                <field name="user_id" required="1" options="{'no_create_edit':True, 'no_open':False, 'no_create':True}"/>
+                                <field name="categ_id" domain="[('x_is_therapy_record', '=', True)]" required="1" options="{'no_create_edit':True, 'no_open':False, 'no_create':True}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Therapy body measure">
+                                <div string="Thông số cơ thể" name='measure_body'/>
+                                <field name="conpute_id" widget="measure_body_detail" style="width:100%;"/>
+                                <div string="Lịch sử đo thông số" name='history_measure_body'/>
+                                <field name="therapy_body_measure_ids">
+                                    <tree default_order="measurement_time desc">
+                                        <field name="measurement_time" attrs="{'required': 1}"/>
+                                        <field name="technician" attrs="{'required': 1}"/>
+                                        <field name="note"/>
+                                    </tree>
+                                    <form>
+                                        <sheet>
+                                            <group>
+                                                <field name="measurement_time" attrs="{'required': 1}"/>
+                                                <field name="technician" attrs="{'required': 1}"/>
+                                            </group>
+                                            <group>
+                                                <field name="product_id" domain="[('categ_id', '=', parent.categ_id)]" force_save="True" attrs="{'required': 1}" options="{'no_create_edit':True, 'no_open':False, 'no_create':True}"/>
+                                                <field name="note"/>
+                                            </group>
+                                            <notebook>
+                                                <page name="measure_line" string="Therapy body measure line">
+                                                    <field name="body_measure_line_ids">
+                                                        <tree editable="bottom">
+                                                            <field name="body_area_id" context="{'default_product_id': parent.product_id}" domain="[('type', '=', 'measure')]" required="True" options="{'no_create_edit':True, 'no_open':False, 'no_create':True}"/>
+                                                            <field name="measurement" required="True"/>
+                                                        </tree>
+                                                    </field>
+                                                </page>
+                                            </notebook>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                            <page string="Therapy prescription" name="therapy_prescription">
+                                <field name="therapy_prescription_ids" readonly="True">
+                                    <tree create="0" default_order="create_date desc">
+                                        <field name="name"/>
+                                        <field name="user_id" attrs="{'required': 1}" options="{'no_create_edit':True, 'no_open':False, 'no_create':True}"/>
+                                        <field name="create_date"/>
+                                        <field name="time_prescription"/>
+                                        <field name="state"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Therapy record product" name="record_product">
+                                <div>
+                                    <button name="action_show_view_update_product" type="object" class="oe_highlight" string="Update Quantity Product"/>
+                                </div>
+                                <field name="therapy_record_product_ids" readonly="True">
+                                    <tree editable="bottom" create="0">
+                                        <field name="order_id"/>
+<!--                                        <field name="order_line_id"/>-->
+                                        <field name="product_id" attrs="{'required': 1}"/>
+                                        <field name="uom_id"/>
+                                        <field name="body_area_ids" widget="many2many_tags" />
+                                        <field name="qty_used"/>
+                                        <field name="qty_available"/>
+                                        <field name="qty_max"/>
+                                        <field name="price_unit"/>
+                                        <field name="price_subtotal_incl"/>
+                                        <field name="amount_paid" force_save="True"/>
+                                        <field name="amount_used" force_save="True"/>
+                                        <field name="actual_debt" force_save="True"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="History update therapy record product" name="update_record_product">
+                                <field name="therapy_record_update_product_ids" readonly="1">
+                                    <tree default_order='date_update desc'>
+                                        <field name="user_id" options="{'no_create_edit':True, 'no_open':True}"/>
+                                        <field name="date_update"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Therapy Prescription Return Product Line" name="therapy_perscription_return_product_line">
+                                <field name="therapy_prescription_return_product_line_ids" readonly="1" force_save="1">
+                                    <tree>
+                                        <field name="product_id"/>
+                                        <field name="qty"/>
+                                        <field name="uom_id"/>
+                                        <field name="date_return"/>
+                                        <field name="user_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="therapy_record_search_view" model="ir.ui.view">
+            <field name="name">Therapy record</field>
+            <field name="model">therapy.record</field>
+            <field name="arch" type="xml">
+                <search string="Views">
+                    <field name="partner_id" string="Code of Partner" filter_domain="['|', ('partner_id.x_old_code', '=', self), ('partner_id.x_code', '=', self)]"/>
+                    <field name="partner_id" string="Name of Partner" filter_domain="[('partner_id.name', 'ilike', self)]"/>
+                    <field name="partner_id" string="Phone of Partner" filter_domain="['|', '|', ('partner_id.phone', '=', self), ('partner_id.mobile', '=', self), ('partner_id.x_mobile2', '=', self)]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Customer" domain="[]" context="{'group_by':'partner_id'}"/>
+                        <filter string="Category" domain="[]" context="{'group_by':'categ_id'}"/>
+                        <filter string="User" domain="[]" context="{'group_by':'user_id'}"/>
+                        <filter string="State" domain="[]" context="{'group_by':'state'}"/>
+                        <filter string="Out of Medicine Day" domain="[]" context="{'group_by':'out_of_medicine_date:day'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_izi_therapy_record" model="ir.actions.act_window">
+            <field name="name">Therapy Record</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">therapy.record</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_izi_therapy_record_by_partner" model="ir.actions.act_window">
+            <field name="name">Therapy Record</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">therapy.record</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name='domain'>[('partner_id', '=', active_id)]</field>
+        </record>
+
+        <record id="action_izi_therapy_record" model="ir.actions.act_window">
+            <field name="name">Therapy Record</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">therapy.record</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Therapy Record" id="izi_therapy_record_menu" parent="point_of_sale.menu_point_root"/>
+
+        <menuitem name="Therapy Record" id="izi_therapy_record" parent="izi_therapy_record.izi_therapy_record_menu"
+                  action="action_izi_therapy_record"/>
+    </data>
+</odoo>

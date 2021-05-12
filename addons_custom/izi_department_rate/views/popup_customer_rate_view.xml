@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_pop_up_rate_service" model="ir.ui.view">
+            <field name="name">izi.service.card.using.form.view</field>
+            <field name="model">izi.service.card.using</field>
+            <field name="arch" type="xml">
+                <form string="Rate Service">
+                    <h3>Service Detail</h3>
+                    <field name="type" invisible="True"/>
+                    <field name="service_card_ids" attrs="{'invisible': [('type', '!=', 'card')]}">
+                        <tree editable="bottom" create="false" delete="false">
+                            <field name="service_id" readonly="1" force_save="1"/>
+                            <field name="employee_ids" readonly="1" force_save="1" widget="many2many_tags"/>
+                            <field name="customer_rate" widget="sentiment_icon" show_all_icon="true"/>
+                            <field name="customer_comment"/>
+                        </tree>
+                    </field>
+                    <br/>
+                    <field name="service_card1_ids" attrs="{'invisible': [('type', '!=', 'service')]}">
+                        <tree editable="bottom" create="false" delete="false">
+                            <field name="service_id" readonly="1" force_save="1"/>
+                            <field name="employee_ids" readonly="1" force_save="1" widget="many2many_tags"/>
+                            <field name="customer_rate" widget="sentiment_icon" show_all_icon="true"/>
+                            <field name="customer_comment"/>
+                        </tree>
+                    </field>
+                    <br/>
+<!--                        <page string="Department Rate">-->
+                    <h3>Department Rate</h3>
+                    <field name="department_rate_line_ids">
+                        <tree editable="bottom" create="false" delete="false">
+                            <field name="department_id" readonly="1" force_save="1"/>
+                            <field name="customer_rate" widget="sentiment_icon" show_all_icon="true"/>
+                            <field name="customer_comment"/>
+                        </tree>
+                    </field>
+                    <footer>
+                        <button name="action_confirm_rate" string="Confirm" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

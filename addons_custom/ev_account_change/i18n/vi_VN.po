@@ -1,0 +1,196 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ev_account_change
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-23 11:27+0000\n"
+"PO-Revision-Date: 2019-10-23 11:27+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "<span class=\"o_form_label\" attrs=\"{'invisible': ['|',('state','!=','draft'), ('type','!=','in_invoice')]}\">Draft\n"
+"                                    Bill\n"
+"                                </span>\n"
+"                                <span class=\"o_form_label\" attrs=\"{'invisible': [('sequence_number_next_prefix','=',False)]}\">- First Number:\n"
+"                                </span>\n"
+"                                <span class=\"o_form_label\" attrs=\"{'invisible': ['|',('state','!=','draft'), ('type','!=','in_refund')]}\">Draft\n"
+"                                    Credit Note\n"
+"                                </span>\n"
+"                                <span class=\"o_form_label\" attrs=\"{'invisible': ['|',('state', '=', 'draft'), ('type','!=','in_invoice')]}\">Bill\n"
+"                                </span>\n"
+"                                <span class=\"o_form_label\" attrs=\"{'invisible': ['|',('state', '=', 'draft'), ('type','!=','in_refund')]}\">Credit\n"
+"                                    Note\n"
+"                                </span>"
+msgstr "<span class=\"o_form_label\" attrs=\"{'invisible': ['|',('state','!=','draft'), ('type','!=','in_invoice')]}\">Draft\n"
+"                                    Bill\n"
+"                                </span>\n"
+"                                <span class=\"o_form_label\" attrs=\"{'invisible': [('sequence_number_next_prefix','=',False)]}\">- First Number:\n"
+"                                </span>\n"
+"                                <span class=\"o_form_label\" attrs=\"{'invisible': ['|',('state','!=','draft'), ('type','!=','in_refund')]}\">Draft\n"
+"                                    Credit Note\n"
+"                                </span>\n"
+"                                <span class=\"o_form_label\" attrs=\"{'invisible': ['|',('state', '=', 'draft'), ('type','!=','in_invoice')]}\">Bill\n"
+"                                </span>\n"
+"                                <span class=\"o_form_label\" attrs=\"{'invisible': ['|',('state', '=', 'draft'), ('type','!=','in_refund')]}\">Credit\n"
+"                                    Note\n"
+"                                </span>"
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "Additional notes..."
+msgstr "Ghi chú thêm..."
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "Ask for a Credit Note"
+msgstr "Ask for a Credit Note"
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "Auto-detect"
+msgstr "Auto-detect"
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "Bank Account"
+msgstr "Tài khoản ngân hàng"
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "Bill"
+msgstr "Hoá đơn"
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "Bill Date"
+msgstr "Ngày hóa đơn"
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "Bill lines"
+msgstr "Dòng hoá đơn"
+
+#. module: ev_account_change
+#: model:ir.model.fields,field_description:ev_account_change.field_account_invoice_line_x_price_subtotal
+msgid "Change Subtotal"
+msgstr "Thay đổi tổng tiền"
+
+#. module: ev_account_change
+#: model:ir.model.fields,field_description:ev_account_change.field_account_invoice_x_description
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: ev_account_change
+#: model:ir.model.fields,field_description:ev_account_change.field_stock_journal_general__change_value
+msgid "Change Value"
+msgstr "Thay đổi giá trị"
+
+#. module: ev_account_change
+#: model:ir.model,name:ev_account_change.model_account_invoice
+msgid "Invoice"
+msgstr "Hóa đơn"
+
+#. module: ev_account_change
+#: model:ir.model,name:ev_account_change.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Chi tiết hóa đơn"
+
+#. module: ev_account_change
+#: model:ir.model,name:ev_account_change.model_stock_journal_general
+msgid "Stock Journal General"
+msgstr "Sổ nhật ký kho"
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "Other Info"
+msgstr "Thông tin khác"
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "Print Excel"
+msgstr "In Excel"
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "Purchase Representative"
+msgstr "Purchase Representative"
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "Register Payment"
+msgstr "Phương thức thanh toán"
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "Set to Draft"
+msgstr "Thiết lập về dự thảo"
+
+#. module: ev_account_change
+#: model:ir.model.fields,field_description:ev_account_change.field_account_invoice_x_amount_tax
+msgid "Tax"
+msgstr "Thuế"
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "Taxes"
+msgstr "Các loại thuế"
+
+#. module: ev_account_change
+#: model:ir.model.fields,field_description:ev_account_change.field_account_invoice_x_amount_total
+msgid "Total"
+msgstr "Tổng"
+
+#. module: ev_account_change
+#: model:ir.model.fields,field_description:ev_account_change.field_account_invoice_x_amount_untaxed
+msgid "Untaxed Amount"
+msgstr "Giá trị trước thuế"
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "Validate"
+msgstr "Xác nhận"
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "Vendor"
+msgstr "Nhà cung cấp"
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "Vendor Bill"
+msgstr "Hóa đơn Nhà cung cấp"
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "Vendor Reference"
+msgstr "Tham chiếu NCC"
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "You have"
+msgstr "You have"
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "for this supplier. You can allocate them to mark this bill as paid."
+msgstr "for this supplier. You can allocate them to mark this bill as paid."
+
+#. module: ev_account_change
+#: model:ir.ui.view,arch_db:ev_account_change.account_invoice_supplier_form
+msgid "outstanding debits"
+msgstr "outstanding debits"
+

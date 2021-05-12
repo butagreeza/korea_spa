@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="pos_work_service_allocation_form">
+            <field name="name">add.body.area</field>
+            <field name="model">pos.work.service.allocation</field>
+            <field name="inherit_id" ref="pos_work_service_allocation.pos_work_service_allocation_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='pos_work_lines']" position="replace">
+                    <field name="pos_work_lines">
+                        <tree editable="bottom" create="false" delete="false">
+                            <field name="pos_session_id" invisible="1"/>
+                            <field name="date" readonly="1" force_save="1"/>
+                            <field name="partner_id" options="{'no_create':1, 'no_create_edit':1}" attrs="{'readonly': [('parent.state', '!=', 'draft')]}"/>
+                            <field name="service_id" options="{'no_create':1, 'no_create_edit':1}" attrs="{'readonly': [('parent.state', '!=', 'draft')]}"/>
+                            <field name="body_area_ids" widget="many2many_tags" readonly="True"/>
+                            <field name="employee_id" options="{'no_create':1, 'no_create_edit':1}" attrs="{'readonly': [('parent.state', '!=', 'draft')]}"/>
+                            <field name="work_lt" attrs="{'readonly': [('parent.state', '!=', 'draft')]}"/>
+                            <field name="work_change"/>
+                            <field name="work_nv" attrs="{'readonly': [('parent.state', '!=', 'draft')]}"/>
+                        </tree>
+                        <form>
+                            <group>
+                                <group>
+                                    <field name="pos_session_id" invisible="1"/>
+                                    <field name="date" readonly="1" force_save="1"/>
+                                    <field name="partner_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                                    <field name="service_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                                    <field name="body_area_ids" widget="many2many_tags" readonly="True"/>
+                                </group>
+                                <group>
+                                    <field name="employee_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                                    <field name="work_lt"/>
+                                    <field name="work_change"/>
+                                    <field name="work_nv"/>
+                                </group>
+                            </group>
+                        </form>
+                    </field>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

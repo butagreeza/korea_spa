@@ -1,0 +1,1038 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* res_partner_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-05 02:53+0000\n"
+"PO-Revision-Date: 2021-01-05 02:53+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: res_partner_custom
+#: sql_constraint:crm.stage:0
+msgid " Mã phải là duy nhất!"
+msgstr " Mã phải là duy nhất!"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+msgid "(edit)"
+msgstr "(edit)"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+msgid "<span class=\"o_stat_text\">Invoiced</span>"
+msgstr "<span class=\"o_stat_text\">Đã xuất hóa đơn</span>"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Accounting Entries"
+msgstr "Accounting Entries"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+msgid "Active"
+msgstr "Có hiệu lực"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Address"
+msgstr "Địa chỉ"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_age
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_age
+msgid "Age"
+msgstr "Tuổi"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_level_age_age_end
+msgid "Age End"
+msgstr "Độ tuổi kết thúc"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_level_age_age_start
+msgid "Age Start"
+msgstr "Độ tuổi bắt đầu"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.view_res_partner_filter_phone
+msgid "Archived"
+msgstr "Đã lưu "
+
+#. module: res_partner_custom
+#: model:ir.actions.act_window,name:res_partner_custom.action_assign_telesale_again_multi
+msgid "Assign Telesales Again Multi"
+msgstr "Giao lại Telesale nhiều KH"
+
+#. module: res_partner_custom
+#: model:ir.actions.act_window,name:res_partner_custom.action_assign_telesale_multi
+msgid "Assign Telesales Multi"
+msgstr "Giao Telesale nhiều KH"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_stage_form
+msgid "Assign telesales"
+msgstr "Giao telesales"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_images
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_images
+msgid "Attachments"
+msgstr "Đính kèm"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Bank account(s)"
+msgstr "(Các) Tải khoản ngân hàng"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_birthday
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_birthday
+msgid "Birthday"
+msgstr "Ngày sinh"
+
+#. module: res_partner_custom
+#: code:addons/res_partner_custom/models/partner_assign_telesales.py:51
+#: code:addons/res_partner_custom/models/partner_assign_telesales.py:76
+#, python-format
+msgid "Bạn chưa chọn nhân viên thực hiện"
+msgstr "Bạn chưa chọn nhân viên thực hiện"
+
+#. module: res_partner_custom
+#: code:addons/res_partner_custom/models/crm_stage.py:29
+#: code:addons/res_partner_custom/models/crm_stage.py:78
+#, python-format
+msgid "Call now"
+msgstr "Cần gọi ngay"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.assign_telesales_again_multi_form_view
+#: model:ir.ui.view,arch_db:res_partner_custom.assign_telesales_multi_form_view
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_assign_telesales_form
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_transfer_stage_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_category_ids
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_category_ids
+msgid "Category"
+msgstr "Nhóm sản phẩm"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "City"
+msgstr "Thành phố"
+
+#. module: res_partner_custom
+#: model:ir.actions.act_window,help:res_partner_custom.action_assign_telesale_multi
+msgid "Click here to add new tài liệu"
+msgstr "Click here to add new tài liệu"
+
+#. module: res_partner_custom
+#: model:ir.actions.act_window,help:res_partner_custom.action_partner_level_form
+msgid "Click to create a new partner levl."
+msgstr "Click to create a new partner levl."
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_crm_stage_x_code
+msgid "Code"
+msgstr "Mã"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.view_res_partner_filter_phone
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+#: model:ir.ui.view,arch_db:res_partner_custom.view_res_partner_filter_phone
+msgid "Company"
+msgstr "Công ty"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.assign_telesales_again_multi_form_view
+#: model:ir.ui.view,arch_db:res_partner_custom.assign_telesales_multi_form_view
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_assign_telesales_form
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_transfer_stage_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: res_partner_custom
+#: model:ir.model,name:res_partner_custom.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Contact / Address"
+msgstr "Contact / Address"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Contact Name"
+msgstr "Tên liên hệ"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Contacts & Address"
+msgstr "Liên lạc & Địa chỉ"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+msgid "Contacts & Addresses"
+msgstr "Các liên lạc & Địa chỉ"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+#: model:ir.ui.view,arch_db:res_partner_custom.view_res_partner_filter_phone
+msgid "Country"
+msgstr "Quốc gia"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+msgid "Create company"
+msgstr "Create company"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_izi_images_profile_customer_create_uid
+#: model:ir.model.fields,field_description:res_partner_custom.field_level_age_create_uid
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales_create_uid
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales_history_create_uid
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_profile_image_create_uid
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_stage_history_create_uid
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_status_create_uid
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_transfer_stage_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_izi_images_profile_customer_create_date
+#: model:ir.model.fields,field_description:res_partner_custom.field_level_age_create_date
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales_create_date
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales_history_create_date
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_profile_image_create_date
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_stage_history_create_date
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_status_create_date
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_transfer_stage_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.view_res_partner_filter_phone
+msgid "Creator"
+msgstr "Người tạo"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Credit card(s)"
+msgstr "Credit card(s)"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_crm_team_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_crm_team_id
+msgid "Crm Team"
+msgstr "Cơ sở làm dịch vụ"
+
+#. module: res_partner_custom
+#: model:ir.actions.act_window,name:res_partner_custom.action_partner_level_form
+#: model:ir.ui.menu,name:res_partner_custom.menu_partner_level_form
+msgid "Custom Levels"
+msgstr "Khung độ tuổi"
+
+#. module: res_partner_custom
+#: model:ir.ui.menu,name:res_partner_custom.customer_menu
+#: model:ir.ui.menu,name:res_partner_custom.customer_menu_in_pipeline
+#: model:ir.ui.menu,name:res_partner_custom.customer_root_main_menu
+#: model:ir.ui.view,arch_db:res_partner_custom.view_res_partner_filter_phone
+msgid "Customers"
+msgstr "Khách hàng"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_crm_stage_x_day_number_remind
+msgid "Day number remind"
+msgstr "Số ngày nhắc lịch"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_status_description
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_izi_images_profile_customer_display_name
+#: model:ir.model.fields,field_description:res_partner_custom.field_level_age_display_name
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales_display_name
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales_history_display_name
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_profile_image_display_name
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_stage_history_display_name
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_status_display_name
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_transfer_stage_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_district_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_district_id
+msgid "District"
+msgstr "Huyện"
+
+#. module: res_partner_custom
+#: code:addons/res_partner_custom/models/res_partner.py:514
+#, python-format
+msgid "Dữ liệu độ tuổi nhập vào không hợp lý {} - {}!"
+msgstr "Dữ liệu độ tuổi nhập vào không hợp lý {} - {}!"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_enclosed_phone
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_enclosed_phone
+msgid "Enclosed Phone"
+msgstr "Số điện thoại người đi cùng"
+
+#. module: res_partner_custom
+#: selection:res.partner,x_sex:0
+msgid "Female"
+msgstr "Nữ"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Fiscal Information"
+msgstr "Thông tin tài chính"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_stage_history_from_stage_id
+msgid "From stage"
+msgstr "Từ trạng thái"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_stage_history_from_stage_name
+msgid "From stage name"
+msgstr "Từ trạng thái"
+
+#. module: res_partner_custom
+#: code:addons/res_partner_custom/models/res_partner.py:521
+#: code:addons/res_partner_custom/models/res_partner.py:526
+#, python-format
+msgid "Giá trị độ tuổi {} - {} vào bị trùng với độ tuổi {} - {}!"
+msgstr "Giá trị độ tuổi {} - {} vào bị trùng với độ tuổi {} - {}!"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.view_res_partner_filter_phone
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: res_partner_custom
+#: model:res.groups,name:res_partner_custom.group_show_number_phone
+msgid "Group Show Number Phone"
+msgstr "Có thể xem số điện thoại"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_izi_images_profile_customer_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_level_age_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales_history_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_profile_image_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_stage_history_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_status_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_transfer_stage_id
+msgid "ID"
+msgstr "ID"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_izi_images_profile_customer_image
+msgid "Image"
+msgstr "Hình ảnh"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+msgid "Internal Notes"
+msgstr "Ghi chú nội bộ"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+msgid "Internal note..."
+msgstr "Internal note..."
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+msgid "Invoicing"
+msgstr "Xuất hóa đơn"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.izi_presenter_view_partner_form
+msgid "Khung độ tuổi..."
+msgstr "Khung độ tuổi..."
+
+#. module: res_partner_custom
+#: code:addons/res_partner_custom/models/partner_assign_telesales.py:56
+#, python-format
+msgid "Khách hàng %s đã được giao cho chuyên viên telesale %s"
+msgstr "Khách hàng %s đã được giao cho chuyên viên telesale %s"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_profile_image_image_large
+msgid "Large-sized Image"
+msgstr "Ảnh lớn - thông tin hồ sơ khách hàng"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_last_interaction
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_last_interaction
+msgid "Last Interaction"
+msgstr "Lần cuối cùng tương tác"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_izi_images_profile_customer___last_update
+#: model:ir.model.fields,field_description:res_partner_custom.field_level_age___last_update
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales___last_update
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales_history___last_update
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_profile_image___last_update
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_stage_history___last_update
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_status___last_update
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_transfer_stage___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_izi_images_profile_customer_write_uid
+#: model:ir.model.fields,field_description:res_partner_custom.field_level_age_write_uid
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales_history_write_uid
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales_write_uid
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_profile_image_write_uid
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_stage_history_write_uid
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_status_write_uid
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_transfer_stage_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_izi_images_profile_customer_write_date
+#: model:ir.model.fields,field_description:res_partner_custom.field_level_age_write_date
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales_history_write_date
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales_write_date
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_profile_image_write_date
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_stage_history_write_date
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_status_write_date
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_transfer_stage_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: res_partner_custom
+#: code:addons/res_partner_custom/models/crm_stage.py:35
+#, python-format
+msgid "Lead"
+msgstr "Lead"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_level_age_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_level_age_id
+msgid "Level Age"
+msgstr "Khung độ tuổi"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_link_facebook
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_link_facebook
+msgid "Link facebook"
+msgstr "Link facebook"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_link_zalo
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_link_zalo
+msgid "Link zalo"
+msgstr "Link zalo"
+
+#. module: res_partner_custom
+#: code:addons/res_partner_custom/models/crm_stage.py:65
+#, python-format
+msgid "Lose"
+msgstr "Thất bại"
+
+#. module: res_partner_custom
+#: code:addons/res_partner_custom/models/res_partner.py:517
+#, python-format
+msgid "Lỗi khoảng độ tuổi {} > {}!"
+msgstr "Lỗi khoảng độ tuổi {} > {}!"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Mailing Opt-Out"
+msgstr "Có nhận thư hay không"
+
+#. module: res_partner_custom
+#: selection:res.partner,x_sex:0
+msgid "Male"
+msgstr "Nam"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_manage_user_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_manage_user_id
+msgid "Manage User"
+msgstr "Nhân viên chịu trách nhiệm"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+msgid "Meetings"
+msgstr "Các cuộc gặp"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Misc"
+msgstr "Các thứ khác"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_mobile2
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_mobile2
+msgid "Mobile 2"
+msgstr "Mobile 2"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Mobile 2:"
+msgstr "Mobile 2:"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Mobile:"
+msgstr "Di động:"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_izi_images_profile_customer_name
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_profile_image_name
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_stage_history_name
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_status_name
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+msgid "Name"
+msgstr "Tên"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_level_age_name
+msgid "Name Level"
+msgstr "Tên khung"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_next_interaction_reminder_activity_type_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_next_interaction_reminder_activity_type_id
+msgid "Next interaction reminder activity"
+msgstr "Hình thức tương tác tiếp theo"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales_history_next_interaction_reminder_activity_type_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales_next_interaction_reminder_activity_type_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_transfer_stage_next_interaction_reminder_activity_type_id
+msgid "Next interaction reminder activity type"
+msgstr "Hình thức tương tác tiếp theo"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales_history_next_interaction_reminder_date
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales_next_interaction_reminder_date
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_transfer_stage_next_interaction_reminder_date
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_next_interaction_reminder_date
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_next_interaction_reminder_date
+msgid "Next Interaction Reminder Date"
+msgstr "Lịch tương tác tiếp theo"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.izi_presenter_view_partner_form
+msgid "Ngày sinh.."
+msgstr "Ngày sinh.."
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_profile_image_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+msgid "Opportunities"
+msgstr "Các cơ hội"
+
+#. module: res_partner_custom
+#: code:addons/res_partner_custom/models/crm_stage.py:53
+#, python-format
+msgid "Opportunity"
+msgstr "Cơ hội"
+
+#. module: res_partner_custom
+#: selection:res.partner,x_sex:0
+msgid "Other"
+msgstr "Khác"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Other information"
+msgstr "Thông tin khác"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+msgid "POS Sales"
+msgstr "POS Sales"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_izi_images_profile_customer_partner_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_level_age_partner_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales_partner_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_profile_image_partner_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_stage_history_partner_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_transfer_stage_partner_id
+msgid "Partner"
+msgstr "Khách hàng"
+
+#. module: res_partner_custom
+#: sql_constraint:res.partner:0
+msgid "Partner Code is unique"
+msgstr "Mã Khách hàng là duy nhất"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_partner_job
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_partner_job
+msgid "Partner Job"
+msgstr "Nghề nghiệp"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.view_partner_custom_level_form
+msgid "Partner Level"
+msgstr "Partner Level"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.view_partner_custom_level_list
+msgid "Partner Levels"
+msgstr "Khung độ tuổi"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_code
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_code
+msgid "Partner code"
+msgstr "Mã khách hàng"
+
+#. module: res_partner_custom
+#: sql_constraint:res.partner:0
+msgid "Partner mobile 2 is unique in a brand"
+msgstr "Số di động 2 là duy nhất trong một thương hiệu"
+
+#. module: res_partner_custom
+#: sql_constraint:res.partner:0
+msgid "Partner mobile is unique in a brand"
+msgstr "Số di động là duy nhất trong một thương hiệu"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_old_code
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_old_code
+msgid "Partner old code"
+msgstr "Mã cũ khách hàng"
+
+#. module: res_partner_custom
+#: sql_constraint:res.partner:0
+msgid "Partner old code is unique"
+msgstr "Mã cũ khách hàng là duy nhất"
+
+#. module: res_partner_custom
+#: sql_constraint:res.partner:0
+msgid "Partner phone is unique in a brand"
+msgstr "Số điện thoại là duy nhất trong một thương hiệu"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.izi_presenter_view_partner_form
+msgid "Partner profile"
+msgstr "Ảnh hồ sơ khách hàng"
+
+#. module: res_partner_custom
+#: model:ir.model,name:res_partner_custom.model_partner_stage_history
+msgid "Partner stage history"
+msgstr "Lịch sử trạng thái"
+
+#. module: res_partner_custom
+#: model:ir.actions.act_window,name:res_partner_custom.action_partner_status
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_partner_status_ids
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_partner_status_ids
+#: model:ir.ui.menu,name:res_partner_custom.menu_partner_status
+msgid "Partner status"
+msgstr "Tình trạng khách hàng"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+msgid "Partners"
+msgstr "Khách hàng"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_izi_images_profile_customer_path
+msgid "Path"
+msgstr "Đường dẫn"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Payments"
+msgstr "Các thanh toán"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.view_res_partner_filter_phone
+msgid "Persons"
+msgstr "Persons"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Phone:"
+msgstr "Điện thoại"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Point of Sale"
+msgstr "Điểm bán hàng"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_presenter
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_presenter
+msgid "Presenter"
+msgstr "Người giới thiệu"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_presenter_phone
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_presenter_phone
+msgid "Presenter Phone"
+msgstr "Số điện thoại người giới thiệu"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Pricelists are managed on"
+msgstr "Bảng giá được quản lý trên"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_profile_customer_ids
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_profile_customer_ids
+msgid "Profile Customer"
+msgstr "Hồ sơ khách hàng"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_profile_image_ids
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_profile_image_ids
+msgid "Profile image"
+msgstr "Ảnh hồ sơ khách hàng"
+
+#. module: res_partner_custom
+#: model:ir.actions.act_window,name:res_partner_custom.profile_image_action_window_by_partner
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_profile_image_count
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_profile_image_count
+#: model:ir.ui.view,arch_db:res_partner_custom.izi_presenter_view_partner_form
+msgid "Profile images"
+msgstr "Ảnh hồ sơ"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Purchase"
+msgstr "Mua hàng"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+msgid "Purchases"
+msgstr "Mua hàng"
+
+#. module: res_partner_custom
+#: code:addons/res_partner_custom/models/crm_stage.py:41
+#, python-format
+msgid "Reference"
+msgstr "Tham khảo"
+
+#. module: res_partner_custom
+#: code:addons/res_partner_custom/models/crm_stage.py:47
+#, python-format
+msgid "Reference2"
+msgstr "Thảo khảo 2"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_revenue_old
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_revenue_old
+msgid "Revenue Old"
+msgstr "Doanh thu cũ"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Sale"
+msgstr "Bán"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Sales & Purchases"
+msgstr "Bán hàng & Mua hàng"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.view_res_partner_filter_phone
+msgid "Salesperson"
+msgstr "Nhân viên bán hàng"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_sex
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_sex
+msgid "Sex"
+msgstr "Giới tính"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_profile_image_image_small
+msgid "Small-sized image"
+msgstr "Ảnh cỡ nhỏ"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_source_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_source_id
+#: model:ir.ui.view,arch_db:res_partner_custom.view_res_partner_filter_phone
+msgid "Source"
+msgstr "Nguồn"
+
+#. module: res_partner_custom
+#: model:ir.ui.menu,name:res_partner_custom.source_menu
+msgid "Sources"
+msgstr "Nguồn"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_transfer_stage_stage_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_stage_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_stage_id
+msgid "Stage"
+msgstr "Trạng thái"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_stage_code
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_stage_code
+msgid "Stage code"
+msgstr "Mã trạng thái"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_stage_history_ids
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_stage_history_ids
+#: model:ir.ui.view,arch_db:res_partner_custom.izi_presenter_view_partner_form
+msgid "Stage history"
+msgstr "Lịch sử trạng thái"
+
+#. module: res_partner_custom
+#: model:ir.model,name:res_partner_custom.model_crm_stage
+msgid "Stage of case"
+msgstr "Trạng thái"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.view_res_partner_filter_phone
+msgid "States"
+msgstr "Trạng thái"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Street 2..."
+msgstr "Street 2..."
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Street..."
+msgstr "Địa chỉ..."
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_crm_lead_tag_ids
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_crm_lead_tag_ids
+#: model:ir.ui.view,arch_db:res_partner_custom.view_res_partner_filter_phone
+msgid "Tag"
+msgstr "Đối tượng khách hàng"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+msgid "Tags..."
+msgstr "Từ khóa..."
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales_history_telesales_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_assign_telesales_telesales_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_telesales_id
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_telesales_id
+msgid "Telesales"
+msgstr "Chuyên viên telesales"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_partner_x_visiting_last
+#: model:ir.model.fields,field_description:res_partner_custom.field_res_users_x_visiting_last
+msgid "The last visiting"
+msgstr "Ngày cuối cùng khách hàng tới cơ sở"
+
+#. module: res_partner_custom
+#: model:res.groups,comment:res_partner_custom.group_show_number_phone
+msgid "The user's contain in man can see number phone of partner "
+msgstr "The user's contain in man can see number phone of partner "
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_stage_history_time_change
+msgid "Time change"
+msgstr "Thời gian chuyển trạng thái"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.view_res_partner_filter_phone
+msgid "Time create"
+msgstr "Ngày tạo"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_stage_history_to_stage_id
+msgid "To stage"
+msgstr "Sang trạng thái"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_stage_history_to_stage_name
+msgid "To stage name"
+msgstr "Sang trạng thái"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_stage_form
+msgid "Transfer stage"
+msgstr "Chuyển trạng thái"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.izi_presenter_view_partner_form
+msgid "Tỉnh - Huyện"
+msgstr "Tỉnh - Huyện"
+
+#. module: res_partner_custom
+#: code:addons/res_partner_custom/models/res_partner.py:113
+#: code:addons/res_partner_custom/models/res_partner.py:119
+#, python-format
+msgid "Tồn tại khách hàng có số di động này: %s"
+msgstr "Tồn tại khách hàng có số di động này: %s"
+
+#. module: res_partner_custom
+#: code:addons/res_partner_custom/models/res_partner.py:159
+#: code:addons/res_partner_custom/models/res_partner.py:166
+#: code:addons/res_partner_custom/models/res_partner.py:173
+#, python-format
+msgid "Tồn tại khách hàng có số điện thoại này"
+msgstr "Tồn tại khách hàng có số điện thoại này"
+
+#. module: res_partner_custom
+#: code:addons/res_partner_custom/models/res_partner.py:107
+#, python-format
+msgid "Tồn tại khách hàng có số điện thoại này: %s"
+msgstr "Tồn tại khách hàng có số điện thoại này: %s"
+
+#. module: res_partner_custom
+#: model:ir.model.fields,field_description:res_partner_custom.field_partner_stage_history_user_id
+msgid "User change"
+msgstr "Người chuyển"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+msgid "Vendor Bills"
+msgstr "Hóa đơn Nhà cung cấp"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.view_res_partner_filter_phone
+msgid "Vendors"
+msgstr "Nhà cung cấp"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "Warehouse"
+msgstr "Kho hàng"
+
+#. module: res_partner_custom
+#: code:addons/res_partner_custom/models/crm_stage.py:59
+#, python-format
+msgid "Won"
+msgstr "Chốt"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "ZIP"
+msgstr "ZIP"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+msgid "e.g. BE0477472701"
+msgstr "e.g. BE0477472701"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "e.g. Mr."
+msgstr "e.g. Mr."
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+msgid "e.g. Sales Director"
+msgstr "e.g. Sales Director"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+msgid "e.g. www.odoo.com"
+msgstr "e.g. www.odoo.com"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_supplier_form
+msgid "internal note..."
+msgstr "Ghi chú nội bộ..."
+
+#. module: res_partner_custom
+#: model:ir.model,name:res_partner_custom.model_izi_images_profile_customer
+msgid "izi.images.profile.customer"
+msgstr "izi.images.profile.customer"
+
+#. module: res_partner_custom
+#: model:ir.model,name:res_partner_custom.model_level_age
+msgid "level.age"
+msgstr "Khung độ tuổi"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.assign_telesales_again_multi_form_view
+#: model:ir.ui.view,arch_db:res_partner_custom.assign_telesales_multi_form_view
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_assign_telesales_form
+#: model:ir.ui.view,arch_db:res_partner_custom.partner_transfer_stage_form
+msgid "or"
+msgstr "hoặc"
+
+#. module: res_partner_custom
+#: model:ir.model,name:res_partner_custom.model_partner_assign_telesales
+msgid "partner.assign.telesales"
+msgstr "Giao telesales"
+
+#. module: res_partner_custom
+#: model:ir.model,name:res_partner_custom.model_partner_assign_telesales_history
+msgid "partner.assign.telesales.history"
+msgstr "partner.assign.telesales.history"
+
+#. module: res_partner_custom
+#: model:ir.model,name:res_partner_custom.model_partner_profile_image
+msgid "partner.profile.image"
+msgstr "Ảnh hồ sơ khách hàng"
+
+#. module: res_partner_custom
+#: model:ir.model,name:res_partner_custom.model_partner_status
+msgid "partner.status"
+msgstr "Tình trạng khách hàng"
+
+#. module: res_partner_custom
+#: model:ir.model,name:res_partner_custom.model_partner_transfer_stage
+msgid "partner.transfer.stage"
+msgstr "Chuyển trạng thái khách hàng"
+
+#. module: res_partner_custom
+#: model:ir.ui.view,arch_db:res_partner_custom.res_partner_add_tab_other_info_form_view
+msgid "the parent company"
+msgstr "công ty mẹ"
+

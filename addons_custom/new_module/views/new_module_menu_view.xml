@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Top menu item -->
+    <menuitem id="new_module_menu_root"
+              name="New Module"
+              web_icon="new_module,static/src/image/icon_new_module.png"
+              sequence="12"/>
+
+    <menuitem id="new_module_order_menu"
+              name="new_module"
+              parent="new_module_menu_root"
+              sequence="1"/>
+
+    <menuitem id="menu_new_module_config"
+              parent="new_module_menu_root"
+              sequence="100"
+              name="Config"/>
+</odoo>

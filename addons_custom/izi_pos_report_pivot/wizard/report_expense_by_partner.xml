@@ -1,0 +1,86 @@
+<odoo>
+    <data>
+        <record id="report_expense_by_partner_form_view" model="ir.ui.view">
+            <field name="name">Report Expense By Partner</field>
+            <field name="model">report.expense.income</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="date_from" required="True" />
+                            <field name="date_to" required="True"/>
+                        </group>
+                        <group>
+                            <field name="partner_ids" widget="many2many_tags" options="{'no_create': True}"/>
+                        </group>
+                    </group>
+
+                    <footer>
+                        <button name="action_get_report_income" context="{'type':'tree'}" string="Get Report Tree" type="object" class="btn-primary"/>
+                        <button name="action_get_report_income" context="{'type':'pivot'}" string="Get Report Pivot" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="report_expense_by_partner_action" model="ir.actions.act_window">
+            <field name="name">Report Expense By Partner</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">report.expense.income</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="izi_pos_report_pivot.report_expense_by_partner_form_view"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="report_expense_by_partner_menu"
+                  parent="point_of_sale.menu_point_rep"
+                  action="report_expense_by_partner_action"
+                  sequence="7"/>
+
+        <record id="report_expense_by_partner_line_tree_view" model="ir.ui.view">
+            <field name="name">Report Expense By Partner</field>
+            <field name="model">report.expense.income.line</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="date" required="1"/>
+                    <field name="partner_code" required="1"/>
+                    <field name="partner_name" required="1"/>
+                    <field name="bill_name" required="1"/>
+                    <field name="amount" required="1" sum="Amount Total"/>
+                    <field name="journal_id" required="1"/>
+                    <field name="user_id" required="1"/>
+                    <field name="user_last_id" required="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="report_expense_by_partner_line_pivot_view" model="ir.ui.view">
+            <field name="name">Report Expense By Partner</field>
+            <field name="model">report.expense.income.line</field>
+            <field name="arch" type="xml">
+                <pivot disable_linking="True">
+                    <field name="partner_id" type="row"/>
+                    <field name="bill_name" type="row"/>
+                    <field name="journal_id" type="col"/>
+                    <field name="date" type="col" interval="day"/>
+                    <field name="amount" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="report_expense_by_partner_line_action" model="ir.actions.act_window">
+            <field name="name">Report Expense By Partner</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">report.expense.income.line</field>
+            <field name="view_mode">tree,pivot</field>
+            <field name="view_type">tree</field>
+            <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('report_expense_by_partner_line_tree_view')}),
+                          (0, 0, {'view_mode': 'pivot', 'view_id': ref('report_expense_by_partner_line_pivot_view')})]"/>
+            <field name="target">current</field>
+        </record>
+
+    </data>
+</odoo>

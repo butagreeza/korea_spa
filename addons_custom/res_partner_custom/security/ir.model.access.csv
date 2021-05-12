@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_res_partner_custom_id1,res_partner_custom_name1,model_izi_images_profile_customer,point_of_sale.group_pos_user,1,1,1,1
+access_res_partner_customer_stage,res_partner_custom_name2,model_partner_stage_history,,1,1,1,1
+access_res_partner_customer_image,res_partner_custom_name3,model_partner_profile_image,,1,1,1,1

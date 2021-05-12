@@ -1,0 +1,28 @@
+<odoo>
+    <data>
+        <record id="product_category_form_view_inherit" model="ir.ui.view">
+            <field name="name">Category</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='first']" position="after">
+                    <notebook>
+                        <page name="category_remind" string="Service remind">
+                            <field name="x_product_categ_remind_ids" nolabel="1">
+                                <tree editable="bottom" >
+                                    <field name="activity_type_id" required="True" options="{'no_create': True}"/>
+                                    <field name="date_number" required="True"/>
+                                    <field name="period" required="True"/>
+                                    <field name="object" required="True"/>
+                                    <field name="type" required="True"/>
+                                    <field name="repeat"/>
+                                    <field name="note" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

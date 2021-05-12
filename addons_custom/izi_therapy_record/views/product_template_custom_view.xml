@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_product_template_inherit_form" model="ir.ui.view">
+            <field name="name">Product Template</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <div name="options" position="inside">
+                    <div attrs="{'invisible':[('type', '!=', 'service')]}">
+                        <field name="x_is_massage"/>
+                        <label for="x_is_massage"/>
+                    </div>
+                    <div attrs="{'invisible':[('type', '!=', 'service')]}">
+                        <field name="x_is_injection"/>
+                        <label for="x_is_injection"/>
+                    </div>
+                    <div attrs="{'invisible':[('type', '!=', 'service')]}">
+                        <field name="x_is_medicine_day"/>
+                        <label for="x_is_medicine_day"/>
+                    </div>
+                </div>
+                <xpath expr="//page[@name='general_information']" position="after">
+                    <page name="body_area_inject" string="Body Area Inject" attrs="{'invisible':[('x_is_injection','=',False), ('x_is_massage','=',False)]}">
+                        <field name="x_body_area_inject_ids">
+                            <tree editable="bottom">
+                                <field name="name" required="True"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page name="body_area_measure" string="Body Area Measure" attrs="{'invisible':[('x_is_injection','=',False), ('x_is_massage','=',False)]}">
+                        <field name="x_body_area_measure_ids">
+                            <tree editable="bottom">
+                                <field name="name" required="True"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_template_search_form_view_stock_inherit" model="ir.ui.view">
+            <field name="name">product.template.search.stock.inherit.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_search_view"/>
+            <field name="arch" type="xml">
+                <field name="pricelist_id" position="after">
+                    <separator/>
+                    <filter name="effect" string="Effect" domain="[('active','=', True)]"/>
+                    <filter name="archive" string="Archive" domain="[('active','=', False)]"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

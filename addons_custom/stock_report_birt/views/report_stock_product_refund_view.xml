@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="report_stock_product_refund_form_view" model="ir.ui.view">
+            <field name="name">report stock product refund form view</field>
+            <field name="model">report.stock.product.refund</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="from_date" required="1"/>
+                            <field name="to_date" required="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button class="oe_highlight" name="create_report_stock_product_refund" type="object"
+                                string="Print report"/>
+                        <button class="oe_highlight" name="create_report_stock_product_refund_ex" type="object"
+                                string="Print report ex"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_report_stock_product_refund" model="ir.actions.act_window">
+            <field name="name">Report Stock Product Refund</field>
+            <field name="res_model">report.stock.product.refund</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        <menuitem id="report_stock_product_refund" name="Report Stock Product Refund"
+                  action="action_report_stock_product_refund"
+                  parent="stock.menu_warehouse_report"/>
+    </data>
+</odoo>

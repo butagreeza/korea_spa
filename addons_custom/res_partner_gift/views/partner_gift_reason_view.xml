@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="partner_gift_reason_tree_view" model="ir.ui.view">
+            <field name="name">partner.gift.reason</field>
+            <field name="model">partner.gift.reason</field>
+            <field name="arch" type="xml">
+                <tree string="Gift Reason" editable="bottom">
+                    <field name="name"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="partner_gift_reason_tree_form" model="ir.ui.view">
+            <field name="name">partner.gift.reason</field>
+            <field name="model">partner.gift.reason</field>
+            <field name="arch" type="xml">
+                <form string="Gift Reason">
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_partner_gift_reason" model="ir.actions.act_window">
+            <field name="name">Partner Gift Reason</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">partner.gift.reason</field>
+            <field name="view_type">form</field>
+        </record>
+
+        <menuitem
+            action="action_partner_gift_reason"
+            id="menu_partner_gift_reason"
+            name="Partner Gift Reason"
+            sequence="16"
+            parent="crm.crm_menu_config"
+        />
+    </data>
+</odoo>

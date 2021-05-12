@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="rpt_crm_state_from" model="ir.ui.view">
+            <field name="name">rpt.crm.state.form</field>
+            <field name="model">rpt.crm.state</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="from_date" required="1"/>
+                        <field name="to_date" required="1"/>
+                        <field name="select_all_stage"/>
+                        <field name="stage_ids" options="{'no_create':1, 'no_create_edit':1}" widget="many2many_tags"
+                               attrs="{'invisible': [('select_all_stage','=',True)],'required': [('select_all_stage','=',False)]}"/>
+                    </group>
+                    <group>
+                        <field name="select_team_all"/>
+                        <field name="team_ids" options="{'no_create':1, 'no_create_edit':1}" widget="many2many_tags"
+                               attrs="{'invisible': [('select_team_all','=',True)],'required': [('select_team_all','=',False)]}"/>
+                    </group>
+                    <footer>
+                        <button class="oe_highlight" name="create_report_crm_state" type="object" string="Print Report"/>
+                        <button class="oe_highlight" name="create_report_crm_state_excel" type="object" string="Print Report Excel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="rpt_crm_state_action" model="ir.actions.act_window">
+            <field name="name">Rpt Crm State</field>
+            <field name="res_model">rpt.crm.state</field>
+            <field name="view_mode">form</field>
+            <field name="view_type">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+        <menuitem id="rpt_crm_state_menu" action="rpt_crm_state_action" name="Rpt Crm State"
+                  parent="crm.crm_menu_report"/>
+    </data>
+</odoo>

@@ -1,0 +1,79 @@
+<odoo>
+    <data>
+        <record id="izi_view_therapy_bundle_tree" model="ir.ui.view">
+            <field name="name">izi.view.therapy.bundle.tree</field>
+            <field name="model">therapy.bundle</field>
+            <field name="arch" type="xml">
+                <tree string="Therapy bundle" create="0">
+                    <field name="name"/>
+                    <field name="order_id"/>
+                    <field name="partner_id"/>
+                    <field name="amount_total"/>
+                    <field name="file_attach"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="izi_view_therapy_bundle_form" model="ir.ui.view">
+            <field name="name">izi.view.therapy.bundle.form</field>
+            <field name="model">therapy.bundle</field>
+            <field name="arch" type="xml">
+                <form create="0">
+                    <header>
+                        <field name="state" widget="statusbar" statusbar_visible="in_therapy,signed_commitment,stop_care,cancel" nolabel="1" readonly="1" />
+                        <button name="action_sign_therapy_bundle" string="Sign Bundle" type="object" class="btn-primary" attrs="{'invisible': [('state','!=','in_therapy')]}"/>
+                        <button name="action_stop_care" string="Stop Care" type="object" class="btn-primary" attrs="{'invisible': [('state','!=','signed_commitment')]}"/>
+                        <button name="action_cancel" string="Cancel" class="btn-default"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Tên gói trị liệu..." attrs="{'required': 1}"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="order_id"/>
+                                <field name="partner_id"/>
+
+                            </group>
+                            <group>
+                                <field name="file_attach"/>
+                                <field name="amount_total"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Therapy bundle Line">
+                                <field name="therapy_bundle_line_ids">
+                                    <tree editable="bottom">
+                                        <field name="product_id" attrs="{'required': 1}"/>
+                                        <field name="uom_id"/>
+                                        <field name="qty"/>
+                                        <field name="body_area_ids" context="{'default_product_id': product_id}" widget="many2many_tags"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_izi_therapy_bundle" model="ir.actions.act_window">
+            <field name="name">Therapy bundle</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">therapy.bundle</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Therapy bundle" id="izi_therapy_bundle" parent="izi_therapy_record.izi_therapy_record_menu"
+                      action="action_izi_therapy_bundle"/>
+    </data>
+</odoo>

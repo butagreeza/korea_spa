@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="template_custom_by_tungpd">
+    <t t-name="izi_crm_interaction.FloatMinutesSeconds">
+        <span><t t-esc="item"/></span>
+    </t>
+</templates>

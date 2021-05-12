@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+    <odoo>
+        <record model="ir.ui.view" id="use_service_card_add_groups_form">
+            <field name="name">izi.service.card.using_form_view</field>
+            <field name="model">izi.service.card.using</field>
+            <field name="inherit_id" ref="izi_use_service_card.use_service_card_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='payment_service']" position="attributes">
+                    <attribute name="groups">izi_res_permissions.group_cashier</attribute>
+                </xpath>
+            </field>
+        </record>
+    </odoo>
+</data>

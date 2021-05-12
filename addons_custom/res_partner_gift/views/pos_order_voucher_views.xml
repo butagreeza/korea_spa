@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="pos_order_gift_form_view" model="ir.ui.view">
+            <field name="name">pos.order.gift</field>
+            <field name="model">pos.order</field>
+            <field name="arch" type="xml">
+                <form string="Point of Sale Orders">
+                    <header>
+                        <field name="x_is_sign_order" invisible="1"/>
+                        <field name="x_type" invisible="1"/>
+                        <field name="x_promotion_test" invisible="1"/>
+                        <field name="x_discount_computed" invisible="1"/>
+                        <field name="x_pos_partner_refund_id" invisible="1"/>
+                        <field name="x_status" invisible="1"/>
+                            <button name="%(point_of_sale.action_pos_payment)d" type="action" string="Payment" class="oe_highlight"
+                                context="{'pos_session_id' : session_id, 'izi_recompute_order_discount':True}"
+                                attrs="{'invisible':['|','|','&amp;','&amp;', ('state', '!=', 'to_payment'), ('x_pos_partner_refund_id','=', False),('x_status', '!=', 'change'), '&amp;','&amp;', ('state', '!=', 'draft'),('x_pos_partner_refund_id','!=', False), ('x_status', '!=', 'change'), '&amp;' ,('state', '=', 'invoiced'), ('x_status', '!=', 'change')]}"
+                                groups="izi_res_permissions.group_cashier, izi_res_permissions.group_consultant, izi_res_permissions.group_member_uid_telesales"/>
+                        <button name="action_order_confirm" string="Confirm" class="oe_highlight" type="object"
+                                attrs="{'invisible':[('state','!=','to_confirm')]}"
+                                groups="pos_security.group_pos_supervisor_user, izi_res_permissions.group_leader_shop, izi_res_permissions.group_cashier"/>
+                        <button name="action_debt_approve"
+                                groups="izi_res_permissions.group_business_manager, izi_res_permissions.group_cashier"
+                                confirm="Đơn hàng này đang bán sản phẩm dưới giá tối thiểu. Bạn có chắc chắn duyệt đơn?"
+                                string="Approve" class="oe_highlight" type="object"
+                                attrs="{'invisible':['|',('state','!=','to_approve'), ('x_pos_partner_refund_id','!=', False)]}"/>
+                        <button name="action_order_cancel"
+                                groups="pos_security.group_pos_supervisor_user,izi_res_permissions.group_consultant,izi_res_permissions.group_leader_shop,izi_res_permissions.group_cashier,point_of_sale.group_pos_user"
+                                confirm="Huỷ các thanh toán và thực hiện thanh toán lại?" string="Cancel" type="object"
+                                attrs="{'invisible':['|', ('state','not in',['to_approve', 'customer_comment', 'to_payment']), ('x_pos_partner_refund_id', '!=', False)]}"/>
+                        <button name="refund" string="Return Products" type="object" attrs="{'invisible':['|',('state','in',['draft', 'to_confirm', 'to_approve']),
+                        ('x_pos_partner_refund_id','=', False)]}"/>
+                        <button name="action_compute_order_discount" string="Discount compute" type="object"
+                                attrs="{'invisible':['|',('state','!=','draft'), ('x_pos_partner_refund_id','!=', False)]}"/>
+                        <button name="action_send_payment"
+                                attrs="{'invisible':['|',('state','!=','draft'), ('x_pos_partner_refund_id','!=', False)]}"
+                                type="object" class="oe_highlight" string="Send"/>
+                        <button name="action_customer_signature" string="Customer Signature" type="object"
+                                attrs="{'invisible':['|',('state','!=','customer_comment'), ('x_is_sign_order','=', False)]}"/>
+                        <button name="refund" string="Refund" type="object"
+                                attrs="{'invisible':['|', '|',('state','not in',('done','invoiced', 'paid')), ('x_pos_partner_refund_id','!=', False),('x_type', 'in', ('3', '4','5'))]}"/>
+                        <button name="send_refund" type="object" string="Send Refund" class="oe_highlight"
+                                attrs="{'invisible':['|',('x_pos_partner_refund_id','=', False), ('state','!=', 'draft')]}"/>
+                        <button name="action_cancel_refund" type="object" string="Back Refund"
+                                attrs="{'invisible':['|',('x_pos_partner_refund_id','=', False), ('state','!=','to_approve')]}"
+                                groups="izi_res_permissions.group_cashier, izi_res_permissions.group_consultant, izi_res_permissions.group_member_uid_telesales"/>
+                        <button name="confirm_refund" type="object" string="Confirm Refund" class="oe_highlight"
+                                attrs="{'invisible':['|',('x_pos_partner_refund_id','=', False), ('state','!=','to_approve')]}"
+                                groups="izi_res_permissions.group_cashier, izi_res_permissions.group_consultant, izi_res_permissions.group_member_uid_telesales"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,to_confirm,paid,done"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_view_invoice" string="Invoice" type="object" class="oe_stat_button"
+                                    icon="fa-pencil-square-o" attrs="{'invisible':[('state','!=','invoiced')]}">
+                            </button>
+                        </div>
+                        <h3 class="text-center">
+                            <field name="name" attrs="{'invisible': [('name','=','/')]}"
+                                   style="margin-right: 35%; margin-left: 35%; max-width: 30%" placeholder="Number"
+                                   readonly="1"/>
+                        </h3>
+                        <group name="order_fields">
+                            <group>
+                                <field name="partner_id" domain="[('customer', '=', True)]" readonly="True"
+                                       context="{'search_default_customer':1, 'form_view_ref': 'res_partner_custom.res_partner_custom_form_view'}"
+                                       options="{'no_create_edit':True, 'no_open':False, 'no_create':True}"
+                                       attrs="{'readonly': ['|',('state','!=','draft'), ('x_pos_partner_refund_id', '!=', False)]}"
+                                       required="1"/>
+                                <field name="pricelist_id" invisible="1" context="{'domain_by_session_id': session_id}"
+                                       options="{'no_create_edit':True, 'no_open':False, 'no_create':True}"
+                                       attrs="{'readonly': ['|',('state','!=','draft'), ('x_pos_partner_refund_id', '!=', False)]}"/>
+                                <field name="date_order" invisible="1" readonly="1"/>
+                                <field name="date_due" invisible="1"
+                                       attrs="{'readonly': [('state','!=','confirm')], 'invisible': [('date_due','=', False)]}"/>
+                                <field name="x_total_order" invisible="1" readonly="1"/>
+                                <field name="x_debt" invisible="1"/>
+                                <field name="session_id" readonly="1" force_save="1" invisible="1"/>
+                                <field name="fiscal_position_id" options="{'no_create': True}" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="user_id" invisible="1" force_save="1"
+                                       attrs="{'readonly': ['|',('state','!=','draft'), ('x_pos_partner_refund_id', '!=', False)]}"/>
+                                <field name="x_cashier_id" readonly="1" invisible="1" force_save="1"/>
+                                <field name="x_pos_partner_refund_id" invisible="1" readonly="1" force_save="1"
+                                       attrs="{'invisible': [('x_pos_partner_refund_id', '=', False)]}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="x_lot_number" invisible="1" widget="enter2action"
+                                       attrs="{'invisible': ['|',('state', '!=', 'draft'), ('x_pos_partner_refund_id', '!=', False)], 'action_element_class': '.izi_btn_action_check_card'}"/>
+                            </group>
+                            <group>
+                                <button name="action_search_lot_number" invisible="1" type="object" string="Search"
+                                        class="oe_highlight izi_btn_action_check_card"
+                                        attrs="{'invisible': ['|',('state', '!=', 'draft'), ('x_pos_partner_refund_id', '!=', False)]}"/>
+                            </group>
+                        </group>
+                        <notebook colspan="4">
+                            <page string="Vouchers">
+                                <field name="lines" colspan="4" nolabel="1">
+                                    <tree string="Order lines" editable="bottom">
+                                        <field name="x_check_service" invisible="True"/>
+                                        <field name="x_charge_refund" invisible="True"/>
+                                        <field name="x_edit_price" invisible="True"/>
+                                        <field name="product_id" context="{'search_voucher':True}" options="{'no_create_edit':True, 'no_open':False, 'no_create':True}" domain="[('product_tmpl_id.x_type_card', '=', 'pmh'), ('available_in_pos','=',True)]"/>
+                                        <field name="lot_name" readonly="1" force_save="1"/>
+                                        <field name="qty" attrs="{'readonly': [('x_check_service', '=', True), ('parent.x_pos_partner_refund_id', '!=', False)]}" force_save="1"/>
+                                        <field name="x_qty" invisible="True" attrs="{'readonly': [('parent.x_pos_partner_refund_id', '!=', False)]}" force_save="1"/>
+                                        <field name="price_unit" widget="monetary" attrs="{'readonly': [('x_edit_price', '=', False)]}" force_save="1"/>
+                                        <field name="discount" widget="monetary"/>
+                                        <field name="x_discount" widget="monetary"/>
+                                        <field name="tax_ids_after_fiscal_position" widget="many2many_tags" invisible="1"/>
+                                        <field name="tax_ids" widget="many2many_tags" invisible="1"/>
+                                        <field name="price_subtotal" widget="monetary" invisible="1"/>
+                                        <field name="x_subtotal_wo_discount" widget="monetary" invisible="1"/>
+                                        <field name="price_subtotal_incl" widget="monetary"/>
+                                    </tree>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                    <field name="amount_tax" widget="monetary"/>
+                                    <field name="x_amount_total" class="oe_subtotal_footer_separator" widget="monetary"/>
+                                    <!--<field name="x_vip_discount" class="oe_subtotal_footer_separator"-->
+                                    <!--widget="monetary"/>-->
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="amount_total"/>
+                                        <button name="button_dummy" states="draft" string="(update)" invisible="1" class="oe_edit_only oe_link"/>
+                                    </div>
+                                    <field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator" widget="monetary"/>
+                                </group>
+                                <div class="oe_clear"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

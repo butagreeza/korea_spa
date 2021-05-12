@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="interaction_criteria_tree_view">
+            <field name="name">interaction.criteria</field>
+            <field name="model">interaction.criteria</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+<!--                    <field name="option_ids"/>-->
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="interaction_criteria_form_view">
+            <field name="name">interaction.criteria</field>
+            <field name="model">interaction.criteria</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h2>
+                            <field name="name" placeholder="Name of Criteria"/>
+                        </h2>
+                            <field name="option_ids">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="interaction_criteria_act" model="ir.actions.act_window">
+            <field name="name">Interaction Criteria</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">interaction.criteria</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Interaction Criteria" id="interaction_criteria_menu" parent="crm.crm_menu_config" sequence="3"
+                  action="interaction_criteria_act"/>
+
+    </data>
+</odoo>

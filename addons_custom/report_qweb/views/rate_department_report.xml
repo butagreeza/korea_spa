@@ -1,0 +1,553 @@
+<openerp>
+    <data>
+        <template id="rate_department_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout" t-lang="en_US">
+                        <div class="page background_gangnam">
+                            <div class="page background_gangnam">
+                                <div style="margin:auto;height: auto;width: 700px;font-size: 18px;">
+                                    <div style="text-align: center;height: auto;width: 700px;">
+                                        <p style="font-size: 25px;">PHIẾU ĐÁNH CÁC BỘ PHẬN</p>
+                                    </div>
+                                    <div style="height: auto;width: 700px;">
+                                        <div>
+                                            <div style="float:left;font-size: 25px;">
+                                                Thông tin khách hàng
+                                            </div>
+                                            <div style="float: right">
+                                                <div style="width: 100%; height: 30px; padding:0px; margin: 0px">
+                                                    <div style="height: 30px; float: right; font-size:18px; font-style:italic;  padding:0px; margin: 0px">
+                                                        Ngày
+                                                        <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d')"/>
+                                                        tháng
+                                                        <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%m')"/>
+                                                        năm
+                                                        <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y')"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br/>
+                                        <div style="clear: both;margin: 20px 0px 0px 12px;">Họ và tên:
+                                            <span t-field="o.customer_id.name" style="margin-left:5px;"/>
+                                        </div>
+                                        <div style="clear: both;margin: 7px 0px 0px 12px;">Mã khách hàng:
+                                            <span t-field="o.customer_id.x_old_code" style="margin-left:5px;"/>
+                                        </div>
+                                        <div style="margin: 7px 0px 0px 12px;">Địa chỉ:
+                                            <span t-field="o.customer_id.street" style="margin-left:5px;"/>
+                                        </div>
+                                        <div style="margin: 7px 0px 0px 12px;">Số điện thoại:
+                                            <span t-field="o.customer_id.phone" style="margin-left:5px;"/>
+                                        </div>
+                                        <div t-if="o.therapy_record_id" style="margin: 7px 0px 0px 12px;">Hồ sơ trị liệu:
+                                            <span t-field="o.therapy_record_id.name" style="margin-left:5px;"/>
+                                        </div>
+                                        <!--<div style="margin-top: 7px;">Email:-->
+                                        <!--    <span t-field="o.customer_id.email" style="margin-left:5px;"/>-->
+                                        <!--</div>-->
+                                    </div>
+                                    <div style="height: auto;width: 700px;">
+                                        <div style="margin-top:10px;">
+                                            <div style="font-size: 25px;">
+                                                Đánh giá sự hài lòng của khách hàng
+                                            </div>
+                                            <!--<div style="font-size: 18px;">-->
+                                            <!--    <i>(Quý khách hàng tích vào những ô cho là đúng)</i>-->
+                                            <!--</div>-->
+                                        </div>
+                                    </div>
+
+
+                                    <div t-foreach="o.department_rate_line_ids" t-as="l" style="margin-top:20px;">
+                                        <span style="padding:1px; margin-left: 10px;" t-field="l.department_id.name"/>
+                                        <div style="width: 100%;">
+
+                                            <div style="width: 700px;margin-left : 51px;float: left;">
+                                                <div style="height: 15px;width: 15px; float: left;border: 1px solid #000;margin-top:3px;">
+                                                    <t t-if="l.customer_rate == 0">
+                                                        <div style="font-size: 25px;margin-top:-13px;">x</div>
+                                                    </t>
+                                                </div>
+                                                <div style="float: left;margin-left: 7px;">
+                                                    Chưa hài lòng
+                                                </div>
+                                                <div style="height: 15px;width: 15px; border: 1px solid #000;margin-left: 50px;float: left;;margin-top:3px;">
+                                                    <t t-if="l.customer_rate == 1">
+                                                        <div style="font-size: 25px;margin-top:-13px;">x</div>
+                                                    </t>
+                                                </div>
+                                                <div style="float: left;margin-left: 7px;">
+                                                    Tạm hài lòng
+                                                </div>
+                                                <div style="height: 15px;width: 15px; border: 1px solid #000;float: left;margin-left: 50px;;margin-top:3px;">
+                                                    <t t-if="l.customer_rate == 2">
+                                                        <div style="font-size: 25px;margin-top:-13px;">x</div>
+                                                    </t>
+                                                </div>
+                                                <div style="float: left;margin-left: 7px;">
+                                                    Rất hài lòng
+                                                </div>
+                                                <div style="height: 15px;width: 15px; border: 1px solid #000;float: left;margin-left: 50px;;margin-top:3px;">
+                                                    <t t-if="l.customer_rate == 3">
+                                                        <div style="font-size: 25px;margin-top:-13px;">x</div>
+                                                    </t>
+                                                </div>
+                                                <div style="float: left;margin-left: 7px;">
+                                                    Không đánh giá
+                                                </div>
+                                                <br/>
+                                                <br/>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout" t-lang="en_US">
+                        <div class="page background_gangnam">
+                            <div class="page background_gangnam">
+                                <div style="font-size: 18px;">
+                                    <div style="margin-top:20px;">
+                                        <t t-if="o.therapy_record_id.therapy_body_measure_ids">
+                                            <div style="height: auto;width: 100%;">
+                                                <div>
+                                                    <div style="float:left;font-size: 25px;">
+                                                        Thông tin khách hàng
+                                                    </div>
+                                                    <div style="float: right">
+                                                        <div style="width: 100%; height: 30px; padding:0px; margin: 0px">
+                                                            <div style="height: 30px; float: right; font-size:18px; font-style:italic;  padding:0px; margin: 0px">
+                                                                Ngày
+                                                                <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d')"/>
+                                                                tháng
+                                                                <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%m')"/>
+                                                                năm
+                                                                <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y')"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br/>
+                                                <div style="clear: both;margin-top: 7px">Họ và tên:
+                                                    <span t-field="o.customer_id.name" style="margin-left:5px;"/>
+                                                </div>
+                                                <div style="clear: both;margin-top: 7px">Mã khách hàng:
+                                                    <span t-field="o.customer_id.x_old_code" style="margin-left:5px;"/>
+                                                </div>
+                                                <div style="margin-top: 7px;">Địa chỉ:
+                                                    <span t-field="o.customer_id.street" style="margin-left:5px;"/>
+                                                </div>
+                                                <div style="margin-top: 7px;">Số điện thoại:
+                                                    <span t-field="o.customer_id.phone" style="margin-left:5px;"/>
+                                                </div>
+                                                <div t-if="o.therapy_record_id" style="margin: 7px 0px 0px 12px;">Hồ sơ trị liệu:
+                                                    <span t-field="o.therapy_record_id.name" style="margin-left:5px;"/>
+                                                </div>
+                                                <!--<div style="margin-top: 7px;">Email:-->
+                                                <!--    <span t-field="o.customer_id.email" style="margin-left:5px;"/>-->
+                                                <!--</div>-->
+                                            </div>
+                                            <span t-if="o.get_body_history()">
+                                                <div style="text-align: center;height: auto;width: 100%;">
+                                                    <p style="font-size: 25px;">LỊCH SỬ ĐO</p>
+                                                </div>
+                                                <table class="table">
+                                                    <tr>
+                                                        <td>Ngày đo</td>
+                                                        <!--<td>Kỹ thuật viên</td>-->
+                                                        <td>Cân nặng</td>
+                                                        <td>Chiều cao</td>
+                                                        <td>Eo trên</td>
+                                                        <td>Eo dưới</td>
+                                                        <td>Eo giữa</td>
+                                                        <td>Bắp tay</td>
+                                                        <td>Bắp đùi phải trên</td>
+                                                        <td>Bắp đùi trái trên</td>
+                                                        <td>Bắp đùi phải dưới</td>
+                                                        <td>Bắp đùi trái dưới</td>
+                                                        <td>Hông</td>
+                                                        <td>Nách</td>
+                                                        <td>Xoài</td>
+                                                        <td>Lưng</td>
+                                                        <td>Bụng trên</td>
+                                                        <td>Bụng giữa</td>
+                                                        <td>Bụng dưới</td>
+                                                        <td>Bắp chân phải trên</td>
+                                                        <td>Bắp chân trái trên</td>
+                                                        <td>Bắp chân phải dưới</td>
+                                                        <td>Bắp chân trái dưới</td>
+
+                                                    </tr>
+                                                    <t t-foreach="o.get_body_history()" t-as="k">
+                                                        <tr>
+                                                            <td>
+                                                                <sapn t-esc="datetime.datetime.strptime(k.measurement_time, '%Y-%m-%d %H:%M:%S').strftime('%d/%m/%Y %H:%M:%S')"/>
+                                                                <!--                                                                <span t-esc="k.measurement_time"/>-->
+                                                            </td>
+                                                            <!--<td>-->
+                                                            <!--  <span t-esc="k.technician.name"/>-->
+                                                            <!--</td>-->
+                                                            <td>
+                                                                <span t-esc="k.weight"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-esc="k.high"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-esc="k.upper_waist"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-esc="k.lower_waist"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-esc="k.middle_waist"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-esc="k.arm"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-esc="k.right_upper_thighs"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-esc="k.left_upper_thighs"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-esc="k.right_lower_thighs"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-esc="k.left_lower_thighs"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-esc="k.flank"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-esc="k.armpit"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-esc="k.lats"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-esc="k.back"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-esc="k.upper_abdomen"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-esc="k.middle_abdomen"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-esc="k.abdomen"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-esc="k.right_upper_calf"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-esc="k.left_upper_calf"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-esc="k.right_lower_calf"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-esc="k.left_lower_calf"/>
+                                                            </td>
+
+                                                        </tr>
+                                                    </t>
+                                                </table>
+                                            </span>
+                                        </t>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <!--        <template id="report_template_invoice_use_service_view_tata">-->
+        <!--            <t t-call="web.html_container">-->
+        <!--                <t t-foreach="docs" t-as="o">-->
+        <!--                    <t t-call="web.external_layout" t-lang="en_US">-->
+        <!--                        <div class="page background_tata">-->
+        <!--                            <style>-->
+        <!--                                .table {-->
+        <!--                                border-collapse: collapse;-->
+        <!--                                width:100%-->
+        <!--                                }-->
+        <!--                                .table > tbody > tr > th {border: 1px solid black; padding: 5px;}-->
+        <!--                                .table > tbody > tr > td {border: 1px solid black; padding: 5px;}-->
+        <!--                                .table > tr {border: 1px solid black; padding: 5px;}-->
+        <!--                                .table > tr > td {border: 1px solid black; padding: 5px;}-->
+        <!--                                &lt;!&ndash;                                .background_tata {&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                  background-image: url(/report_qweb/static/image/background_tata.png);&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                  background-size: cover;&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                  background-position: bottom center;&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                  background-repeat: no-repeat;&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                  min-height: 900px;&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                }&ndash;&gt;-->
+        <!--                            </style>-->
+        <!--                            <div style="width: 100%">-->
+        <!--                                &lt;!&ndash;                                <div style="width: 40%;float: left;margin-top: 20px">&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                    <img src="/report_qweb/static/image/logo_gangnam.png"&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                         style="max-width:230px;max-height:230px;"/>&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                </div>&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                <div style="width: 60%; margin-top: 30px;padding:5px;float: left;font-size:13px;">&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                    <div style="width: 100%; margin: 0px; padding: 0px;font-size:16px;">&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                        <b>VIỆN THẨM MỸ GANGNAM</b>&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                    </div>&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                    <div style="width: 100%; margin-top: 15px; padding: 0px;">&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                        <b>HÀ NỘI </b><t/>          :Số 454 Xã Đàn, Đống Đa&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                    </div>&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                    <div style="width: 100%; margin: 0px; padding: 0px;">&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                        <b>TP. HỒ CHÍ MINH </b> :Số 15 Nguyễn Hiền, Phường 4, Quận 3&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                    </div>&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                    <div style="width: 100%; margin: 0px; padding: 0px;">&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                        <b>HOTLINE         </b><t/>        :093.227.8888-18006257&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                    </div>&ndash;&gt;-->
+        <!--                                &lt;!&ndash;                                </div>&ndash;&gt;-->
+        <!--                                <br clear="both"/>-->
+        <!--                            </div>-->
+        <!--                            <div style="width: 100%; text-align: center;">-->
+        <!--                                <h3>-->
+        <!--                                    <b>HÓA ĐƠN SỬ DỤNG DỊCH VỤ</b>-->
+        <!--                                </h3>-->
+        <!--                                <em style="font-size:18px;">-->
+        <!--                                    SỐ:-->
+        <!--                                    <span style="font-size:18px;" t-field="o.name"/>-->
+        <!--                                </em>-->
+        <!--                            </div>-->
+        <!--                            <br clear="both"/>-->
+
+        <!--                            <table style="width:100%;  padding-left:40px; margin-left: 20px;font-size:16px">-->
+        <!--                                <tr>-->
+        <!--                                    <td class="float:left" width="20%">-->
+        <!--                                        <div style="width: 100%; float: left;margin: 0px; padding:0px;">-->
+        <!--                                            Loại dịch vụ:-->
+        <!--                                        </div>-->
+        <!--                                        <div style="width: 100%; float: left;margin: 0px; padding:0px;">-->
+        <!--                                            Khách hàng:-->
+        <!--                                        </div>-->
+        <!--                                        <div style="width: 100%;float: left;margin: 0px; padding:0px;">-->
+        <!--                                            <t t-if="o.type == 'service'">-->
+        <!--                                                Bảng giá:-->
+        <!--                                            </t>-->
+        <!--                                        </div>-->
+        <!--                                    </td>-->
+        <!--                                    <td class="float:left" width="30%">-->
+        <!--                                        <div style="width: 100%; float: left;margin: 0px; padding:0px;">-->
+        <!--                                            <t t-if="o.type == 'service'">Dịch vụ lẻ</t>-->
+        <!--                                            <t t-if="o.type == 'card'">Thẻ dịch vụ</t>-->
+        <!--                                            <t t-if="o.type == 'guarantee'">Bảo hành</t>-->
+        <!--                                        </div>-->
+        <!--                                        <div style="width: 100%; float: left;margin: 0px; padding:0px;">-->
+        <!--                                            <span t-field="o.customer_id"/>-->
+        <!--                                        </div>-->
+        <!--                                        <div style="width: 100%;float: left;margin: 0px; padding:0px;">-->
+        <!--                                            <t t-if="o.type == 'service'">-->
+        <!--                                                <span t-field="o.pricelist_id.name"/>-->
+        <!--                                            </t>-->
+        <!--                                        </div>-->
+        <!--                                    </td>-->
+        <!--                                    <td class="float:left" width="50%">-->
+        <!--                                        <div style="width: 100%; float: left;margin: 0px; padding-right:40px;">-->
+        <!--                                            Ngày sử dụng dịch vụ:-->
+        <!--                                            <span style="float: right;"-->
+        <!--                                                  t-esc="context_timestamp(datetime.datetime.strptime(o.redeem_date, '%Y-%m-%d %H:%M:%S') + datetime.timedelta(hours=7)).strftime('%d/%m/%Y %H:%M:%S')"/>-->
+        <!--                                        </div>-->
+        <!--                                        <div style="width: 100%; float: left;margin: 0px; padding-right:40px;">-->
+        <!--                                            Thời gian bắt đầu:-->
+        <!--                                            <t t-if="o.date_start ">-->
+        <!--                                                <span style="float: right;"-->
+        <!--                                                      t-esc="context_timestamp(datetime.datetime.strptime(o.date_start, '%Y-%m-%d %H:%M:%S') + datetime.timedelta(hours=7)).strftime('%d/%m/%Y %H:%M:%S')"/>-->
+        <!--                                            </t>-->
+        <!--                                            <t t-else="">-->
+        <!--                                                <span style="float: right;" t-field="o.date_start"/>-->
+        <!--                                            </t>-->
+        <!--                                        </div>-->
+        <!--                                        <div style="width: 100%;float: left;margin: 0px; padding-right:40px;">-->
+        <!--                                            Thời gian kết thúc:-->
+        <!--                                            <t t-if="o.date_end ">-->
+        <!--                                                <span style="float: right;"-->
+        <!--                                                      t-esc="context_timestamp(datetime.datetime.strptime(o.date_end, '%Y-%m-%d %H:%M:%S') + datetime.timedelta(hours=7)).strftime('%d/%m/%Y %H:%M:%S')"/>-->
+        <!--                                            </t>-->
+        <!--                                            <t t-else="">-->
+        <!--                                                <span style="float: right;" t-field="o.date_end"/>-->
+        <!--                                            </t>-->
+        <!--                                        </div>-->
+        <!--                                    </td>-->
+        <!--                                </tr>-->
+        <!--                            </table>-->
+
+        <!--                            <br clear="both"/>-->
+        <!--                            &lt;!&ndash;                            <br clear="both"/>&ndash;&gt;-->
+        <!--                            <div style="width: 100%;float: left;font-size:16px; margin-top: 5px;margin-left: 20px;padding-right:40px;">-->
+        <!--                                <table class="table" style="width: 100%;height: 30px; padding: 1px; margin: 1px">-->
+        <!--                                    <tbody>-->
+        <!--                                        <t t-set="number" t-value="1"/>-->
+        <!--                                        <tr style="padding:1px; margin: 1px;">-->
+        <!--                                            <th class="text-center" width="5%" style="padding:1px; margin: 1px;"-->
+        <!--                                                rowspan="2">-->
+        <!--                                                <p style="padding:1px; margin: 1px;">STT</p>-->
+        <!--                                            </th>-->
+        <!--                                            <th class="text-center" width="8%" style="padding:1px; margin: 1px;"-->
+        <!--                                                rowspan="2">-->
+        <!--                                                <p style="padding:1px; margin: 1px;">Thẻ dịch vụ</p>-->
+        <!--                                            </th>-->
+        <!--                                            <th class="text-center" width="32%" style="padding:1px; margin: 1px;"-->
+        <!--                                                rowspan="2">-->
+        <!--                                                <p style="padding:1px; margin: 1px;">Dịch vụ/ sản phẩm</p>-->
+        <!--                                            </th>-->
+        <!--                                            <th class="text-center" width="5%" style="padding:1px; margin: 1px;"-->
+        <!--                                                rowspan="2">-->
+        <!--                                                <p style="padding:1px; margin: 1px;">Tổng số lần được sử dụng</p>-->
+        <!--                                            </th>-->
+        <!--                                            <th class="text-center" width="5%" style="padding:1px; margin: 1px;"-->
+        <!--                                                rowspan="2">-->
+        <!--                                                <p style="padding:1px; margin: 1px;">Số lần đã sử dụng</p>-->
+        <!--                                            </th>-->
+        <!--                                            <th class="text-center" width="5%" style="padding:1px; margin: 1px;"-->
+        <!--                                                rowspan="2">-->
+        <!--                                                <p style="padding:1px; margin: 1px;">Số lần</p>-->
+        <!--                                            </th>-->
+        <!--                                            <th class="text-center" width="5%" style="padding:1px; margin: 1px;"-->
+        <!--                                                rowspan="2">-->
+        <!--                                                <p style="padding:1px; margin: 1px;">Đơn vị</p>-->
+        <!--                                            </th>-->
+        <!--                                            <th class="text-center" width="10%" style="padding:1px; margin: 1px;"-->
+        <!--                                                rowspan="2">-->
+        <!--                                                <p style="padding:1px; margin: 1px;">Ghi chú</p>-->
+        <!--                                            </th>-->
+        <!--                                            <th class="text-center" width="10%" style="padding:1px; margin: 1px;"-->
+        <!--                                                rowspan="2">-->
+        <!--                                                <p style="padding:1px; margin: 1px;">Kỹ thuật viên</p>-->
+        <!--                                            </th>-->
+        <!--                                            <th class="text-center" width="10%" style="padding:1px; margin: 1px;"-->
+        <!--                                                rowspan="2">-->
+        <!--                                                <p style="padding:1px; margin: 1px;">Bác sĩ</p>-->
+        <!--                                            </th>-->
+        <!--                                        </tr>-->
+        <!--                                        <tr></tr>-->
+        <!--                                        <tr t-foreach="o.service_card_ids" t-as="l"-->
+        <!--                                            style="padding:1px; margin: 1px">-->
+        <!--                                            <t t-set="number" t-value="number+1"/>-->
+        <!--                                            <td id="td1" class="text-center" width="5%"-->
+        <!--                                                style="padding:1px; margin: 1px">-->
+        <!--                                                <t t-esc="number -1"/>-->
+        <!--                                            </td>-->
+        <!--                                            <td style="padding:1px; margin: 1px;text-align: left">-->
+        <!--                                                <span style="padding:1px; margin-left: 10px;"-->
+        <!--                                                      t-field="l.serial_id.name"/>-->
+        <!--                                            </td>-->
+        <!--                                            <td style="padding:1px; margin: 1px;text-align: left">-->
+        <!--                                                <t t-set="text_product"-->
+        <!--                                                   t-value="o.get_name_print_product(l.service_id)"/>-->
+        <!--                                                <t t-esc="text_product"/>-->
+        <!--                                            </td>-->
+        <!--                                            <td class="text-center" style="padding:1px; margin: 1px">-->
+        <!--                                                <span style="padding:1px; margin: 1px;" t-esc="'%.0f'%(l.paid_count)"/>-->
+        <!--                                            </td>-->
+        <!--                                            <td class="text-center" style="padding:1px; margin: 1px">-->
+        <!--                                                <span style="padding:1px; margin: 1px;" t-esc="'%.0f'%(l.used_count)"/>-->
+        <!--                                            </td>-->
+        <!--                                            <td class="text-center" style="padding:1px; margin: 1px">-->
+        <!--                                                <span style="padding:1px; margin: 1px;" t-esc="'%.0f'%(l.quantity)"/>-->
+        <!--                                            </td>-->
+        <!--                                            <td class="text-center" style="padding:1px; margin: 1px">-->
+        <!--                                                <span style="padding:1px; margin: 1px;" t-esc="l.uom_id.name"/>-->
+        <!--                                            </td>-->
+        <!--                                            <td class="text-center" style="padding:1px; margin: 1px">-->
+        <!--                                                <span style="padding:1px; margin: 1px;" t-esc="l.note"/>-->
+        <!--                                            </td>-->
+        <!--                                            <td class="text-center" style="padding:1px; margin: 1px">-->
+        <!--                                                <t t-foreach="l.employee_ids" t-as="x">-->
+        <!--                                                    <t t-esc="x.name"/>-->
+        <!--                                                </t>-->
+        <!--                                            </td>-->
+        <!--                                            <td class="text-center" style="padding:1px; margin: 1px">-->
+        <!--                                                <t t-foreach="l.doctor_ids" t-as="x">-->
+        <!--                                                    <t t-esc="x.name"/>-->
+        <!--                                                </t>-->
+        <!--                                            </td>-->
+        <!--                                        </tr>-->
+        <!--                                    </tbody>-->
+        <!--                                </table>-->
+        <!--                            </div>-->
+        <!--                            <table style="width:100%;  padding:0px; margin: 0px;font-size:16px">-->
+        <!--                                <tr>-->
+        <!--                                    <td class="text-center" width="50%">-->
+
+        <!--                                    </td>-->
+        <!--                                    <td class="text-center" width="50%">-->
+        <!--                                        <br/>-->
+        <!--                                        <p>-->
+        <!--                                            <b>Khách hàng xác nhận</b>-->
+        <!--                                            <t t-if="o.signature_image">-->
+        <!--                                                <div style="max-width: 300px;margin: auto;margin-top: 10px;">-->
+        <!--                                                    <span t-field="o.signature_image"-->
+        <!--                                                          t-field-options='{"widget": "image"}'/>-->
+        <!--                                                </div>-->
+        <!--                                            </t>-->
+        <!--                                        </p>-->
+        <!--                                    </td>-->
+        <!--                                </tr>-->
+        <!--                            </table>-->
+        <!--                        </div>-->
+        <!--                    </t>-->
+        <!--                </t>-->
+        <!--            </t>-->
+        <!--        </template>-->
+
+        <record id="paperformat_report_template_department_rate_view" model="report.paperformat">
+            <field name="name">A4</field>
+            <field name="default" eval="False"/>
+            <field name="format">A4</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">10</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">0</field>
+            <field name="margin_right">0</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="dpi">96</field>
+        </record>
+
+        <report
+                id="qweb_rate_department_report"
+                model="izi.service.card.using"
+                string="Receipt Department"
+                report_type="qweb-pdf"
+                name="report_qweb.rate_department_report"
+                file="report_qweb.rate_department_report"
+                paperformat="report_qweb.paperformat_report_template_department_rate_view"
+                menu="False"/>
+
+
+        <record id="view_use_serive_receipt_rate_department" model="ir.ui.view">
+            <field name="name">Receipt</field>
+            <field name="model">izi.service.card.using</field>
+            <field name="inherit_id" ref="izi_use_service_card.use_service_card_form"/>
+            <field name="arch" type="xml">
+                <button name="action_done" position="after">
+                    <field name="therapy_record_id" invisible="1"></field>
+                    <button name="action_print_department_rate" type="object" string="In phiếu đánh giá"
+                            attrs="{'invisible':[('state','not in',['rate', 'done'])]}" icon="fa-plus-square"
+                    />
+                </button>
+            </field>
+        </record>
+
+    </data>
+</openerp>

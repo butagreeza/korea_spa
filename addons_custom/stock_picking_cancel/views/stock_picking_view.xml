@@ -1,0 +1,38 @@
+<odoo>
+    <data>
+        <record id="view_picking_form_inherit_cancel" model="ir.ui.view">
+            <field name="name">stock.picking.form.cancel</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <button name="action_cancel" position="after">
+                    <button name="action_set_to_draft" attrs="{'invisible': ['|', ('state', 'not in', ('cancel')), ('is_locked', '=', False)]}" string="Set to draft" groups="base.group_user" type="object"/>
+                    <button name="action_cancel_picking" confirm="Are you sure you want to cancel ?" attrs="{'invisible': ['|', ('state', 'not in', ('done')), ('is_locked', '=', False)]}" string="Cancel" groups="stock_picking_cancel.group_stock_picking_cancel" type="object"/>
+                </button>
+            </field>
+        </record>
+
+        <record id="view_inventory_form_inherit_cancel" model="ir.ui.view">
+            <field name="name">stock.inventory.form.cancel</field>
+            <field name="model">stock.inventory</field>
+            <field name="inherit_id" ref="stock.view_inventory_form"/>
+            <field name="arch" type="xml">
+                <button name="action_done" position="after">
+                    <button name="action_cancel_inventory" confirm="Are you sure you want to cancel ?" states="done" string="Cancel" groups="stock_picking_cancel.group_stock_inventory_cancel" type="object"/>
+                </button>
+            </field>
+        </record>
+
+<!--        <record id="view_mrp_unbuild_form_view_inherit_cancel" model="ir.ui.view">-->
+<!--            <field name="name">mrp.unbuild.form.cancel</field>-->
+<!--            <field name="model">mrp.unbuild</field>-->
+<!--            <field name="inherit_id" ref="mrp.mrp_unbuild_form_view"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <button name="action_validate" position="after">-->
+<!--                    <button name="action_cancel_unbuild" confirm="Are you sure you want to cancel ?" states="done" string="Cancel" type="object"/>-->
+<!--                </button>-->
+<!--            </field>-->
+<!--        </record>-->
+
+    </data>
+</odoo>

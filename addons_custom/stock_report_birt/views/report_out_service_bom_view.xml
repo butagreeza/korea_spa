@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="report_out_service_bom_form_view" model="ir.ui.view">
+            <field name="name">Report Out Service Bom</field>
+            <field name="model">report.out.service.bom</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="from_date" required="1"/>
+                            <field name="to_date" required="1"/>
+                        </group>
+                        <group>
+                            <field name="partner_ids" options="{'no_create':1, 'no_create_edit':1}" widget="many2many_tags"/>
+                            <field name="product_ids" options="{'no_create':1, 'no_create_edit':1}" widget="many2many_tags"/>
+                            <field name="service_ids" options="{'no_create':1, 'no_create_edit':1}" widget="many2many_tags"/>
+                            <field name="employee_ids" options="{'no_create':1, 'no_create_edit':1}" widget="many2many_tags"/>
+                        </group>
+                    </group>
+
+                    <footer>
+                        <button class="oe_highlight" name="create_report_out_service_bom" type="object"
+                                string="Print report"/>
+                        <button class="oe_highlight" name="create_report_out_service_bom_export" type="object"
+                                string="Print report ex"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_report_out_service_bom" model="ir.actions.act_window">
+            <field name="name">Report Out Service Bom</field>
+            <field name="res_model">report.out.service.bom</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        <menuitem id="report_out_service_bom" name="Report out service bom"
+                  action="action_report_out_service_bom"
+                  parent="stock.menu_warehouse_report"/>
+    </data>
+</odoo>

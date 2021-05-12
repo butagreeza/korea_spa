@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Employee -->
+        <record id="izi_hr_employee_code_inherit_view_employee_form" model="ir.ui.view">
+            <field name="name">hr.employee.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <label for="x_employee_code" class="oe_edit_only"/>
+                    <h1>
+                        <field name="x_employee_code" placeholder="Employee Code"/>
+                    </h1>
+                </field>
+                <field name="address_home_id" position="after">
+                    <field name="x_street" placeholder="Street"/>
+                </field>
+                <field name="identification_id" position="after">
+                    <field name="x_date_published"/>
+                    <field name="x_place_published"/>
+                </field>
+                <field name="bank_account_id" position="after">
+                    <field name="x_tax_id"/>
+                </field>
+                <field name="work_email" position="replace">
+                    <field name="work_email" widget="email"/>
+                </field>
+                <field name="user_id" position="before">
+                    <field name="x_work_service"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

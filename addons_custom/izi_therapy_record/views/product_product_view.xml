@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="izi_product_product_custom_view_code">
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"></field>
+            <field name="arch" type="xml">
+                <field name="barcode" position="after">
+                    <field name="include_product_id" options="{'no_create_edit':True, 'no_create':True}"/>
+                </field>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

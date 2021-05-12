@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="sequence_izi_merge_use_service_card_dv" model="ir.sequence">
+            <field name="name">GDV</field>
+            <field name="code">merge.use.service</field>
+            <field name="prefix">GDV%(y)s%(month)s/</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+    </data>
+</odoo>

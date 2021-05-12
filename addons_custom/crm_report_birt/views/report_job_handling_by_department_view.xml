@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="report_job_handling_by_department_form" model="ir.ui.view">
+            <field name="name">Report Job Handling By Department</field>
+            <field name="model">report.job.handling.by.department</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="from_date" required="1"/>
+                            <field name="to_date" required="1"/>
+                        </group>
+                        <group>
+                            <field name="department_ids" widget="many2many_tags" options="{'no_create':1, 'no_create_edit':1}"/>
+                            <field name="select_emp_all" />
+                            <field name="employee_ids" attrs="{'invisible': [('select_emp_all','=', True)]}" domain="[('department_id', 'in', department_ids)]" required="True" options="{'no_create':1, 'no_create_edit':1}" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button class="oe_highlight" name="create_report_crm_job_handling_by_department" type="object" string="Print Report"/>
+                        <button class="oe_highlight" name="create_report_crm_job_handling_by_department_excel" type="object" string="Print Report Excel"/>
+                    </footer>
+<!--                    <field name="url_report" widget="display_iframe"/>-->
+                </form>
+            </field>
+        </record>
+        <record id="report_job_handling_by_department_action" model="ir.actions.act_window">
+            <field name="name">Report Job Handling By Department</field>
+            <field name="res_model">report.job.handling.by.department</field>
+            <field name="view_mode">form</field>
+            <field name="view_type">form</field>
+            <field name="target">new</field>
+        </record>
+        <!--<menuitem id="pos_report" name="Pos Report" parent="point_of_sale.menu_point_root" sequence="11"/>-->
+        <menuitem id="report_job_handling_by_department_menu" action="report_job_handling_by_department_action" name="Report Job Handling By Department" parent="crm.crm_menu_report"/>
+    </data>
+</odoo>

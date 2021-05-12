@@ -1,0 +1,1618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.5.0.v201506092134 Build &lt;@BUILD@></property>
+    <property name="units">cm</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">120</property>
+    <parameters>
+        <scalar-parameter name="from_date" id="5">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">date</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2021-01-01</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="to_date" id="6">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">date</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2021-03-27</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="partner_ids" id="632">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">0</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="4">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.postgresql.Driver</property>
+            <property name="odaURL">jdbc:postgresql://103.145.62.165:5445/korea-erp-07122020</property>
+            <property name="odaUser">korea</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">S3JBQDEyM1ZuMjUwNA==</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set" id="7">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">ngay</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ngay</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">ngay</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">kh</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">kh</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">kh</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">makh</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">makh</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">makh</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">makhc</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">makhc</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">makhc</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">sdt</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">sdt</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">sdt</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">donhang</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">donhang</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">donhang</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">chung_chi_thu_chi</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">chung_chi_thu_chi</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">chung_chi_thu_chi</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">phanbo</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">phanbo</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">phanbo</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">don_sddv</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">don_sddv</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">don_sddv</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">dv_hl</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">dv_hl</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">dv_hl</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">tylehoatra</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">tylehoatra</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">tylehoatra</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">nv_bh</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">nv_bh</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">nv_bh</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">sotien_bitru</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">sotien_bitru</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">sotien_bitru</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">dvlam_hoantra</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">dvlam_hoantra</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">dvlam_hoantra</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">nvlam_dv</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">nvlam_dv</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">nvlam_dv</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">tiencong_nvlam_dv</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">tiencong_nvlam_dv</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">tiencong_nvlam_dv</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">tiencong_bsi_lamdv</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">tiencong_bsi_lamdv</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">tiencong_bsi_lamdv</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ghi_chu</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ghi_chu</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">ghi_chu</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="paramName">from_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">1</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_2</property>
+                    <property name="paramName">to_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">2</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_3</property>
+                    <property name="paramName">partner_ids</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">3</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_4</property>
+                    <property name="paramName">partner_ids</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">4</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_5</property>
+                    <property name="paramName">from_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">5</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_6</property>
+                    <property name="paramName">to_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">6</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_7</property>
+                    <property name="paramName">partner_ids</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">7</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_8</property>
+                    <property name="paramName">partner_ids</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">8</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_9</property>
+                    <property name="paramName">from_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">9</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_10</property>
+                    <property name="paramName">to_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">10</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_11</property>
+                    <property name="paramName">partner_ids</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">11</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_12</property>
+                    <property name="paramName">partner_ids</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">12</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_13</property>
+                    <property name="paramName">from_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">13</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_14</property>
+                    <property name="paramName">to_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">14</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_15</property>
+                    <property name="paramName">partner_ids</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">15</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_16</property>
+                    <property name="paramName">partner_ids</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">16</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ngay</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">kh</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">makh</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">makhc</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">sdt</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">donhang</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">chung_chi_thu_chi</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">phanbo</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">don_sddv</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">dv_hl</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">tylehoatra</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">nv_bh</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">sotien_bitru</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">dvlam_hoantra</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">nvlam_dv</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">tiencong_nvlam_dv</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">tiencong_bsi_lamdv</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">ghi_chu</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ngay</property>
+                    <property name="nativeName">ngay</property>
+                    <property name="dataType">date-time</property>
+                    <property name="nativeDataType">93</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">kh</property>
+                    <property name="nativeName">kh</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">makh</property>
+                    <property name="nativeName">makh</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">makhc</property>
+                    <property name="nativeName">makhc</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">sdt</property>
+                    <property name="nativeName">sdt</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">donhang</property>
+                    <property name="nativeName">donhang</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">chung_chi_thu_chi</property>
+                    <property name="nativeName">chung_chi_thu_chi</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">phanbo</property>
+                    <property name="nativeName">phanbo</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">don_sddv</property>
+                    <property name="nativeName">don_sddv</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">dv_hl</property>
+                    <property name="nativeName">dv_hl</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">tylehoatra</property>
+                    <property name="nativeName">tylehoatra</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">nv_bh</property>
+                    <property name="nativeName">nv_bh</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">sotien_bitru</property>
+                    <property name="nativeName">sotien_bitru</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">dvlam_hoantra</property>
+                    <property name="nativeName">dvlam_hoantra</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">nvlam_dv</property>
+                    <property name="nativeName">nvlam_dv</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">tiencong_nvlam_dv</property>
+                    <property name="nativeName">tiencong_nvlam_dv</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">tiencong_bsi_lamdv</property>
+                    <property name="nativeName">tiencong_bsi_lamdv</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">ghi_chu</property>
+                    <property name="nativeName">ghi_chu</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select
+i.date_order as ngay
+, k.name as KH
+, k.x_code as MaKH
+, k.x_old_code as MaKHC
+, k.phone as SDT
+, i.name as donhang
+, '' as chung_chi_thu_chi
+, a.name as phanbo
+, m.name as don_sddv
+, d.name as DV_HL
+, abs((select sum(qty) from pos_order_line WHERE order_id = i.id and product_id = b.product_id)) / (select sum(qty) from pos_order_line WHERE order_id = l.id and product_id = b.product_id) as tylehoatra
+, h.name as NV_BH
+, abs(SUM(b.amount)) as sotien_bitru
+, d.name as dvlam_hoantra
+, o.name as nvlam_dv
+,  COALESCE((CASE 
+		WHEN (SELECT count(*) FROM hr_employee_izi_service_card_using_line_rel WHERE izi_service_card_using_line_id = m.id) > 0 THEN b.quantity/(SELECT count(*) FROM hr_employee_izi_service_card_using_line_rel WHERE izi_service_card_using_line_id = m.id) 
+		ELSE 0 END), 0) * d.x_wage_per_unit
+as tiencong_nvlam_dv
+, COALESCE((CASE WHEN (SELECT count(*) FROM hr_employee_tour_izi_service_card_using_line_rels WHERE izi_service_card_using_line_id = m.id) > 0  THEN b.quantity/(SELECT count(*) FROM hr_employee_tour_izi_service_card_using_line_rels WHERE izi_service_card_using_line_id = m.id) ELSE 0 END), 0) * d.x_wage_per_unit / (CASE WHEN d.x_percentage_of_doctor_salary <> 0 THEN 100*d.x_percentage_of_doctor_salary
+ELSE 1 END)
+as tiencong_bsi_lamdv
+, 'refund đơn hàng có phân bổ' as Ghi_chu
+from pos_revenue_allocation a 
+left join pos_revenue_allocation_line b on b.revenue_allocation_id = a.id
+left join product_product c on b.product_id = c.id
+left join product_template d on c.product_tmpl_id = d.id
+left join hr_employee e on b.employee_id = e.id
+left join resource_resource f on f.id = e.resource_id
+left join res_users g on f.user_id = g.id
+left join res_partner h on g.partner_id = h.id
+left join pos_order i on i.id = a.order_id
+left join res_partner k on a.partner_id = k.id
+left join pos_order l on l.id = i.x_pos_partner_refund_id
+left join izi_service_card_using m on m.pos_order_refund_id = i.id
+left join pos_work_service_allocation_line n on n.use_service_id = m.id
+left join hr_employee o on o.id = n.employee_id
+where i.x_pos_partner_refund_id is not null and a.state = 'close' and i.state in ('done', 'invoiced')
+and (case 
+			when m.id is not null then n.service_id = b.product_id 
+			else 0 = 0
+		end)
+and i.state != 'cancel'
+and i.date_order::date >= ?
+and i.date_order::date <= ?
+and (k.id = ANY(string_to_array( ?, ',')::integer[]) or ? = '0')
+GROUP BY i.name, i.date_order, k.name, k.x_code, k.x_old_code, k.phone, d.name, b.employee_id, h.name, o.name, m.id, b.quantity, d.x_percentage_of_doctor_salary
+,a.amount_allocated, i.x_total_order, i.id, b.product_id, l.id , a.name, d.x_wage_per_unit, m.name
+
+UNION all
+
+select
+a.date_order as ngay
+, b.name as KH
+, b.x_code as MaKH
+, b.x_old_code as MaKHC
+, b.phone as SDT
+, a.name as donhang
+, '' as chung_chi_thu_chi
+, '' as phanbo
+, f.name as don_sddv
+, i.name as DV_HL
+, abs(sum(d.qty)) / (select sum(qty) from pos_order_line WHERE order_id = c.id and product_id = d.product_id) as tylehoatra
+, NULL as NV_BH
+, (select sum(abs(aa.amount)) from account_bank_statement_line aa
+left join account_journal bb on bb.id = aa.journal_id
+left join pos_session cc on cc.id = a.session_id
+left join pos_config dd on dd.id = cc.config_id
+left join journal_loyal_rel ee on ee.pos_config_id = dd.id
+where ee.account_journal_id = aa.journal_id
+and aa.pos_statement_id = a.id 
+) as sotien_bitru
+, i.name as dvlam_hoantra
+, k.name as nvlam_dv
+,  COALESCE((CASE 
+		WHEN (SELECT count(*) FROM hr_employee_izi_service_card_using_line_rel WHERE izi_service_card_using_line_id = f.id) > 0 THEN abs(d.qty)/(SELECT count(*) FROM hr_employee_izi_service_card_using_line_rel WHERE izi_service_card_using_line_id = f.id) 
+		ELSE 0 END), 0) * i.x_wage_per_unit
+as tiencong_nvlam_dv
+, COALESCE((CASE WHEN (SELECT count(*) FROM hr_employee_tour_izi_service_card_using_line_rels WHERE izi_service_card_using_line_id = f.id) > 0  THEN abs(d.qty)/(SELECT count(*) FROM hr_employee_tour_izi_service_card_using_line_rels WHERE izi_service_card_using_line_id = f.id) ELSE 0 END), 0) * i.x_wage_per_unit / (CASE WHEN i.x_percentage_of_doctor_salary <> 0 THEN 100*i.x_percentage_of_doctor_salary
+ELSE 1 END)
+as tiencong_bsi_lamdv
+, 'refund đơn hàng nhưng không phân bổ' as Ghi_chu
+from pos_order a
+left join pos_order_line d on d.order_id = a.id
+left join res_partner b on a.partner_id = b.id
+left join pos_order c on c.id = a.x_pos_partner_refund_id
+left join product_product h on d.product_id = h.id
+left join product_template i on h.product_tmpl_id = i.id
+left join pos_revenue_allocation e on a.id = e.order_id
+left join izi_service_card_using f on f.pos_order_refund_id = a.id
+left join pos_work_service_allocation_line g on g.use_service_id = f.id
+left join hr_employee k on k.id = g.employee_id
+WHERE
+a.x_pos_partner_refund_id is not null
+and e.id is null
+AND i.default_code not in  ('TDV', 'PDDV')
+and i.x_type_card = 'none'	
+and (case 
+			when g.id is not null then g.service_id = d.product_id 
+			else 0 = 0
+		end)
+and a.date_order::date >= ?
+and a.date_order::date <= ?
+and (b.id = ANY(string_to_array( ?, ',')::integer[]) or ? = '0')
+group by a.date_order, b.x_code, b.x_old_code, b.name, b.phone, a.name, i.name, c.id, d.product_id,  k.name, i.x_percentage_of_doctor_salary
+, i.x_wage_per_unit, f.id, d.qty, f.name, a.session_id, a.id
+
+
+union all 
+
+select 
+ a.date as ngay
+, k.name as KH
+, k.x_code as MaKH
+, k.x_old_code as MaKHC
+, k.phone as SDT
+, i.name as donhang
+, a.name as chung_chi_thu_chi
+, '' as phanbo
+, '' as don_sddv
+, '' as DV_HL
+, (case 
+		when i.id is not null then CEIL((abs((sum(b.value) filter (WHERE b.cash_id = a.id and a.partner_id = b.partner_id))) / abs((select sum(abs(bb.qty) * bb.price_unit - (abs(bb.qty) * bb.price_unit * bb.discount / 100) - abs(bb.x_discount))
+																from pos_order aa 
+																left join pos_order_line bb on bb.order_id = aa.id
+																where  i.id = aa.id))))
+		else null end) as tyle_hoantra
+, '' as NV_BH
+, b.value as sotien_bitru
+, '' as dvlam_hoantra
+, '' as nvlam_dv
+, 0 as tiencong_nvlam_dv
+, 0 as tiencong_bsi_lamdv
+, 'phiếu chi nhưng không có phân bổ doanh thu' as Ghi_chu
+from account_cash a 
+left join account_cash_line b on b.cash_id = a.id
+left join product_product c on b.product_id = c.id
+left join product_template d on c.product_tmpl_id = d.id
+left join pos_order i on a.ref = i.name
+left join res_partner k on a.partner_id = k.id
+where d.default_code = 'CKDCK' and a.revenue_id is null and a.state = 'done' 
+and (case 
+		when i.id is not null then i.state in ('done', 'invoiced')
+		else 0 = 0
+		end)
+and a.date::date >= ?
+and a.date::date <= ?
+and (k.id = ANY(string_to_array( ?, ',')::integer[]) or ? = '0')
+GROUP BY i.name,a.date
+, k.name, k.x_code, k.x_old_code, k.phone, a.name, b.value
+, d.name, i.id
+
+union all 
+
+select 
+ a.date as ngay
+, k.name as KH
+, k.x_code as MaKH
+, k.x_old_code as MaKHC
+, k.phone as SDT
+, i.name as donhang
+, a.name as chung_chi_thu_chi
+, h.name as phanbo
+, '' as don_sddv
+, n.name as DV_HL
+, (case 
+		when i.id is not null then CEIL((abs((sum(b.value) filter (WHERE b.cash_id = a.id and a.partner_id = b.partner_id))) / abs((select sum(abs(bb.qty) * bb.price_unit - (abs(bb.qty) * bb.price_unit * bb.discount / 100) - abs(bb.x_discount))
+																from pos_order aa 
+																left join pos_order_line bb on bb.order_id = aa.id
+																where  i.id = aa.id))))
+		else null end) as tyle_hoantra
+, s.name as NV_BH
+, abs(SUM(l.amount)) as sotien_bitru
+, '' as dvlam_hoantra
+, '' as nvlam_dv
+, 0 as tiencong_nvlam_dv
+, 0 as tiencong_bsi_lamdv
+, concat('phiếu chi có phân bổ doanh thu', ' - ', d.name)  as Ghi_chu
+from account_cash a 
+left join account_cash_line b on b.cash_id = a.id
+left join product_product c on b.product_id = c.id
+left join product_template d on c.product_tmpl_id = d.id
+left join pos_order i on a.ref = i.name
+left join res_partner k on a.partner_id = k.id
+left join pos_revenue_allocation h on a.revenue_id = h.id
+left join pos_revenue_allocation_line l on l.revenue_allocation_id = h.id
+left join product_product m on l.product_id = m.id
+left join product_template n on m.product_tmpl_id = n.id
+left join hr_employee p on l.employee_id = p.id
+left join resource_resource q on q.id = p.resource_id
+left join res_users r on q.user_id = r.id
+left join res_partner s on r.partner_id = s.id
+where d.default_code = 'CKDCK' and a.revenue_id is not null and h.state = 'close' 
+and n.default_code not in ('TDV', 'PDDV') 
+and (case 
+		when i.id is not null then i.state in ('done', 'invoiced')
+		else 0 = 0
+		end)
+and i.date_order::date >= ?
+and i.date_order::date <= ?
+and (k.id = ANY(string_to_array( ?, ',')::integer[]) or ? = '0')
+GROUP BY i.name,a.date
+, k.name, k.x_code, k.x_old_code, k.phone
+, n.name,l.employee_id, s.name, h.amount_allocated,i.x_total_order, d.name, i.id, h.name, n.name, a.name
+
+
+]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>3</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>4</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>5</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>6</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>7</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>8</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>9</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>10</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>11</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>12</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>13</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>14</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>15</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>16</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="center" id="519">
+            <property name="textAlign">center</property>
+        </style>
+        <style name="crosstab" id="520"/>
+        <style name="crosstab-column-grand-total" id="521">
+            <property name="fontWeight">bold</property>
+        </style>
+        <style name="crosstab-column-header" id="522">
+            <property name="backgroundColor">#CCCCCC</property>
+        </style>
+        <style name="crosstab-column-sub-total" id="523">
+            <property name="fontWeight">bold</property>
+        </style>
+        <style name="crosstab-header" id="524">
+            <property name="backgroundColor">#233C98</property>
+        </style>
+        <style name="crosstab-row-grand-total" id="525">
+            <property name="fontWeight">bold</property>
+        </style>
+        <style name="crosstab-row-header" id="526">
+            <property name="backgroundColor">#CCCCCC</property>
+        </style>
+        <style name="crosstab-row-sub-total" id="527">
+            <property name="fontWeight">bold</property>
+        </style>
+        <style name="crosstabselledit" id="528">
+            <property name="paddingTop">3px</property>
+            <property name="paddingLeft">3px</property>
+            <property name="paddingBottom">3px</property>
+            <property name="paddingRight">3px</property>
+        </style>
+        <style name="data" id="529"/>
+        <style name="crosstab-cell" id="530">
+            <property name="borderBottomColor">black</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="borderLeftColor">black</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1px</property>
+            <property name="borderRightColor">black</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1px</property>
+            <property name="borderTopColor">black</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1px</property>
+            <property name="paddingTop">3px</property>
+            <property name="paddingLeft">3px</property>
+            <property name="paddingBottom">3px</property>
+            <property name="paddingRight">3px</property>
+        </style>
+        <style name="grid" id="531"/>
+        <style name="grid-row" id="532">
+            <property name="paddingTop">3px</property>
+            <property name="paddingLeft">3px</property>
+            <property name="paddingBottom">3px</property>
+            <property name="paddingRight">3px</property>
+        </style>
+        <style name="grid-cell" id="533"/>
+        <style name="master1" id="534">
+            <property name="textAlign">left</property>
+        </style>
+        <style name="NewStyle" id="518">
+            <property name="height">0cm</property>
+            <property name="width">0cm</property>
+        </style>
+        <style name="page" id="535"/>
+        <style name="report" id="536">
+            <property name="fontFamily">"Times New Roman"</property>
+            <property name="fontSize">13pt</property>
+        </style>
+        <style name="reportFooter1" id="537">
+            <property name="fontSize">13pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="reportFooter2" id="538">
+            <property name="fontSize">13pt</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="reportFooter3" id="539">
+            <property name="fontSize">13pt</property>
+            <property name="fontStyle">italic</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="reportHeader1" id="540">
+            <property name="fontSize">13pt</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="reportHeader2" id="541">
+            <property name="fontSize">13pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="reportHeaderDate" id="542">
+            <property name="fontSize">13pt</property>
+            <property name="fontStyle">italic</property>
+        </style>
+        <style name="reportTitle" id="543">
+            <property name="fontSize">16pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="table" id="544">
+            <property name="paddingTop">4px</property>
+            <property name="paddingLeft">4px</property>
+            <property name="paddingBottom">4px</property>
+            <property name="paddingRight">4px</property>
+        </style>
+        <style name="table-cell" id="545">
+            <property name="borderBottomColor">black</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="borderLeftColor">black</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1px</property>
+            <property name="borderRightColor">black</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1px</property>
+            <property name="borderTopColor">black</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1px</property>
+            <property name="paddingTop">3px</property>
+            <property name="paddingLeft">3px</property>
+            <property name="paddingBottom">3px</property>
+            <property name="paddingRight">3px</property>
+        </style>
+        <style name="table-detail" id="546"/>
+        <style name="table-detail-cell" id="547"/>
+        <style name="table-footer" id="548">
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">right</property>
+        </style>
+        <style name="table-footer-cell" id="549"/>
+        <style name="table-header" id="550">
+            <property name="backgroundColor">#233C98</property>
+            <property name="fontWeight">bold</property>
+            <property name="color">#FFFFFF</property>
+        </style>
+        <style name="table-header-cell" id="211"/>
+        <style name="text" id="212"/>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2"/>
+    </page-setup>
+    <body>
+        <grid id="634">
+            <column id="635"/>
+            <row id="636">
+                <cell id="637">
+                    <label id="145">
+                        <property name="fontSize">16pt</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">BÁO CÁO HOÀN TRẢ CHO KHÁCH HÀNG</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="638">
+                <cell id="639"/>
+            </row>
+            <row id="640">
+                <cell id="641">
+                    <text-data id="146">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">12pt</property>
+                        <property name="color">#000000</property>
+                        <property name="textAlign">center</property>
+                        <expression name="valueExpr">"THỜI GIAN HOÀN TRẢ TỪ " + Formatter.format(params["from_date"].value, 'dd/MM/yyyy') + " ĐẾN " + Formatter.format(params["to_date"].value, 'dd/MM/yyyy')</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+            </row>
+            <row id="642">
+                <cell id="643"/>
+            </row>
+            <row id="644">
+                <cell id="645">
+                    <table id="881">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">ngay</property>
+                                <text-property name="displayName">ngay</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["ngay"]</expression>
+                                <property name="dataType">date-time</property>
+                            </structure>
+                            <structure>
+                                <property name="name">kh</property>
+                                <text-property name="displayName">kh</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["kh"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">makh</property>
+                                <text-property name="displayName">makh</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["makh"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">makhc</property>
+                                <text-property name="displayName">makhc</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["makhc"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">sdt</property>
+                                <text-property name="displayName">sdt</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["sdt"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">donhang</property>
+                                <text-property name="displayName">donhang</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["donhang"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">chung_chi_thu_chi</property>
+                                <text-property name="displayName">chung_chi_thu_chi</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["chung_chi_thu_chi"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">phanbo</property>
+                                <text-property name="displayName">phanbo</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["phanbo"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">don_sddv</property>
+                                <text-property name="displayName">don_sddv</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["don_sddv"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">dv_hl</property>
+                                <text-property name="displayName">dv_hl</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["dv_hl"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">tylehoatra</property>
+                                <text-property name="displayName">tylehoatra</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["tylehoatra"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">nv_bh</property>
+                                <text-property name="displayName">nv_bh</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["nv_bh"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">sotien_bitru</property>
+                                <text-property name="displayName">sotien_bitru</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["sotien_bitru"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">dvlam_hoantra</property>
+                                <text-property name="displayName">dvlam_hoantra</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["dvlam_hoantra"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">nvlam_dv</property>
+                                <text-property name="displayName">nvlam_dv</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["nvlam_dv"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">tiencong_nvlam_dv</property>
+                                <text-property name="displayName">tiencong_nvlam_dv</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["tiencong_nvlam_dv"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">tiencong_bsi_lamdv</property>
+                                <text-property name="displayName">tiencong_bsi_lamdv</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["tiencong_bsi_lamdv"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">ghi_chu</property>
+                                <text-property name="displayName">ghi_chu</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["ghi_chu"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="pageBreakInterval">8000</property>
+                        <column id="996"/>
+                        <column id="975"/>
+                        <column id="976"/>
+                        <column id="977"/>
+                        <column id="978"/>
+                        <column id="979"/>
+                        <column id="980"/>
+                        <column id="981"/>
+                        <column id="982"/>
+                        <column id="983"/>
+                        <column id="984"/>
+                        <column id="985"/>
+                        <column id="986"/>
+                        <column id="987"/>
+                        <column id="988"/>
+                        <column id="989"/>
+                        <column id="990"/>
+                        <column id="991"/>
+                        <column id="992"/>
+                        <header>
+                            <row id="882">
+                                <property name="verticalAlign">middle</property>
+                                <cell id="993">
+                                    <label id="997">
+                                        <text-property name="text">STT</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="883">
+                                    <label id="884">
+                                        <text-property name="text">NGÀY HOÀN TRẢ</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="885">
+                                    <label id="886">
+                                        <text-property name="text">KHÁCH HÀNG</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="887">
+                                    <label id="888">
+                                        <text-property name="text">MÃ KHÁCH HÀNG</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="889">
+                                    <label id="890">
+                                        <text-property name="text">MÃ KHÁCH HÀNG CŨ</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="891">
+                                    <label id="892">
+                                        <text-property name="text">SỐ ĐIỆN THOẠI</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="893">
+                                    <label id="894">
+                                        <text-property name="text">ĐƠN HÀNG</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="895">
+                                    <label id="896">
+                                        <text-property name="text">CHỨNG CHỈ THU CHI</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="897">
+                                    <label id="898">
+                                        <text-property name="text">ĐƠN PHÂN BỔ</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="899">
+                                    <label id="900">
+                                        <text-property name="text">ĐƠN SỬ DỤNG DỊCH VỤ</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="901">
+                                    <label id="902">
+                                        <text-property name="text">DỊCH VỤ HOÀN LẠI</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="903">
+                                    <label id="904">
+                                        <text-property name="text">TỶ LỆ HOÀN TRẢ</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="905">
+                                    <label id="906">
+                                        <text-property name="text">NHÂN VIÊN BÁN HÀNG</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="907">
+                                    <label id="908">
+                                        <text-property name="text">SÔ TIỀN NHÂN VIÊN BỊ TRỪ THEO % HOÀN</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="909">
+                                    <label id="910">
+                                        <text-property name="text">DỊCH VỤ LÀM HOÀN TRẢ</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="911">
+                                    <label id="912">
+                                        <text-property name="text">NHÂN VIÊN LÀM DỊCH VỤ</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="913">
+                                    <label id="914">
+                                        <text-property name="text">TIỀN CÔNG KTV LÀM DỊCH VỤ</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="915">
+                                    <label id="916">
+                                        <text-property name="text">TIỀN CÔNG BÁC SĨ LÀM DỊCH VỤ</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="917">
+                                    <label id="918">
+                                        <text-property name="text">GHI CHÚ</text-property>
+                                    </label>
+                                </cell>
+                            </row>
+                        </header>
+                        <detail>
+                            <row id="919">
+                                <property name="textAlign">center</property>
+                                <property name="verticalAlign">middle</property>
+                                <cell id="994">
+                                    <text-data id="998">
+                                        <property name="fontFamily">"Times New Roman"</property>
+                                        <property name="fontSize">12pt</property>
+                                        <property name="textAlign">center</property>
+                                        <expression name="valueExpr">row.__rownum+1</expression>
+                                        <property name="contentType">plain</property>
+                                    </text-data>
+                                </cell>
+                                <cell id="920">
+                                    <data id="921">
+                                        <structure name="dateTimeFormat">
+                                            <property name="category">Short Date</property>
+                                            <property name="pattern">Short Date</property>
+                                            <property name="locale">vi_VN</property>
+                                        </structure>
+                                        <property name="resultSetColumn">ngay</property>
+                                    </data>
+                                </cell>
+                                <cell id="922">
+                                    <property name="textAlign">left</property>
+                                    <data id="923">
+                                        <property name="textAlign">left</property>
+                                        <property name="resultSetColumn">kh</property>
+                                    </data>
+                                </cell>
+                                <cell id="924">
+                                    <data id="925">
+                                        <property name="resultSetColumn">makh</property>
+                                    </data>
+                                </cell>
+                                <cell id="926">
+                                    <data id="927">
+                                        <property name="resultSetColumn">makhc</property>
+                                    </data>
+                                </cell>
+                                <cell id="928">
+                                    <data id="929">
+                                        <property name="resultSetColumn">sdt</property>
+                                    </data>
+                                </cell>
+                                <cell id="930">
+                                    <data id="931">
+                                        <property name="textAlign">left</property>
+                                        <property name="resultSetColumn">donhang</property>
+                                    </data>
+                                </cell>
+                                <cell id="932">
+                                    <data id="933">
+                                        <property name="resultSetColumn">chung_chi_thu_chi</property>
+                                    </data>
+                                </cell>
+                                <cell id="934">
+                                    <data id="935">
+                                        <property name="resultSetColumn">phanbo</property>
+                                    </data>
+                                </cell>
+                                <cell id="936">
+                                    <data id="937">
+                                        <property name="resultSetColumn">don_sddv</property>
+                                    </data>
+                                </cell>
+                                <cell id="938">
+                                    <data id="939">
+                                        <property name="textAlign">left</property>
+                                        <property name="resultSetColumn">dv_hl</property>
+                                    </data>
+                                </cell>
+                                <cell id="940">
+                                    <data id="941">
+                                        <structure name="numberFormat">
+                                            <property name="category">Percent</property>
+                                            <property name="pattern">#,##0.00%{RoundingMode=HALF_UP}</property>
+                                        </structure>
+                                        <property name="resultSetColumn">tylehoatra</property>
+                                    </data>
+                                </cell>
+                                <cell id="942">
+                                    <data id="943">
+                                        <property name="textAlign">left</property>
+                                        <property name="resultSetColumn">nv_bh</property>
+                                    </data>
+                                </cell>
+                                <cell id="944">
+                                    <data id="945">
+                                        <structure name="numberFormat">
+                                            <property name="category">Fixed</property>
+                                            <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
+                                        </structure>
+                                        <property name="resultSetColumn">sotien_bitru</property>
+                                    </data>
+                                </cell>
+                                <cell id="946">
+                                    <data id="947">
+                                        <property name="textAlign">left</property>
+                                        <property name="resultSetColumn">dvlam_hoantra</property>
+                                    </data>
+                                </cell>
+                                <cell id="948">
+                                    <data id="949">
+                                        <property name="textAlign">left</property>
+                                        <property name="resultSetColumn">nvlam_dv</property>
+                                    </data>
+                                </cell>
+                                <cell id="950">
+                                    <data id="951">
+                                        <structure name="numberFormat">
+                                            <property name="category">Fixed</property>
+                                            <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
+                                        </structure>
+                                        <property name="resultSetColumn">tiencong_nvlam_dv</property>
+                                    </data>
+                                </cell>
+                                <cell id="952">
+                                    <data id="953">
+                                        <structure name="numberFormat">
+                                            <property name="category">Fixed</property>
+                                            <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
+                                        </structure>
+                                        <property name="resultSetColumn">tiencong_bsi_lamdv</property>
+                                    </data>
+                                </cell>
+                                <cell id="954">
+                                    <data id="955">
+                                        <property name="textAlign">left</property>
+                                        <property name="resultSetColumn">ghi_chu</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </detail>
+                    </table>
+                </cell>
+            </row>
+        </grid>
+    </body>
+</report>

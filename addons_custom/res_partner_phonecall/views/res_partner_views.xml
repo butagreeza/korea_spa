@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="voip_phonecall_tree_view" model="ir.ui.view">
+            <field name="name">res.partner.phonecall</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='sales_purchases']" position="after">
+                    <page string="Voip Phonecall">
+                        <field name="x_phonecall_ids">
+                            <tree string="Phonecalls" default_order='call_date desc' create="0" edit="0">
+                                <field name="user_ids" widget="many2many_tags"/>
+                                <field name="call_type"/>
+                                <field name="call_status"/>
+                                <field name="hotline"/>
+                                <field name="call_date"/>
+                                <field name="start_time"/>
+                                <field name="end_time"/>
+                                <field name="wait_time" widget="integer"/>
+                                <field name="hold_time" widget="integer"/>
+                                <field name="talk_time" widget="integer"/>
+                                <field name="end_status"/>
+                                <field name="user_id"/>
+                                <field name="path" invisible="True"/>
+                                <field name="path_download" invisible="True"/>
+                                <button name="action_listen" type="object" string="Listen" class="oe_highlight" attrs="{'invisible': [('path', '=', False)]}" context="{'phonecall_id': id}"/>
+                                <button name="action_download" type="object" string="Download" attrs="{'invisible': [('path_download', '=', False)]}" class="oe_highlight" context="{'phonecall_id': id}"/>
+                            </tree>
+                            <form string="PhoneCall" create="false" edit="false">
+                                <header>
+                                    <button name="action_listen" type="object" string="Listen"
+                                        class="oe_highlight" context="{'phonecall_id': id}"/>
+                                    <button name="action_download" type="object" string="Download"
+                                            class="oe_highlight" context="{'phonecall_id': id}"/>
+                                </header>
+                                <sheet>
+                                  <group>
+                                      <group>
+                                          <field name="call_type"/>
+                                          <field name="call_status"/>
+                                          <field name="hotline"/>
+                                          <field name="call_date"/>
+                                          <field name="user_id" options="{'no_create':1, 'no_edit':1, 'no_open':1}"/>
+                                          <field name="user_ids" widget="many2many_tags" options="{'no_create':1, 'no_edit':1, 'no_open':1}"/>
+                                      </group>
+                                      <group>
+                                          <field name="start_time"/>
+                                          <field name="end_time"/>
+                                          <field name="wait_time" widget="integer"/>
+                                          <field name="hold_time" widget="integer"/>
+                                          <field name="talk_time" widget="integer"/>
+                                          <field name="end_status"/>
+                                      </group>
+                                  </group>
+
+                                </sheet>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+                    <xpath expr="//field[@name='source_id']" position="after">
+                        <field name="x_call_last_date" readonly="1"/>
+                    </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

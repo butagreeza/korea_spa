@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!--<record id="customer_form_view_for_pos" model="ir.ui.view">-->
+        <!--<field name="name">customer_form_view_for_pos</field>-->
+        <!--<field name="model">res.partner</field>-->
+        <!--<field name="arch" type="xml">-->
+            <!--<form string="Customer" create="false" edit="false">-->
+                <!--<sheet>-->
+                    <!--<div class="oe_title">-->
+                        <!--<div class="oe_edit_only">-->
+                            <!--<label for="name"/>-->
+                        <!--</div>-->
+                        <!--<h1>-->
+                            <!--<field name="name" placeholder="Name"/>-->
+                        <!--</h1>-->
+                    <!--</div>-->
+                    <!--<group>-->
+                        <!--<group>-->
+                            <!--<field name="x_code"/>-->
+                            <!--<field name="x_birthday"/>-->
+                            <!--<field name="email" widget="email" required="context.get('force_email', False)"-->
+                                   <!--attrs="{'required': [('user_ids','!=', [])]}"/>-->
+                            <!--&lt;!&ndash;<field name="credit" string="Công nợ"/>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<field name="x_point_total" readonly="1"/>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<field name="x_loyal_total" readonly="1"/>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<field name="x_balance" readonly="1"/>&ndash;&gt;-->
+                        <!--</group>-->
+                        <!--<group>-->
+                            <!--&lt;!&ndash;<field name="x_rank" readonly="1"/>&ndash;&gt;-->
+                            <!--<field name="user_ids" invisible="1"/>-->
+                            <!--&lt;!&ndash;<field name="x_birthday"/>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<field name="email" widget="email" required="context.get('force_email', False)"&ndash;&gt;-->
+                                   <!--&lt;!&ndash;attrs="{'required': [('user_ids','!=', [])]}"/>&ndash;&gt;-->
+                            <!--<field name="phone" groups="izi_display_fields.group_display_phone" required="1"/>-->
+                            <!--<field name="mobile" groups="izi_display_fields.group_display_phone"/>-->
+                            <!--<field name="x_mobile2" groups="izi_display_fields.group_display_phone"/>-->
+                        <!--</group>-->
+                    <!--</group>-->
+                    <!--<notebook>-->
+                        <!--<page string="Thẻ dịch vụ">-->
+                            <!--<field name="x_card_ids" readonly="1">-->
+                                <!--<tree>-->
+                                    <!--<field name="name"/>-->
+                                    <!--<field name="product_id" string="Service Cards"/>-->
+                                    <!--<field name="life_date"/>-->
+                                    <!--<field name="x_status"/>-->
+                                <!--</tree>-->
+                            <!--</field>-->
+                        <!--</page>-->
+                        <!--&lt;!&ndash;<page string="Phiếu mua hàng">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<field name="x_pmh_ids" readonly="1">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<tree>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<field name="name"/>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<field name="product_id" string="Coupons"/>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<field name="life_date"/>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<field name="x_status"/>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</tree>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</field>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</page>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<page name="crm_history" string="Lịch sử lên hạng">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<field name="x_crm_his_ids" readonly="1">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<tree>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<field name="rank_current"/>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<field name="rank_request"/>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<field name="state"/>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<field name="vip_custom_id"/>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</tree>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</field>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</page>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <page name="virtual_money" string="Virtual money">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <field name="virtual_money_ids" readonly="1">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <tree>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <field name="order_id"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <field name="typex"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <field name="money"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <field name="money_used"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <field name="debt_amount"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <field name="state"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </tree>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </field>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <group class="oe_subtotal_footer oe_right">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="oe_inline">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <label for="x_virtual_total"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <field name="x_virtual_total" nolabel="1"&ndash;&gt;-->
+<!--&lt;!&ndash;                                       widget="monetary" options="{'currency_field': 'currency_id'}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </group>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </page>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <page name="virtual_money_history" string="Virtual money history">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <field name="virtual_money_history_ids" readonly="1">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <tree>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <field name="order_id"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <field name="amount" sum="Total"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <field name="create_date" string="Used date"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </tree>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </field>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </page>&ndash;&gt;-->
+                        <!--<page name="revenue" string="Doanh thu">-->
+                            <!--<field name="x_revenue_ids" readonly="1">-->
+                                <!--<tree>-->
+                                    <!--<field name="order_id"/>-->
+                                    <!--<field name="journal_id"/>-->
+                                    <!--<field name="date"/>-->
+                                    <!--<field name="amount"/>-->
+                                <!--</tree>-->
+                            <!--</field>-->
+                            <!--<group class="oe_subtotal_footer oe_right">-->
+                                <!--<div class="oe_inline">-->
+                                    <!--<label for="x_total_revenue"/>-->
+                                <!--</div>-->
+                                <!--<field name="x_total_revenue" nolabel="1"-->
+                                       <!--widget="monetary" options="{'currency_field': 'currency_id'}"/>-->
+                            <!--</group>-->
+                        <!--</page>-->
+                    <!--</notebook>-->
+                <!--</sheet>-->
+            <!--</form>-->
+        <!--</field>-->
+    <!--</record>-->
+
+    <record id="view_pos_pos_form_inherit" model="ir.ui.view">
+        <field name="name">view_pos_pos_form_inherit</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="context">{'form_view_ref':'izi_pos_custom_backend.customer_form_view_for_pos'}
+                </attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_pos_pos_form_izi_vm_sell_inherit" model="ir.ui.view">
+        <field name="name">view_pos_pos_form_inherit</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="izi_virtual_money.view_pos_pos_form_izi_vm_sell"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="context">{'form_view_ref':'izi_pos_custom_backend.customer_form_view_for_pos'}
+                </attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

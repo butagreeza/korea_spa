@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_izi_merge_use_service_izi_merge_use_service,izi_merge_use_service.izi_merge_use_service,model_izi_merge_use_service_izi_merge_use_service,,1,0,0,0

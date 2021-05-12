@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="res_user_form">
+            <field name="name">Users Preferences</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <group name="preferences" position="after">
+                        <group name="voip_config" string="PBX Configuration">
+                            <field name="x_agent_phone" class="oe_inline"/>
+                            <field name="x_agent_phone_old" class="oe_inline"/>
+                        </group>
+                    </group>
+                </data>
+            </field>
+        </record>
+    </data>
+</odoo>

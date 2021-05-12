@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="revenue_monthly_program_action" model="ir.actions.act_window">
+            <field name="name">Customer Not Revenue</field>
+            <field name="res_model">res.partner.revenue.monthly</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="view_revenue_monthly_program_form" model="ir.ui.view">
+            <field name="name">Customer Not Revenue form</field>
+            <field name="model">res.partner.revenue.monthly</field>
+            <field name="arch" type="xml">
+                <form string="CRM sale program">
+                    <sheet>
+                        <group>
+                            <h1>
+                                <field name="name" required="1"/>
+                            </h1>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="type"/>
+                            </group>
+                            <group>
+                                <field name="x_config_id"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Line">
+                                <field name="lines">
+                                    <tree editable="bottom">
+                                        <field name="partner_id"/>
+                                        <field name="revenue_old"/>
+                                        <!--<field name="x_birthday"/>-->
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_revenue_monthly_program_tree" model="ir.ui.view">
+            <field name="name">Customer Not Revenue tree</field>
+            <field name="model">res.partner.revenue.monthly</field>
+            <field name="arch" type="xml">
+                <tree string="Customer Not Revenue">
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="x_config_id"/>
+                </tree>
+            </field>
+        </record>
+        <menuitem action="revenue_monthly_program_action" name="Customer Not Revenue"
+                  id="revenue_monthly_program"
+                  sequence="20" parent="crm.res_partner_menu_crm"/>
+    </data>
+</odoo>

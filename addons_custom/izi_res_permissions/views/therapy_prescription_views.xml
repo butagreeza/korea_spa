@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="izi_view_therapy_prescription_inherit_form" model="ir.ui.view">
+            <field name="name">Therapy prescription Permission</field>
+            <field name="model">therapy.prescription</field>
+            <field name="inherit_id" ref="izi_therapy_record.izi_view_therapy_prescription_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_done']" position="replace">
+                    <button name="action_done" string="Done" attrs="{'invisible':[('state', '!=', 'waiting')]}" type="object" class="btn-primary" groups="izi_res_permissions.group_leader_consultant"/>
+                </xpath>
+                <xpath expr="//button[@name='action_approve']" position="replace">
+                    <button name="action_approve" string="Approve" attrs="{'invisible':['|', ('state','!=', 'transfer_confirmation'), ('check_invisible_button_approve', '=', True)]}" type="object" class="btn-primary" groups="izi_res_permissions.group_cashier"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

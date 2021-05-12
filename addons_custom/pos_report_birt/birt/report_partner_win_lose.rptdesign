@@ -1,0 +1,1244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.5.0.v201506092134 Build &lt;@BUILD@></property>
+    <property name="units">cm</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">120</property>
+    <parameters>
+        <scalar-parameter name="from_date" id="5">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">date</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2021-01-01</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="to_date" id="6">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">date</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2021-01-31</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="user_id" id="7">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">0</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="4">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.postgresql.Driver</property>
+            <property name="odaURL">jdbc:postgresql://103.145.62.165:5445/korea-erp-07122020</property>
+            <property name="odaUser">korea</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">S3JBQDEyM1ZuMjUwNA==</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set" id="8">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">ngay</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ngay</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">ngay</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">id</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">makh</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">makh</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">makh</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">tenkh</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">tenkh</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">tenkh</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">sdt</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">sdt</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">sdt</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">trangthai</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">trangthai</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">trangthai</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">tuvan</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">tuvan</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">tuvan</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="paramName">from_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">1</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_2</property>
+                    <property name="paramName">to_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">2</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_3</property>
+                    <property name="paramName">user_id</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">3</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_4</property>
+                    <property name="paramName">user_id</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">4</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_5</property>
+                    <property name="paramName">from_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">dateTime</property>
+                    <property name="nativeDataType">93</property>
+                    <property name="position">5</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_6</property>
+                    <property name="paramName">to_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">dateTime</property>
+                    <property name="nativeDataType">93</property>
+                    <property name="position">6</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_7</property>
+                    <property name="paramName">user_id</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">7</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_8</property>
+                    <property name="paramName">user_id</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">8</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ngay</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">id</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">makh</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">tenkh</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">sdt</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">trangthai</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">tuvan</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ngay</property>
+                    <property name="nativeName">ngay</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">id</property>
+                    <property name="nativeName">id</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">makh</property>
+                    <property name="nativeName">makh</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">tenkh</property>
+                    <property name="nativeName">tenkh</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">sdt</property>
+                    <property name="nativeName">sdt</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">trangthai</property>
+                    <property name="nativeName">trangthai</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">tuvan</property>
+                    <property name="nativeName">tuvan</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select * from 
+(select 
+(a.create_date + interval '7 hour')::date as ngay
+, a.id as id
+, a.x_code as makh
+, a.name as tenkh
+, a.phone as sdt
+, c.name as trangthai
+, e.name as tuvan
+from
+	(select * 
+	from res_partner a
+	WHERE 
+	(a.create_date + interval '7 hour')::date >= ?
+	and (a.create_date + interval '7 hour')::date <= ?) a
+left join reception_customer b on b.partner_id = a.id
+left join crm_stage c on a.x_stage_id = c.id
+left join res_users d on d.id = b.user_id
+left join res_partner e on e.id = d.partner_id
+left join partner_stage_history f on f.partner_id = a.id
+WHERE 
+b.state = 'done'
+and c.x_code in ('won', 'lose')
+and f.id is null
+and (d.id = ANY(string_to_array( ?, ',')::integer[]) or ? = '0')
+union all
+
+select 
+(a.time_change + interval '7 hour')::date as ngay
+, b.id as id
+, b.x_code as makh
+, b.name as tenkh
+, b.phone as sdt
+, c.name as trangthai
+, g.name as tuvan
+from partner_stage_history a
+left join res_partner b on a.partner_id = b.id
+left join crm_stage c on a.to_stage_id = c.id
+left join reception_customer e on e.partner_id = b.id
+left join res_users f on f.id = e.user_id
+left join res_partner g on g.id = f.partner_id
+WHERE
+a.time_change >= ?
+and a.time_change <= ?
+and (f.id = ANY(string_to_array( ?, ',')::integer[]) or ? = '0')
+and b.id is not null
+and g.id is not null
+and c.x_code in ('won', 'lose')
+) as bongchot
+ORDER BY bongchot.ngay]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>3</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>4</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>5</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>6</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>7</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>8</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ngay</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>13</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>ngay</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ngay</design:label>
+            <design:formattingHints>
+              <design:displaySize>13</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>makh</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>makh</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>makh</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>tenkh</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>tenkh</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>tenkh</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>sdt</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>sdt</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>sdt</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>trangthai</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>trangthai</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>trangthai</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>tuvan</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>tuvan</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>tuvan</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <cubes>
+        <tabular-cube name="Data Cube" id="181">
+            <property name="dimensions">
+                <tabular-dimension name="Group" id="182">
+                    <property name="defaultHierarchy">NewTabularHierarchy</property>
+                    <property name="hierarchies">
+                        <tabular-hierarchy name="NewTabularHierarchy" id="183">
+                            <property name="levels">
+                                <tabular-level name="id" id="307">
+                                    <property name="dataType">integer</property>
+                                    <property name="columnName">id</property>
+                                </tabular-level>
+                                <tabular-level name="ngay" id="184">
+                                    <property name="dataType">date</property>
+                                    <property name="columnName">ngay</property>
+                                </tabular-level>
+                                <tabular-level name="makh" id="185">
+                                    <property name="dataType">string</property>
+                                    <property name="columnName">makh</property>
+                                </tabular-level>
+                                <tabular-level name="tenkh" id="186">
+                                    <property name="dataType">string</property>
+                                    <property name="columnName">tenkh</property>
+                                </tabular-level>
+                                <tabular-level name="sdt" id="187">
+                                    <property name="dataType">string</property>
+                                    <property name="columnName">sdt</property>
+                                </tabular-level>
+                            </property>
+                        </tabular-hierarchy>
+                    </property>
+                </tabular-dimension>
+                <tabular-dimension name="Group1" id="189">
+                    <property name="isTimeType">false</property>
+                    <property name="defaultHierarchy">NewTabularHierarchy1</property>
+                    <property name="hierarchies">
+                        <tabular-hierarchy name="NewTabularHierarchy1" id="190">
+                            <property name="levels">
+                                <tabular-level name="tuvan" id="627">
+                                    <property name="dataType">string</property>
+                                    <property name="columnName">tuvan</property>
+                                </tabular-level>
+                            </property>
+                        </tabular-hierarchy>
+                    </property>
+                </tabular-dimension>
+            </property>
+            <property name="measureGroups">
+                <tabular-measure-group name="Summary Field" id="192">
+                    <property name="measures">
+                        <tabular-measure name="trangthai" id="193">
+                            <property name="function">first</property>
+                            <property name="isCalculated">false</property>
+                            <expression name="measureExpression" type="javascript">dataSetRow["trangthai"]</expression>
+                            <property name="dataType">string</property>
+                            <property name="isVisible">true</property>
+                        </tabular-measure>
+                    </property>
+                </tabular-measure-group>
+            </property>
+            <property name="dataSet">Data Set</property>
+        </tabular-cube>
+    </cubes>
+    <styles>
+        <style name="center" id="179">
+            <property name="textAlign">center</property>
+        </style>
+        <style name="crosstab" id="163"/>
+        <style name="crosstab-column-grand-total" id="169">
+            <property name="fontWeight">bold</property>
+        </style>
+        <style name="crosstab-column-header" id="166">
+            <property name="backgroundColor">#CCCCCC</property>
+        </style>
+        <style name="crosstab-column-sub-total" id="171">
+            <property name="fontWeight">bold</property>
+        </style>
+        <style name="crosstab-header" id="164">
+            <property name="backgroundColor">#233C98</property>
+        </style>
+        <style name="crosstab-row-grand-total" id="168">
+            <property name="fontWeight">bold</property>
+        </style>
+        <style name="crosstab-row-header" id="167">
+            <property name="backgroundColor">#CCCCCC</property>
+        </style>
+        <style name="crosstab-row-sub-total" id="170">
+            <property name="fontWeight">bold</property>
+        </style>
+        <style name="crosstabselledit" id="180">
+            <property name="paddingTop">3px</property>
+            <property name="paddingLeft">3px</property>
+            <property name="paddingBottom">3px</property>
+            <property name="paddingRight">3px</property>
+        </style>
+        <style name="data" id="149"/>
+        <style name="crosstab-cell" id="165">
+            <property name="borderBottomColor">black</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="borderLeftColor">black</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1px</property>
+            <property name="borderRightColor">black</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1px</property>
+            <property name="borderTopColor">black</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1px</property>
+            <property name="paddingTop">3px</property>
+            <property name="paddingLeft">3px</property>
+            <property name="paddingBottom">3px</property>
+            <property name="paddingRight">3px</property>
+        </style>
+        <style name="grid" id="152"/>
+        <style name="grid-row" id="153">
+            <property name="paddingTop">3px</property>
+            <property name="paddingLeft">3px</property>
+            <property name="paddingBottom">3px</property>
+            <property name="paddingRight">3px</property>
+        </style>
+        <style name="grid-cell" id="154"/>
+        <style name="master1" id="174">
+            <property name="textAlign">left</property>
+        </style>
+        <style name="page" id="148"/>
+        <style name="report" id="147">
+            <property name="fontFamily">"Times New Roman"</property>
+            <property name="fontSize">13pt</property>
+        </style>
+        <style name="reportFooter1" id="175">
+            <property name="fontSize">13pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="reportFooter2" id="176">
+            <property name="fontSize">13pt</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="reportFooter3" id="177">
+            <property name="fontSize">13pt</property>
+            <property name="fontStyle">italic</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="reportHeader1" id="172">
+            <property name="fontSize">13pt</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="reportHeader2" id="173">
+            <property name="fontSize">13pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="reportHeaderDate" id="178">
+            <property name="fontSize">13pt</property>
+            <property name="fontStyle">italic</property>
+        </style>
+        <style name="reportTitle" id="151">
+            <property name="fontSize">16pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="table" id="155">
+            <property name="paddingTop">4px</property>
+            <property name="paddingLeft">4px</property>
+            <property name="paddingBottom">4px</property>
+            <property name="paddingRight">4px</property>
+        </style>
+        <style name="table-cell" id="156">
+            <property name="borderBottomColor">black</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="borderLeftColor">black</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1px</property>
+            <property name="borderRightColor">black</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1px</property>
+            <property name="borderTopColor">black</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1px</property>
+            <property name="paddingTop">3px</property>
+            <property name="paddingLeft">3px</property>
+            <property name="paddingBottom">3px</property>
+            <property name="paddingRight">3px</property>
+        </style>
+        <style name="table-detail" id="161"/>
+        <style name="table-detail-cell" id="162"/>
+        <style name="table-footer" id="159">
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">right</property>
+        </style>
+        <style name="table-footer-cell" id="160"/>
+        <style name="table-header" id="157">
+            <property name="backgroundColor">#233C98</property>
+            <property name="fontWeight">bold</property>
+            <property name="color">#FFFFFF</property>
+        </style>
+        <style name="table-header-cell" id="158"/>
+        <style name="text" id="150"/>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2"/>
+    </page-setup>
+    <body>
+        <grid id="9">
+            <column id="10"/>
+            <row id="11">
+                <cell id="12">
+                    <label id="21">
+                        <property name="fontSize">16pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">BÁO CÁO TỶ LỆ BONG CHỐT</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="13">
+                <cell id="14"/>
+            </row>
+            <row id="15">
+                <cell id="16">
+                    <text-data id="66">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">12pt</property>
+                        <property name="color">#000000</property>
+                        <property name="textAlign">center</property>
+                        <expression name="valueExpr">"THỜI GIAN LÀM VIỆC TỪ " + Formatter.format(params["from_date"].value, 'dd/MM/yyyy') + " ĐẾN " + Formatter.format(params["to_date"].value, 'dd/MM/yyyy')</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+            </row>
+            <row id="17">
+                <cell id="18"/>
+            </row>
+            <row id="19">
+                <cell id="20">
+                    <extended-item extensionName="Crosstab" extensionVersion="3.7.0" id="628">
+                        <property name="cube">Data Cube</property>
+                        <property name="measures">
+                            <extended-item extensionName="MeasureView" id="661">
+                                <property name="measure">trangthai</property>
+                                <property name="detail">
+                                    <extended-item extensionName="AggregationCell" id="662">
+                                        <property name="aggregationOnRow">Group/sdt</property>
+                                        <property name="aggregationOnColumn">Group1/tuvan</property>
+                                        <property name="content">
+                                            <data id="663">
+                                                <property name="textAlign">center</property>
+                                                <property name="resultSetColumn">trangthai_Group/sdt_Group1/tuvan</property>
+                                            </data>
+                                        </property>
+                                    </extended-item>
+                                </property>
+                                <property name="aggregations">
+                                    <extended-item extensionName="AggregationCell" id="673">
+                                        <property name="aggregationOnColumn">Group1/tuvan</property>
+                                        <property name="content">
+                                            <data id="674">
+                                                <property name="borderBottomStyle">solid</property>
+                                                <property name="borderBottomWidth">medium</property>
+                                                <property name="borderLeftStyle">none</property>
+                                                <property name="borderRightStyle">none</property>
+                                                <property name="borderTopStyle">none</property>
+                                                <property name="textAlign">center</property>
+                                                <property name="allowExport">false</property>
+                                                <property name="resultSetColumn">tong_thatbai</property>
+                                            </data>
+                                            <data id="676">
+                                                <property name="borderBottomStyle">solid</property>
+                                                <property name="borderBottomWidth">medium</property>
+                                                <property name="borderLeftStyle">none</property>
+                                                <property name="borderRightStyle">none</property>
+                                                <property name="borderTopStyle">none</property>
+                                                <property name="textAlign">center</property>
+                                                <property name="allowExport">false</property>
+                                                <property name="resultSetColumn">trangthai_Group1/tuvan</property>
+                                            </data>
+                                            <data id="677">
+                                                <property name="borderBottomStyle">none</property>
+                                                <property name="borderLeftStyle">none</property>
+                                                <property name="borderRightStyle">none</property>
+                                                <property name="borderTopStyle">none</property>
+                                                <structure name="numberFormat">
+                                                    <property name="category">Percent</property>
+                                                    <property name="pattern">###0.00%{RoundingMode=HALF_UP}</property>
+                                                </structure>
+                                                <property name="textAlign">center</property>
+                                                <property name="resultSetColumn">ty_le</property>
+                                            </data>
+                                        </property>
+                                    </extended-item>
+                                </property>
+                                <property name="header">
+                                    <extended-item extensionName="CrosstabCell" id="664"/>
+                                </property>
+                            </extended-item>
+                        </property>
+                        <property name="rows">
+                            <extended-item extensionName="CrosstabView" id="630">
+                                <property name="grandTotal">
+                                    <extended-item extensionName="CrosstabCell" id="672">
+                                        <property name="content">
+                                            <label id="675">
+                                                <property name="fontWeight">bold</property>
+                                                <property name="color">white</property>
+                                                <property name="borderBottomStyle">solid</property>
+                                                <property name="borderBottomWidth">medium</property>
+                                                <property name="borderLeftStyle">none</property>
+                                                <property name="borderRightStyle">none</property>
+                                                <property name="borderTopStyle">none</property>
+                                                <property name="textAlign">center</property>
+                                                <property name="width">100%</property>
+                                                <text-property name="text">TỔNG SỐ LƯỢNG BONG</text-property>
+                                            </label>
+                                            <label id="680">
+                                                <property name="fontWeight">bold</property>
+                                                <property name="color">white</property>
+                                                <property name="borderBottomStyle">solid</property>
+                                                <property name="borderBottomWidth">medium</property>
+                                                <property name="borderLeftStyle">none</property>
+                                                <property name="borderRightStyle">none</property>
+                                                <property name="borderTopStyle">none</property>
+                                                <property name="textAlign">center</property>
+                                                <text-property name="text">TỔNG SỐ LƯỢNG CHỐT</text-property>
+                                            </label>
+                                            <label id="682">
+                                                <property name="fontWeight">bold</property>
+                                                <property name="color">white</property>
+                                                <property name="borderBottomStyle">none</property>
+                                                <property name="borderLeftStyle">none</property>
+                                                <property name="borderRightStyle">none</property>
+                                                <property name="borderTopStyle">none</property>
+                                                <property name="textAlign">center</property>
+                                                <text-property name="text">TỶ LỆ</text-property>
+                                            </label>
+                                        </property>
+                                        <property name="verticalAlign">middle</property>
+                                    </extended-item>
+                                </property>
+                                <property name="views">
+                                    <extended-item extensionName="DimensionView" id="631">
+                                        <property name="dimension">Group</property>
+                                        <property name="levels">
+                                            <extended-item extensionName="LevelView" name="NewLevel View" id="632">
+                                                <property name="level">Group/id</property>
+                                                <property name="member">
+                                                    <extended-item extensionName="CrosstabCell" id="633">
+                                                        <property name="content">
+                                                            <data name="id" id="634">
+                                                                <list-property name="visibility">
+                                                                    <structure>
+                                                                        <property name="format">all</property>
+                                                                        <expression name="valueExpr" type="javascript">true</expression>
+                                                                    </structure>
+                                                                </list-property>
+                                                                <property name="allowExport">false</property>
+                                                                <property name="resultSetColumn">id</property>
+                                                            </data>
+                                                            <text-data id="567">
+                                                                <property name="color">black</property>
+                                                                <expression name="valueExpr">i++</expression>
+                                                                <property name="contentType">html</property>
+                                                            </text-data>
+                                                        </property>
+                                                        <property name="fontWeight">normal</property>
+                                                        <property name="textAlign">center</property>
+                                                        <property name="verticalAlign">middle</property>
+                                                    </extended-item>
+                                                </property>
+                                            </extended-item>
+                                            <extended-item extensionName="LevelView" name="NewLevel View1" id="636">
+                                                <property name="level">Group/ngay</property>
+                                                <property name="member">
+                                                    <extended-item extensionName="CrosstabCell" id="637">
+                                                        <property name="content">
+                                                            <data name="ngay" id="639">
+                                                                <structure name="dateTimeFormat">
+                                                                    <property name="category">Short Date</property>
+                                                                    <property name="pattern">Short Date</property>
+                                                                    <property name="locale">vi_VN</property>
+                                                                </structure>
+                                                                <property name="resultSetColumn">ngay</property>
+                                                            </data>
+                                                        </property>
+                                                        <property name="fontWeight">normal</property>
+                                                        <property name="textAlign">center</property>
+                                                        <property name="verticalAlign">middle</property>
+                                                    </extended-item>
+                                                </property>
+                                            </extended-item>
+                                            <extended-item extensionName="LevelView" name="NewLevel View2" id="641">
+                                                <property name="level">Group/makh</property>
+                                                <property name="member">
+                                                    <extended-item extensionName="CrosstabCell" id="642">
+                                                        <property name="content">
+                                                            <data name="makh" id="644">
+                                                                <property name="resultSetColumn">makh</property>
+                                                            </data>
+                                                        </property>
+                                                        <property name="fontWeight">normal</property>
+                                                        <property name="textAlign">center</property>
+                                                        <property name="verticalAlign">middle</property>
+                                                    </extended-item>
+                                                </property>
+                                            </extended-item>
+                                            <extended-item extensionName="LevelView" name="NewLevel View3" id="646">
+                                                <property name="level">Group/tenkh</property>
+                                                <property name="member">
+                                                    <extended-item extensionName="CrosstabCell" id="647">
+                                                        <property name="content">
+                                                            <data name="tenkh" id="649">
+                                                                <property name="textAlign">left</property>
+                                                                <property name="resultSetColumn">tenkh</property>
+                                                            </data>
+                                                        </property>
+                                                        <property name="fontWeight">normal</property>
+                                                        <property name="textAlign">center</property>
+                                                        <property name="verticalAlign">middle</property>
+                                                    </extended-item>
+                                                </property>
+                                            </extended-item>
+                                            <extended-item extensionName="LevelView" name="NewLevel View4" id="651">
+                                                <property name="level">Group/sdt</property>
+                                                <property name="member">
+                                                    <extended-item extensionName="CrosstabCell" id="652">
+                                                        <property name="content">
+                                                            <data name="sdt" id="654">
+                                                                <property name="resultSetColumn">sdt</property>
+                                                            </data>
+                                                        </property>
+                                                        <property name="fontWeight">normal</property>
+                                                        <property name="textAlign">center</property>
+                                                        <property name="verticalAlign">middle</property>
+                                                    </extended-item>
+                                                </property>
+                                            </extended-item>
+                                        </property>
+                                    </extended-item>
+                                </property>
+                            </extended-item>
+                        </property>
+                        <property name="columns">
+                            <extended-item extensionName="CrosstabView" id="656">
+                                <property name="views">
+                                    <extended-item extensionName="DimensionView" id="657">
+                                        <property name="dimension">Group1</property>
+                                        <property name="levels">
+                                            <extended-item extensionName="LevelView" name="NewLevel View5" id="658">
+                                                <property name="level">Group1/tuvan</property>
+                                                <property name="member">
+                                                    <extended-item extensionName="CrosstabCell" id="659">
+                                                        <property name="content">
+                                                            <data name="tuvan" id="660">
+                                                                <property name="resultSetColumn">tuvan</property>
+                                                            </data>
+                                                        </property>
+                                                        <property name="textAlign">left</property>
+                                                        <property name="verticalAlign">middle</property>
+                                                    </extended-item>
+                                                </property>
+                                            </extended-item>
+                                        </property>
+                                    </extended-item>
+                                </property>
+                            </extended-item>
+                        </property>
+                        <property name="header">
+                            <extended-item extensionName="CrosstabCell" id="666">
+                                <property name="content">
+                                    <label id="635">
+                                        <property name="color">white</property>
+                                        <property name="textAlign">center</property>
+                                        <text-property name="text">STT</text-property>
+                                    </label>
+                                </property>
+                                <property name="verticalAlign">middle</property>
+                            </extended-item>
+                            <extended-item extensionName="CrosstabCell" id="667">
+                                <property name="content">
+                                    <label id="679">
+                                        <property name="color">white</property>
+                                        <property name="textAlign">center</property>
+                                        <text-property name="text">NGÀY</text-property>
+                                    </label>
+                                </property>
+                                <property name="verticalAlign">middle</property>
+                            </extended-item>
+                            <extended-item extensionName="CrosstabCell" id="668">
+                                <property name="content">
+                                    <label id="678">
+                                        <property name="color">white</property>
+                                        <property name="textAlign">center</property>
+                                        <text-property name="text">MÃ KHÁCH HÀNG</text-property>
+                                    </label>
+                                </property>
+                                <property name="verticalAlign">middle</property>
+                            </extended-item>
+                            <extended-item extensionName="CrosstabCell" id="669">
+                                <property name="content">
+                                    <label id="650">
+                                        <property name="color">white</property>
+                                        <property name="textAlign">center</property>
+                                        <text-property name="text">TÊN KHÁCH HÀNG</text-property>
+                                    </label>
+                                </property>
+                                <property name="verticalAlign">middle</property>
+                            </extended-item>
+                            <extended-item extensionName="CrosstabCell" id="670">
+                                <property name="content">
+                                    <label id="671">
+                                        <property name="color">white</property>
+                                        <property name="textAlign">center</property>
+                                        <text-property name="text">SỐ ĐIỆN THOẠI</text-property>
+                                    </label>
+                                </property>
+                                <property name="verticalAlign">middle</property>
+                            </extended-item>
+                            <extended-item extensionName="CrosstabCell" id="629">
+                                <property name="content">
+                                    <text-data id="566">
+                                        <property name="color">#233C98</property>
+                                        <list-property name="visibility">
+                                            <structure>
+                                                <property name="format">all</property>
+                                                <expression name="valueExpr" type="javascript">true</expression>
+                                            </structure>
+                                        </list-property>
+                                        <property name="allowExport">false</property>
+                                        <expression name="valueExpr">i=1</expression>
+                                        <property name="contentType">html</property>
+                                    </text-data>
+                                </property>
+                            </extended-item>
+                            <extended-item extensionName="CrosstabCell" id="638"/>
+                            <extended-item extensionName="CrosstabCell" id="643"/>
+                            <extended-item extensionName="CrosstabCell" id="648"/>
+                            <extended-item extensionName="CrosstabCell" id="653"/>
+                        </property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">id</property>
+                                <expression name="expression">dimension["Group"]["id"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">ngay</property>
+                                <expression name="expression">dimension["Group"]["ngay"]</expression>
+                                <property name="dataType">date</property>
+                            </structure>
+                            <structure>
+                                <property name="name">makh</property>
+                                <expression name="expression">dimension["Group"]["makh"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">tenkh</property>
+                                <expression name="expression">dimension["Group"]["tenkh"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">sdt</property>
+                                <expression name="expression">dimension["Group"]["sdt"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">tuvan</property>
+                                <expression name="expression">dimension["Group1"]["tuvan"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">trangthai_Group/sdt_Group1/tuvan</property>
+                                <expression name="expression">measure["trangthai"]</expression>
+                                <property name="dataType">string</property>
+                                <simple-property-list name="aggregateOn">
+                                    <value>Group/sdt</value>
+                                    <value>Group1/tuvan</value>
+                                </simple-property-list>
+                                <property name="aggregateFunction">FIRST</property>
+                            </structure>
+                            <structure>
+                                <property name="name">trangthai_Group1/tuvan</property>
+                                <text-property name="displayName">tong_chot</text-property>
+                                <property name="dataType">integer</property>
+                                <simple-property-list name="aggregateOn">
+                                    <value>Group1/tuvan</value>
+                                </simple-property-list>
+                                <property name="aggregateFunction">COUNT</property>
+                                <list-property name="arguments">
+                                    <structure>
+                                        <property name="name">Expression</property>
+                                        <expression name="value" type="javascript">measure["trangthai"]</expression>
+                                    </structure>
+                                </list-property>
+                                <expression name="filterExpr" type="javascript">measure["trangthai"] == "Chốt"</expression>
+                            </structure>
+                            <structure>
+                                <property name="name">tong_thatbai</property>
+                                <property name="dataType">integer</property>
+                                <simple-property-list name="aggregateOn">
+                                    <value>Group1/tuvan</value>
+                                </simple-property-list>
+                                <property name="aggregateFunction">COUNT</property>
+                                <list-property name="arguments">
+                                    <structure>
+                                        <property name="name">Expression</property>
+                                        <expression name="value" type="javascript">measure["trangthai"]</expression>
+                                    </structure>
+                                </list-property>
+                                <expression name="filterExpr" type="javascript">measure["trangthai"] == "Thất bại"</expression>
+                            </structure>
+                            <structure>
+                                <property name="name">ty_le</property>
+                                <text-property name="displayName">Tỷ lệ</text-property>
+                                <expression name="expression" type="javascript">data["trangthai_Group1/tuvan"] / (data["tong_thatbai"] + data["trangthai_Group1/tuvan"])</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                        </list-property>
+                    </extended-item>
+                </cell>
+            </row>
+        </grid>
+    </body>
+</report>

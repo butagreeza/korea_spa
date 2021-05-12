@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="res_partner_form_interaction" model="ir.ui.view">
+            <field name="name">Partner</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='toggle_active']" position="before">
+                    <field name="x_interaction_ids" invisible="1"/>
+                    <button type="action" class="oe_stat_button" icon="fa-calendar-o"
+                            name="%(izi_crm_interaction.action_izi_partner_interaction_by_partner)d"
+                            context="{'default_partner_id': active_id}"
+                            attrs="{'invisible': [('customer', '=', False)]}">
+                        <field name="x_interaction_count" widget="statinfo" string="Interaction"/>
+                    </button>
+                    <button type="action" name="%(izi_crm_interaction.action_activity_history_by_partner)d"
+                            context="{'default_partner_id': active_id}"
+                            class="oe_stat_button" icon="fa-calendar-o"
+                            attrs="{'invisible': [('customer', '=', False)]}">
+                        <field name="x_activity_count" widget="statinfo" string="Activity History"/>
+                    </button>
+                </xpath>
+                <xpath expr="//page[13]" position="after">
+                    <page string="Partner Interaction">
+                        <field name="x_interaction_ids" >
+                            <tree>
+                                <field name="therapy_record_ids"/>
+                                <field name="expected_date"/>
+                                <field name="actual_date"/>
+                                <field name="object"/>
+                                <field name="mail_activity_type_id"/>
+                                <field name="read_time"/>
+                                <field name="content"/>
+                                <field name="type"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                <xpath expr="//field[@name='source_id']" position="after">
+                    <field name="x_special_caregiver"  options="{'no_create':1, 'no_create_edit':1}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="report_birthday_partner_form" model="ir.ui.view">
+            <field name="name">Report birthday partner</field>
+            <field name="model">report.birthday.partner</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <label string="Ngày sinh nhật"/>
+                            <div class="o_address_format">
+                                <field name="date" class="oe_inline" required="1" placeholder="Ngày"/>
+                              -
+                                <field name="month" class="oe_inline" required="1" placeholder="Tháng"/>
+                            </div>
+                        </group>
+                    </group>
+                    <footer>
+                        <button class="oe_highlight" name="create_report" type="object" string="Print Report"/>
+                        <button class="oe_highlight" name="create_report_excel" type="object" string="Print Report Excel"/>
+                    </footer>
+<!--                    <field name="url_report" widget="display_iframe"/>-->
+                </form>
+            </field>
+        </record>
+        <record id="report_birthday_partner_action" model="ir.actions.act_window">
+            <field name="name">Report birthday_partner</field>
+            <field name="res_model">report.birthday.partner</field>
+            <field name="view_mode">form</field>
+            <field name="view_type">form</field>
+            <field name="target">new</field>
+        </record>
+        <!--<menuitem id="pos_report" name="Pos Report" parent="point_of_sale.menu_point_root" sequence="11"/>-->
+        <menuitem id="report_birthday_partner_menu" action="report_birthday_partner_action" name="Report birthday_partner" parent="crm.crm_menu_report"/>
+    </data>
+</odoo>

@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="use_service_card_form_rate_inherit">
+            <field name="name">izi.service.card.using</field>
+            <field name="model">izi.service.card.using</field>
+            <field name="inherit_id" ref="izi_use_service_card.use_service_card_form"/>
+            <field name="priority">12</field>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_rate']" position="replace">
+                    <button name="action_rate_custom" type="object" string="Rate" class="oe_highlight" states="working"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="revenue_allocation_form_inherit_view">
+            <field name="name">Revenue Allocation from view</field>
+            <field name="model">pos.revenue.allocation</field>
+            <field name="inherit_id" ref="pos_revenue_allocation.revenue_allocation_form_view" />
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='source']" position="inside">
+                    <field name="pos_customer_deposit_line_id" options="{'no_create': 1, 'no_create_edit': 1, 'no_edit': 1}"
+                           attrs="{'readonly': [('state', '=', 'close')], 'invisible': [('pos_customer_deposit_line_id', '=', False)]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

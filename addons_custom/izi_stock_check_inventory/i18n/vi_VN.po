@@ -1,0 +1,134 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* izi_stock_check_inventory
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-06 09:54+0000\n"
+"PO-Revision-Date: 2019-05-06 16:55+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: izi_stock_check_inventory
+#: code:addons/izi_stock_check_inventory/models/stock_inventory_custom.py:183
+#, python-format
+msgid "CHÊNH LỆCH"
+msgstr "CHÊNH LỆCH"
+
+#. module: izi_stock_check_inventory
+#: model:ir.ui.view,arch_db:izi_stock_check_inventory.izi_view_inventory_form_custom
+msgid "Download Import Template"
+msgstr "Tải file mẫu"
+
+#. module: izi_stock_check_inventory
+#: model:ir.ui.view,arch_db:izi_stock_check_inventory.izi_view_inventory_form_custom
+msgid "Download Result Stock Inventory"
+msgstr "Tải dữ liệu tồn kho"
+
+#. module: izi_stock_check_inventory
+#: model:ir.model.fields,field_description:izi_stock_check_inventory.field_stock_inventory_field_binary_import
+msgid "Field Binary Import"
+msgstr "Field Binary Import"
+
+#. module: izi_stock_check_inventory
+#: model:ir.model.fields,field_description:izi_stock_check_inventory.field_stock_inventory_field_binary_name
+msgid "Field Binary Name"
+msgstr "Field Binary Name"
+
+#. module: izi_stock_check_inventory
+#: code:addons/izi_stock_check_inventory/models/stock_inventory_custom.py:184
+#, python-format
+msgid "GHI CHÚ"
+msgstr "GHI CHÚ"
+
+#. module: izi_stock_check_inventory
+#: model:ir.model.fields,field_description:izi_stock_check_inventory.field_stock_inventory_line_x_note
+msgid "Ghi chú"
+msgstr "Ghi chú"
+
+#. module: izi_stock_check_inventory
+#: model:ir.ui.view,arch_db:izi_stock_check_inventory.izi_view_inventory_form_custom
+msgid "Import"
+msgstr "Nhập"
+
+#. module: izi_stock_check_inventory
+#: model:ir.model,name:izi_stock_check_inventory.model_stock_inventory
+msgid "Inventory"
+msgstr "Tồn kho"
+
+#. module: izi_stock_check_inventory
+#: model:ir.model,name:izi_stock_check_inventory.model_stock_inventory_line
+msgid "Inventory Line"
+msgstr "Chi tiết kiểm kho"
+
+#. module: izi_stock_check_inventory
+#: code:addons/izi_stock_check_inventory/models/stock_inventory_custom.py:254
+#, python-format
+msgid "Kiểm kê kho "
+msgstr "Kiểm kê kho"
+
+#. module: izi_stock_check_inventory
+#: model:ir.ui.view,arch_db:izi_stock_check_inventory.izi_view_inventory_form_custom
+msgid "Kết quả kiểm tồn có định dạng là xls hoặc xlsx"
+msgstr "Kết quả kiểm tồn có định dạng là xls hoặc xlsx"
+
+#. module: izi_stock_check_inventory
+#: model:ir.ui.view,arch_db:izi_stock_check_inventory.izi_view_inventory_form_custom
+msgid "Mẫu import có định dạng là xls hoặc xlsx"
+msgstr "Mẫu import có định dạng là xls hoặc xlsx"
+
+#. module: izi_stock_check_inventory
+#: code:addons/izi_stock_check_inventory/models/stock_inventory_custom.py:181
+#, python-format
+msgid "SL LÝ THUYẾT"
+msgstr "SL LÝ THUYẾT"
+
+#. module: izi_stock_check_inventory
+#: code:addons/izi_stock_check_inventory/models/stock_inventory_custom.py:182
+#, python-format
+msgid "SL THỰC TẾ"
+msgstr "SL THỰC TẾ"
+
+#. module: izi_stock_check_inventory
+#: code:addons/izi_stock_check_inventory/models/stock_inventory_custom.py:177
+#, python-format
+msgid "STT"
+msgstr "STT"
+
+#. module: izi_stock_check_inventory
+#: code:addons/izi_stock_check_inventory/models/stock_inventory_custom.py:178
+#, python-format
+msgid "SẢN PHẨM"
+msgstr "SẢN PHẨM"
+
+#. module: izi_stock_check_inventory
+#: model:ir.model.fields,field_description:izi_stock_check_inventory.field_stock_inventory_warehouse_id
+msgid "Warehouse"
+msgstr "Kho hàng"
+
+#. module: izi_stock_check_inventory
+#: code:addons/izi_stock_check_inventory/models/stock_inventory_custom.py:20
+#, python-format
+msgid "You must define a warehouse for the company: %s."
+msgstr "You must define a warehouse for the company: %s."
+
+#. module: izi_stock_check_inventory
+#: code:addons/izi_stock_check_inventory/models/stock_inventory_custom.py:179
+#, python-format
+msgid "ĐƠN VỊ"
+msgstr "ĐƠN VỊ"
+
+#. module: izi_stock_check_inventory
+#: code:addons/izi_stock_check_inventory/models/stock_inventory_custom.py:180
+#, python-format
+msgid "ĐỊA ĐIỂM"
+msgstr "ĐỊA ĐIỂM"
+

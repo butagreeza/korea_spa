@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="pos_payment_allocation_list_view">
+            <field name="name">pos.payment.allocation.list</field>
+            <field name="model">pos.payment.allocation</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="order_id"/>
+                    <field name="partner_id"/>
+                    <field name="amount_total"/>
+                    <field name="amount_allocation"/>
+                    <field name="date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="pos_payment_allocation_form_view">
+            <field name="name">pos.payment.allocation.form</field>
+            <field name="model">pos.payment.allocation</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_pos_payment_allocation" type="object" string="Allocation Payment" class="oe_highlight" states="draft" confirm="Bạn có chắc chắn phân bổ. Nêu chưa chắc chắn vui lòng kiểm tra lại"/>
+                        <button name="action_back" type="object" states="done" string="Back" confirm="Bạn có chắc chắn muốn quay lại" groups="pos_security.group_pos_supervisor_user"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,done" readonly="1" force_save="1"/>
+                    </header>
+                    <sheet>
+                        <h3 class="text-center">PHÂN BỔ THANH TOÁN</h3>
+                        <h3 class="text-center">
+                            <field name="name" readonly="1" required="1" attrs="{'invisible': [('name','=','/')]}"
+                                   style="margin-right: 35%%; margin-left: 35%%; max-width: 30%%; font-style: italic;"
+                                   placeholder="Number"/>
+                        </h3>
+                        <group>
+                            <group>
+                                <field name="order_id" readonly="1" force_save="1"/>
+                                <field name="partner_id" readonly="1" force_save="1"/>
+                                <field name="invoice_id" invisible="1"/>
+                                <field name="date" readonly="1" force_save="1"/>
+                            </group>
+                            <group>
+                                <field name="amount_total" readonly="1" force_save="1"/>
+                                <field name="amount_allocation" readonly="1" force_save="1"/>
+                                <field name="amount_remain" readonly="1" force_save="1"/>
+                                <field name="default_unlink" invisible="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Pos Payment Allocation">
+                                <field name="payment_allocation_ids">
+                                    <tree editable="bottom" delete="false" create="false">
+                                        <field name="amount_readonly" invisible="1"/>
+                                        <field name="product_id" options="{'no_create':1, 'no_create_edit':1}" readonly="1" force_save="1"/>
+                                        <field name="quantity" readonly="1" force_save="1"/>
+                                        <field name="amount" attrs="{'readonly': ['|','|',('parent.state', '!=', 'draft'), ('amount_product', '=', 0), ('amount_readonly', '=', True)]}" force_save="1"/>
+                                        <field name="amount_product" readonly="1" force_save="1"/>
+                                        <field name="amount_payment_product" readonly="1" force_save="1"/>
+                                        <field name="order_id" invisible="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="pos_payment_allocation_action">
+            <field name="name">Pos Payment Allocation</field>
+            <field name="res_model">pos.payment.allocation</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{'delete':False,'create':False}</field>
+        </record>
+
+        <record id="payment_allocation_search_view" model="ir.ui.view">
+            <field name="name">payment_allocation_search_view</field>
+            <field name="model">pos.payment.allocation</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="partner_id"
+                           filter_domain="['|','|','|','|','|','|','|','|',('partner_id.name','ilike',self),('partner_id.phone','ilike',self),('partner_id.mobile','ilike',self),('partner_id.x_mobile2','ilike',self),('partner_id.x_old_code', 'ilike', self),('partner_id.x_code', 'ilike', self),('partner_id.display_name','ilike',self),('partner_id.ref','=',self),('partner_id.email','ilike',self)]"/>
+                    <field name="name" filter_domain="[('name', 'ilike', self)]"/>
+                    <field name="order_id" filter_domain="[('name', 'ilike', self)]"/>
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="state" string="State" context="{'group_by': 'state'}"/>
+                        <filter name="partner_id" string="Partner" context="{'group_by': 'partner_id'}"/>
+                        <filter name="order_id" string="Order" context="{'group_by': 'order_id'}"/>
+                   </group>
+                </search>
+            </field>
+        </record>
+
+        <menuitem id="pos_payment_allocation_menu"
+                  name="Pos Payment Allocaiton"
+                  parent="point_of_sale.menu_point_of_sale"
+                  action="pos_payment_allocation_action" sequence="99"/>
+    </data>
+</odoo>

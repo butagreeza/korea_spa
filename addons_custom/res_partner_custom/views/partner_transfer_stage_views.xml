@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <record id="partner_transfer_stage_form" model="ir.ui.view">
+            <field name="name">Transfer stage</field>
+            <field name="model">partner.transfer.stage</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="stage_id" required="True" options="{'no_create':1, 'no_create_edit':1}"/>
+                            <field name="next_interaction_reminder_activity_type_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                            <field name="next_interaction_reminder_date"/>
+                        </group>
+                        <footer>
+                            <button name="action_confirm_transfer_stage" string="Confirm" type="object" class="oe_highlight"/>
+                            or
+                            <button string="Cancel" class="oe_link" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

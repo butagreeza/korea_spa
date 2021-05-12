@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.module.category" id="category_branch">
+        <field name="name">Branch</field>
+    </record>
+
+    <!-- Chăm sóc khách hàng -->
+    <record id="group_customer_care" model="res.groups">
+        <field name="name">Customer care</field>
+        <field name="category_id" ref="izi_res_permissions.category_branch"/>
+    </record>
+    <!-- Trưởng nhóm chăm sóc khách hàng -->
+    <record id="group_leader_customer_care" model="res.groups">
+        <field name="name">Leader customer care</field>
+        <field name="implied_ids" eval="[(4, ref('izi_res_permissions.group_customer_care'))]"/>
+        <field name="category_id" ref="izi_res_permissions.category_branch"/>
+    </record>
+
+    <!--Kế toán quầy-->
+    <record id="group_cashier" model="res.groups">
+        <field name="name">Cashier</field>
+        <field name="category_id" ref="izi_res_permissions.category_branch"/>
+    </record>
+
+    <!--Tư vấn viên-->
+    <record id="group_consultant" model="res.groups">
+        <field name="name">Consultant</field>
+        <field name="category_id" ref="izi_res_permissions.category_branch"/>
+    </record>
+
+    <!--Trưởng tư vấn viên-->
+    <record id="group_leader_consultant" model="res.groups">
+        <field name="name">Leader consultant</field>
+        <field name="implied_ids" eval="[(4, ref('group_consultant'))]"/>
+        <field name="category_id" ref="izi_res_permissions.category_branch"/>
+    </record>
+
+    <!--Thủ kho chi nhánh-->
+    <record id="group_inventory_accounting" model="res.groups">
+        <field name="name">Inventory accounting</field>
+        <field name="implied_ids" eval="[(4, ref('stock.group_stock_user'))]"/>
+        <field name="category_id" ref="izi_res_permissions.category_branch"/>
+    </record>
+
+    <!--Kế toán trưởng-->
+    <record id="group_leader_accountant" model="res.groups">
+        <field name="name">Leader Accountant</field>
+        <field name="implied_ids" eval="[(4, ref('izi_res_permissions.group_cashier')),(4, ref('izi_res_permissions.group_inventory_accounting'))]"/>
+        <field name="category_id" ref="izi_res_permissions.category_branch"/>
+    </record>
+
+
+    <!--Lễ tân-->
+    <record id="group_receptionist" model="res.groups">
+        <field name="name">Receptionist</field>
+        <field name="category_id" ref="izi_res_permissions.category_branch"/>
+    </record>
+
+    <!--Kỹ thuật viên-->
+    <record id="group_therapist" model="res.groups">
+        <field name="name">Therapist</field>
+        <field name="category_id" ref="izi_res_permissions.category_branch"/>
+    </record>
+
+    <!--Bác sĩ-->
+    <record id="group_doctor" model="res.groups">
+        <field name="name">Doctor</field>
+        <field name="category_id" ref="izi_res_permissions.category_branch"/>
+    </record>
+
+    <!--Shop trưởng-->
+    <record id="group_leader_shop" model="res.groups">
+        <field name="name">Leader shop</field>
+        <field name="implied_ids" eval="[(4, ref('izi_res_permissions.group_cashier'))
+                                        , (4, ref('izi_res_permissions.group_consultant'))
+                                        , (4, ref('izi_res_permissions.group_inventory_accounting'))
+                                        , (4, ref('izi_res_permissions.group_receptionist'))
+                                        , (4, ref('izi_res_permissions.group_doctor'))
+                                        , (4, ref('izi_res_permissions.group_leader_consultant'))
+                                        , (4, ref('izi_res_permissions.group_therapist'))]"/>
+        <field name="category_id" ref="izi_res_permissions.category_branch"/>
+    </record>
+</odoo>

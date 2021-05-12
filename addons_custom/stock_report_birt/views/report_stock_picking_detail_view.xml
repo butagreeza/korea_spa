@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="import_stock_picking_detail_form_view" model="ir.ui.view">
+            <field name="name">import stock picking detail form view</field>
+            <field name="model">report.stock.picking.detail</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="from_date" required="1"/>
+                            <field name="to_date" required="1"/>
+                        </group>
+                        <group>
+                            <field name="partner_ids" options="{'no_create':1, 'no_create_edit':1}" widget="many2many_tags"/>
+                            <field name="product_ids" options="{'no_create':1, 'no_create_edit':1}" widget="many2many_tags"/>
+                        </group>
+                    </group>
+
+                    <footer>
+                        <button class="oe_highlight" name="create_report_stock_picking_detail" type="object"
+                                string="Print report"/>
+                        <button class="oe_highlight" name="create_report_stock_picking_detail_export" type="object"
+                                string="Print report ex"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_report_stock_picking_detail" model="ir.actions.act_window">
+            <field name="name">Import export Inventory</field>
+            <field name="res_model">report.stock.picking.detail</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        <menuitem id="report_stock_picking_detail" name="Report stock picking detail"
+                  action="action_report_stock_picking_detail"
+                  parent="stock.menu_warehouse_report"/>
+    </data>
+</odoo>

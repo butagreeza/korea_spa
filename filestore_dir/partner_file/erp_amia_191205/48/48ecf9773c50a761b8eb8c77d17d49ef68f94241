@@ -1,0 +1,1010 @@
+
+.o_mail_navbar_item > a {
+  opacity: 1;
+}
+.o_mail_navbar_item > a > i {
+  font-size: larger;
+}
+.o_mail_navbar_item.o_no_notification > a {
+  opacity: 0.5;
+}
+.o_mail_navbar_item.o_no_notification > a > i {
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+}
+.o_mail_navbar_item.o_no_notification > a .o_notification_counter {
+  display: none;
+}
+.o_mail_navbar_item.open .o_mail_navbar_dropdown {
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+}
+.o_mail_navbar_item .o_notification_counter {
+  position: absolute;
+  top: 20%;
+  left: auto;
+  bottom: auto;
+  right: 1px;
+  background: #00a09d;
+  color: white;
+  padding: 0em 0.3em;
+  font-size: 0.7em;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown {
+  width: 350px;
+  padding: 0;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_spinner {
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #666666;
+  height: 50px;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top {
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex: 0 0 auto;
+  -moz-flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  border-bottom: 1px solid #d9d7d7;
+  box-shadow: 0 0 2px #d9d7d7;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message {
+  color: #008784;
+  font-weight: normal;
+  border-radius: 0;
+  font-weight: 500;
+  padding: 5px;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button[disabled],
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message[disabled],
+fieldset[disabled] .o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button,
+fieldset[disabled] .o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message:active {
+  border-color: transparent;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message:focus {
+  color: #003a39;
+  text-decoration: none;
+  background-color: transparent;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button[disabled]:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message[disabled]:hover,
+fieldset[disabled] .o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button:hover,
+fieldset[disabled] .o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button[disabled]:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message[disabled]:focus,
+fieldset[disabled] .o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button:focus,
+fieldset[disabled] .o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message:focus {
+  color: #777777;
+  text-decoration: none;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default {
+  text-transform: none;
+  color: #666666;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default.focus {
+  color: #2f3136;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default.active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default.active {
+  border-color: transparent;
+  background-color: transparent;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default .text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default .text-muted {
+  opacity: 0.5;
+  color: #777777;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default .text-muted.focus {
+  opacity: 1;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-default .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-default .text-muted.focus {
+  color: #2f3136;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success {
+  text-transform: none;
+  color: #666666;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success.focus {
+  color: #00a04a;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success.active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success.active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success.active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success.active {
+  border-color: transparent;
+  background-color: transparent;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success .text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success .text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success .text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success .text-muted {
+  opacity: 0.5;
+  color: #777777;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success .text-muted.focus {
+  opacity: 1;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-success .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-success .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-success .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-success .text-muted.focus {
+  color: #00a04a;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning {
+  text-transform: none;
+  color: #666666;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning.focus {
+  color: #f0ad4e;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning.active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning.active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning.active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning.active {
+  border-color: transparent;
+  background-color: transparent;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning .text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning .text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning .text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning .text-muted {
+  opacity: 0.5;
+  color: #777777;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning .text-muted.focus {
+  opacity: 1;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-warning .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-warning .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-warning .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-warning .text-muted.focus {
+  color: #f0ad4e;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger {
+  text-transform: none;
+  color: #666666;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger.focus {
+  color: #dc6965;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger.active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger.active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger.active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger.active {
+  border-color: transparent;
+  background-color: transparent;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger .text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger .text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger .text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger .text-muted {
+  opacity: 0.5;
+  color: #777777;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger .text-muted.focus {
+  opacity: 1;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-danger .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-danger .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-danger .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-danger .text-muted.focus {
+  color: #dc6965;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info {
+  text-transform: none;
+  color: #666666;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info.focus {
+  color: #4396af;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info.active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info.active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info.active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info.active {
+  border-color: transparent;
+  background-color: transparent;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info .text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info .text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info .text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info .text-muted {
+  opacity: 0.5;
+  color: #777777;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info .text-muted.focus {
+  opacity: 1;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.btn-info .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.btn-info .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.text-info .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message.text-info .text-muted.focus {
+  color: #4396af;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button {
+  color: #a8a8a8;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.active {
+  color: #00a09d;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.active {
+  cursor: default;
+  font-weight: bold;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_channels {
+  -ms-flex: 0 1 auto;
+  -moz-flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
+  max-height: 400px;
+  min-height: 50px;
+  overflow-y: auto;
+}
+@media (min-width: 768px) {
+  .o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_channels .o_mail_channel_preview {
+    height: 50px;
+    padding: 5px;
+  }
+  .o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_channels .o_mail_channel_preview .o_mail_channel_image {
+    width: 40px;
+  }
+  .o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_channels .o_mail_channel_preview .o_channel_info {
+    margin-left: 10px;
+  }
+  .o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_channels .o_mail_channel_preview .o_channel_info .o_channel_title .o_last_message_date {
+    padding-top: 2px;
+    font-size: x-small;
+    margin-left: 10px;
+  }
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button {
+  color: #008784;
+  font-weight: normal;
+  border-radius: 0;
+  font-weight: 500;
+  padding: 2px;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button[disabled],
+fieldset[disabled] .o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button:active {
+  border-color: transparent;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button:focus {
+  color: #003a39;
+  text-decoration: none;
+  background-color: transparent;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button[disabled]:hover,
+fieldset[disabled] .o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button[disabled]:focus,
+fieldset[disabled] .o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button:focus {
+  color: #777777;
+  text-decoration: none;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default {
+  text-transform: none;
+  color: #666666;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default.focus {
+  color: #2f3136;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default.active {
+  border-color: transparent;
+  background-color: transparent;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default .text-muted {
+  opacity: 0.5;
+  color: #777777;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default .text-muted.focus {
+  opacity: 1;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-default .text-muted.focus {
+  color: #2f3136;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success {
+  text-transform: none;
+  color: #666666;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success.focus {
+  color: #00a04a;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success.active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success.active {
+  border-color: transparent;
+  background-color: transparent;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success .text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success .text-muted {
+  opacity: 0.5;
+  color: #777777;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success .text-muted.focus {
+  opacity: 1;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-success .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-success .text-muted.focus {
+  color: #00a04a;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning {
+  text-transform: none;
+  color: #666666;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning.focus {
+  color: #f0ad4e;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning.active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning.active {
+  border-color: transparent;
+  background-color: transparent;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning .text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning .text-muted {
+  opacity: 0.5;
+  color: #777777;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning .text-muted.focus {
+  opacity: 1;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-warning .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-warning .text-muted.focus {
+  color: #f0ad4e;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger {
+  text-transform: none;
+  color: #666666;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger.focus {
+  color: #dc6965;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger.active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger.active {
+  border-color: transparent;
+  background-color: transparent;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger .text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger .text-muted {
+  opacity: 0.5;
+  color: #777777;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger .text-muted.focus {
+  opacity: 1;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-danger .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-danger .text-muted.focus {
+  color: #dc6965;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info {
+  text-transform: none;
+  color: #666666;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info.focus {
+  color: #4396af;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info:active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info.active,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info.active {
+  border-color: transparent;
+  background-color: transparent;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info.text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info .text-muted,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info .text-muted {
+  opacity: 0.5;
+  color: #777777;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info .text-muted.focus {
+  opacity: 1;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info.text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info .text-muted:hover,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info.text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info .text-muted:focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info.text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.btn-info .text-muted.focus,
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_activity_filter_button.text-info .text-muted.focus {
+  color: #4396af;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_no_activity {
+  cursor: initial;
+  -webkit-align-items: center;
+  align-items: center;
+  color: grey;
+  opacity: 0.5;
+  padding: 3px;
+}
+.o_no_chat_window .o_mail_navbar_dropdown .o_new_message {
+  display: none;
+}
+@media (max-width: 767px) {
+  .o_mail_navbar_item .o_notification_counter {
+    top: 10%;
+  }
+  .o_mail_navbar_item .o_mail_navbar_dropdown {
+    position: relative;
+  }
+  .o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top {
+    padding: 5px;
+  }
+  .o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_mobile_header {
+    padding: 5px;
+    height: 44px;
+    border-bottom: 1px solid #ebebeb;
+    box-shadow: 0 0 2px #d9d7d7;
+  }
+  .o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_channels {
+    max-height: none;
+    padding-bottom: 52px;
+  }
+  .o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_mobile_tabs {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+    color: #666666;
+  }
+}

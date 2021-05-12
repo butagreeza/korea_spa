@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="phonecall_new_tree_view" model="ir.ui.view">
+            <field name="name">phonecall</field>
+            <field name="model">phonecall</field>
+            <field eval="1" name="priority"/>
+            <field name="arch" type="xml">
+                <tree edit="0" string="Phonecalls">
+                    <field name="call_status"/>
+                    <field name="phone"/>
+                    <field name="partner_id"/>
+                    <field name="user_id"/>
+                    <field name="user_ids" widget="many2many_tags"/>
+                    <field name="call_type"/>
+                    <field name="hotline"/>
+                    <field name="call_date"/>
+                    <field name="start_time"/>
+                    <field name="end_time"/>
+                    <field name="wait_time"/>
+                    <field name="hold_time"/>
+                    <field name="talk_time"/>
+                    <field name="end_status"/>
+                    <field name="path" invisible="1"/>
+                    <field name="path_download" invisible="1"/>
+                    <button name="action_listen" type="object" string="Listen" class="oe_highlight" attrs="{'invisible': [('path', '=', False)]}" context="{'phonecall_id': id}"/>
+                    <button name="action_download" type="object" string="Download" attrs="{'invisible': [('path_download', '=', False)]}" class="oe_highlight" context="{'phonecall_id': id}"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_phonecalls_filter" model="ir.ui.view">
+            <field name="model">phonecall</field>
+            <field name="arch" type="xml">
+                <search string="Views">
+                    <field name="phone" string="Phone"/>
+                    <field name="partner_id" string="Name Partner" filter_domain="[('partner_id.name', 'ilike', self)]"/>
+                    <field name="partner_id" string="Code Partner" filter_domain="['|', ('partner_id.x_old_code', 'ilike', self), ('partner_id.x_code', 'ilike', self)]"/>
+                    <field name="hotline" string="Hotline"/>
+                    <field name="user_id" string="Last Employee"/>
+                    <separator/>
+                    <filter string="Call type out" name="call_type" domain="[('call_type', '=', 'outgoing')]"/>
+                    <filter string="Call type in" name="call_type" domain="[('call_type', '=', 'incoming')]"/>
+                    <filter string="call_status_miss" name="call_status" domain="[('call_status', '=','miss')]"/>
+                    <filter string="call_status_meet" name="call_status" domain="[('call_status', '=','meetAgent')]"/>
+                    <filter string="end_status_sys" name="end_status" domain="[('end_status', '=', 'system')]"/>
+                    <filter string="end_status_cus" name="end_status" domain="[('end_status', '=', 'cus')]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Call Status" name="call_status" domain="[]" context="{'group_by':'call_status'}"/>
+                        <filter string="Call Type" name="call_type" domain="[]" context="{'group_by':'call_type'}"/>
+                        <filter string="Partner" name="partner" domain="[]" context="{'group_by':'partner_id'}"/>
+                        <filter string="Hotline" domain="[]" context="{'group_by':'hotline'}"/>
+                        <filter string="Last Employee" domain="[]" context="{'group_by':'user_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="phonecall_action" model="ir.actions.act_window">
+            <field name="name">Phonecalls</field>
+            <field name="res_model">phonecall</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="phonecall_new_tree_view"/>
+            <field name="search_view_id" ref="res_partner_phonecall.view_phonecalls_filter"/>
+        </record>
+
+        <menuitem id="phonecall_menu" name="phonecall_menu" string="PhoneCall"
+                  parent="izi_crm_interaction.partner_interaction_main_menu" action="phonecall_action"/>
+    </data>
+</odoo>

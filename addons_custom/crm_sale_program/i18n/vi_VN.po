@@ -1,0 +1,197 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_sale_program
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-06 08:48+0000\n"
+"PO-Revision-Date: 2019-05-06 15:53+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: crm_sale_program
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_line_x_birthday
+msgid "Birth Day"
+msgstr "DSKH sinh nhật theo tháng"
+
+#. module: crm_sale_program
+#: selection:crm.sale.program,type:0
+msgid "Birthday"
+msgstr "DSKH sinh nhật theo tháng"
+
+#. module: crm_sale_program
+#: model:ir.actions.act_window,name:crm_sale_program.crm_sale_program_action
+#: model:ir.ui.menu,name:crm_sale_program.crm_sale_program
+#: model:ir.ui.view,arch_db:crm_sale_program.view_crm_sale_program_form
+#: model:ir.ui.view,arch_db:crm_sale_program.view_crm_sale_program_tree
+msgid "CRM sale program"
+msgstr "DSKH sinh nhật theo tháng"
+
+#. module: crm_sale_program
+#: model:ir.actions.act_window,help:crm_sale_program.crm_sale_program_action
+msgid "Click create to add a new CRM sale program record"
+msgstr "Click create to add a new CRM sale program record"
+
+#. module: crm_sale_program
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_create_uid
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_history_create_uid
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_line_create_uid
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_partner_line_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: crm_sale_program
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_create_date
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_history_create_date
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_line_create_date
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_partner_line_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: crm_sale_program
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_description
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: crm_sale_program
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_display_name
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_history_display_name
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_line_display_name
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_partner_line_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: crm_sale_program
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_from_date
+msgid "From date"
+msgstr "Từ ngày"
+
+#. module: crm_sale_program
+#: model:ir.actions.server,name:crm_sale_program.ir_request_job_crm_sale_program_historyr_ir_actions_server
+#: model:ir.cron,cron_name:crm_sale_program.ir_request_job_crm_sale_program_historyr
+#: model:ir.cron,name:crm_sale_program.ir_request_job_crm_sale_program_historyr
+msgid "Get request job crm sale program history"
+msgstr "Get request job crm sale program history"
+
+#. module: crm_sale_program
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_history_id
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_id
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_line_id
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_partner_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_sale_program
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program___last_update
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_history___last_update
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_line___last_update
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_partner_line___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: crm_sale_program
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_history_write_uid
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_line_write_uid
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_partner_line_write_uid
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: crm_sale_program
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_history_write_date
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_line_write_date
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_partner_line_write_date
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: crm_sale_program
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_line_ids
+msgid "Line"
+msgstr "Line"
+
+#. module: crm_sale_program
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: crm_sale_program
+#: selection:crm.sale.program,type:0
+msgid "New Customer"
+msgstr "New Customer"
+
+#. module: crm_sale_program
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_history_partner_id
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_line_partner_id
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_partner_line_partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: crm_sale_program
+#: model:ir.ui.view,arch_db:crm_sale_program.view_crm_sale_program_form
+msgid "Partners"
+msgstr "Đối tác"
+
+#. module: crm_sale_program
+#: selection:crm.sale.program,type:0
+msgid "Product"
+msgstr "Product"
+
+#. module: crm_sale_program
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_history_program_id
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_line_program_id
+msgid "Program"
+msgstr "Program"
+
+#. module: crm_sale_program
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_line_x_rank
+msgid "Rank"
+msgstr "Hạng"
+
+#. module: crm_sale_program
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_partner_line_program_rel_id
+msgid "Relation"
+msgstr "Relation"
+
+#. module: crm_sale_program
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_to_date
+msgid "To date"
+msgstr "Đến ngày "
+
+#. module: crm_sale_program
+#: model:ir.model.fields,field_description:crm_sale_program.field_crm_sale_program_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: crm_sale_program
+#: selection:crm.sale.program,type:0
+msgid "Vip"
+msgstr "Vip"
+
+#. module: crm_sale_program
+#: model:ir.model,name:crm_sale_program.model_crm_sale_program
+msgid "crm.sale.program"
+msgstr "crm.sale.program"
+
+#. module: crm_sale_program
+#: model:ir.model,name:crm_sale_program.model_crm_sale_program_history
+msgid "crm.sale.program.history"
+msgstr "crm.sale.program.history"
+
+#. module: crm_sale_program
+#: model:ir.model,name:crm_sale_program.model_crm_sale_program_line
+msgid "crm.sale.program.line"
+msgstr "crm.sale.program.line"
+
+#. module: crm_sale_program
+#: model:ir.model,name:crm_sale_program.model_crm_sale_program_partner_line
+msgid "crm.sale.program.partner.line"
+msgstr "crm.sale.program.partner.line"

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="rpt_crm_fail_from" model="ir.ui.view">
+            <field name="name">rpt.crm.fail.form</field>
+            <field name="model">rpt.crm.fail</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="from_date" required="1"/>
+                        <field name="to_date" required="1"/>
+                        <field name="select_all"/>
+                        <field name="employee_ids" options="{'no_create':1, 'no_create_edit':1}" widget="many2many_tags"
+                               attrs="{'invisible': [('select_all','=',True)],'required': [('select_all','=',False)]}"/>
+                    </group>
+                    <group>
+                        <field name="select_config_all"/>
+                        <field name="config_ids" options="{'no_create':1, 'no_create_edit':1}" widget="many2many_tags"
+                               attrs="{'invisible': [('select_all','=',True)],'required': [('select_all','=',False)]}"/>
+                    </group>
+                    <footer>
+                        <button class="oe_highlight" name="create_report_crm_fail" type="object" string="Print Report"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="rpt_crm_fail_action" model="ir.actions.act_window">
+            <field name="name">Rpt Crm Fail</field>
+            <field name="res_model">rpt.crm.fail</field>
+            <field name="view_mode">form</field>
+            <field name="view_type">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+        <!--<menuitem id="pos_report" name="Pos Report" parent="point_of_sale.menu_point_root" sequence="11"/>-->
+        <menuitem id="rpt_crm_fail_menu" action="rpt_crm_fail_action" name="Rpt Crm Fail"
+                  parent="crm.crm_menu_report"/>
+    </data>
+</odoo>

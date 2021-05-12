@@ -1,0 +1,380 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* res_partner_phonecall
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-04 10:41+0000\n"
+"PO-Revision-Date: 2020-09-04 10:41+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_hotline_config_active
+msgid "Active"
+msgstr "Có hiệu lực"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_res_users_x_agent_phone
+msgid "Agent Phone"
+msgstr "NHÁNH IP"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_res_users_x_agent_phone_old
+msgid "Agent Phone Old"
+msgstr "NHÁNH IP CŨ"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_branch_hotline
+msgid "Branch Hotline"
+msgstr "Nhánh tổng đài"
+
+#. module: res_partner_phonecall
+#: model:ir.ui.view,arch_db:res_partner_phonecall.view_phonecalls_filter
+msgid "Call Status"
+msgstr "Trạng thái cuộc gọi"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_call_time_end
+msgid "Call Time End"
+msgstr "Thời điểm kết thúc cuộc gọi"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_call_type
+#: model:ir.ui.view,arch_db:res_partner_phonecall.view_phonecalls_filter
+msgid "Call Type"
+msgstr "Loại cuộc gọi"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_call_date
+msgid "Call date"
+msgstr "Ngày gọi"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_res_partner_x_call_last_date
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_res_users_x_call_last_date
+msgid "Call last date"
+msgstr "Ngày liên hệ cuối cùng"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_call_status
+msgid "Call status"
+msgstr "Trạng thái cuộc gọi"
+
+#. module: res_partner_phonecall
+#: model:ir.ui.view,arch_db:res_partner_phonecall.view_phonecalls_filter
+msgid "Call type in"
+msgstr "Gọi vào"
+
+#. module: res_partner_phonecall
+#: model:ir.ui.view,arch_db:res_partner_phonecall.view_phonecalls_filter
+msgid "Call type out"
+msgstr "Gọi ra"
+
+#. module: res_partner_phonecall
+#: model:ir.ui.view,arch_db:res_partner_phonecall.view_phonecalls_filter
+msgid "Code Partner"
+msgstr "Mã Khách hàng"
+
+#. module: res_partner_phonecall
+#: model:ir.model,name:res_partner_phonecall.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_hotline_config_create_uid
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_hotline_config_create_date
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_customer_3c_id
+msgid "Customer ID"
+msgstr "Mã khách hàng của 3c"
+
+#. module: res_partner_phonecall
+#: selection:phonecall,call_status:0
+msgid "Cuộc gọi gặp"
+msgstr "Cuộc gọi gặp"
+
+#. module: res_partner_phonecall
+#: selection:phonecall,call_status:0
+msgid "Cuộc gọi nhỡ "
+msgstr "Cuộc gọi nhỡ "
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_hotline_config_date_end_synchronize
+msgid "Date end synchronize"
+msgstr "Ngày dừng đồng bộ cuộc gọi"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_hotline_config_date_start_synchronize
+msgid "Date start synchronize"
+msgstr "Ngày bắt đầu đồng bộ cuộc gọi"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_hotline_config_display_name
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: res_partner_phonecall
+#: model:ir.ui.view,arch_db:res_partner_phonecall.voip_phonecall_tree_view
+msgid "Download"
+msgstr "Tải xuống"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_end_status
+msgid "End Status"
+msgstr "Trạng thái kết thúc"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_end_time
+msgid "End time"
+msgstr "Thời điểm kết thúc cuộc gọi"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_path_download
+msgid "File download"
+msgstr "File download"
+
+#. module: res_partner_phonecall
+#: model:ir.actions.server,name:res_partner_phonecall.get_voip_phonecall_ir_actions_server
+#: model:ir.cron,cron_name:res_partner_phonecall.get_voip_phonecall
+#: model:ir.cron,name:res_partner_phonecall.get_voip_phonecall
+msgid "Get voip_phonecall"
+msgstr "Đồng bộ cuộc gọi"
+
+#. module: res_partner_phonecall
+#: model:ir.ui.view,arch_db:res_partner_phonecall.view_phonecalls_filter
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: res_partner_phonecall
+#: selection:phonecall,call_type:0
+msgid "Gọi ra"
+msgstr "Gọi ra"
+
+#. module: res_partner_phonecall
+#: selection:phonecall,call_type:0
+msgid "Gọi vào"
+msgstr "Gọi vào"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_hotline
+#: model:ir.ui.view,arch_db:res_partner_phonecall.view_phonecalls_filter
+msgid "Hotline"
+msgstr "Số điện thoại tổng đài"
+
+#. module: res_partner_phonecall
+#: selection:phonecall,end_status:0
+msgid "Hệ thống"
+msgstr "Hệ thống"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_hotline_config_id
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_id
+msgid "ID"
+msgstr "ID"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_hotline_config_key_access
+msgid "Key Access"
+msgstr "Khóa truy cập"
+
+#. module: res_partner_phonecall
+#: selection:phonecall,end_status:0
+msgid "Khách hàng"
+msgstr "Khách hàng"
+
+#. module: res_partner_phonecall
+#: model:ir.ui.view,arch_db:res_partner_phonecall.view_phonecalls_filter
+msgid "Last Employee"
+msgstr "Chuyên viên gần nhất"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_hotline_config___last_update
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_hotline_config_write_uid
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_hotline_config_write_date
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_path
+msgid "Link recording"
+msgstr "Link ghi âm"
+
+#. module: res_partner_phonecall
+#: model:ir.ui.view,arch_db:res_partner_phonecall.voip_phonecall_tree_view
+msgid "Listen"
+msgstr "Nghe"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_mobifone_id
+msgid "Mobiphone ID"
+msgstr "Mobiphone ID"
+
+#. module: res_partner_phonecall
+#: model:ir.ui.view,arch_db:res_partner_phonecall.view_phonecalls_filter
+msgid "Name Partner"
+msgstr "Tên khách hàng"
+
+#. module: res_partner_phonecall
+#: model:ir.ui.view,arch_db:res_partner_phonecall.res_user_form
+msgid "PBX Configuration"
+msgstr "Cấu hình số điện thoại tổng đài"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_partner_id
+#: model:ir.ui.view,arch_db:res_partner_phonecall.view_phonecalls_filter
+msgid "Partner"
+msgstr "Khách hàng"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_hotline_config_phone
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_phone
+#: model:ir.ui.view,arch_db:res_partner_phonecall.view_phonecalls_filter
+msgid "Phone"
+msgstr "Điện thoại"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_name
+msgid "Phone Call"
+msgstr "Cuộc gọi"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_res_partner_x_phonecall_ids
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_res_users_x_phonecall_ids
+msgid "Phone Calls"
+msgstr "Cuộc gọi"
+
+#. module: res_partner_phonecall
+#: model:ir.ui.view,arch_db:res_partner_phonecall.voip_phonecall_tree_view
+msgid "PhoneCall"
+msgstr "Chi tiết cuộc gọi"
+
+#. module: res_partner_phonecall
+#: model:ir.actions.act_window,name:res_partner_phonecall.phonecall_action
+#: model:ir.ui.view,arch_db:res_partner_phonecall.phonecall_new_tree_view
+#: model:ir.ui.view,arch_db:res_partner_phonecall.voip_phonecall_tree_view
+msgid "Phonecalls"
+msgstr "Cuộc gọi"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_start_time
+msgid "Start time"
+msgstr "Thời điểm bắt đầu cuộc gọi"
+
+#. module: res_partner_phonecall
+#: model:ir.actions.server,name:res_partner_phonecall.synchronize_partner_ir_actions_server
+#: model:ir.cron,cron_name:res_partner_phonecall.synchronize_partner
+#: model:ir.cron,name:res_partner_phonecall.synchronize_partner
+msgid "Synchronize Phone Partner"
+msgstr "Đồng bộ khách hàng trong cuộc gọi"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_hold_time
+msgid "Time Hold"
+msgstr "Thời gian giữ cuộc gọi (s)"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_talk_time
+msgid "Time Talk"
+msgstr "Thời gian đàm thoại (s)"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_wait_time
+msgid "Time Wait"
+msgstr "Thời gian chờ cuộc gọi (s)"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_user_id
+msgid "User"
+msgstr "Chuyên viên gần nhất"
+
+#. module: res_partner_phonecall
+#: model:ir.model,name:res_partner_phonecall.model_res_users
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_user_ids
+msgid "Users"
+msgstr "Các chuyên viên"
+
+#. module: res_partner_phonecall
+#: model:ir.ui.view,arch_db:res_partner_phonecall.view_phonecalls_filter
+msgid "Views"
+msgstr "Bộ lọc"
+
+#. module: res_partner_phonecall
+#: model:ir.ui.view,arch_db:res_partner_phonecall.voip_phonecall_tree_view
+msgid "Voip Phonecall"
+msgstr "Kết nối tổng đài"
+
+#. module: res_partner_phonecall
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_hotline_config_name
+#: model:ir.model.fields,field_description:res_partner_phonecall.field_phonecall_voip_phonecall_config_id
+#: model:ir.ui.menu,name:res_partner_phonecall.menu_voip_phonecall_config
+msgid "Voip Phonecall Config"
+msgstr "Cấu hình kết nối tổng đài"
+
+#. module: res_partner_phonecall
+#: model:ir.ui.view,arch_db:res_partner_phonecall.view_phonecalls_filter
+msgid "call_status_meet"
+msgstr "Cuộc gọi gặp"
+
+#. module: res_partner_phonecall
+#: model:ir.ui.view,arch_db:res_partner_phonecall.view_phonecalls_filter
+msgid "call_status_miss"
+msgstr "Cuộc gọi nhỡ"
+
+#. module: res_partner_phonecall
+#: model:ir.ui.view,arch_db:res_partner_phonecall.view_phonecalls_filter
+msgid "end_status_cus"
+msgstr "Khách hàng kết thúc"
+
+#. module: res_partner_phonecall
+#: model:ir.ui.view,arch_db:res_partner_phonecall.view_phonecalls_filter
+msgid "end_status_sys"
+msgstr "Hệ thống kết thúc"
+
+#. module: res_partner_phonecall
+#: model:ir.model,name:res_partner_phonecall.model_hotline_config
+msgid "hotline.config"
+msgstr "Cấu hình tổng đài"
+
+#. module: res_partner_phonecall
+#: model:ir.actions.act_window,name:res_partner_phonecall.action_hotline_config
+msgid "hotline_config"
+msgstr "Cấu hình tổng đài"
+
+#. module: res_partner_phonecall
+#: model:ir.model,name:res_partner_phonecall.model_phonecall
+msgid "phonecall"
+msgstr "Cuộc gọi"
+
+#. module: res_partner_phonecall
+#: model:ir.ui.menu,name:res_partner_phonecall.phonecall_menu
+msgid "phonecall_menu"
+msgstr "Quản lý cuộc gọi"
+

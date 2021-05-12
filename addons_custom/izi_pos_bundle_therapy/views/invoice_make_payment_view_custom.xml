@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="view_invoice_make_payment_form_inherit" model="ir.ui.view">
+            <field name="name">Pay invoice Inherit</field>
+            <field name="model">invoice.make.payment</field>
+            <field name="inherit_id" ref="izi_pos_custom_backend.view_invoice_make_payment_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='customer_sign']" position="before">
+                    <field name="x_is_sign" invisible="True"/>
+                </xpath>
+                <xpath expr="//field[@name='customer_sign']" position="replace">
+                    <field name="customer_sign" widget="signature"
+                                   attrs="{'invisible': [('x_is_sign', '=', False)]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

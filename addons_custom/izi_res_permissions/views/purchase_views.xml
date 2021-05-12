@@ -1,0 +1,66 @@
+<odoo>
+    <data>
+        <!-- Mua hàng -->
+        <record model="ir.ui.menu" id="purchase.menu_purchase_root">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('izi_res_permissions.group_leader_accountant'),
+                   ref('izi_res_permissions.group_inventory_accounting')])]"/>
+        </record>
+
+        <!-- Mua hàng/Mua hàng-->
+        <record model="ir.ui.menu" id="purchase.menu_procurement_management">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('izi_res_permissions.group_leader_accountant'),
+                   ref('izi_res_permissions.group_inventory_accounting')])]"/>
+        </record>
+
+        <!--Mua hàng/Mua hàng/Đơn hàng-->
+        <record model="ir.ui.menu" id="purchase.menu_purchase_form_action">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('izi_res_permissions.group_leader_accountant'),
+                   ref('izi_res_permissions.group_inventory_accounting')])]"/>
+        </record>
+
+        <!--Mua hàng/Mua hàng/Nhà cung cấp-->
+        <record model="ir.ui.menu" id="purchase.menu_procurement_management_supplier_name">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('izi_res_permissions.group_leader_accountant'),
+                   ref('izi_res_permissions.group_inventory_accounting')])]"/>
+        </record>
+
+        <!--Mua hàng/Mua hàng/Sản phẩm-->
+        <record model="ir.ui.menu" id="purchase.menu_procurement_partner_contact_form">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('izi_res_permissions.group_leader_accountant'),
+                   ref('izi_res_permissions.group_inventory_accounting')])]"/>
+        </record>
+
+        <!--Mua hàng/Mua hàng/Biến thể sản phẩm-->
+        <record model="ir.ui.menu" id="purchase.product_product_menu">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('izi_res_permissions.group_leader_accountant'),
+                   ref('izi_res_permissions.group_inventory_accounting')])]"/>
+        </record>
+
+        <!--Mua hàng/Điều khiển-->
+        <record model="ir.ui.menu" id="purchase.menu_purchase_control">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('izi_res_permissions.group_leader_accountant'),
+                   ref('izi_res_permissions.group_inventory_accounting')])]"/>
+        </record>
+
+        <!--Mua hàng/Điều khiển/Hàng sắp về-->
+        <record model="ir.ui.menu" id="purchase.menu_action_picking_tree_in_move">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('izi_res_permissions.group_leader_accountant'),
+                   ref('izi_res_permissions.group_inventory_accounting')])]"/>
+        </record>
+
+        <!--Mua hàng/Điều khiển/Hóa đơn NCC-->
+        <record model="ir.ui.menu" id="purchase.menu_procurement_management_pending_invoice">
+            <field name="groups_id"
+                   eval="[(6,0,[ref('izi_res_permissions.group_leader_accountant'),
+                   ref('izi_res_permissions.group_inventory_accounting')])]"/>
+        </record>
+    </data>
+</odoo>

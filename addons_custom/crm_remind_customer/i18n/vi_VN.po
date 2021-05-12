@@ -1,0 +1,277 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_remind_customer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-06 08:23+0000\n"
+"PO-Revision-Date: 2019-05-06 15:41+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: crm_remind_customer
+#: model:ir.ui.view,arch_db:crm_remind_customer.service_calender_reminder_form
+msgid "CHĂM SÓC KHÁCH HÀNG"
+msgstr "CHĂM SÓC KHÁCH HÀNG"
+
+#. module: crm_remind_customer
+#: model:ir.actions.server,name:crm_remind_customer.job_crm_reminder_action_ir_actions_server
+#: model:ir.cron,cron_name:crm_remind_customer.job_crm_reminder_action
+#: model:ir.cron,name:crm_remind_customer.job_crm_reminder_action
+msgid "CRM Reminder"
+msgstr "Chăm sóc khách hàng"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_res_partner_service_calender_remider_ids
+#: model:ir.model.fields,field_description:crm_remind_customer.field_res_users_service_calender_remider_ids
+#: model:ir.ui.view,arch_db:crm_remind_customer.service_calender_reminder_form
+msgid "Calender Reminder"
+msgstr "Lịch nhắc khách hàng"
+
+#. module: crm_remind_customer
+#: selection:crm.service.calender.reminder.line,type:0
+msgid "Card"
+msgstr "Thẻ"
+
+#. module: crm_remind_customer
+#: model:ir.model,name:crm_remind_customer.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_create_uid
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_create_uid
+#: model:ir.model.fields,field_description:crm_remind_customer.field_product_service_reminder_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_create_date
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_create_date
+#: model:ir.model.fields,field_description:crm_remind_customer.field_product_service_reminder_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_calendar_event_x_crm_remind_customer_id
+msgid "Crm Remind Customer"
+msgstr "Chăm sóc khách hàng "
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_date
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_date
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_description
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_display_name
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_display_name
+#: model:ir.model.fields,field_description:crm_remind_customer.field_product_service_reminder_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_employee_id
+msgid "Employee"
+msgstr "Người lao động"
+
+#. module: crm_remind_customer
+#: model:ir.model,name:crm_remind_customer.model_calendar_event
+msgid "Event"
+msgstr "Sự kiện"
+
+#. module: crm_remind_customer
+#: selection:crm.service.calender.reminder,type:0
+msgid "HTKH"
+msgstr "Hỏi thăm khách hàng"
+
+#. module: crm_remind_customer
+#: selection:product.service.reminder,type:0
+msgid "HTTB"
+msgstr "Hỏi thăm theo buổi"
+
+#. module: crm_remind_customer
+#: selection:product.service.reminder,type:0
+msgid "HTTN"
+msgstr "Hỏi thăm theo ngày"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_id
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_id
+#: model:ir.model.fields,field_description:crm_remind_customer.field_product_service_reminder_id
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder___last_update
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line___last_update
+#: model:ir.model.fields,field_description:crm_remind_customer.field_product_service_reminder___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_write_uid
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_write_uid
+#: model:ir.model.fields,field_description:crm_remind_customer.field_product_service_reminder_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_write_date
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_write_date
+#: model:ir.model.fields,field_description:crm_remind_customer.field_product_service_reminder_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: crm_remind_customer
+#: model:ir.ui.view,arch_db:crm_remind_customer.izi_calender_reminder_partner_form
+msgid "Lịch sử chăm sóc"
+msgstr "Lịch sử chăm sóc"
+
+#. module: crm_remind_customer
+#: selection:crm.service.calender.reminder,type:0
+#: selection:product.service.reminder,type:0
+msgid "NLKH"
+msgstr "Nhắc lịch khách hàng"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_name
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_name
+#: model:ir.model.fields,field_description:crm_remind_customer.field_product_service_reminder_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: crm_remind_customer
+#: code:addons/crm_remind_customer/models/service_calender_reminder.py:20
+#: code:addons/crm_remind_customer/models/service_calender_reminder.py:21
+#, python-format
+msgid "New"
+msgstr "Tạo mới"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_note_before_custom
+msgid "Note Before Custom"
+msgstr "Note Before Custom"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_origin
+msgid "Origin"
+msgstr "Tham chiếu"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_phone
+msgid "Phone"
+msgstr "Điện thoại"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_config_id
+msgid "Pos Config"
+msgstr "Điểm bán hàng"
+
+#. module: crm_remind_customer
+#: model:ir.model,name:crm_remind_customer.model_product_product
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_quantity_used
+msgid "Quantity Used"
+msgstr "Số lượng sử dụng"
+
+#. module: crm_remind_customer
+#: selection:crm.service.calender.reminder.line,type:0
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_product_id
+#: model:ir.model.fields,field_description:crm_remind_customer.field_product_service_reminder_product_id
+msgid "Service"
+msgstr "Dịch vụ"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_service_calender_reminder_id
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_service_calender_reminder_ids
+#: model:ir.ui.view,arch_db:crm_remind_customer.product_product_view_inherit_for_calender_service
+msgid "Service Calender"
+msgstr "Lịch nhắc dịch vụ khách hàng"
+
+#. module: crm_remind_customer
+#: model:ir.actions.act_window,name:crm_remind_customer.service_calender_reminder_action
+#: model:ir.model.fields,field_description:crm_remind_customer.field_product_product_x_service_calender_reminder_ids
+#: model:ir.ui.menu,name:crm_remind_customer.service_calender_reminder_menu
+msgid "Service Calender Reminder"
+msgstr "Hỏi thăm khách hàng"
+
+#. module: crm_remind_customer
+#: model:ir.actions.act_window,name:crm_remind_customer.service_calender_reminder_nlkh_action
+msgid "Service Calender Reminder NLKH"
+msgstr "Nhắc lịch khách hàng"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_total_quantity
+msgid "Toal Quantity"
+msgstr "Tổng SL"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_type
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_type
+#: model:ir.model.fields,field_description:crm_remind_customer.field_product_service_reminder_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_crm_service_calender_reminder_line_user_id
+msgid "User"
+msgstr "Người dùng"
+
+#. module: crm_remind_customer
+#: model:ir.model.fields,field_description:crm_remind_customer.field_product_service_reminder_value
+msgid "Value"
+msgstr "Giá trị"
+
+#. module: crm_remind_customer
+#: code:addons/crm_remind_customer/models/service_calender_reminder.py:36
+#: code:addons/crm_remind_customer/models/service_calender_reminder.py:62
+#, python-format
+msgid "Xin hãy cấu hình chức vụ nhân viên tư vấn với mã là 'NVTV'"
+msgstr "Xin hãy cấu hình chức vụ nhân viên tư vấn với mã là 'NVTV'"
+
+#. module: crm_remind_customer
+#: model:ir.model,name:crm_remind_customer.model_crm_service_calender_reminder
+msgid "crm.service.calender.reminder"
+msgstr "crm.service.calender.reminder"
+
+#. module: crm_remind_customer
+#: model:ir.model,name:crm_remind_customer.model_crm_service_calender_reminder_line
+msgid "crm.service.calender.reminder.line"
+msgstr "crm.service.calender.reminder.line"
+
+#. module: crm_remind_customer
+#: model:ir.model,name:crm_remind_customer.model_izi_service_card_using
+msgid "izi.service.card.using"
+msgstr "izi.service.card.using"
+
+#. module: crm_remind_customer
+#: model:ir.model,name:crm_remind_customer.model_product_service_reminder
+msgid "product.service.reminder"
+msgstr "product.service.reminder"

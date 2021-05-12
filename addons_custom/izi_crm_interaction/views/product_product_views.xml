@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="product_template_form_view_inherit" model="ir.ui.view">
+            <field name="name">Product</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <div name="options" position="inside">
+                    <div>
+                        <field name="x_is_remind"/>
+                        <label for="x_is_remind"/>
+                    </div>
+                </div>
+                <page name="notes" position="after">
+                    <page name="service_remind" string="Service remind">
+                        <div name="customer_care" >
+                            <field name="x_service_remind_ids" nolabel="1">
+                                <tree editable="bottom">
+                                    <field name="activity_type_id" required="1"/>
+                                    <field name="date_number" required="1"/>
+                                    <field name="period" required="1"/>
+                                    <field name="object" required="1"/>
+                                    <field name="type" required="1"/>
+                                    <field name="repeat" required="1"/>
+                                    <field name="note" />
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="activity_type_id" required="1"/>
+                                        <field name="date_number" required="1"/>
+                                        <field name="period" required="1"/>
+                                    </group>
+                                    <group>
+                                        <field name="object" required="1"/>
+                                        <field name="type" required="1"/>
+                                        <field name="repeat" required="1"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </div>
+                    </page>
+                </page>
+            </field>
+        </record>
+    </data>
+</odoo>

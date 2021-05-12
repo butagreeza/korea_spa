@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="izi_view_pos_payment_add_voucher" model="ir.ui.view">
+            <field name="name">izi.pos.make.payment.form</field>
+            <field name="model">pos.make.payment</field>
+            <field name="inherit_id" ref="izi_pos_custom_backend.izi_view_pos_payment_pos_order"/>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <field name="x_vc_code" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="x_vc_code" position="after">
+                    <field name="x_vc_id" options="{'no_create':True}" context="{'default_order_id': active_id}" attrs="{'invisible': [('x_show_vc_code', '=', False)], 'required': [('x_show_vc_code', '=', True)]}"/>
+                    <field name="x_vc_amount" readonly="1" attrs="{'invisible': [('x_vc_id', '=', False)]}"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="izi_view_pos_payment_service_add_voucher" model="ir.ui.view">
+            <field name="name">payment.service.add.voucher.form</field>
+            <field name="model">pos.payment.service</field>
+            <field name="inherit_id" ref="izi_use_service_card.view_pop_up_pos_payment_service"/>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <field name="x_vc_code" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="x_vc_code" position="after">
+                    <field name="x_vc_id" options="{'no_create':True}" context="{'default_using_service_id': active_id}" attrs="{'invisible': [('x_show_vc_code', '=', False)], 'required': [('x_show_vc_code', '=', True)]}"/>
+                    <field name="x_vc_amount" readonly="1" attrs="{'invisible': [('x_vc_id', '=', False)]}"/>
+                </field>
+                <field name="amount" position="attributes">
+                    <attribute name="attrs">{'readonly': ['|' ,('x_lock_amount', '=', True), ('x_vc_id', '!=', False)]}</attribute>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

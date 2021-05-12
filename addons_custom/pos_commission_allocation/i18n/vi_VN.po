@@ -1,0 +1,239 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* pos_commission_allocation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-18 09:25+0000\n"
+"PO-Revision-Date: 2021-01-18 09:25+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_commission_allocation
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_account_cash_in_id
+msgid "Account cash In"
+msgstr "Phiếu Thu"
+
+#. module: pos_commission_allocation
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_account_cash_out_id
+msgid "Account cash Out"
+msgstr "Phiếu Chi"
+
+#. module: pos_commission_allocation
+#: model:ir.ui.view,arch_db:pos_commission_allocation.commission_allocation_form_view
+msgid "Allocation Lines"
+msgstr "Chi tiết"
+
+#. module: pos_commission_allocation
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_line_amount
+#: model:ir.ui.view,arch_db:pos_commission_allocation.commission_allocation_form_view
+msgid "Amount"
+msgstr "Số tiền"
+
+#. module: pos_commission_allocation
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_line_amount_commission
+msgid "Amount Commission"
+msgstr "Số tiền hoa hồng"
+
+#. module: pos_commission_allocation
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_line_amount_total
+msgid "Amount Total"
+msgstr "Tổng"
+
+#. module: pos_commission_allocation
+#: model:ir.ui.view,arch_db:pos_commission_allocation.commission_allocation_form_view
+msgid "Back"
+msgstr "Quay lại"
+
+#. module: pos_commission_allocation
+#: model:ir.ui.view,arch_db:pos_commission_allocation.commission_allocation_form_view
+msgid "Bạn có chắc chắn muốn quay lại?"
+msgstr "Bạn có chắc chắn muốn quay lại?"
+
+#. module: pos_commission_allocation
+#: model:ir.ui.view,arch_db:pos_commission_allocation.commission_allocation_form_view
+msgid "COMMISSTION ALLOCATION"
+msgstr "PHÂN BỔ HOA HỒNG"
+
+#. module: pos_commission_allocation
+#: model:ir.ui.view,arch_db:pos_commission_allocation.commission_allocation_form_view
+#: selection:pos.commission.allocation,state:0
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: pos_commission_allocation
+#: model:ir.actions.act_window,name:pos_commission_allocation.commission_allocation_action
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_commission_line_ids
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_line_commission_id
+#: model:ir.ui.menu,name:pos_commission_allocation.menu_commission_allocation
+#: model:ir.ui.view,arch_db:pos_commission_allocation.commission_allocation_form_view
+msgid "Commission Allocation"
+msgstr "Phân bổ hoa hồng"
+
+#. module: pos_commission_allocation
+#: model:ir.ui.view,arch_db:pos_commission_allocation.commission_allocation_form_view
+msgid "Commission Allocation Lines"
+msgstr "Chi tiết phân bổ"
+
+#. module: pos_commission_allocation
+#: model:ir.ui.view,arch_db:pos_commission_allocation.commission_allocation_form_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: pos_commission_allocation
+#: model:ir.actions.act_window,help:pos_commission_allocation.commission_allocation_action
+msgid "Create a Commission Allocation"
+msgstr "Tạo phân bổ hoa hồng"
+
+#. module: pos_commission_allocation
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_create_uid
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_line_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: pos_commission_allocation
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_create_date
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_line_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: pos_commission_allocation
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_date_allocation
+msgid "Date Allocation"
+msgstr "Ngày tạp đơn phân bổ"
+
+#. module: pos_commission_allocation
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_display_name
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_line_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: pos_commission_allocation
+#: selection:pos.commission.allocation,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: pos_commission_allocation
+#: selection:pos.commission.allocation,state:0
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: pos_commission_allocation
+#: model:ir.ui.view,arch_db:pos_commission_allocation.commission_allocation_form_view
+msgid "Hành động sẽ tạo ra 1 phiếu chi cho các khách hàng đã được chọn để trích hoa hồng.Bạn có chắc chắn muốn Phê duyệt"
+msgstr "Hành động sẽ tạo ra 1 phiếu chi cho các khách hàng đã được chọn để trích hoa hồng.Bạn có chắc chắn muốn Phê duyệt"
+
+#. module: pos_commission_allocation
+#: model:ir.ui.view,arch_db:pos_commission_allocation.commission_allocation_form_view
+msgid "Hành động sẽ tạo ra 1 phiếu thu cho các khách hàng đã được trích hoa hồng trước đó.Bạn có chắc chắn muốn Hủy"
+msgstr "Hành động sẽ tạo ra 1 phiếu thu cho các khách hàng đã được trích hoa hồng trước đó.Bạn có chắc chắn muốn Hủy"
+
+#. module: pos_commission_allocation
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_id
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_commission_allocation
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation___last_update
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_line___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: pos_commission_allocation
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_line_write_uid
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: pos_commission_allocation
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_line_write_date
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: pos_commission_allocation
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_name
+#: model:ir.ui.view,arch_db:pos_commission_allocation.commission_allocation_form_view
+msgid "Name"
+msgstr "Tên"
+
+#. module: pos_commission_allocation
+#: code:addons/pos_commission_allocation/models/pos_commission_allocation.py:131
+#, python-format
+msgid "New"
+msgstr "New"
+
+#. module: pos_commission_allocation
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_line_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: pos_commission_allocation
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_line_order_id
+msgid "Order"
+msgstr "Đơn hàng"
+
+#. module: pos_commission_allocation
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_line_partner_id
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_partner_id
+msgid "Partner"
+msgstr "Khách hàng"
+
+#. module: pos_commission_allocation
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_line_percent
+#: model:ir.ui.view,arch_db:pos_commission_allocation.commission_allocation_form_view
+msgid "Percent"
+msgstr "Tỷ lệ %"
+
+#. module: pos_commission_allocation
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_account_cash_commission_allocation_id
+msgid "Pos Commission Allocation"
+msgstr "Phân bổ hoa hồng"
+
+#. module: pos_commission_allocation
+#: model:ir.ui.view,arch_db:pos_commission_allocation.view_pos_commission_allocation_filter
+msgid "Search Commission Allocation"
+msgstr "Tìm kiếm đơn phân bổ hoa hồng"
+
+#. module: pos_commission_allocation
+#: model:ir.ui.view,arch_db:pos_commission_allocation.commission_allocation_form_view
+msgid "Send"
+msgstr "Gửi"
+
+#. module: pos_commission_allocation
+#: model:ir.model.fields,field_description:pos_commission_allocation.field_pos_commission_allocation_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: pos_commission_allocation
+#: selection:pos.commission.allocation,state:0
+msgid "To Approve"
+msgstr "Chờ phê duyệt"
+
+#. module: pos_commission_allocation
+#: model:ir.ui.view,arch_db:pos_commission_allocation.commission_allocation_form_view
+msgid "Total"
+msgstr "Tổng"
+
+#. module: pos_commission_allocation
+#: model:ir.ui.view,arch_db:pos_commission_allocation.commission_allocation_form_view
+msgid "Total Commission"
+msgstr "Tổng tiền hoa hồng"
+
+#. module: pos_commission_allocation
+#: model:ir.model,name:pos_commission_allocation.model_pos_commission_allocation
+msgid "pos.commission.allocation"
+msgstr "Phân bổ hoa hồng"
+
+#. module: pos_commission_allocation
+#: model:ir.model,name:pos_commission_allocation.model_pos_commission_allocation_line
+msgid "pos.commission.allocation.line"
+msgstr "Chi tiết phân bổ hoa hồng"
+

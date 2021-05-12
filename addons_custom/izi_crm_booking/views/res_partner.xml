@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="izi_respartner_service_booking_inherit" model="ir.ui.view">
+            <field name="name">Res Partner service booking inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='toggle_active']" position="after">
+                    <field name="x_service_booking_ids" invisible="1"/>
+                    <button type="action"
+                            name="%(izi_crm_booking.action_service_booking_by_partner)d"
+                            class="oe_stat_button"
+                            icon="fa-calendar-o" context="{'default_customer_id': active_id}">
+                        <field name="x_service_booking_count" widget="statinfo" string="Booking/Meeting"/>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+        <!--        <record id="partner_supplier_form_inherit" model="ir.ui.view">-->
+        <!--            <field name="name">res.partner</field>-->
+        <!--            <field name="model">res.partner</field>-->
+        <!--            <field name="inherit_id" ref="res_partner_custom.partner_supplier_form"/>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <xpath expr="//button[@name='%(purchase.act_res_partner_2_purchase_order)d']" position="before">-->
+        <!--                    <field name="x_service_booking_ids" invisible="1"/>-->
+        <!--                        <button type="object"-->
+        <!--                                name="action_view_service_booking"-->
+        <!--                                class="oe_stat_button"-->
+        <!--                                icon="fa-calendar-o"-->
+        <!--                                attrs="{'invisible': [('x_service_booking_count', '=', 0)]}" groups="base.group_user">-->
+        <!--                            <field name="x_service_booking_count" widget="statinfo" string="Booking/Meeting"/>-->
+        <!--                        </button>-->
+        <!--&lt;!&ndash;                        <button class="oe_stat_button o_res_partner_tip_opp" type="action"&ndash;&gt;-->
+        <!--&lt;!&ndash;                            name="%(izi_use_service_card.izi_images_view_act)d"&ndash;&gt;-->
+        <!--&lt;!&ndash;                            icon="fa-camera" attrs="{'invisible':[('supplier','=',True)]}">&ndash;&gt;-->
+        <!--&lt;!&ndash;                        <field string="Images" name="image_count" widget="statinfo"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;                    </button>&ndash;&gt;-->
+        <!--                </xpath>-->
+        <!--            </field>-->
+        <!--        </record>-->
+    </data>
+</odoo>

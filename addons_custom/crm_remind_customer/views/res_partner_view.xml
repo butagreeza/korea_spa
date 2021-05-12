@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="izi_calender_reminder_partner_form" model="ir.ui.view">
+            <field name="name">izi.calender.reminder.res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <!-- Thêm tab lịch sử chăm sóc -->
+                <xpath expr="//page[@name='sales_purchases']" position="after">
+                    <page name="Calender Reminder" string="Lịch sử chăm sóc">
+                        <field name="service_calender_remider_ids" readonly="1">
+                            <tree>
+                                <field name="product_id"/>
+                                <field name="date"/>
+                                <field name="type"/>
+                                <field name="total_quantity"/>
+                                <field name="quantity_used"/>
+                                <field name="description"/>
+                                <field name="note"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="report_service_bom_form_view" model="ir.ui.view">
+            <field name="name">Report Service Bom</field>
+            <field name="model">report.service.bom</field>
+            <field name="arch" type="xml">
+                <form>
+                    <footer>
+                        <button class="oe_highlight" name="create_report_service_bom" type="object"
+                                string="Print report"/>
+                        <button class="oe_highlight" name="create_report_service_bom_export" type="object"
+                                string="Print report ex"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_report_service_bom" model="ir.actions.act_window">
+            <field name="name">Report Service Bom</field>
+            <field name="res_model">report.service.bom</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        <menuitem id="report_service_bom" name="Report service bom"
+                  action="action_report_service_bom"
+                  parent="stock.menu_warehouse_report"/>
+    </data>
+</odoo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="hotline_config_view" model="ir.ui.view">
+            <field name="name">hotline_config</field>
+            <field name="model">hotline.config</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                    <field name="phone"/>
+                    <field name="date_start_synchronize"/>
+                    <field name="date_end_synchronize"/>
+                    <field name="key_access"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_hotline_config" model="ir.actions.act_window">
+            <field name="name">hotline_config</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hotline.config</field>
+            <field name="view_mode">tree</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('res_partner_phonecall.hotline_config_view')})]"/>
+        </record>
+
+        <menuitem id="menu_voip_phonecall_config"
+                  name="Voip Phonecall Config"
+                  action="action_hotline_config"
+                  parent="crm.crm_menu_config"/>
+    </data>
+</odoo>

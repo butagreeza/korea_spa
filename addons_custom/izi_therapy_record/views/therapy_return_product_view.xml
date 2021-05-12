@@ -1,0 +1,142 @@
+<odoo>
+    <data>
+        <record id="izi_view_therapy_prescription_return_product_popup" model="ir.ui.view">
+            <field name="name">therapy.prescription.return.product.popup</field>
+            <field name="model">therapy.prescription.return.product</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,to_approve,waiting_warehouse,done" nolabel="1"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="therapy_record_id" required="1"/>
+                                <br/>
+                            </group>
+                            <group>
+                                <field name="date_return"/>
+                                <br/>
+                                <field name="user_id"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Detail" name="detail_therapy_prescription_return_product">
+                                <field name="therapy_prescription_return_product_line_ids">
+                                    <tree editable="bottom">
+                                        <field name="product_id" domain="[('product_tmpl_id.type','=','product')]" options="{'no_create': True, 'no_edit': True}"/>
+                                        <field name="qty"/>
+                                        <field name="uom_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <footer>
+                        <button name="action_confirm" confirm="Bạn có chắc chắn trả lại những sản phẩm này!" string="Confirm" type="object" class="oe_highlight"/>
+                        <button string="Cancel" class="btn-default" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="izi_view_therapy_prescription_return_product_form_view" model="ir.ui.view">
+            <field name="name">therapy.prescription.return.product.popup</field>
+            <field name="model">therapy.prescription.return.product</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="send_return_product" type="object" string="Send" class="oe_highlight" states="draft"/>
+                        <button name="action_confirm_return_product" type="object" string="Confirm" class="oe_highlight" states="to_approve"/>
+                        <button name="set_to_draft" type="object" string="Set to draft" attrs="{'invisible':[('state','=', 'draft')]}" confirm="Bạn có chắc chắn hủy đơn trả hàng này!"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,to_approve,waiting_warehouse,done" nolabel="1"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="partner_id" required="1" options="{'no_create':1, 'no_create_edit':1}"/>
+                                <br/>
+                                <field name="therapy_record_id" context="{'partner_id': partner_id}" required="1" options="{'no_create':1, 'no_create_edit':1}" domain="[('partner_id','=', partner_id)]"/>
+                                <br/>
+                            </group>
+                            <group>
+                                <field name="date_return"/>
+                                <br/>
+                                <field name="user_id" attrs="{'readonly':[('state','!=', 'draft')]}"/>
+                                <br/>
+                                <field name="picking_id" readonly="1" attrs="{'invisible':[('picking_id','=', False)]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Detail" name="detail_therapy_prescription_return_product">
+                                <field name="therapy_prescription_return_product_line_ids" attrs="{'readonly':[('state','!=', 'draft')]}">
+                                    <tree editable="bottom">
+                                        <field name="product_id" domain="[('product_tmpl_id.type','=','product')]" options="{'no_create': True, 'no_edit': True}"/>
+                                        <field name="qty"/>
+                                        <field name="uom_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="izi_view_therapy_prescription_return_product_tree_view" model="ir.ui.view">
+            <field name="name">therapy.prescription.return.product.tree</field>
+            <field name="model">therapy.prescription.return.product</field>
+            <field name="arch" type="xml">
+                <tree string="Therapy Prescription Return Product" default_order="date_return desc">
+                    <field name="partner_id"/>
+                    <field name="therapy_record_id"/>
+                    <field name="date_return"/>
+                    <field name="user_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="therapy_prescription_return_product_search_view" model="ir.ui.view">
+            <field name="name">therapy_prescription_return_product_search</field>
+            <field name="model">therapy.prescription.return.product</field>
+            <field name="arch" type="xml">
+                <search string="Views">
+                    <field name="partner_id" string="Code of Partner" filter_domain="['|', ('partner_id.x_old_code', '=', self), ('partner_id.x_code', '=', self)]"/>
+                    <field name="partner_id" string="Name of Partner" filter_domain="[('partner_id.name', 'ilike', self)]"/>
+                    <field name="partner_id" string="Phone of Partner" filter_domain="['|', '|', ('partner_id.phone', '=', self), ('partner_id.mobile', '=', self), ('partner_id.x_mobile2', '=', self)]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Customer" domain="[]" context="{'group_by':'partner_id'}"/>
+                        <filter string="User" domain="[]" context="{'group_by':'user_id'}"/>
+                        <filter string="State" domain="[]" context="{'group_by':'state'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="therapy_prescription_return_product_act" model="ir.actions.act_window">
+            <field name="name">Therapy Prescription Return Product</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">therapy.prescription.return.product</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('izi_therapy_record.izi_view_therapy_prescription_return_product_tree_view')}),
+                          (0, 0, {'view_mode': 'form', 'view_id': ref('izi_therapy_record.izi_view_therapy_prescription_return_product_form_view')})]"/>
+        </record>
+
+
+
+        <menuitem id="therapy_prescription_return_product_menu"
+            name="Therapy Prescription Return Product"
+            action="therapy_prescription_return_product_act"
+            parent="izi_therapy_record.izi_therapy_record_menu"/>
+    </data>
+</odoo>

@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.5.0.v201506092134 Build &lt;@BUILD@></property>
+    <property name="units">cm</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">120</property>
+    <parameters>
+        <scalar-parameter name="from_date" id="6">
+            <text-property name="promptText">from_date</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">date</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2020-12-15</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="to_date" id="7">
+            <text-property name="promptText">to_date</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">date</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2020-12-31</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="4">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.postgresql.Driver</property>
+            <property name="odaURL">jdbc:postgresql://103.145.62.165:5445/korea-erp-07122020</property>
+            <property name="odaUser">korea</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">S3JBQDEyM1ZuMjUwNA==</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set" id="5">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">ngay_phan_hoi</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ngay_phan_hoi</text-property>
+                    <text-property name="heading">ngay_phan_hoi</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">co_so_lam_dich_vu</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">co_so_lam_dich_vu</text-property>
+                    <text-property name="heading">co_so_lam_dich_vu</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">chuyen_gia_tu_van</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">chuyen_gia_tu_van</text-property>
+                    <text-property name="heading">chuyen_gia_tu_van</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ma_kh</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ma_kh</text-property>
+                    <text-property name="heading">ma_kh</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ten_kh</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ten_kh</text-property>
+                    <text-property name="heading">ten_kh</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">cac_loai_phan_hoi</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">cac_loai_phan_hoi</text-property>
+                    <text-property name="heading">cac_loai_phan_hoi</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">noi_dung</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">noi_dung</text-property>
+                    <text-property name="heading">noi_dung</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">nguoi_xu_ly</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">nguoi_xu_ly</text-property>
+                    <text-property name="heading">nguoi_xu_ly</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">nguoi_theo_doi</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">nguoi_theo_doi</text-property>
+                    <text-property name="heading">nguoi_theo_doi</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">thoi_gian_xu_ly_cuoi_cung</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">thoi_gian_xu_ly_cuoi_cung</text-property>
+                    <text-property name="heading">thoi_gian_xu_ly_cuoi_cung</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">nguoi_tao</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">nguoi_tao</text-property>
+                    <text-property name="heading">nguoi_tao</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ly_do_kh_phan_hoi</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ly_do_kh_phan_hoi</text-property>
+                    <text-property name="heading">ly_do_kh_phan_hoi</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">huong_giai_quyet</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">huong_giai_quyet</text-property>
+                    <text-property name="heading">huong_giai_quyet</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ly_do_tu_choi</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ly_do_tu_choi</text-property>
+                    <text-property name="heading">ly_do_tu_choi</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">muc_do_uu_tien</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">muc_do_uu_tien</text-property>
+                    <text-property name="heading">muc_do_uu_tien</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">trang_thai</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">trang_thai</text-property>
+                    <text-property name="heading">trang_thai</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">from_date</property>
+                    <property name="paramName">from_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">1</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">to_date</property>
+                    <property name="paramName">to_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">2</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ngay_phan_hoi</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">co_so_lam_dich_vu</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">chuyen_gia_tu_van</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">ma_kh</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">ten_kh</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">cac_loai_phan_hoi</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">noi_dung</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">nguoi_xu_ly</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">nguoi_theo_doi</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">thoi_gian_xu_ly_cuoi_cung</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">nguoi_tao</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">ly_do_kh_phan_hoi</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">huong_giai_quyet</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">ly_do_tu_choi</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">muc_do_uu_tien</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">trang_thai</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ngay_phan_hoi</property>
+                    <property name="nativeName">ngay_phan_hoi</property>
+                    <property name="dataType">date-time</property>
+                    <property name="nativeDataType">93</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">co_so_lam_dich_vu</property>
+                    <property name="nativeName">co_so_lam_dich_vu</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">chuyen_gia_tu_van</property>
+                    <property name="nativeName">chuyen_gia_tu_van</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">ma_kh</property>
+                    <property name="nativeName">ma_kh</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">ten_kh</property>
+                    <property name="nativeName">ten_kh</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">cac_loai_phan_hoi</property>
+                    <property name="nativeName">cac_loai_phan_hoi</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">noi_dung</property>
+                    <property name="nativeName">noi_dung</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">nguoi_xu_ly</property>
+                    <property name="nativeName">nguoi_xu_ly</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">nguoi_theo_doi</property>
+                    <property name="nativeName">nguoi_theo_doi</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">thoi_gian_xu_ly_cuoi_cung</property>
+                    <property name="nativeName">thoi_gian_xu_ly_cuoi_cung</property>
+                    <property name="dataType">date-time</property>
+                    <property name="nativeDataType">93</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">nguoi_tao</property>
+                    <property name="nativeName">nguoi_tao</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">ly_do_kh_phan_hoi</property>
+                    <property name="nativeName">ly_do_kh_phan_hoi</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">huong_giai_quyet</property>
+                    <property name="nativeName">huong_giai_quyet</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">ly_do_tu_choi</property>
+                    <property name="nativeName">ly_do_tu_choi</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">muc_do_uu_tien</property>
+                    <property name="nativeName">muc_do_uu_tien</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">trang_thai</property>
+                    <property name="nativeName">trang_thai</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT
+a.claim_date as ngay_phan_hoi
+, l.name as co_so_lam_dich_vu
+, k.name as chuyen_gia_tu_van
+, b.x_old_code as ma_kh
+, b.name as ten_kh, STRING_AGG(d.name, ', ') as cac_loai_phan_hoi
+, a.content as noi_dung
+, f.name as nguoi_xu_ly
+, STRING_AGG(i.name, ', ') as nguoi_theo_doi
+, a.deadline + INTERVAL '7 hour' as  thoi_gian_xu_ly_cuoi_cung
+, n.name as nguoi_tao
+, a.cause as ly_do_kh_phan_hoi
+, a.resolution as huong_giai_quyet
+, a.cause_refuse as ly_do_tu_choi
+, CASE WHEN a.priority = 'normal' THEN 'Bình thường' WHEN a.priority = 'low' THEN 'Thấp' WHEN a.priority = 'high' THEN 'Cao' ELSE a.priority END as muc_do_uu_tien
+, CASE WHEN a.state = 'new' THEN 'Mới' WHEN a.state = 'processing' THEN 'Đang xử lý' WHEN a.state = 'done' THEN 'Xong' WHEN a.state = 'refuse' THEN 'Từ chối' ELSE a.state END as trang_thai
+FROM crm_claim a
+LEFT JOIN res_partner b ON a.partner_id = b.id
+LEFT JOIN crm_claim_crm_claim_type_rel c ON a.id = c.crm_claim_id
+LEFT JOIN crm_claim_type d ON d.id = c.crm_claim_type_id
+LEFT JOIN res_users e ON a.handler_id = e.id 
+LEFT JOIN res_partner f ON e.partner_id = f.id
+LEFT JOIN crm_claim_res_users_rel g ON g.crm_claim_id = a.id
+LEFT JOIN res_users h ON g.res_users_id = h.id
+LEFT JOIN res_partner i ON h.partner_id = i.id
+LEFT JOIN res_users j ON b.user_id = j.id 
+LEFT JOIN res_partner k ON j.partner_id = k.id
+LEFT JOIN crm_team l ON b.x_crm_team_id = l.id
+LEFT JOIN res_users m ON a.create_uid = m.id
+LEFT JOIN res_partner n ON m.partner_id = n.id
+WHERE 
+(a.claim_date + INTERVAL '7 hour')::DATE >= ?::DATE
+AND (a.claim_date + INTERVAL '7 hour')::DATE <= ?::DATE
+GROUP BY
+a.claim_date,l.name,k.name,b.x_old_code,b.name, a.content,f.name,a.deadline,a.cause,a.resolution, a.cause_refuse,a.priority, a.state, n.name]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="259">
+            <property name="fontFamily">"Times New Roman"</property>
+            <property name="fontSize">13pt</property>
+        </style>
+        <style name="page" id="260"/>
+        <style name="data" id="261"/>
+        <style name="text" id="262"/>
+        <style name="reportTitle" id="263">
+            <property name="fontSize">16pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="grid" id="264"/>
+        <style name="grid-row" id="265">
+            <property name="paddingTop">3px</property>
+            <property name="paddingLeft">3px</property>
+            <property name="paddingBottom">3px</property>
+            <property name="paddingRight">3px</property>
+        </style>
+        <style name="grid-cell" id="266"/>
+        <style name="table" id="267">
+            <property name="paddingTop">4px</property>
+            <property name="paddingLeft">4px</property>
+            <property name="paddingBottom">4px</property>
+            <property name="paddingRight">4px</property>
+        </style>
+        <style name="table-cell" id="268">
+            <property name="borderBottomColor">black</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="borderLeftColor">black</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1px</property>
+            <property name="borderRightColor">black</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1px</property>
+            <property name="borderTopColor">black</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1px</property>
+            <property name="paddingTop">3px</property>
+            <property name="paddingLeft">3px</property>
+            <property name="paddingBottom">3px</property>
+            <property name="paddingRight">3px</property>
+        </style>
+        <style name="table-header" id="269">
+            <property name="backgroundColor">#233C98</property>
+            <property name="fontWeight">bold</property>
+            <property name="color">#FFFFFF</property>
+        </style>
+        <style name="table-header-cell" id="270"/>
+        <style name="table-footer" id="271">
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">right</property>
+        </style>
+        <style name="table-footer-cell" id="272"/>
+        <style name="table-detail" id="273"/>
+        <style name="table-detail-cell" id="274"/>
+        <style name="crosstab" id="275"/>
+        <style name="crosstab-header" id="276">
+            <property name="backgroundColor">#233C98</property>
+        </style>
+        <style name="crosstab-cell" id="277">
+            <property name="borderBottomColor">black</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="borderLeftColor">black</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1px</property>
+            <property name="borderRightColor">black</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1px</property>
+            <property name="borderTopColor">black</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1px</property>
+            <property name="paddingTop">3px</property>
+            <property name="paddingLeft">3px</property>
+            <property name="paddingBottom">3px</property>
+            <property name="paddingRight">3px</property>
+        </style>
+        <style name="crosstab-column-header" id="278">
+            <property name="backgroundColor">#CCCCCC</property>
+        </style>
+        <style name="crosstab-row-header" id="279">
+            <property name="backgroundColor">#CCCCCC</property>
+        </style>
+        <style name="crosstab-row-grand-total" id="280">
+            <property name="fontWeight">bold</property>
+        </style>
+        <style name="crosstab-column-grand-total" id="281">
+            <property name="fontWeight">bold</property>
+        </style>
+        <style name="crosstab-row-sub-total" id="282">
+            <property name="fontWeight">bold</property>
+        </style>
+        <style name="crosstab-column-sub-total" id="283">
+            <property name="fontWeight">bold</property>
+        </style>
+        <style name="reportHeader1" id="284">
+            <property name="fontSize">13pt</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="reportHeader2" id="285">
+            <property name="fontSize">13pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="master1" id="286">
+            <property name="textAlign">left</property>
+        </style>
+        <style name="reportFooter1" id="287">
+            <property name="fontSize">13pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="reportFooter2" id="288">
+            <property name="fontSize">13pt</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="reportFooter3" id="289">
+            <property name="fontSize">13pt</property>
+            <property name="fontStyle">italic</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="reportHeaderDate" id="290">
+            <property name="fontSize">13pt</property>
+            <property name="fontStyle">italic</property>
+        </style>
+        <style name="center" id="291">
+            <property name="textAlign">center</property>
+        </style>
+        <style name="crosstabselledit" id="292">
+            <property name="paddingTop">3px</property>
+            <property name="paddingLeft">3px</property>
+            <property name="paddingBottom">3px</property>
+            <property name="paddingRight">3px</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <label id="9">
+            <property name="fontSize">16pt</property>
+            <property name="textAlign">left</property>
+            <text-property name="text">BÁO CÁO CHI TIẾT PHẢN HỒI CỦA KHÁCH HÀNG </text-property>
+        </label>
+        <text-data id="66">
+            <property name="fontFamily">"Times New Roman"</property>
+            <property name="fontSize">12pt</property>
+            <property name="color">#000000</property>
+            <property name="textAlign">left</property>
+            <expression name="valueExpr">"THỜI GIAN LÀM VIỆC TỪ " + params["from_date"].value + " ĐẾN " + params["to_date"].value</expression>
+            <property name="contentType">html</property>
+        </text-data>
+        <table id="67">
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">co_so_lam_dich_vu</property>
+                    <text-property name="displayName">co_so_lam_dich_vu</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["co_so_lam_dich_vu"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">chuyen_gia_tu_van</property>
+                    <text-property name="displayName">chuyen_gia_tu_van</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["chuyen_gia_tu_van"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ma_kh</property>
+                    <text-property name="displayName">ma_kh</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ma_kh"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ten_kh</property>
+                    <text-property name="displayName">ten_kh</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ten_kh"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">cac_loai_phan_hoi</property>
+                    <text-property name="displayName">cac_loai_phan_hoi</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["cac_loai_phan_hoi"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">noi_dung</property>
+                    <text-property name="displayName">noi_dung</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["noi_dung"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">nguoi_xu_ly</property>
+                    <text-property name="displayName">nguoi_xu_ly</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["nguoi_xu_ly"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">nguoi_theo_doi</property>
+                    <text-property name="displayName">nguoi_theo_doi</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["nguoi_theo_doi"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">thoi_gian_xu_ly_cuoi_cung</property>
+                    <text-property name="displayName">thoi_gian_xu_ly_cuoi_cung</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["thoi_gian_xu_ly_cuoi_cung"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">ly_do_kh_phan_hoi</property>
+                    <text-property name="displayName">ly_do_kh_phan_hoi</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ly_do_kh_phan_hoi"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">huong_giai_quyet</property>
+                    <text-property name="displayName">huong_giai_quyet</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["huong_giai_quyet"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ly_do_tu_choi</property>
+                    <text-property name="displayName">ly_do_tu_choi</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ly_do_tu_choi"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">muc_do_uu_tien</property>
+                    <text-property name="displayName">muc_do_uu_tien</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["muc_do_uu_tien"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">trang_thai</property>
+                    <text-property name="displayName">trang_thai</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["trang_thai"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ngay_phan_hoi</property>
+                    <text-property name="displayName">ngay_phan_hoi</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ngay_phan_hoi"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">nguoi_tao</property>
+                    <text-property name="displayName">nguoi_tao</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["nguoi_tao"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <property name="pageBreakInterval">1000</property>
+            <column id="158">
+                <property name="width">1cm</property>
+            </column>
+            <column id="295">
+                <property name="width">1.5cm</property>
+            </column>
+            <column id="141"/>
+            <column id="142"/>
+            <column id="143"/>
+            <column id="144"/>
+            <column id="145"/>
+            <column id="146">
+                <property name="width">3in</property>
+            </column>
+            <column id="147"/>
+            <column id="148"/>
+            <column id="149"/>
+            <column id="300"/>
+            <column id="150"/>
+            <column id="151">
+                <property name="width">2.5in</property>
+            </column>
+            <column id="152"/>
+            <column id="153"/>
+            <column id="154"/>
+            <header>
+                <row id="68">
+                    <cell id="155">
+                        <label id="159">
+                            <text-property name="text">STT</text-property>
+                        </label>
+                    </cell>
+                    <cell id="293">
+                        <label id="296">
+                            <text-property name="text">NGÀY PHẢN HỒI</text-property>
+                        </label>
+                    </cell>
+                    <cell id="69">
+                        <label id="70">
+                            <text-property name="text">CƠ SỞ LÀM DV</text-property>
+                        </label>
+                    </cell>
+                    <cell id="71">
+                        <label id="72">
+                            <text-property name="text">CHUYÊN GIA TƯ VẤN</text-property>
+                        </label>
+                    </cell>
+                    <cell id="73">
+                        <label id="74">
+                            <text-property name="text">MÃ KH</text-property>
+                        </label>
+                    </cell>
+                    <cell id="75">
+                        <label id="76">
+                            <text-property name="text">TÊN KH</text-property>
+                        </label>
+                    </cell>
+                    <cell id="77">
+                        <label id="78">
+                            <text-property name="text">CÁC LOẠI PHẢN HỒI</text-property>
+                        </label>
+                    </cell>
+                    <cell id="79">
+                        <label id="80">
+                            <text-property name="text">NỘI DUNG</text-property>
+                        </label>
+                    </cell>
+                    <cell id="81">
+                        <label id="82">
+                            <text-property name="text">NGƯỜI XỬ LÝ</text-property>
+                        </label>
+                    </cell>
+                    <cell id="83">
+                        <label id="84">
+                            <text-property name="text">NGƯỜI THEO DÕI</text-property>
+                        </label>
+                    </cell>
+                    <cell id="85">
+                        <label id="86">
+                            <text-property name="text">THỜI GIAN XỬ LÝ CUỐI CÙNG</text-property>
+                        </label>
+                    </cell>
+                    <cell id="298">
+                        <label id="301">
+                            <text-property name="text">NGƯỜI TẠO PHẢN HỒI</text-property>
+                        </label>
+                    </cell>
+                    <cell id="87">
+                        <label id="302">
+                            <text-property name="text">LÝ DO KH PHẢN HỒI</text-property>
+                        </label>
+                    </cell>
+                    <cell id="89">
+                        <label id="90">
+                            <text-property name="text">HƯỚNG GIẢI QUYẾT</text-property>
+                        </label>
+                    </cell>
+                    <cell id="91">
+                        <label id="92">
+                            <text-property name="text">LÝ DO TỪ CHỐI</text-property>
+                        </label>
+                    </cell>
+                    <cell id="93">
+                        <label id="94">
+                            <text-property name="text">MỨC ĐỘ ƯU TIÊN</text-property>
+                        </label>
+                    </cell>
+                    <cell id="95">
+                        <label id="96">
+                            <text-property name="text">TRẠNG THÁI</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="97">
+                    <cell id="156">
+                        <text-data id="258">
+                            <property name="fontFamily">"Times New Roman"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="textAlign">center</property>
+                            <expression name="valueExpr">row.__rownum+1</expression>
+                            <property name="contentType">plain</property>
+                        </text-data>
+                    </cell>
+                    <cell id="294">
+                        <data id="297">
+                            <structure name="dateTimeFormat">
+                                <property name="category">Short Date</property>
+                                <property name="pattern">Short Date</property>
+                                <property name="locale">vi_VN</property>
+                            </structure>
+                            <property name="resultSetColumn">ngay_phan_hoi</property>
+                        </data>
+                    </cell>
+                    <cell id="98">
+                        <data id="99">
+                            <property name="resultSetColumn">co_so_lam_dich_vu</property>
+                        </data>
+                    </cell>
+                    <cell id="100">
+                        <data id="101">
+                            <property name="resultSetColumn">chuyen_gia_tu_van</property>
+                        </data>
+                    </cell>
+                    <cell id="102">
+                        <data id="103">
+                            <property name="resultSetColumn">ma_kh</property>
+                        </data>
+                    </cell>
+                    <cell id="104">
+                        <data id="105">
+                            <property name="resultSetColumn">ten_kh</property>
+                        </data>
+                    </cell>
+                    <cell id="106">
+                        <data id="107">
+                            <property name="resultSetColumn">cac_loai_phan_hoi</property>
+                        </data>
+                    </cell>
+                    <cell id="108">
+                        <data id="109">
+                            <property name="resultSetColumn">noi_dung</property>
+                        </data>
+                    </cell>
+                    <cell id="110">
+                        <data id="111">
+                            <property name="resultSetColumn">nguoi_xu_ly</property>
+                        </data>
+                    </cell>
+                    <cell id="112">
+                        <data id="113">
+                            <property name="resultSetColumn">nguoi_theo_doi</property>
+                        </data>
+                    </cell>
+                    <cell id="114">
+                        <data id="115">
+                            <structure name="dateTimeFormat">
+                                <property name="category">Short Date</property>
+                                <property name="pattern">Short Date</property>
+                                <property name="locale">vi_VN</property>
+                            </structure>
+                            <property name="resultSetColumn">thoi_gian_xu_ly_cuoi_cung</property>
+                        </data>
+                    </cell>
+                    <cell id="299">
+                        <data id="303">
+                            <property name="resultSetColumn">nguoi_tao</property>
+                        </data>
+                    </cell>
+                    <cell id="116">
+                        <data id="117">
+                            <property name="resultSetColumn">ly_do_kh_phan_hoi</property>
+                        </data>
+                    </cell>
+                    <cell id="118">
+                        <data id="119">
+                            <property name="resultSetColumn">huong_giai_quyet</property>
+                        </data>
+                    </cell>
+                    <cell id="120">
+                        <data id="121">
+                            <property name="resultSetColumn">ly_do_tu_choi</property>
+                        </data>
+                    </cell>
+                    <cell id="122">
+                        <data id="123">
+                            <property name="resultSetColumn">muc_do_uu_tien</property>
+                        </data>
+                    </cell>
+                    <cell id="124">
+                        <data id="125">
+                            <property name="resultSetColumn">trang_thai</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+    </body>
+</report>

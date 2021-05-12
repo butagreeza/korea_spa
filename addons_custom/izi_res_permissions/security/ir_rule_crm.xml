@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--Tương tác KH -->
+        <record id="izi_crm_interaction_view_partner_interaction_rule" model="ir.rule">
+            <field name="name">View partner interaction rule</field>
+            <field name="model_id" ref="izi_crm_interaction.model_partner_interaction"/>
+            <field name="global" eval="False"/>
+            <field name="domain_force">[('user_id', '=', user.id)]</field>
+            <field name="groups"
+                   eval="[(4, ref('group_customer_care')), (4, ref('group_leader_customer_care')), (4, ref('group_consultant'))]"/>
+        </record>
+
+        <!-- Nhắc lịch tương tác -->
+<!--        <record id="izi_crm_interaction_view_activity_history_rule" model="ir.rule">-->
+<!--            <field name="name">View activity history rule</field>-->
+<!--            <field name="model_id" ref="izi_crm_interaction.model_activity_history"/>-->
+<!--            <field name="global" eval="False"/>-->
+<!--            <field name="domain_force">[('user_id', '=', user.id)]</field>-->
+<!--            <field name="groups"-->
+<!--                   eval="[(4, ref('group_customer_care')), (4, ref('group_consultant'))]"/>-->
+<!--        </record>-->
+
+        <!-- Booking-->
+        <record id="izi_crm_booking_view_service_booking_rule" model="ir.rule">
+            <field name="name">View service booking rule</field>
+            <field name="model_id" ref="izi_crm_booking.model_service_booking"/>
+            <field name="global" eval="False"/>
+            <field name="domain_force">[('team_id.x_branch_id', '=', user.branch_id.id)]</field>
+            <field name="groups" eval="[(4, ref('group_leader_telesales')),
+                (4, ref('group_telesales')),
+                (4, ref('group_doctor')),
+                (4, ref('group_social_network_administrator')),
+                (4, ref('group_leader_social_network_administrator')),
+                (4, ref('sales_team.group_sale_manager')),
+                (4, ref('sales_team.group_sale_salesman')),
+                (4, ref('group_customer_care')),
+                (4, ref('group_customer_care')),
+                (4, ref('group_leader_customer_care'))]"/>
+        </record>
+
+        <!--Khiếu nại-->
+        <record id="izi_crm_claim_view_cskh_only_claim_rule" model="ir.rule">
+            <field name="name">View CSKH only claim rule</field>
+            <field name="model_id" ref="izi_crm_claim.model_crm_claim"/>
+            <field name="global" eval="False"/>
+            <field name="domain_force">[('create_uid', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('group_customer_care'))]"/>
+        </record>
+
+        <record id="izi_crm_claim_view_tvv_bs_tele_only_claim_rule" model="ir.rule">
+            <field name="name">View TVV BS TELE only claim rule</field>
+            <field name="model_id" ref="izi_crm_claim.model_crm_claim"/>
+            <field name="global" eval="False"/>
+            <field name="domain_force">[('handler_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('group_consultant')),
+                (4, ref('group_consultant')),
+                (4, ref('group_leader_consultant')),
+                (4, ref('group_doctor')),
+                (4, ref('group_telesales')),
+                (4, ref('group_leader_telesales')),
+                (4, ref('sales_team.group_sale_manager'))]"/>
+        </record>
+
+    </data>
+</odoo>

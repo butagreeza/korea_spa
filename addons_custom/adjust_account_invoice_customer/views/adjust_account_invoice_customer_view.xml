@@ -1,0 +1,75 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="adjust_account_invoice_customer_list">
+            <field name="name">adjust.account.invoice.customer.list</field>
+            <field name="model">adjust.account.invoice.customer</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="type"/>
+                    <field name="date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="adjust_account_invoice_customer_form">
+            <field name="name">adjust.account.invoice.customer.form</field>
+            <field name="model">adjust.account.invoice.customer</field>
+            <field name="arch" type="xml">
+                <form>
+                     <header>
+                            <button name="exchange_invoice" string="Exchange Invoice" type="object" class="oe_highlight" states="draft"/>
+                            <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+                        </header>
+                    <sheet>
+                        <field name="name" invisible="1"/>
+                        <group>
+                            <group>
+                                <field name="partner_id" options="{'no_create':1, 'no_create_edit':1}" required="1"/>
+                                <field name="type" required="1"/>
+                            </group>
+                            <group>
+                                <field name="date" readonly="1" force_save="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Invoice">
+                                <field name="adjust_account_invoice_ids">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="invoice_id" readonly="1" force_save="1"/>
+                                        <field name="amount_total" readonly="1" force_save="1"/>
+                                        <field name="residual" readonly="1" force_save="1"/>
+                                        <field name="date_invoice" readonly="1" force_save="1"/>
+                                        <field name="is_adjust"/>
+                                        <field name="adjust_amount_total" invisible="1"/>
+                                        <field name="adjust_residual"/>
+                                        <field name="note" readonly="1" force_save="1"/>
+                                        <field name="reason" attrs="{'required': ['|',('adjust_amount_total', '!=', 0),('adjust_residual', '!=', 0)]}"/>
+                                    </tree>
+                                    <!--<form context="{'form_view_ref':'account.invoice_form'}">-->
+                                        <!--&lt;!&ndash;<field name="invoice_id" context="{'form_view_ref':'account.invoice_form'}"/>&ndash;&gt;-->
+                                    <!--</form>-->
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="adjust_account_invoice_customer_action_window">
+            <field name="name">Adjust Account Invoice Customer</field>
+            <field name="res_model">adjust.account.invoice.customer</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        </record>
+
+
+        <menuitem name="Adjust Account Invoice Customer" id="adjust_account_invoice_customer_menu" parent="izi_pos_custom_backend.izi_menu_res_partner_debt"
+                  action="adjust_account_invoice_customer_action_window" sequence="70" groups="pos_security.group_supervisor_manager"/>
+    </data>
+</odoo>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="rpt_revenue_allocation_detail_default_use_form" model="ir.ui.view">
+            <field name="name">Rpt Pos Revennua Detail Default Use</field>
+            <field name="model">rpt.revenue.allocation.detail.default.use</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+<!--                            <field name="select_all"/>-->
+<!--                            <field name="crm_team_ids" widget="many2many_tags"-->
+<!--                                   options="{'no_create': 1, 'no_create_edit': 1}"-->
+<!--                                   attrs="{'invisible': [('1','=','1')]}" readonly="1" force_save="1"/>-->
+                        <field name="crm_team_ids" widget="many2many_tags"
+                                   options="{'no_create': 1, 'no_create_edit': 1}" groups="izi_res_permissions.group_leader_uid_telesales"/>
+                        <field name="employee_id" widget="many2many_tags"
+                               options="{'no_create': 1, 'no_create_edit': 1}" attrs="{'readonly': [('crm_team_ids', '=', False)]}"/>
+                        <field name="from_date" required="1"/>
+                        <field name="to_date" required="1"/>
+                    </group>
+                    <footer>
+                        <button class="oe_highlight" name="create_report" type="object" string="Print Report"/>
+<!--                        <button class="oe_highlight" name="create_report_excel" type="object"-->
+<!--                                string="Print Report Excel"/>-->
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="rpt_pos_revenue_detail_default_use_action" model="ir.actions.act_window">
+            <field name="name">Rpt Pos Revenue Detial Default Use</field>
+            <field name="res_model">rpt.revenue.allocation.detail.default.use</field>
+            <field name="view_mode">form</field>
+            <field name="view_type">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+        <!--<menuitem id="pos_report" name="Pos Report" parent="point_of_sale.menu_point_root" sequence="11"/>-->
+        <menuitem id="rpt_revenue_datil_default_use_menu" action="rpt_pos_revenue_detail_default_use_action" name="Rpt Revenue Allocation Detail Default Use"
+                  parent="crm.crm_menu_report"/>
+    </data>
+</odoo>

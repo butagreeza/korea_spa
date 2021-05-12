@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="report_incomming_spending_form" model="ir.ui.view">
+            <field name="name">Report Incomming Spending</field>
+            <field name="model">report.incomming.spending</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="from_date" required="1"/>
+                            <field name="to_date" required="1"/>
+                        </group>
+                        <group>
+                            <field name="pos_config_id" options="{'no_create':1, 'no_create_edit':1}" required="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button class="oe_highlight" name="create_report_incomming_spending" type="object" string="Print Report"/>
+                        <button class="oe_highlight" name="create_report_incomming_spending_excel" type="object" string="Print Report Excel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="report_incomming_spending_action" model="ir.actions.act_window">
+            <field name="name">Report Incomming Spending</field>
+            <field name="res_model">report.incomming.spending</field>
+            <field name="view_mode">form</field>
+            <field name="view_type">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+        <menuitem id="report_incomming_spending_menu" action="report_incomming_spending_action" name="Report Incomming Spending" parent="point_of_sale.menu_point_rep"/>
+    </data>
+</odoo>

@@ -1,0 +1,241 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_payment_allocation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-04 03:56+0000\n"
+"PO-Revision-Date: 2019-01-04 11:01+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: pos_payment_allocation
+#: model:ir.ui.view,arch_db:pos_payment_allocation.pos_payment_allocation_form_view
+msgid "Allocation Payment"
+msgstr "Phân bổ thanh toán"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_line_amount
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_amount_allocation
+msgid "Amount Allocation"
+msgstr "Tổng tiền đã phân bổ"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_izi_service_card_detail_amount_payment
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_order_line_x_amount_payment
+msgid "Amount Payment"
+msgstr "Tổng tiền đã trả"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_line_amount_payment_product
+msgid "Amount Payment Product"
+msgstr "Tổng tiền thanh toán"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_line_amount_product
+msgid "Amount Product"
+msgstr "Tổng tiền sản phẩm/dịch vụ"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_amount_remain
+msgid "Amount Remain"
+msgstr "Tổng tiền còn lại "
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_amount_total
+msgid "Amount Total"
+msgstr "Tổng"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_create_uid
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_line_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_create_date
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_line_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_date
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_display_name
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_line_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: pos_payment_allocation
+#: selection:pos.payment.allocation,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: pos_payment_allocation
+#: selection:pos.payment.allocation,state:0
+msgid "Draft"
+msgstr "Tạo mới"
+
+#. module: pos_payment_allocation
+#: model:ir.ui.view,arch_db:pos_payment_allocation.payment_allocation_search_view
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_id
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_invoice_id
+msgid "Invoice"
+msgstr "Hóa đơn"
+
+#. module: pos_payment_allocation
+#: model:ir.model,name:pos_payment_allocation.model_invoice_make_payment
+msgid "Invoice Payment"
+msgstr "Hóa đơn thanh toán"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation___last_update
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_line___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_line_write_uid
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_line_write_date
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: pos_payment_allocation
+#: model:ir.model,name:pos_payment_allocation.model_pos_order_line
+msgid "Lines of Point of Sale Orders"
+msgstr "Chi tiết mua bán"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: pos_payment_allocation
+#: code:addons/pos_payment_allocation/models/pos_payment_allocation.py:30
+#: code:addons/pos_payment_allocation/models/pos_payment_allocation.py:31
+#, python-format
+msgid "New"
+msgstr "Mới"
+
+#. module: pos_payment_allocation
+#: model:ir.ui.view,arch_db:pos_payment_allocation.pos_payment_allocation_form_view
+msgid "Number"
+msgstr "Số"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_order_x_pos_payment_ids
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_order_x_pos_payment_line_ids
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_line_order_id
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_order_id
+#: model:ir.ui.view,arch_db:pos_payment_allocation.payment_allocation_search_view
+msgid "Order"
+msgstr "Đơn hàng"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_line_order_line_id
+msgid "Order Line"
+msgstr "Chi tiết đơn hàng"
+
+#. module: pos_payment_allocation
+#: model:ir.ui.view,arch_db:pos_payment_allocation.pos_payment_allocation_form_view
+msgid "PHÂN BỔ THANH TOÁN"
+msgstr "PHÂN BỔ THANH TOÁN"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_partner_id
+#: model:ir.ui.view,arch_db:pos_payment_allocation.payment_allocation_search_view
+msgid "Partner"
+msgstr "Khách hàng"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_line_payment_allocation_id
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_payment_allocation_ids
+msgid "Payment Allocation"
+msgstr "Phân bổ thanh toán"
+
+#. module: pos_payment_allocation
+#: model:ir.ui.view,arch_db:pos_payment_allocation.pos_payment_allocation_pos_form_inherit
+msgid "Payment Allocation details"
+msgstr "Phân bổ thanh toán"
+
+#. module: pos_payment_allocation
+#: model:ir.model,name:pos_payment_allocation.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Điểm bán hàng"
+
+#. module: pos_payment_allocation
+#: model:ir.ui.menu,name:pos_payment_allocation.pos_payment_allocation_menu
+msgid "Pos Payment Allocaiton"
+msgstr "Phân bổ thanh toán "
+
+#. module: pos_payment_allocation
+#: model:ir.actions.act_window,name:pos_payment_allocation.pos_payment_allocation_action
+#: model:ir.ui.view,arch_db:pos_payment_allocation.pos_payment_allocation_form_view
+msgid "Pos Payment Allocation"
+msgstr "Phân bổ thanh toán"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_line_product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_line_quantity
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: pos_payment_allocation
+#: model:ir.model.fields,field_description:pos_payment_allocation.field_pos_payment_allocation_state
+#: model:ir.ui.view,arch_db:pos_payment_allocation.payment_allocation_search_view
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: pos_payment_allocation
+#: model:ir.model,name:pos_payment_allocation.model_izi_service_card_detail
+msgid "izi.service.card.detail"
+msgstr "izi.service.card.detail"
+
+#. module: pos_payment_allocation
+#: model:ir.model,name:pos_payment_allocation.model_pos_payment_allocation
+msgid "pos.payment.allocation"
+msgstr "pos.payment.allocation"
+
+#. module: pos_payment_allocation
+#: model:ir.model,name:pos_payment_allocation.model_pos_payment_allocation_line
+msgid "pos.payment.allocation.line"
+msgstr "pos.payment.allocation.line"
+
+#. module: pos_payment_allocation
+#: model:ir.model,name:pos_payment_allocation.model_pos_session
+msgid "pos.session"
+msgstr "pos.session"

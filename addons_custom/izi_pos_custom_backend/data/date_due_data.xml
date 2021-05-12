@@ -1,0 +1,8 @@
+<odoo>
+    <data noupdate="1">
+        <record id="parameter_date_due_number" model="ir.config_parameter">
+            <field name="key">parameter_date_due_number</field>
+            <field name="value">3</field>
+        </record>
+    </data>
+</odoo>

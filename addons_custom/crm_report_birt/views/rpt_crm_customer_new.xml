@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="rpt_crm_customer_new_from" model="ir.ui.view">
+            <field name="name">rrpt.crm.customer.new.form</field>
+            <field name="model">rpt.crm.customer.new</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="from_date" required="1"/>
+                        <field name="to_date" required="1"/>
+                        <field name="select_all"/>
+                        <field name="x_pos_config" options="{'no_create':1, 'no_create_edit':1}" widget="many2many_tags"
+                               attrs="{'invisible': [('select_all','=',True)],'required': [('select_all','=',False)]}"/>
+                    </group>
+                    <footer>
+                        <button class="oe_highlight" name="create_report_crm_customer_new" type="object" string="Print Report"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="rpt_crm_customer_new_action" model="ir.actions.act_window">
+            <field name="name">Rpt Crm Customer New</field>
+            <field name="res_model">rpt.crm.customer.new</field>
+            <field name="view_mode">form</field>
+            <field name="view_type">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="rpt_crm_customer_new_menu" action="rpt_crm_customer_new_action" name="Rpt Crm Customer New"
+                  parent="crm.crm_menu_report"/>
+    </data>
+</odoo>

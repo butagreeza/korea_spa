@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="izi_view_therapy_record_tree" model="ir.ui.view">
+            <field name="name">Therapy record</field>
+            <field name="model">therapy.record</field>
+            <field name="inherit_id" ref="izi_therapy_record.izi_view_therapy_record_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="interaction_last_date"/>
+                    <field name="out_of_medicine_date"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="izi_view_therapy_record_form_inherit" model="ir.ui.view">
+            <field name="name">Therapy record Inherit</field>
+            <field name="model">therapy.record</field>
+            <field name="inherit_id" ref="izi_therapy_record.izi_view_therapy_record_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='therapy_perscription_return_product_line']" position="after">
+                    <page string="Interactions" name="interactions">
+                        <field name="interaction_ids" readonly="True">
+                            <tree default_order="actual_date desc">
+                                <field name="user_id"/>
+                                <field name="expected_date"/>
+                                <field name="actual_date"/>
+                                <field name="mail_activity_type_id"/>
+                                <field name="content"/>
+                                <field name="object"/>
+                                <field name="type"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Other Information">
+                        <group>
+                            <field name="interaction_last_date" readonly="True"/>
+                        </group>
+                        <group>
+                            <field name="out_of_medicine_date"/>
+                            <field name="is_inventory"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
