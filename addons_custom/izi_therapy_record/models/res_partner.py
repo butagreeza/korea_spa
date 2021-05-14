@@ -13,7 +13,8 @@ class ResPartner(models.Model):
     therapy_record_count = fields.Integer(string='Therapy Record', compute='get_count_therapy_record')
     therapy_prescription_count = fields.Integer(string='Therapy Prescription', compute='get_count_therapy_record')
 
-    @api.depends('therapy_record_count', 'therapy_prescription_count')
+    # @api.depends('therapy_record_count', 'therapy_prescription_count')
+    @api.multi
     def get_count_therapy_record(self):
         for line in self:
             therapy_record_ids = self.env['therapy.record'].search([('partner_id', '=', line.id)])

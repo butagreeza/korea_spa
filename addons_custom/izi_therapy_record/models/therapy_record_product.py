@@ -25,7 +25,7 @@ class TherapyRecordProduct(models.Model):
     actual_debt = fields.Float(string='Actual Debt', compute='_compute_qty_available', store=True)
     payment_allocation_ids = fields.One2many('pos.payment.allocation', related='order_id.x_pos_payment_ids', string='Payment Allocation', readonly=True)
 
-    @api.depends('qty_used', 'qty_max', 'price_unit', 'amount_used', 'amount_paid', 'payment_allocation_ids.state')
+    @api.depends('qty_used', 'qty_max', 'price_unit', 'payment_allocation_ids.state')
     def _compute_qty_available(self):
         Payment_allocationself_Obj = self.env['pos.payment.allocation']
         Order_Obj = self.env['pos.order']

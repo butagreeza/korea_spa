@@ -61,7 +61,7 @@
                                         <field name="uom_id" readonly="1" force_save="1"/>
                                         <field name="qty" force_save="1"/>
                                         <field name="qty_available" readonly="1" force_save="1"/>
-                                        <field name="body_area_ids" domain="[('type', '!=', 'measure')]" context="{'default_product_id': product_id, 'therapy_record_id': parent.therapy_record_id, 'order_id': order_id}" widget="many2many_tags" attrs="{'readonly':[('product_is_massage','=',False), ('product_is_injection','=',False)], 'required': ['|', ('product_is_massage', '=', True), ('product_is_injection', '=', True)]}" options="{'no_create_edit':True, 'no_create':True}"/>
+                                        <field name="body_area_ids" domain="[('type', '=', 'injection')]" context="{'default_product_id': product_id}" widget="many2many_tags" attrs="{'readonly':[('product_is_massage','=',False), ('product_is_injection','=',False)], 'required': ['|', ('product_is_massage', '=', True), ('product_is_injection', '=', True)]}" options="{'no_create_edit':True, 'no_create':True}"/>
                                         <field name="actual_debt" readonly="1" force_save="1"/>
                                         <field name="note" force_save="1"/>
                                         <field name="type" invisible="1" force_save="1"/>

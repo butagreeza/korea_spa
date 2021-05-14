@@ -163,8 +163,8 @@ class UseServiceCard(models.Model):
                                     therapy_record_id = service_card.therapy_record_id.id
                             else:
                                 therapy_record_id = False
-                            if config['type'] == 'do_service' and remain_qty <= 0:
-                                break
+                            # if config['type'] == 'do_service' and remain_qty <= 0:
+                            #     break
                             if config['object'] == 'customer_care':
                                 remind = self.env['activity.history'].create({
                                     'therapy_record_id': therapy_record_id,
