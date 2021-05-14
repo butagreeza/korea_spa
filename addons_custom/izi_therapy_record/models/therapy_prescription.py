@@ -9,6 +9,11 @@ class TherapyPrescription(models.Model):
     _name = 'therapy.prescription'
     _inherit = ['mail.thread', 'mail.activity.mixin', 'resource.mixin']
 
+    def _default_session(self):
+        user_id = self.env['res.users'].search([('id', '=', self.env.uid)], limit=1)
+        config_id = user_id.x_pos_config_id.id
+        return self.env['pos.session'].search([('state', '=', 'opened'), ('config_id', '=', config_id)], limit=1)
+
     name = fields.Char(string='Therapy prescription', track_visibility='onchange')
     partner_id = fields.Many2one('res.partner', string='Partner', track_visibility='onchange')
     user_id = fields.Many2one('res.users', string='Prescriber', track_visibility='onchange')
@@ -40,6 +45,10 @@ class TherapyPrescription(models.Model):
     location_id = fields.Many2one('stock.location', related='config_id.stock_location_id', string='Stock Location', readonly=True)
     state_using = fields.Selection([('open', 'Open'), ('close', 'Close')], string='State Using')
     state_picking = fields.Selection([('open', 'Open'), ('close', 'Close')], string='State Picking')
+    session_id = fields.Many2one(
+        'pos.session', string='Session', required=True, index=True,
+        readonly=True, default=_default_session)
+
 
     @api.depends('therapy_prescription_return_product_line_ids')
     def _check_invisible_button_approve(self):

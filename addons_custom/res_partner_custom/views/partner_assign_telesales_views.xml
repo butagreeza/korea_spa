@@ -50,6 +50,34 @@
                     target="new"
         />
 
+        <record model="ir.ui.view" id="assign_user_again_multi_form_view">
+            <field name="name">Assign User Multi History</field>
+            <field name="model">partner.assign.user.history</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="user_id" required="True" options="{'no_create':1, 'no_create_edit':1}"/>
+                        </group>
+                        <footer>
+                            <button name="action_confirm_assign_user_again_multi" string="Confirm" type="object" class="oe_highlight"/>
+                            or
+                            <button string="Cancel" class="oe_link" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_assign_user_again_multi"
+                    key2="client_action_user_again_multi" name="Assign User Again Multi"
+                    res_model="partner.assign.user.history" src_model="res.partner"
+                    view_mode="form" view_type="form"
+                    view_id="assign_user_again_multi_form_view"
+                    target="new"
+        />
+
+
         <record model="ir.ui.view" id="assign_telesales_again_multi_form_view">
             <field name="name">Assign Telesales Multi History</field>
             <field name="model">partner.assign.telesales.history</field>

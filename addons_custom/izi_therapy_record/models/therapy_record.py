@@ -3,6 +3,10 @@ from odoo import api, fields, models, SUPERUSER_ID, _
 from datetime import date, datetime, timedelta
 from odoo.exceptions import UserError, ValidationError, MissingError, except_orm
 import time
+from odoo import http
+import logging
+
+_logger = logging.getLogger(__name__)
 
 
 class TherapyRecord(models.Model):
@@ -21,7 +25,7 @@ class TherapyRecord(models.Model):
                                        readonly=True)
     partner_country_id = fields.Many2one('res.country', string='Country', related='partner_id.country_id',
                                          readonly=True)
-    partner_phone = fields.Char(string='Phone', related='partner_id.phone', readonly=True)
+    partner_phone = fields.Char(string='Phone', related='partner_id.phone', readonly=True, store=True)
     crm_lead_tag_ids = fields.Many2many('crm.lead.tag', string='Tag', related='partner_id.x_crm_lead_tag_ids',
                                         readonly=True)
     user_id = fields.Many2one('res.users', string='User', track_visibility='onchange')
@@ -181,6 +185,38 @@ class TherapyRecord(models.Model):
 
         return measure_line_details, body_ids
 
+    def _read_from_database(self, field_names, inherited_field_names=[]):
+        super(TherapyRecord, self)._read_from_database(field_names, inherited_field_names)
+        context = self._context
+        if 'partner_phone' in field_names:
+            for record in self:
+                try:
+                    UserObj = http.request.env['res.users']
+                    display_phone = UserObj.has_group('izi_display_fields.group_display_phone')
+                    if display_phone or self.env.uid == 1:
+                        record._cache['partner_phone']
+                    else:
+                        # record._cache['phone']
+                        record._cache['partner_phone'] = record._cache['partner_phone'][0:len(record._cache['partner_phone']) - 3] + '***'
+                except Exception:
+                    pass
+
+    # @api.multi
+    # def read(self, fields=None, load='_classic_read'):
+    #     result = super(TherapyRecord, self).read()
+    #     for record in result:
+    #         if record['partner_phone']:
+    #             try:
+    #                 UserObj = http.request.env['res.users']
+    #                 display_phone = UserObj.has_group('izi_display_fields.group_display_phone')
+    #                 if display_phone or self.env.uid == 1:
+    #                     record['partner_phone'] = record['partner_phone'][0:len(record['partner_phone']) - 3] + '***'
+    #                 else:
+    #                     record['partner_phone'] = record['partner_phone'][0:len(record['partner_phone']) - 3] + '***'
+    #             except Exception:
+    #                 pass
+    #     return result
+
     @api.model
     def create(self, vals):
         if not vals.get('name') and vals.get('categ_id') and vals.get('partner_id'):
@@ -198,6 +234,10 @@ class TherapyRecord(models.Model):
     @api.multi
     def unlink(self):
         for therapy in self:
-            if therapy.therapy_record_product_ids:
+            check = True
+            for therapy_product in  therapy.therapy_record_product_ids:
+                if therapy_product.qty_max == 0:
+                    check = False
+            if check:
                 raise UserError('Hồ sơ trị liệu của khách hàng %s vẫn còn sản phẩm dịch vụ tồn! Vui lòng sử dụng hết sản phẩm tồn trước khi xóa Hồ sơ trị liệu.' %(therapy.partner_id.name))
         return super(TherapyRecord, self).unlink()

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_izi_use_service_card_inherit" model="ir.ui.view">
+            <field name="name">therapy_service_using</field>
+            <field name="model">izi.service.card.using</field>
+            <field name="inherit_id" ref="izi_use_service_card.use_service_card_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_cancel']" position="attributes">
+                    <attribute name="attrs">{'invisible': ['|', ('type', 'in', ['bundle', 'guarantee_bundle'])]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_confirm_service']" position="after">
+                    <button name="action_confirm_bundle" type="object" class="oe_highlight" string="Confirm"
+                            attrs="{'invisible': ['|',('type', '!=', 'bundle'), ('state', '!=', 'draft')]}"/>
+                </xpath>
+                <xpath expr="//button[@name='action_confirm_guarantee']" position="after">
+                    <button name="action_confirm_guarantee_bundle" type="object" class="oe_highlight" string="Confirm"
+                            attrs="{'invisible': ['|',('type', '!=', 'guarantee_bundle'), ('state', '!=', 'wait_payment')]}"/>
+                </xpath>
+                <xpath expr="//button[@name='action_send_price']" position="replace">
+                    <button name="action_send_price" type="object" string="Send"
+                            attrs="{'invisible': ['|',('type', 'in', ['card', 'bundle']), ('state', '!=', 'draft')]}"
+                            class="oe_highlight"/>
+                </xpath>
+                <xpath expr="//field[@name='pricelist_id']" position="replace">
+                    <field name="pricelist_id" context="{'domain_by_session_id': pos_session_id}"
+                           options="{'no_create':1, 'no_create_edit':1}"
+                           attrs="{'invisible': [('type', '=', 'bundle')], 'readonly': [('state', '!=', 'draft')]}"/>
+                </xpath>
+                <xpath expr="//field[@name='pricelist_id']" position="after">
+                    <field name="therapy_record_id"
+                           attrs="{'invisible':[('type','not in', ['bundle', 'guarantee_bundle'])], 'readonly': True}"/>
+                    <field name="therapy_prescription_id"
+                           attrs="{'invisible':[('type','not in', ['bundle', 'guarantee_bundle'])], 'readonly': True}"/>
+                </xpath>
+                <xpath expr="//field[@name='type']" position="attributes">
+                    <attribute name="attrs">{'readonly': ['|', ('type', '=', 'bundle'), ('state', '!=', 'draft')]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='customer_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': ['|', ('type', '=', 'bundle'), ('state', '!=', 'draft')]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='service_card1_ids']/tree/field[@name='amount']" position="after">
+                    <field name="is_injection" invisible="True"/>
+                    <field name="is_massage" invisible="True"/>
+                    <field name="body_area_ids" domain="[('type', '=', 'injection')]"
+                           context="{'default_product_id': service_id}" widget="many2many_tags"
+                           attrs="{'column_invisible': [('parent.therapy_prescription_id','=',False)], 'invisible': [('is_massage', '=', False), ('is_injection','=', False)]}"
+                           options="{'no_create_edit':True, 'no_create':True}"/>
+                </xpath>
+                <xpath expr="//page[2]" position="attributes">
+                    <attribute name="attrs">{'invisible': [('type', 'not in',
+                        ['guarantee','guarantee_bundle','service'])]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//page[1]" position="after">
+                    <page string="Service Bundle" attrs="{'invisible': [('type', '!=', 'bundle')]}">
+                        <field name="service_bundle_ids" context="{'default_type':'service_bundle'}"
+                               attrs="{'readonly': [('customer_id', '=', False), ('state', 'in', ('done', 'cancel'))]}">
+                            <tree editable="bottom" create="false" delete="false">
+                                <field name="type" force_save="1" invisible="1"/>
+                                <field name="branch_id" invisible="True"/>
+                                <field name="is_injection" invisible="True"/>
+                                <field name="is_massage" invisible="True"/>
+                                <field name="service_id" options="{'no_create':1, 'no_create_edit':1}"
+                                       context="{'therapy_prescription_id': parent.therapy_prescription_id,}"
+                                       attrs="{'readonly': True}"/>
+                                <field name="quantity" attrs="{'readonly': True}"/>
+                                <field name="body_area_ids" domain="[('type', '=', 'injection')]"
+                                       force_save="1"
+                                       context="{'default_product_id': service_id}"
+                                       widget="many2many_tags"
+                                       attrs="{'readonly':[('is_massage','=',False), ('is_injection','=',False)], 'required': ['|', ('is_massage', '=', True), ('is_injection', '=', True)]}"
+                                       options="{'no_create_edit':True, 'no_create':True}"/>
+                                <field name="bed_ids"
+                                       force_save="1"
+                                       options="{'no_create':1, 'no_create_edit':1}"
+                                       domain="[('branch_id', '=', branch_id), ('state', '=', 'ready')]"
+                                       widget="many2many_tags"
+                                       attrs="{'required': 0, 'readonly': ['|',('parent.state', '!=', 'draft'), ('quantity','=',0)]}"/>
+                                <field name="employee_ids"
+                                       force_save="1"
+                                       options="{'no_create':1, 'no_create_edit':1}"
+                                       domain="[('job_id.x_code', '=', 'KTV'), ('x_branch_id', '=', branch_id)]"
+                                       attrs="{'readonly': [('parent.state', '!=', 'draft')]}"
+                                       widget="many2many_tags"
+                                       required="0"/>
+                                <field name="doctor_ids"
+                                       force_save="1"
+                                       domain="[('job_id.x_code', '=', 'BS')]"
+                                       options="{'no_create':1, 'no_create_edit':1}"
+                                       attrs="{'readonly': [('parent.state', '!=', 'draft')]}"
+                                       widget="many2many_tags"/>
+                                <field name="work_type" required="1"
+                                       attrs="{'readonly': [('parent.state', '!=', 'draft')]}" invisible="1"/>
+                                <field name="customer_rate" widget="sentiment_icon"
+                                       attrs="{'invisible': [('parent.state', 'not in', ('rate', 'done'))]}"
+                                       readonly="1" force_save="1"/>
+                                <field name="customer_comment"
+                                       attrs="{'invisible': [('parent.state', 'not in', ('rate', 'done'))]}"
+                                       readonly="1" force_save="1"/>
+                                <field name="show_button" invisible="1"/>
+                                <field name="note" attrs="{'readonly': [('parent.state', 'in', ('done', 'cancel'))]}"/>
+                                <field name="state" invisible="1"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <group>
+                                        <field name="service_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                                        <field name="quantity"/>
+                                        <field name="price_unit"/>
+                                    </group>
+                                    <group>
+                                        <field name="discount"/>
+                                        <field name="amount"/>
+                                        <field name="employee_ids" options="{'no_create':1, 'no_create_edit':1}"
+                                               required="1" widget="many2many_tags"/>
+                                    </group>
+                                    <label for="note"/>
+                                    <field name="note"/>
+                                </group>
+                            </form>
+                        </field>
+                        <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                            <div class="oe_subtotal_footer_separator oe_inline">
+                                <label for="amount_total"/>
+                            </div>
+                            <field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator"
+                                   widget="monetary"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="pop_up_change_employee_service" model="ir.ui.view">
+            <field name="name">therapy_service_using</field>
+            <field name="model">izi.service.card.using</field>
+            <field name="inherit_id" ref="izi_use_service_card.pop_up_change_employee_service"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[1]" position="attributes">
+                    <attribute name="attrs">{'invisible': [('type', '!=', 'card')]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//page[2]" position="attributes">
+                    <attribute name="attrs">{'invisible': [('type', 'not in',
+                        ['guarantee','guarantee_bundle','service'])]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//page[2]" position="after">
+                    <page string="Service Bundle"
+                          attrs="{'invisible': [('type', '!=', 'bundle')]}">
+                        <field name="service_bundle_ids" context="{'default_type':'service_bundle'}"
+                               attrs="{'readonly': [('customer_id', '=', False), ('state', 'in', ('done', 'cancel'))]}">
+                            <tree editable="bottom" create="false" delete="false">
+                                <field name="type" force_save="1" invisible="1"/>
+                                <field name="branch_id" invisible="True"/>
+                                <field name="is_injection" invisible="True"/>
+                                <field name="is_massage" invisible="True"/>
+                                <field name="service_id" options="{'no_create':1, 'no_create_edit':1}"
+                                       attrs="{'readonly': True}"/>
+                                <field name="quantity" attrs="{'readonly': True}"/>
+                                <field name="body_area_ids"
+                                       force_save="1"
+                                       widget="many2many_tags"
+                                       attrs="{'readonly': 1}"
+                                       options="{'no_create_edit':True, 'no_create':True}"/>
+                                <field name="bed_ids"
+                                       force_save="1"
+                                       widget="many2many_tags"
+                                       readonly="1"/>
+                                <field name="employee_ids"
+                                       force_save="1"
+                                       options="{'no_create':1, 'no_create_edit':1}"
+                                       domain="[('job_id.x_code', '=', 'KTV'), ('x_branch_id', '=', branch_id)]"
+                                       widget="many2many_tags"
+                                       required="0"/>
+                                <field name="doctor_ids"
+                                       force_save="1"
+                                       domain="[('job_id.x_code', '=', 'BS')]"
+                                       options="{'no_create':1, 'no_create_edit':1}"
+                                       widget="many2many_tags"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <group>
+                                        <field name="service_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                                        <field name="quantity"/>
+                                        <field name="price_unit"/>
+                                    </group>
+                                    <group>
+                                        <field name="discount"/>
+                                        <field name="amount"/>
+                                        <field name="employee_ids" options="{'no_create':1, 'no_create_edit':1}"
+                                               required="1" widget="many2many_tags"/>
+                                    </group>
+                                    <label for="note"/>
+                                    <field name="note"/>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

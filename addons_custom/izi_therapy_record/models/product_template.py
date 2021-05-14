@@ -12,3 +12,4 @@ class ProductTemplate(models.Model):
     x_is_medicine_day = fields.Boolean(string='IS Medicine', default=False)
     x_body_area_inject_ids = fields.Many2many('body.area', 'body_inject_id', domain=[('type', '=', 'injection')], string='Body Area Inject')
     x_body_area_measure_ids = fields.Many2many('body.area', 'body_measure_id', domain=[('type', '=', 'measure')], string='Body Area Measure')
+    x_body_area_massage_ids = fields.Many2many('body.area', 'body_inject_id', domain=[('type', '=', 'injection')], string='Body Area Massage')

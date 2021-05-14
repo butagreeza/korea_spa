@@ -976,7 +976,7 @@ class StockInventoryCustomerUpdate(models.Model):
                     'typex': '1'
                 }
                 self.env['pos.order.line'].create(vals1)
-                tkc_vitual_money_id =  self.env['pos.virtual.money'].create(coin1)
+                tkc_vitual_money_id = self.env['pos.virtual.money'].create(coin1)
                 # tai khoan km
                 vals2 = {
                     'product_id': line.product_id.id,

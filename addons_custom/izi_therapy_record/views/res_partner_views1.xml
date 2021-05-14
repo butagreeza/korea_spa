@@ -1,0 +1,55 @@
+<odoo>
+    <data>
+        <record id="res_partner_inherit_return_product_form_view" model="ir.ui.view">
+            <field name="name">Res Partner</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="pos_destroy_service.izi_destroy_service_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='destroy_service']" position="after">
+                    <page string="Return Product">
+                        <field name="therapy_prescription_return_product_line_ids" readonly="1">
+                            <tree>
+                                <field name="therapy_prescription_id"/>
+                                <field name="therapy_record_id"/>
+                                <field name="product_id"/>
+                                <field name="qty"/>
+                                <field name="uom_id"/>
+                                <field name="date_return"/>
+                                <field name="user_id"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="res_partner_therapy_view" model="ir.ui.view">
+            <field name="name">Res Partner</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='toggle_active']" position="before">
+                    <!-- HSTL-->
+                    <button class="oe_stat_button o_res_partner_tip_opp" type="action"
+                            attrs="{'invisible': [('customer', '=', False)]}"
+                            name="%(izi_therapy_record.action_izi_therapy_record_by_partner)d"
+                            icon="fa-book"
+                            context="{'default_partner_id': active_id}">
+                        <field string="Therapy Record" name="therapy_record_count" widget="statinfo"/>
+                    </button>
+
+                    <!-- PCĐ-->
+                    <button class="oe_stat_button o_res_partner_tip_opp" type="action"
+                            attrs="{'invisible': [('customer', '=', False)]}"
+                            name="%(izi_therapy_record.action_izi_therapy_prescription_by_partner)d"
+                            icon="fa-list"
+                            context="{'default_partner_id': active_id}">
+                        <field string="Therapy Prescription" name="therapy_prescription_count" widget="statinfo"/>
+                    </button>
+
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

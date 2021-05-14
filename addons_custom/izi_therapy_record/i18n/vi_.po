@@ -6,19 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-05 02:55+0000\n"
-"PO-Revision-Date: 2020-11-05 02:55+0000\n"
+"POT-Creation-Date: 2021-05-14 01:28+0000\n"
+"PO-Revision-Date: 2021-05-14 01:28+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-
-#. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_abdomen
-msgid "Abdomen"
-msgstr "Bụng dưới"
 
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_prescription_line_actual_debt
@@ -62,19 +57,9 @@ msgid "Area Measure"
 msgstr "Vùng đo"
 
 #. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_arm
-msgid "Arm"
-msgstr "Bắp tay"
-
-#. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_armpit
-msgid "Armpit"
-msgstr "Vùng nách"
-
-#. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_back
+#: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_therapy_record_form
 msgid "Back"
-msgstr "Vùng lưng"
+msgstr "Quay lại"
 
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_partner_birthday
@@ -106,7 +91,7 @@ msgstr "Vùng cơ thể làm dịch vụ"
 #: model:ir.model.fields,field_description:izi_therapy_record.field_product_template_x_body_area_massage_ids
 #: model:ir.ui.view,arch_db:izi_therapy_record.view_product_template_inherit_form
 msgid "Body Area Massage"
-msgstr "Vùng cơ thể Massage"
+msgstr "Body Area Massage"
 
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_product_product_x_body_area_measure_ids
@@ -118,7 +103,7 @@ msgstr "Vùng cơ thể đo"
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_body_area_body_inject_id
 msgid "Body Injection"
-msgstr "Vùng cơ thể bắn"
+msgstr "Body Injection"
 
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_body_area_body_measure_id
@@ -211,7 +196,7 @@ msgstr "Hủy"
 #: model:ir.ui.view,arch_db:izi_therapy_record.therapy_prescription_search_view
 #: model:ir.ui.view,arch_db:izi_therapy_record.therapy_record_search_view
 msgid "Category"
-msgstr "Nhóm dịch vụ"
+msgstr "Chuyên mục"
 
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_prescription_check_invisible_button_approve
@@ -224,22 +209,22 @@ msgid "Chiều cao"
 msgstr "Chiều cao"
 
 #. module: izi_therapy_record
-#: code:addons/izi_therapy_record/models/izi_service_card_using.py:280
-#: code:addons/izi_therapy_record/models/izi_service_card_using.py:403
+#: code:addons/izi_therapy_record/models/izi_service_card_using.py:461
+#: code:addons/izi_therapy_record/models/izi_service_card_using.py:583
 #, python-format
 msgid "Choose?"
 msgstr "Lựa chọn?"
 
 #. module: izi_therapy_record
-#: code:addons/izi_therapy_record/models/therapy_prescription.py:247
-#: code:addons/izi_therapy_record/models/therapy_return_product.py:75
+#: code:addons/izi_therapy_record/models/therapy_prescription.py:249
+#: code:addons/izi_therapy_record/models/therapy_return_product.py:76
 #, python-format
 msgid "Chưa cấu hình loại điều chuyển kho cho điểm bán hàng của bạn!"
 msgstr "Chưa cấu hình loại điều chuyển kho cho điểm bán hàng của bạn!"
 
 #. module: izi_therapy_record
-#: code:addons/izi_therapy_record/models/therapy_prescription.py:279
-#: code:addons/izi_therapy_record/models/therapy_prescription.py:288
+#: code:addons/izi_therapy_record/models/therapy_prescription.py:395
+#: code:addons/izi_therapy_record/models/therapy_prescription.py:404
 #, python-format
 msgid "Chưa lựa chọn Sản phẩm/Dịch vụ sử dụng"
 msgstr "Chưa lựa chọn Sản phẩm/Dịch vụ sử dụng"
@@ -248,7 +233,7 @@ msgstr "Chưa lựa chọn Sản phẩm/Dịch vụ sử dụng"
 #: selection:therapy.prescription,state_picking:0
 #: selection:therapy.prescription,state_using:0
 msgid "Close"
-msgstr "Đóng"
+msgstr "Close"
 
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_body_area_code
@@ -266,7 +251,7 @@ msgstr "Mã khách hàng"
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_conpute_id
 msgid "Compute View"
-msgstr "Chi tiết thông số"
+msgstr "Compute View"
 
 #. module: izi_therapy_record
 #: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_therapy_prescription_form
@@ -284,7 +269,7 @@ msgstr "Xác nhận"
 #. module: izi_therapy_record
 #: model:ir.model,name:izi_therapy_record.model_res_partner
 msgid "Contact"
-msgstr "Khách hàng"
+msgstr "Liên hệ"
 
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_partner_country_id
@@ -338,7 +323,7 @@ msgid "Customer"
 msgstr "Khách hàng"
 
 #. module: izi_therapy_record
-#: code:addons/izi_therapy_record/models/izi_service_card_using.py:515
+#: code:addons/izi_therapy_record/models/izi_service_card_using.py:717
 #, python-format
 msgid "Customer Signature?"
 msgstr "Customer Signature?"
@@ -354,7 +339,7 @@ msgid "Cân nặng"
 msgstr "Cân nặng"
 
 #. module: izi_therapy_record
-#: code:addons/izi_therapy_record/models/therapy_prescription.py:572
+#: code:addons/izi_therapy_record/models/therapy_prescription.py:604
 #, python-format
 msgid "Cảnh báo!"
 msgstr "Cảnh báo!"
@@ -419,7 +404,7 @@ msgstr "Nháp"
 #. module: izi_therapy_record
 #: model:ir.ui.view,arch_db:izi_therapy_record.product_template_search_form_view_stock_inherit
 msgid "Effect"
-msgstr "Hiệu ứng"
+msgstr "Effect"
 
 #. module: izi_therapy_record
 #: model:ir.ui.view,arch_db:izi_therapy_record.report_template_work_service_view
@@ -456,7 +441,7 @@ msgstr "Nhóm theo"
 #. module: izi_therapy_record
 #: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_therapy_record_form
 msgid "History update therapy record product"
-msgstr "Lịch sử cập nhập sản phẩm tồn"
+msgstr "Lịch sử cập nhập sản phẩm"
 
 #. module: izi_therapy_record
 #: model:ir.ui.view,arch_db:izi_therapy_record.report_template_work_service_view
@@ -464,7 +449,7 @@ msgid "Hông"
 msgstr "Hông"
 
 #. module: izi_therapy_record
-#: code:addons/izi_therapy_record/models/therapy_prescription.py:68
+#: code:addons/izi_therapy_record/models/therapy_prescription.py:76
 #, python-format
 msgid "Hồ sơ trị liệu %s chưa có sản phẩm/ dịch vụ tồn!"
 msgstr "Hồ sơ trị liệu %s chưa có sản phẩm/ dịch vụ tồn!"
@@ -499,11 +484,6 @@ msgstr "Trong liệu trình"
 #: model:ir.model.fields,field_description:izi_therapy_record.field_product_product_include_product_id
 msgid "Include Product"
 msgstr "Sản phẩm kèm theo"
-
-#. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_interaction_last_date
-msgid "Interaction Last Date"
-msgstr "Ngày tương tác gần nhất"
 
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_izi_service_card_using_line_is_injection
@@ -558,7 +538,7 @@ msgstr "Khách hàng:\n"
 "                                    ["
 
 #. module: izi_therapy_record
-#: code:addons/izi_therapy_record/models/therapy_prescription.py:347
+#: code:addons/izi_therapy_record/models/therapy_prescription.py:389
 #, python-format
 msgid "Không có số lượng của sản phẩm thuốc khi chỉ định ngày thuốc"
 msgstr "Không có số lượng của sản phẩm thuốc khi chỉ định ngày thuốc"
@@ -609,34 +589,9 @@ msgid "Last Updated on"
 msgstr "Cập nhật lần cuối vào"
 
 #. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_lats
-msgid "Lats"
-msgstr "Vùng xoài"
-
-#. module: izi_therapy_record
 #: model:ir.model,name:izi_therapy_record.model_crm_lead
 msgid "Lead/Opportunity"
-msgstr "Cơ hội bán hàng"
-
-#. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_left_lower_calf
-msgid "Left Lower Calf"
-msgstr "Bắp chân trái dưới"
-
-#. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_left_upper_calf
-msgid "Left Upper Calf"
-msgstr "Bắp chân trái trên"
-
-#. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_left_upper_thighs
-msgid "Left Upper Thigh"
-msgstr "Bắp đùi trái trên"
-
-#. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_left_lower_thighs
-msgid "Left lower Thigh"
-msgstr "Bắp đùi trái dưới"
+msgstr "Đầu mối/Cơ hội"
 
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_partner_level_age_id
@@ -661,14 +616,9 @@ msgid "Lịch sử đo thông số"
 msgstr "Lịch sử đo thông số"
 
 #. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_lower_waist
-msgid "Lower of Waist"
-msgstr "Eo dưới"
-
-#. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_product_product_x_measure_ok
-msgid "Measure Ok"
-msgstr "Dịch vụ cần đo chỉ số cơ thể"
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_line_measurement
+msgid "Measurement"
+msgstr "Measurement"
 
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_measurement_time
@@ -686,16 +636,7 @@ msgid "Medicine Day"
 msgstr "Ngày thuốc"
 
 #. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_middle_abdomen
-msgid "Middle Abdomen"
-msgstr "Bụng giữa"
-
-#. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_middle_waist
-msgid "Middle Waist"
-msgstr "Eo giữa"
-
-#. module: izi_therapy_record
+#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_line_name
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_name
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_name
 msgid "Name"
@@ -719,8 +660,7 @@ msgid "Name of User"
 msgstr "Tên của Tư vấn"
 
 #. module: izi_therapy_record
-#: code:addons/izi_therapy_record/models/therapy_body_measure.py:39
-#: code:addons/izi_therapy_record/models/therapy_prescription.py:347
+#: code:addons/izi_therapy_record/models/therapy_body_measure.py:20
 #, python-format
 msgid "New"
 msgstr "Mới"
@@ -767,7 +707,7 @@ msgstr "Nách"
 #: selection:therapy.prescription,state_picking:0
 #: selection:therapy.prescription,state_using:0
 msgid "Open"
-msgstr "Mở"
+msgstr "Open"
 
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_prescription_line_order_id
@@ -777,9 +717,9 @@ msgid "Order"
 msgstr "Đơn hàng"
 
 #. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_out_of_medicine_date
-msgid "Out of Medicine Date"
-msgstr "Ngày hết thuốc"
+#: model:ir.ui.view,arch_db:izi_therapy_record.therapy_record_search_view
+msgid "Out of Medicine Day"
+msgstr "Out of Medicine Day"
 
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_prescription_partner_id
@@ -787,7 +727,7 @@ msgstr "Ngày hết thuốc"
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_prescription_return_product_partner_id
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_partner_id
 msgid "Partner"
-msgstr "Khách hàng"
+msgstr "Đối tác"
 
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_product_payment_allocation_ids
@@ -807,7 +747,7 @@ msgid "Phone of Partner"
 msgstr "Số điện thoại khách hàng"
 
 #. module: izi_therapy_record
-#: code:addons/izi_therapy_record/models/therapy_prescription.py:384
+#: code:addons/izi_therapy_record/models/therapy_prescription.py:391
 #, python-format
 msgid "Phải chỉ định ngày thuốc mới được xuất sản phẩm thuốc"
 msgstr "Phải chỉ định ngày thuốc mới được xuất sản phẩm thuốc"
@@ -967,26 +907,6 @@ msgid "Salesperson"
 msgstr "Nhân viên bán hàng"
 
 #. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_right_lower_calf
-msgid "Right Lower Calf"
-msgstr "Bắp chân phải dưới"
-
-#. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_right_upper_calf
-msgid "Right Upper Calf"
-msgstr "Bắp chân phải trên"
-
-#. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_right_upper_thighs
-msgid "Right Upper Thigh"
-msgstr "Bắp chân trái dưới"
-
-#. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_right_lower_thighs
-msgid "Right lower Thigh"
-msgstr "Bắp đùi phải dưới"
-
-#. module: izi_therapy_record
 #: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_therapy_prescription_form
 #: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_therapy_prescription_return_product_form_view
 #: model:ir.ui.view,arch_db:izi_therapy_record.view_izi_use_service_card_inherit
@@ -1021,6 +941,7 @@ msgstr "Đã ký đạt cam kết"
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_prescription_state
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_partner_state_id
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_state
+#: model:ir.ui.view,arch_db:izi_therapy_record.therapy_prescription_return_product_search_view
 #: model:ir.ui.view,arch_db:izi_therapy_record.therapy_prescription_search_view
 #: model:ir.ui.view,arch_db:izi_therapy_record.therapy_record_search_view
 msgid "State"
@@ -1029,12 +950,12 @@ msgstr "Giai đoạn"
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_prescription_state_picking
 msgid "State Picking"
-msgstr "Trạng thái đơn xuất kho"
+msgstr "State Picking"
 
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_prescription_state_using
 msgid "State Using"
-msgstr "Trạng thái đơn sử dụng dịch vụ"
+msgstr "State Using"
 
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_prescription_location_id
@@ -1064,7 +985,7 @@ msgid "Street"
 msgstr "Địa chỉ"
 
 #. module: izi_therapy_record
-#: code:addons/izi_therapy_record/models/therapy_prescription.py:424
+#: code:addons/izi_therapy_record/models/therapy_prescription.py:606
 #, python-format
 msgid "Sản phẩm \"\" chỉ còn "
 msgstr "Sản phẩm \"\" chỉ còn "
@@ -1112,7 +1033,7 @@ msgid "Therapy Body Measure Line"
 msgstr "Chi tiết thông số cơ thể"
 
 #. module: izi_therapy_record
-#: code:addons/izi_therapy_record/models/therapy_record.py:61
+#: code:addons/izi_therapy_record/models/therapy_record.py:74
 #: model:ir.model.fields,field_description:izi_therapy_record.field_izi_service_card_using_line_therapy_prescription_id
 #: model:ir.model.fields,field_description:izi_therapy_record.field_izi_service_card_using_therapy_prescription_id
 #: model:ir.model.fields,field_description:izi_therapy_record.field_res_partner_therapy_prescription_count
@@ -1173,13 +1094,11 @@ msgstr "Hồ sơ trị liệu"
 
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_product_update_line_product_update_id
-#: model:ir.ui.view,arch_db:izi_therapy_record.therapy_record_product_update_form_view
 msgid "Therapy Record Product Update"
 msgstr "Cập nhật sản phẩm tồn của hồ sơ trị liệu"
 
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_product_update_update_line_ids
-#: model:ir.ui.view,arch_db:izi_therapy_record.therapy_record_product_update_form_view
 msgid "Therapy Record Product Update Line"
 msgstr "Chi tiết sản phẩm tồn của hồ sơ trị liệu"
 
@@ -1229,7 +1148,7 @@ msgstr "Sản phẩm trị liệu hiện có"
 #. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_therapy_record_update_product_ids
 msgid "Therapy record product update"
-msgstr "Cập nhật tồn HSTL"
+msgstr "Therapy record product update"
 
 #. module: izi_therapy_record
 #: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_therapy_record_form
@@ -1281,7 +1200,7 @@ msgid "Unit of Measure"
 msgstr "Đơn vị tính"
 
 #. module: izi_therapy_record
-#: model:ir.ui.view,arch_db:izi_therapy_record.therapy_record_product_update_form_view
+#: model:ir.ui.view,arch_db:izi_therapy_record.therapy_record_product_update_form_popup_view
 msgid "Update Product"
 msgstr "Cập nhật SL sản phẩm"
 
@@ -1291,20 +1210,11 @@ msgid "Update Quantity Product"
 msgstr "Cập nhật SL sản phẩm"
 
 #. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_upper_abdomen
-msgid "Upper Abdomen"
-msgstr "Bụng trên"
-
-#. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_upper_waist
-msgid "Upper of Waist"
-msgstr "Eo trên"
-
-#. module: izi_therapy_record
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_prescription_return_product_line_user_id
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_prescription_return_product_user_id
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_product_update_user_id
 #: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_record_user_id
+#: model:ir.ui.view,arch_db:izi_therapy_record.therapy_prescription_return_product_search_view
 #: model:ir.ui.view,arch_db:izi_therapy_record.therapy_prescription_search_view
 #: model:ir.ui.view,arch_db:izi_therapy_record.therapy_record_search_view
 msgid "User"
@@ -1354,9 +1264,9 @@ msgid "Work service"
 msgstr "Work service"
 
 #. module: izi_therapy_record
-#: model:ir.model.fields,field_description:izi_therapy_record.field_therapy_body_measure_weight
-msgid "Weight"
-msgstr "Trọng lượng"
+#: model:ir.ui.view,arch_db:izi_therapy_record.report_template_work_service_view
+msgid "Xoài"
+msgstr "Xoài"
 
 #. module: izi_therapy_record
 #: model:ir.model,name:izi_therapy_record.model_body_area
@@ -1366,17 +1276,17 @@ msgstr "Vùng cơ thể"
 #. module: izi_therapy_record
 #: model:ir.model,name:izi_therapy_record.model_izi_service_card_using
 msgid "izi.service.card.using"
-msgstr "Sử dụng dịch vụ"
+msgstr "izi.service.card.using"
 
 #. module: izi_therapy_record
 #: model:ir.model,name:izi_therapy_record.model_izi_service_card_using_line
 msgid "izi.service.card.using.line"
-msgstr "Chi tiết sử dụng dịch vụ"
+msgstr "izi.service.card.using.line"
 
 #. module: izi_therapy_record
-#: model:ir.ui.view,arch_db:izi_therapy_record.izi_view_therapy_prescription_return_product_popup
-msgid "or"
-msgstr "hoặc"
+#: model:ir.model,name:izi_therapy_record.model_pos_work_service_allocation_line
+msgid "pos.work.service.allocation.line"
+msgstr "pos.work.service.allocation.line"
 
 #. module: izi_therapy_record
 #: model:ir.model,name:izi_therapy_record.model_therapy_body_measure
