@@ -25,12 +25,17 @@ class BodyArea(models.Model):
                     arr_body = product_id.x_body_area_inject_ids.ids
                 elif product_id.x_is_injection and self._context.get('is_measure'):
                     arr_body = product_id.x_body_area_measure_ids.ids
-                elif product_id.x_is_massage and self._context.get('therapy_record_id'):
-                    therapy_product_ids = self.env['therapy.record.product'].search(
-                        [('therapy_record_id', '=', self._context.get('therapy_record_id'))])
-                    order_id = self.env['pos.order'].search([('id', '=', self._context.get('order_id'))])
-                    for line_id in therapy_product_ids.filtered(lambda line: line.product_id.x_is_injection and line.order_id.id == order_id.id):
-                        arr_body += line_id.body_area_ids.filtered(lambda body:body.id in product_id.x_body_area_massage_ids.ids).ids
+                elif product_id.x_is_massage:
+                    if self._context.get('therapy_record_id'):
+                        therapy_product_ids = self.env['therapy.record.product'].search(
+                            [('therapy_record_id', '=', self._context.get('therapy_record_id'))])
+                        order_id = self.env['pos.order'].search([('id', '=', self._context.get('order_id'))])
+                        for line_id in therapy_product_ids.filtered(
+                                lambda line: line.product_id.x_is_injection and line.order_id.id == order_id.id):
+                            arr_body += line_id.body_area_ids.filtered(
+                                lambda body: body.id in product_id.x_body_area_massage_ids.ids).ids
+                    else:
+                        arr_body = product_id.x_body_area_massage_ids.ids
                 else:
                     arr_body = []
             if len(arr_body) == 0:

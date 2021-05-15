@@ -373,33 +373,33 @@ class ResPartnerCustom(models.Model):
             raise except_orm('Thông báo', 'Không tìm thấy Trình tự sinh mã đối tác có mã: %s' % (code_sequence,))
         return str(sequence_generate)
 
-    # def _read_from_database(self, field_names, inherited_field_names=[]):
-    #     super(ResPartnerCustom, self)._read_from_database(field_names, inherited_field_names)
-    #     context = self._context
-    #     if 'phone' in field_names:
-    #         for record in self:
-    #             try:
-    #                 UserObj = http.request.env['res.users']
-    #                 display_phone = UserObj.has_group('izi_display_fields.group_display_phone')
-    #                 if display_phone or self.env.uid == 1:
-    #                     record._cache['phone']
-    #                 else:
-    #                     record._cache['phone']
-    #                     record._cache['phone'] = record._cache['phone'][0:len(record._cache['phone']) - 3] + '***'
-    #             except Exception:
-    #                 pass
-    #     if 'mobile' in field_names:
-    #         for record in self:
-    #             try:
-    #                 UserObj = http.request.env['res.users']
-    #                 display_phone = UserObj.has_group('izi_display_fields.group_display_phone')
-    #                 if display_phone:
-    #                     record._cache['mobile']
-    #                 else:
-    #                     record._cache['mobile']
-    #                     record._cache['mobile'] = record._cache['mobile'][0:len(record._cache['mobile']) - 3] + '***'
-    #             except Exception:
-    #                 pass
+    def _read_from_database(self, field_names, inherited_field_names=[]):
+        super(ResPartnerCustom, self)._read_from_database(field_names, inherited_field_names)
+        context = self._context
+        if 'phone' in field_names:
+            for record in self:
+                try:
+                    UserObj = http.request.env['res.users']
+                    display_phone = UserObj.has_group('izi_display_fields.group_display_phone')
+                    if display_phone or self.env.uid == 1:
+                        record._cache['phone']
+                    else:
+                        record._cache['phone']
+                        record._cache['phone'] = record._cache['phone'][0:len(record._cache['phone']) - 3] + '***'
+                except Exception:
+                    pass
+        if 'mobile' in field_names:
+            for record in self:
+                try:
+                    UserObj = http.request.env['res.users']
+                    display_phone = UserObj.has_group('izi_display_fields.group_display_phone')
+                    if display_phone:
+                        record._cache['mobile']
+                    else:
+                        record._cache['mobile']
+                        record._cache['mobile'] = record._cache['mobile'][0:len(record._cache['mobile']) - 3] + '***'
+                except Exception:
+                    pass
 
     # @api.model
     # def fields_view_get(self, view_id=None, view_type=False, toolbar=False, submenu=False):

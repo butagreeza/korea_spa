@@ -923,6 +923,10 @@ ORDER BY b.date]]></xml-property>
                             <property name="borderTopStyle">solid</property>
                             <property name="borderTopWidth">thin</property>
                             <data id="315">
+                                <structure name="numberFormat">
+                                    <property name="category">Fixed</property>
+                                    <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
+                                </structure>
                                 <property name="resultSetColumn">Column Binding</property>
                             </data>
                         </cell>
@@ -971,6 +975,10 @@ ORDER BY b.date]]></xml-property>
                     </cell>
                     <cell id="139">
                         <data id="161">
+                            <structure name="numberFormat">
+                                <property name="category">Fixed</property>
+                                <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
+                            </structure>
                             <property name="resultSetColumn">amount</property>
                         </data>
                     </cell>

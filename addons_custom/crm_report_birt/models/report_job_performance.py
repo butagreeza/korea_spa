@@ -25,10 +25,7 @@ class ReportJobPerformance(models.TransientModel):
                 department += ',' + str(dep.id)
             department_id = (department[1:])
         else:
-            department = ''
-            for dep in self.env['hr.department'].search():
-                department += ',' + str(dep.id)
-            department_id = (department[1:])
+            department_id = '0'
         param_str = param_str1 + param_str4 + department_id
         return {
             'type': 'ir.actions.act_url',
@@ -52,10 +49,7 @@ class ReportJobPerformance(models.TransientModel):
                 department += ',' + str(dep.id)
             department_id = (department[1:])
         else:
-            department = ''
-            for dep in self.env['hr.department'].search():
-                department += ',' + str(dep.id)
-            department_id = (department[1:])
+            department_id = '0'
         param_str = param_str1 + param_str4 + department_id
         return {
             'type': 'ir.actions.act_url',

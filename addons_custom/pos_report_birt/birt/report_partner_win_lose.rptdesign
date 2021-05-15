@@ -1212,7 +1212,7 @@ ORDER BY bongchot.ngay]]></xml-property>
                                         <expression name="value" type="javascript">measure["trangthai"]</expression>
                                     </structure>
                                 </list-property>
-                                <expression name="filterExpr" type="javascript">measure["trangthai"] == "Chốt"</expression>
+                                <expression name="filterExpr" type="javascript">measure["trangthai"] != "Thất bại"</expression>
                             </structure>
                             <structure>
                                 <property name="name">tong_thatbai</property>
