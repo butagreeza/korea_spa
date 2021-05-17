@@ -40,6 +40,7 @@
         'views/report_give_gift_partner_view.xml',
         'views/report_interaction_partner_view.xml',
         'views/report_job_handling_by_department_view.xml',
+        'views/report_activity_history_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

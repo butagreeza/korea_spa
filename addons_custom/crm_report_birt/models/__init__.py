@@ -16,3 +16,4 @@ from . import report_partner_feedback
 from . import report_give_gift_partner
 from . import report_interaction_partner
 from . import report_job_handling_by_department
+from . import report_activity_history

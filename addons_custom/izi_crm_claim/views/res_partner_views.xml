@@ -35,7 +35,7 @@
                             attrs="{'invisible': [('customer', '=', False)]}"
                             name="%(izi_crm_claim.crm_claim_action_window_by_partner)d"
                             icon="fa-question"
-                            context="{'search_default_partner_id': active_id}">
+                            context="{'default_partner_id': active_id}">
                         <field string="Claim" name="claim_count" widget="statinfo"/>
                     </button>
                 </xpath>

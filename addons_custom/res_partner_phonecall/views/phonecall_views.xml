@@ -65,7 +65,7 @@
             <field name="search_view_id" ref="res_partner_phonecall.view_phonecalls_filter"/>
         </record>
 
-        <menuitem id="phonecall_menu" name="phonecall_menu" string="PhoneCall"
+        <menuitem id="phonecall_menu" name="phonecall_menu" string="PhoneCall" groups="base.group_system"
                   parent="izi_crm_interaction.partner_interaction_main_menu" action="phonecall_action"/>
     </data>
 </odoo>
