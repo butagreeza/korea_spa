@@ -382,11 +382,11 @@ FROM
 account_bank_statement_line a
 LEFT JOIN res_partner b ON a.partner_id = b.id
 LEFT JOIN account_journal c ON a.journal_id = c.id
-LEFT JOIN journal_loyal_rel d ON d.account_journal_id= a.journal_id
+LEFT JOIN pos_config_journal_pay_debt_rel d ON d.journal_id= a.journal_id
 LEFT JOIN utm_source e ON e.id = b.source_id
 WHERE (a.create_date + interval '7 hour')::DATE >= ?::DATE
 AND (a.create_date + interval '7 hour')::DATE <= ?::DATE
-and d.pos_config_id=?
+and d.config_id=?
 and c.code != 'DC'
 and (case when '0' = ? then 0 = 0
 		else e.name = ?

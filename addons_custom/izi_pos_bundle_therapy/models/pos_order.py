@@ -12,7 +12,6 @@ class PosOrder(models.Model):
     x_therapy_record_id = fields.Many2one('therapy.record', string='Therapy Record')
     x_categ_id = fields.Many2one('product.category', related='x_therapy_record_id.categ_id', string='Category', readonly=True)
     x_is_use_barem = fields.Boolean(default=False, string='Is use barem')
-    x_number_massage = fields.Integer(string='Number Massage', default=0)
     x_pos_order_complement_ids = fields.One2many('pos.order.complement', 'pos_order_id', string='Pos Order Complement')
     x_barem_id = fields.Many2one('therapy.bundle.barem', string='Barem')
     x_is_create_therapy_record = fields.Boolean(string="Is create therapy record", default=False)
@@ -21,6 +20,7 @@ class PosOrder(models.Model):
     def onchange_lines(self):
         check_is_therapy_record = False
         check_is_use_barem = False
+        arr_body = []
         for order_line_id in self.lines:
             if order_line_id.x_categ_id.x_is_therapy_record:
                 check_is_therapy_record = True
@@ -28,6 +28,7 @@ class PosOrder(models.Model):
                 check_is_use_barem = True
         self.x_is_create_therapy_record = check_is_therapy_record
         self.x_is_use_barem = check_is_use_barem
+
 
     @api.multi
     def action_compute_barem(self):
@@ -427,12 +428,6 @@ class PosOrder(models.Model):
                 #             break
                     # for
 
-
-
-
-
-
-
     def _add_service_to_card(self, list, lot_obj):
         amount = 0
         amount_product = 0
@@ -594,6 +589,8 @@ class PosOrder(models.Model):
     def action_order_confirm(self):
         Threapy_Obj = self.env['therapy.record']
         Category_Obj = self.env['product.category']
+        ProductLot_Obj = self.env['stock.production.lot']
+        super(PosOrder, self).action_order_confirm()
         if self.x_is_create_therapy_record:
             # self._create_therapy_bundle()  # Tạo gói liệu trình
             arr_category = []
@@ -609,7 +606,20 @@ class PosOrder(models.Model):
                             'categ_id': category.id,
                         })
                     self._update_therapy_record_product(therapy_record)  # Đổ sản phẩm vào danh mục sản phẩm tồn trên hồ sơ trị liệu
-        return super(PosOrder, self).action_order_confirm()
+        # thêm vùng cho thẻ dịch vụ (trong trường hợp bán buổi massage cho khách)
+        product_lot_id = ProductLot_Obj.search([('x_order_id', '=', self.id)], limit=1)
+        if product_lot_id:
+            for order_line in self.lines:
+                if (order_line.product_id.x_is_injection or order_line.product_id.x_is_massage) and len(
+                        order_line.x_body_area_ids) > 0:
+                    service_detail_id = self.env['izi.service.card.detail'].search(
+                        [('lot_id', '=', product_lot_id.id), ('product_id', '=', order_line.product_id.id)])
+                    service_detail_id.update({
+                        'total_qty': service_detail_id.total_qty * len(order_line.x_body_area_ids),
+                        'body_area_ids': [(6, 0, order_line.x_body_area_ids.ids)],
+                    })
+        else:
+            raise UserError('Không tìm thấy thẻ dịch vụ của đơn hàng! Vui lòng kiểm tra lại để hoàn thành đơn hàng')
 
     # @api.multi
     # def confirm_refund(self):
@@ -663,9 +673,29 @@ class PosOrderLine(models.Model):
     _inherit = 'pos.order.line'
 
     x_body_area_ids = fields.Many2many('body.area', string='Body Area')
+    x_is_massage = fields.Boolean(string='Is Massage', default=False, help="Pos order buy product which is massage")
     x_categ_id = fields.Many2one('product.category', related='product_id.categ_id', readonly=True, store=True)
     x_is_create_therapy = fields.Boolean(related='x_categ_id.x_is_therapy_record', string="Is create therapy record", store=True, readonly=True)
     x_use_compute_massage = fields.Boolean(string="Use amount compute massage")
+
+    @api.depends('price_unit', 'tax_ids', 'qty', 'discount', 'product_id', 'x_discount', 'x_body_area_ids')
+    def _compute_amount_line_all(self):
+        for line in self:
+            if line.product_id.x_is_massage or line.product_id.x_is_injection:
+                line.x_is_massage = True
+            if line.qty != 0:
+                fpos = line.order_id.fiscal_position_id
+                tax_ids_after_fiscal_position = fpos.map_tax(line.tax_ids, line.product_id,
+                                                             line.order_id.partner_id) if fpos else line.tax_ids
+                price = (line.price_unit - line.price_unit * line.discount / 100) - (line.x_discount / line.qty)
+                # nếu bán dịch vụ massage theo thẻ dịch vụ thì nhân thêm số lg vùng vào tổng tiền
+                if line.x_body_area_ids and line.product_id.x_is_massage:
+                    price *= len(line.x_body_area_ids)
+                taxes = tax_ids_after_fiscal_position.compute_all(price, line.order_id.pricelist_id.currency_id,
+                                                                  line.qty,
+                                                                  product=line.product_id,
+                                                                  partner=line.order_id.partner_id)
+                line.price_subtotal = line.price_subtotal_incl = taxes['total_included']
 
 class PosOrderComplement(models.Model):
     _name = 'pos.order.complement'

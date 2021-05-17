@@ -448,6 +448,7 @@ FROM (
 	WHERE a.call_status = 'meetAgent'
 				and (f.id = ANY(string_to_array( ?, ',')::integer[]) or ? = '0')
 				and a.partner_id is not null
+				and f.id is not null
 				and (a.call_date + INTERVAL '7' HOUR)::date >= ?
 				and (a.call_date + INTERVAL '7' HOUR)::date <= ?
 	GROUP BY b.login,c.name,f.name)
@@ -474,6 +475,7 @@ FROM (
 	LEFT JOIN hr_department f ON e.department_id = f.id
 	LEFT JOIN mail_activity_type g ON a.mail_activity_type_id = g.id
 	WHERE a.state = 'done'
+				and f.id is not null
 				and (f.id = ANY(string_to_array( ?, ',')::integer[]) or ? = '0')
 				and a.actual_date >= ?
 				and a.actual_date <= ?
@@ -501,6 +503,7 @@ FROM (
 	LEFT JOIN hr_employee e ON d.id = e.resource_id
 	LEFT JOIN hr_department f ON e.department_id = f.id
 	WHERE a.state = 'done'
+				and f.id is not null
 				and (f.id = ANY(string_to_array( ?, ',')::integer[]) or ? = '0')
 				and a.actual_date >= ?
 				and a.actual_date <= ?

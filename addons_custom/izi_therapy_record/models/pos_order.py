@@ -13,6 +13,3 @@ class PosOrder(models.Model):
         if not self._context.get('default_partner_id', False):
             self.partner_id = self._context.get('default_partner_id')
         return res
-
-
-

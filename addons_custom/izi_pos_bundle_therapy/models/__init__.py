@@ -1,3 +1,5 @@
+from . import izi_service_card_detail
+from . import izi_service_card_using
 from . import therapy_bundle_barem
 from . import product_product
 from . import pos_order

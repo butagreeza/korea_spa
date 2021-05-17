@@ -29,6 +29,7 @@
                            attrs="{'invisible': [('type', '=', 'bundle')], 'readonly': [('state', '!=', 'draft')]}"/>
                 </xpath>
                 <xpath expr="//field[@name='pricelist_id']" position="after">
+                    <field name="is_body_area" invisible="True"/>
                     <field name="therapy_record_id"
                            attrs="{'invisible':[('type','not in', ['bundle', 'guarantee_bundle'])], 'readonly': True}"/>
                     <field name="therapy_prescription_id"
@@ -48,6 +49,14 @@
                     <field name="body_area_ids" domain="[('type', '=', 'injection')]"
                            context="{'default_product_id': service_id}" widget="many2many_tags"
                            attrs="{'column_invisible': [('parent.therapy_prescription_id','=',False)], 'invisible': [('is_massage', '=', False), ('is_injection','=', False)]}"
+                           options="{'no_create_edit':True, 'no_create':True}"/>
+                </xpath>
+                <xpath expr="//field[@name='service_card_ids']/tree/field[@name='quantity']" position="after">
+                    <field name="is_injection" invisible="True"/>
+                    <field name="is_massage" invisible="True"/>
+                    <field name="body_area_ids" domain="[('type', '=', 'injection')]"
+                           context="{'default_product_id': service_id}" widget="many2many_tags"
+                           attrs="{'column_invisible': [('parent.is_body_area', '=', False)], 'readonly': ['|', ('is_massage', '!=', False), ('is_injection','!=', False)]}"
                            options="{'no_create_edit':True, 'no_create':True}"/>
                 </xpath>
                 <xpath expr="//page[2]" position="attributes">

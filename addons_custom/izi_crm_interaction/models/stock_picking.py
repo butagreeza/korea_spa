@@ -21,17 +21,17 @@ class StockPicking(models.Model):
         return res
 
     def create_activity_history(self):
-        if self.x_therapy_record_id.state not in ['cancel'] and self.x_medicine_day_ok:
+        if self.x_therapy_record_id.state not in ['cancel', 'stop_care'] and self.x_medicine_day_ok:
             #todo cập nhật ngày hết thuốc trên HSTL
             #tinh số ngày thuốc được dùng trong PCĐ
             qty = 0
             for therapy_prescription_line_remain_id in self.x_therapy_prescription_id.therapy_prescription_line_remain_ids:
                 if therapy_prescription_line_remain_id.product_id.x_is_medicine_day:
                     qty += therapy_prescription_line_remain_id.qty
-            qty_remain = 0
+            qty_remain = 1
             #kiểm tra xem có phải là ngày lấy thuốc cuối cùng không?
-            for remain_product in self.x_therapy_record_id.therapy_record_product_ids.filtered(lambda remain:remain.product_id.x_is_medicine_day):
-                qty_remain += remain_product.qty_available
+            # for remain_product in self.x_therapy_record_id.therapy_record_product_ids.filtered(lambda remain:remain.product_id.x_is_medicine_day):
+            #     qty_remain + = remain_product.qty_available
             if self.x_therapy_record_id.out_of_medicine_date:
                 out_of_date = datetime.strptime(self.x_therapy_record_id.out_of_medicine_date, '%Y-%m-%d') + timedelta(days=qty)
             else:

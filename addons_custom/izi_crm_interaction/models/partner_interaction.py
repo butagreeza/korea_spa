@@ -206,6 +206,12 @@ class PartnerInteraction(models.Model):
             interaction.read_therapy_record_start = None
             interaction.read_therapy_record_end = None
             interaction.read_time = None
+            for activity in interaction.activity_history_ids:
+                if activity.date_move_remind:
+                    activity.state = 'move_remind'
+                else:
+                    activity.state = 'assigned'
+                activity.partner_interaction_id = False
 
     @api.model
     def value_to_html(self, value):

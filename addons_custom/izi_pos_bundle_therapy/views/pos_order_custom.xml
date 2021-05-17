@@ -10,7 +10,6 @@
 <!--                </xpath>-->
                 <xpath expr="//field[@name='user_id']" position="before">
                     <field name="x_therapy_record_id" readonly="True" attrs="{'invisible': [('x_therapy_record_id', '=', False)]}"/>
-                    <field name="x_number_massage" readonly="True" attrs="{'invisible': [('x_therapy_record_id', '=', False)]}"/>
                     <field name="x_barem_id" readonly="True" attrs="{'invisible': [('x_therapy_record_id', '=', False)]}"/>
                     <field name="x_categ_id" invisible="1"/>
                     <field name="x_is_use_barem" invisible="1"/>
@@ -43,6 +42,7 @@
                                 <field name="x_check_service" invisible="True"/>
                                 <field name="x_charge_refund" invisible="True"/>
                                 <field name="x_edit_price" invisible="True"/>
+                                <field name="x_is_massage" invisible="True"/>
                                 <field name="product_id" context="{'izi_pos_product_search':True}" options="{'no_create_edit':True, 'no_open':False, 'no_create':True}" domain="[('product_tmpl_id.x_type_card', '=', 'none'), ('available_in_pos','=',True)]"/>
                                 <field name="x_categ_id" readonly="True"/>
                                 <field name="lot_name" readonly="1" force_save="1"/>
@@ -50,8 +50,8 @@
                                 <field name="x_use_compute_massage"/>
                                 <field name="x_qty" invisible="True" attrs="{'readonly': [('parent.x_pos_partner_refund_id', '!=', False)]}" force_save="1"/>
                                 <field name="x_is_create_therapy" invisible="True"/>
-                                <field name="x_body_area_ids" context="{'default_product_id': product_id}" widget="many2many_tags" options="{'no_create_edit':True, 'no_create':True}" attrs="{'required': [('x_is_create_therapy', '=', True)]}" domain="[('type','=', 'injection')]"/>
-                                <field name="price_unit" widget="monetary" attrs="{'readonly': [('x_edit_price', '=', False)]}" force_save="1"/>
+                                <field name="x_body_area_ids" context="{'default_product_id': product_id}" widget="many2many_tags" options="{'no_create_edit':True, 'no_create':True}" attrs="{'required': [('x_is_massage', '=', True)]}" domain="[('type','=', 'injection')]"/>
+                                <field name="price_unit" widget=    "monetary" attrs="{'readonly': [('x_edit_price', '=', False)]}" force_save="1"/>
                                 <field name="discount" widget="monetary"/>
                                 <field name="x_discount" widget="monetary"/>
                                 <field name="tax_ids_after_fiscal_position" widget="many2many_tags" invisible="1"/>

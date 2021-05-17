@@ -11,6 +11,7 @@ class IziServiceCardUsing(models.Model):
     therapy_prescription_id = fields.Many2one('therapy.prescription', string='Therapy Prescription')
     therapy_record_id = fields.Many2one('therapy.record', related='therapy_prescription_id.therapy_record_id', string='Therapy Record', store=True, readonly=True)
     service_bundle_ids = fields.One2many('izi.service.card.using.line', 'using_id', "Service Bundle", domain=lambda self: [('type', '=', 'service_bundle')], copy=False)
+    is_body_area = fields.Boolean(string='Have body area', default=False)
 
     # @api.onchange('therapy_prescription_id')
     def _onchange_customer(self):
@@ -168,6 +169,7 @@ class IziServiceCardUsing(models.Model):
                             'use_service_id': service_card.id,
                             'use_service_line_id': bundle.id,
                         })
+
 
     @api.multi
     def action_done(self):

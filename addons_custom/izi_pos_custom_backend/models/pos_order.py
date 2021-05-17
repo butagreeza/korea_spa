@@ -986,24 +986,23 @@ class PosOrder(models.Model):
             'x_user_id': [(6, 0, self.x_user_id.ids)],
             'x_discount_computed': True,
             'x_cashier_id': self.x_cashier_id.id,
-            'x_therapy_record_id': self.x_therapy_record_id and self.x_therapy_record_id.id or False,
-            'x_number_massage': self.x_number_massage and self.x_number_massage or False,
-            'x_barem_id': self.x_barem_id and self.x_barem_id.id or False
+            # 'x_therapy_record_id': self.x_therapy_record_id and self.x_therapy_record_id.id or False,
+            # 'x_barem_id': self.x_barem_id and self.x_barem_id.id or False
         }
         pos_order_id = Posorder.create(argvs)
         pos_order_id.update({'name': 'RF_' + str(self.name)})
 
-        order_id = self.env['pos.order'].search([('id', '=', pos_order_id.id)])
-        complements = self.env['pos.order.complement'].search([('pos_order_id', '=', self.id)])
-        cmple = []
-        for complement in complements:
-            if complement.qty > 0:
-                cmple.append({
-                    'product_id': complement.product_id.id,
-                    'qty': -complement.qty,
-                    'uom_id': complement.uom_id.id
-                })
-        order_id.x_pos_order_complement_ids = cmple
+        # order_id = self.env['pos.order'].search([('id', '=', pos_order_id.id)])
+        # complements = self.env['pos.order.complement'].search([('pos_order_id', '=', self.id)])
+        # cmple = []
+        # for complement in complements:
+        #     if complement.qty > 0:
+        #         cmple.append({
+        #             'product_id': complement.product_id.id,
+        #             'qty': -complement.qty,
+        #             'uom_id': complement.uom_id.id
+        #         })
+        # order_id.x_pos_order_complement_ids = cmple
 
         if self.x_type != '2':
             if not self.session_id.config_id.x_charge_refund_id:
